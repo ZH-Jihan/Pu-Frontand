@@ -65,12 +65,50 @@ const AllFacultys = () => {
     }
     if (selecteditem.marrited) {
       if (selecteditem.marrited === "Married") {
-        return (data = data.filter(
+        data = data.filter(
           (el) =>
             el.marritStatus !== "" &&
             el.marritStatus !== "Unmarried" &&
             el.marritStatus !== "Seperated"
-        ));
+        )
+        const today = new Date();
+        const todayMonth = today.getMonth();
+        const todayDay = today.getDate();
+        
+        const todayData = [];
+        const otherData = [];
+        
+        data.forEach(person => {
+            const dob = new Date(person.marritStatus);
+            if (dob.getMonth() === todayMonth && dob.getDate() === todayDay) {
+                todayData.push(person);
+            } else {
+                otherData.push(person);
+            }
+        });
+        
+        todayData.sort((a, b) => a.name.localeCompare(b.name));
+
+        otherData.sort((a, b) => {
+          const dateA = new Date(a.marritStatus);
+          const dateB = new Date(b.marritStatus);
+      
+          // Sort by month first
+          const monthComparison = dateA.getMonth() - dateB.getMonth();
+          if (monthComparison !== 0) {
+              return monthComparison;
+          }
+      
+          // If the month is the same, sort by day
+          const dayComparison = dateA.getDate() - dateB.getDate();
+          if (dayComparison !== 0) {
+              return dayComparison;
+          }
+
+          return a.name.localeCompare(b.name);
+      });
+      const sortedData = todayData.concat(otherData);
+      return sortedData
       }
       data = data.filter((el) => el.marritStatus == selecteditem.marrited);
     }
