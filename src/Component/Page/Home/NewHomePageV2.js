@@ -1,4 +1,17 @@
-import { faBan, faBarsProgress, faCalendarDays, faChartPie, faCodeBranch, faFilePen, faHouseCircleCheck, faMoneyBillTrendUp, faNewspaper, faRectangleList, faRectangleXmark, faUsers, } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBan,
+  faBarsProgress,
+  faCalendarDays,
+  faChartPie,
+  faCodeBranch,
+  faFilePen,
+  faHouseCircleCheck,
+  faMoneyBillTrendUp,
+  faNewspaper,
+  faRectangleList,
+  faRectangleXmark,
+  faUsers,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { signOut } from "firebase/auth";
 import React from "react";
@@ -20,31 +33,102 @@ const NewHomePageV2 = () => {
   const [admin] = useAdmin(user);
   //** Report list array **/
   const reports = [
-    { name: "Routine", icon: faCalendarDays, navigate: "/routine", permission: "user" },
-    { name: "All Faculty", icon: faUsers, navigate: "/faculty" , permission: "user"},
-    { name: "Admission Analyze", icon: faChartPie, navigate: "/studentAnalyze" , permission: "user"},
-    { name: "Credit Fee Analyze", icon: faMoneyBillTrendUp, navigate: "/tutionfee" , permission: "admin"},
-    { name: "Faculty Wise Class", icon: faRectangleList, navigate: "/teacherclass" , permission: "admin"},
-    { name: "Check Faculty Absent", icon: faRectangleXmark, navigate: "/absentreportview", permission: "admin" },
-    { name: "Program Wise Details", icon: faCodeBranch, navigate: "/program", permission: "admin" },
-    { name: "Program Wise Class", icon: faBarsProgress, navigate: "/programClasscount", permission: "admin" },
-    { name: "Class Room List", icon: faHouseCircleCheck, navigate: "/classroom", permission: "admin" },
-    { name: "Faculty Absent Entry", icon: faBan, navigate: "/absentreportentry", permission: "admin" },
-    { name: "Journal View", icon: faNewspaper, navigate: "/viewJournal", permission: "admin" },
-    { name: "Admission Form", icon: faFilePen, navigate: "/admisonfrom", permission: "admin" },
-    { name: "Regester Form", icon: faFilePen, navigate: "/registarfrom", permission: "admin" },
+    {
+      name: "Routine",
+      icon: faCalendarDays,
+      navigate: "/routine",
+      permission: "user",
+    },
+    {
+      name: "All Faculty",
+      icon: faUsers,
+      navigate: "/faculty",
+      permission: "user",
+    },
+    {
+      name: "Admission Analyze",
+      icon: faChartPie,
+      navigate: "/studentAnalyze",
+      permission: "user",
+    },
+    {
+      name: "Credit Fee Analyze",
+      icon: faMoneyBillTrendUp,
+      navigate: "/tutionfee",
+      permission: "admin",
+    },
+    {
+      name: "Create User",
+      icon: faMoneyBillTrendUp,
+      navigate: "/createuser",
+      permission: "admin",
+    },
+    {
+      name: "Faculty Wise Class",
+      icon: faRectangleList,
+      navigate: "/teacherclass",
+      permission: "admin",
+    },
+    {
+      name: "Check Faculty Absent",
+      icon: faRectangleXmark,
+      navigate: "/absentreportview",
+      permission: "admin",
+    },
+    {
+      name: "Program Wise Details",
+      icon: faCodeBranch,
+      navigate: "/program",
+      permission: "admin",
+    },
+    {
+      name: "Program Wise Class",
+      icon: faBarsProgress,
+      navigate: "/programClasscount",
+      permission: "admin",
+    },
+    {
+      name: "Class Room List",
+      icon: faHouseCircleCheck,
+      navigate: "/classroom",
+      permission: "admin",
+    },
+    {
+      name: "Faculty Absent Entry",
+      icon: faBan,
+      navigate: "/absentreportentry",
+      permission: "admin",
+    },
+    {
+      name: "Journal View",
+      icon: faNewspaper,
+      navigate: "/viewJournal",
+      permission: "admin",
+    },
+    {
+      name: "Admission Form",
+      icon: faFilePen,
+      navigate: "/admisonfrom",
+      permission: "admin",
+    },
+    {
+      name: "Regester Form",
+      icon: faFilePen,
+      navigate: "/registarfrom",
+      permission: "admin",
+    },
   ];
 
-  const filterUserAccess = () =>{
+  const filterUserAccess = () => {
     let filterReport;
     if (user) {
-      filterReport= reports.filter(el=> el.permission === "user")
+      filterReport = reports.filter((el) => el.permission === "user");
     }
     if (admin) {
-      filterReport= reports
+      filterReport = reports;
     }
     return filterReport;
-  }
+  };
   return (
     <div>
       <div>
@@ -96,9 +180,8 @@ const NewHomePageV2 = () => {
                   />
                   <span class="self-center whitespace-nowrap">PU MIS</span>
                 </a>
-                
               </div>
-              
+
               <div class="flex items-center">
                 <button
                   id="toggleSidebarMobileSearch"
@@ -120,10 +203,16 @@ const NewHomePageV2 = () => {
                   </svg>
                 </button>
                 <div>
-              <button className="btn btn-ghost" onClick={()=>{signOut(auth);}}>{user? "Log Out":"LogIN"}</button>
+                  <button
+                    className="btn btn-ghost"
+                    onClick={() => {
+                      signOut(auth);
+                    }}
+                  >
+                    {user ? "Log Out" : "LogIN"}
+                  </button>
+                </div>
               </div>
-              </div>
-              
             </div>
           </div>
         </nav>

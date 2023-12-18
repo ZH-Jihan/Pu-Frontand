@@ -1,9 +1,12 @@
+import { useAuthState } from "react-firebase-hooks/auth";
 import { Toaster } from "react-hot-toast";
 import { Route, Routes } from "react-router-dom";
+import useAdmin from "./Component/Hooks/Admin";
 import CompanyInfo from "./Component/Page/About/CompanyInfo";
 import AllDepartment from "./Component/Page/All Report/AllDepartment";
 import RutinMainPage from "./Component/Page/All Report/Class Rutin/RutinMainPage";
 import ClassRoomView from "./Component/Page/All Report/ClassRoomView";
+import CreateUser from "./Component/Page/All Report/CreateUser";
 import EntryAbsentReport from "./Component/Page/All Report/EntryAbsentReport";
 import AllFacultys from "./Component/Page/All Report/Faculty List/AllFacultys";
 import FacultyDetails from "./Component/Page/All Report/Faculty List/FacultyDetails";
@@ -24,10 +27,12 @@ import CheckUser from "./Component/Page/Security/CheckUser";
 import RequireAuth from "./Component/Page/Security/RequireAuth";
 import Notpound from "./Component/Page/Sheared Page/Notpound";
 import Login from "./Component/Page/SingUp & Login/Login";
-import SingUp from "./Component/Page/SingUp & Login/SingUp";
+import auth from "./firebase.init";
 // axios.defaults.url("http://localhost:5000/api/v1")
 
 function App() {
+  const [user, loading] = useAuthState(auth);
+  const [admin] = useAdmin(user);
   return (
     <>
       <div>
@@ -81,11 +86,12 @@ function App() {
             <Route path="/registarfrom" element={<RegistrationFrom />} />
             <Route path="/routine" element={<RutinMainPage />}></Route>
             
+            {admin && <Route path="/createuser" element={ <CreateUser/>}></Route>}
+            
             <Route path="*" element={<Notpound></Notpound>}></Route>
           </Route>
           
             <Route path="/login" element={<Login />}></Route>
-            <Route path="/singup" element={<SingUp />}></Route>
             <Route path="/about" element={<CompanyInfo />}></Route>
           {/* Class Rutin Related Page */}
           {/* <Route path="/classrutin" element={<HomePage/>}/> */}

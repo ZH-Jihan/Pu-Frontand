@@ -45,18 +45,20 @@ const Faculty = ({setOrder,faculty}) => {
   // DOJ & DOB Entry Check
   const checkdoj = (props) => {
     const doj = props.doj;
+    const chakeMS = moment(doj).format('ll');
     if (doj  === "") {
       return <span className="text-red-500">Not Mention</span>
     } else {
-      return <>{doj} <span className="text-red-500">( {dateDiff(jdate,curret)} )</span></>
+      return <>{chakeMS} <span className="text-red-500">( {dateDiff(jdate,curret)} )</span></>
       }
     }
   const checkdob = (props) => {
     const dob = props.dob;
+    const chakeMS = moment(dob).format('ll');
     if (dob  === "") {
       return <span className="text-red-500">Not Mention</span>
     } else {
-      return <>{dob} <span className="text-red-500">( {dateDiff(bdate,curret)} )</span></>
+      return <>{chakeMS} <span className="text-red-500">( {dateDiff(bdate,curret)} )</span></>
       }
   }
   const checkMaritStatus = (props) => {

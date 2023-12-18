@@ -130,9 +130,9 @@ const Login = () => {
             <span class="ml-2"
             >You don't have an account?
             <Link
-              to="/registar"
+              to="#"
               class="text-xs ml-2 text-blue-500 font-semibold"
-              >Please Registar</Link>
+              >Please Contact Admin</Link>
               </span>
           </div>
         </div>

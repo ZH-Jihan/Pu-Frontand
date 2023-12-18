@@ -29,7 +29,7 @@ const FacultyBtn = ({onChange,selecteditem}) => {
         ],
       };
     const marritedBtn = {
-        btnHade: "Married Status",
+        btnHade: "Marital Status",
         btnvalue: selecteditem.marrited,
         function: { onChange },
         btnName: "marrited",
