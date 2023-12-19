@@ -57,7 +57,7 @@ const NewHomePageV2 = () => {
       name: "Credit Fee Analyze",
       icon: faMoneyBillTrendUp,
       navigate: "/tutionfee",
-      permission: "admin",
+      permission: "user",
     },
     {
       name: "Create User",
@@ -283,7 +283,7 @@ const NewHomePageV2 = () => {
             ></div>
             <div
               id="main-content"
-              class="h-full w-full bg-gray-50 relative overflow-y-auto lg:ml-52 lg:mr-2"
+              class="h-full w-full pt-8 bg-gray-50 relative overflow-y-auto lg:ml-52 lg:mr-2"
             >
               <Outlet></Outlet>
             </div>

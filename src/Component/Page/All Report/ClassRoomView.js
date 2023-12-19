@@ -15,9 +15,11 @@ const ClassRoomView = () => {
   }
   const tableHead = [
     { field: "roomnum", header: "" },
-    { field: "roomname", header: "" },
+    { field: "capacity", header: "" },
     { field: "roominitial", header: "" },
-    { field: "capacity", header: "" }
+    { field: "roomname", header: "" }
+    
+    
   ];
     return (
         <div className="mx-2">
