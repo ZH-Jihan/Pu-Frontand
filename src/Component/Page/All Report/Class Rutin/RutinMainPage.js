@@ -131,8 +131,9 @@ if (filterselect.semester === "") {
           </>
         )}
       </div>
-      {filterselect.semester &&  filterselect.date && (
-        <RutineTable
+      { 
+       filterselect.semester &&  filterselect.date && (
+          <RutineTable
           data={filter(semFilterData)}
           data2={daySlot}
           atAGlance={filterDataSemWise()}
@@ -140,6 +141,7 @@ if (filterselect.semester === "") {
           columns={tableHead}
           name={filterselect.reportType}
         />
+        
       )}
     </div>
   );

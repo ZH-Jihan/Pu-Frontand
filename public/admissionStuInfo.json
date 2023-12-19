@@ -147288,5 +147288,71 @@
     "DOB": "04/12/1981",
     "Address": "House No.- 43, Road No. - 06 Area- Satarkul Road, GM Bari Post Office- Badda Police Station- Badda District- Dhaka Post Code- 1212 Bangladesh",
     "Waiver": "0"
+  },
+  {
+    "semester": "Spring-24",
+    "Name": "Kazi Bony Amin",
+    "AR": "241175",
+    "Status": "0",
+    "programCode": "38",
+    "programName": "CSE",
+    "DOB": "12/01/2003",
+    "Address": "House- 12/2/D Road- Primary School Road P.S- Kallayanpur Dist.- Dhaka P.C- 1207",
+    "Waiver": "0"
+  },
+  {
+    "semester": "Spring-24",
+    "Name": "Md. Fahim Hossain",
+    "AR": "241180",
+    "Status": "0",
+    "programCode": "45",
+    "programName": "CE",
+    "DOB": "13-12-05",
+    "Address": "House- 222, Alir Mor, Uttar Badda P.O- Badda P.S- Badda Dist.- Dhaka Bangladesh",
+    "Waiver": "0"
+  },
+  {
+    "semester": "Spring-24",
+    "Name": "Arif Miah",
+    "AR": "241179",
+    "Status": "0",
+    "programCode": "46",
+    "programName": "CE",
+    "DOB": "12/04/1994",
+    "Address": "Vill.- Pubergaon, Mhodha Para Mia Bari P.O- Atlapur Bazar P.S- Rupgonj P.C- 1720 Dist.- Narayangonj Bangladesh",
+    "Waiver": "0"
+  },
+  {
+    "semester": "Spring-24",
+    "Name": "Md Rakib Hossain",
+    "AR": "241176",
+    "Status": "0",
+    "programCode": "47",
+    "programName": "CE",
+    "DOB": "01/01/2000",
+    "Address": "Vill- Chandpal P.O- Sabupuna P.S- Bauphal Dist.- Patuakhali P.C- 8621",
+    "Waiver": "0"
+  },
+  {
+    "semester": "Spring-24",
+    "Name": "Md. Janntul Ferdous",
+    "AR": "241177",
+    "Status": "0",
+    "programCode": "47",
+    "programName": "CE",
+    "DOB": "25-10-96",
+    "Address": "Vill.- Berabala Akandopara P.O- Shibganj P.S- Shibganj P.C- 5810 Dist.- Bogura Bangladesh",
+    "Waiver": "0"
+  },
+  {
+    "semester": "Spring-24",
+    "Name": "Md. Sawon Ali",
+    "AR": "241178",
+    "Status": "0",
+    "programCode": "47",
+    "programName": "CE",
+    "DOB": "09/12/1997",
+    "Address": "Vill.- Raipur, Soukhetupara P.O- Raipur Khetupra P.S- Sujanagar P.C- 6660 Dist.- Pabna Bangladesh",
+    "Waiver": "0"
   }
 ]

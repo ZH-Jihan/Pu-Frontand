@@ -86,7 +86,7 @@ function App() {
             <Route path="/registarfrom" element={<RegistrationFrom />} />
             <Route path="/routine" element={<RutinMainPage />}></Route>
             
-            {admin && <Route path="/createuser" element={ <CreateUser/>}></Route>}
+            <Route path="/createuser" element={ admin &&  <CreateUser/>}></Route>
             
             <Route path="*" element={<Notpound></Notpound>}></Route>
           </Route>
