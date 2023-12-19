@@ -138,6 +138,9 @@ const RutineTable = ({
               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
               {room.name}
               </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+              {room.value.length}
+              </td>
             </tr>
           ))}
       </>

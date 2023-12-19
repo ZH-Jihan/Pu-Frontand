@@ -93,7 +93,7 @@ const NewHomePageV2 = () => {
       name: "Class Room List",
       icon: faHouseCircleCheck,
       navigate: "/classroom",
-      permission: "admin",
+      permission: "user",
     },
     {
       name: "Faculty Absent Entry",

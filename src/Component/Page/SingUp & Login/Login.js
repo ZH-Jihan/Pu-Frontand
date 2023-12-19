@@ -9,7 +9,6 @@ import SocileLogin from '../../Page/Sheared Page/SocileLogin';
  
 const Login = () => {
   
-  
   const emailRef = useRef();
   const passwordRef = useRef();
   const navigate = useNavigate();
