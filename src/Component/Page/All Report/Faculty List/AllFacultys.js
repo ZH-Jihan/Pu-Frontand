@@ -248,7 +248,7 @@ const AllFacultys = () => {
     return <Loading />;
   } else {
     return (
-      <div className="w-auto">
+      <div className="w-auto p-4">
         <>
           <div>
             <h1 className="font-bold text-5xl mt-8 mb-4 text-center">
@@ -315,7 +315,7 @@ const AllFacultys = () => {
                 <Button details={btnData.departmentBtn} />
                 <Button details={btnData.universityBtn} other={universitys} />
               </div>
-              <div className="mt-4 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 justify-items-center">
+              <div className="mt-4 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-12 justify-items-center">
                 {filterFaculty(facultys).map((faculty) => (
                   <Faculty key={faculty.id} faculty={faculty} />
                 ))}

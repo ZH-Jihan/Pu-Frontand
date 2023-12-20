@@ -1,0 +1,506 @@
+[
+  {
+    "Name": "Prof. Dr. Md. Abdul Mannan Chowdhury",
+    "Designation": "Vice Chancellor",
+    "Dept": "",
+    "ID": "232-035-700"
+  },
+  {
+    "Name": "Brig Gen Md. Anisur Rahman (Retd)",
+    "Designation": "Adviser",
+    "Dept": "",
+    "ID": "231-001-700"
+  },
+  {
+    "Name": "Md. Ruhul Amin",
+    "Designation": "Registrar",
+    "Dept": "Registar's Office",
+    "ID": "222-026-700"
+  },
+  {
+    "Name": "Md. Sakir Hossain",
+    "Designation": "Additional Registrar",
+    "Dept": "Registar's Office",
+    "ID": "233-024-700"
+  },
+  {
+    "Name": "Mohammad Faridul Hassan",
+    "Designation": "Sr. Asst. Registrar",
+    "Dept": "Civil",
+    "ID": "091-018-700"
+  },
+  {
+    "Name": "Kanij Sultana",
+    "Designation": "Asst. Registrar",
+    "Dept": "Controller Section",
+    "ID": "091-026-700"
+  },
+  {
+    "Name": "Nargis Sultana",
+    "Designation": "Asst. Registrar",
+    "Dept": "English",
+    "ID": "073-011-700"
+  },
+  {
+    "Name": "Rumana Ahmed",
+    "Designation": "Deputy Controller",
+    "Dept": "Controller Section",
+    "ID": "221-006-700"
+  },
+  {
+    "Name": "Md. Hanifur Rahman",
+    "Designation": "System Administrator",
+    "Dept": "IT",
+    "ID": "062-013-700"
+  },
+  {
+    "Name": "Md. Abdul Goffar",
+    "Designation": "Head of Admission",
+    "Dept": "Admission",
+    "ID": "223-006-700"
+  },
+  {
+    "Name": "Mohammad Manjurul Haque Khan",
+    "Designation": "Head of Student Affairs",
+    "Dept": "Student  Affairs",
+    "ID": "223-020-700"
+  },
+  {
+    "Name": "Mohammad Tarequl Islam",
+    "Designation": "Asst. Director",
+    "Dept": "Accounts",
+    "ID": "072-011-700"
+  },
+  {
+    "Name": "Sagira Banu",
+    "Designation": "Sr. Executive",
+    "Dept": "Registar's Office",
+    "ID": "121-010-700"
+  },
+  {
+    "Name": "Md. Eqbal Hossain",
+    "Designation": "Sr. Executive",
+    "Dept": "Registar's Office",
+    "ID": "121-023-700"
+  },
+  {
+    "Name": "Debanjana Basak",
+    "Designation": "Sr. Executive",
+    "Dept": "Registar's Office",
+    "ID": "212-013-700"
+  },
+  {
+    "Name": "Mohammad Abdullah Parvez",
+    "Designation": "Sr. Executive",
+    "Dept": "Accounts",
+    "ID": "173-007-700"
+  },
+  {
+    "Name": "Morshedur Rahaman",
+    "Designation": "Sr. Executive",
+    "Dept": "Accounts",
+    "ID": "182-009-700"
+  },
+  {
+    "Name": "Rifha Sanjida Himi",
+    "Designation": "Sr. Executive",
+    "Dept": "Civil",
+    "ID": "192-062-700"
+  },
+  {
+    "Name": "Mirza Hasan Mortuza",
+    "Designation": "Sr. Executive",
+    "Dept": "ECE",
+    "ID": "121-011-700"
+  },
+  {
+    "Name": "Hasina Akter Lubna",
+    "Designation": "Sr. Executive",
+    "Dept": "Business",
+    "ID": "121-005-700"
+  },
+  {
+    "Name": "Md. Abdun Noor",
+    "Designation": "Sr. Executive",
+    "Dept": "Admin",
+    "ID": "062-006-700"
+  },
+  {
+    "Name": "Subrina",
+    "Designation": "Sr. Executive",
+    "Dept": "Admin",
+    "ID": "212-012-700"
+  },
+  {
+    "Name": "Fahmida Akter Khan",
+    "Designation": "Sr. Executive",
+    "Dept": "Admission",
+    "ID": "091-019-700"
+  },
+  {
+    "Name": "Md. Sakib Hassan",
+    "Designation": "Sr. Executive",
+    "Dept": "Admission",
+    "ID": "212-011-700"
+  },
+  {
+    "Name": "Nahida Sharkar",
+    "Designation": "Asst. Executive",
+    "Dept": "Registar's Office",
+    "ID": "222-007-700"
+  },
+  {
+    "Name": "Sobuz Ahammad",
+    "Designation": "Asst. Executive",
+    "Dept": "Library",
+    "ID": "233-004-700"
+  },
+  {
+    "Name": "Ashrafy Jahan Chowdhury",
+    "Designation": "Asst. Executive",
+    "Dept": "Admin",
+    "ID": "232-001-700"
+  },
+  {
+    "Name": "Umme Fatama",
+    "Designation": "Asst. Executive",
+    "Dept": "Controller Section",
+    "ID": "222-008-700"
+  },
+  {
+    "Name": "Afroza Khanom",
+    "Designation": "Executive",
+    "Dept": "Controller Section",
+    "ID": "121-022-700"
+  },
+  {
+    "Name": "Shamsur Rahman",
+    "Designation": "Executive",
+    "Dept": "Accounts",
+    "ID": "071-029-700"
+  },
+  {
+    "Name": "Najnin Ferdous Supta",
+    "Designation": "Executive",
+    "Dept": "Accounts",
+    "ID": "232-002-700"
+  },
+  {
+    "Name": "Md. Farid Ahmed Khan",
+    "Designation": "Executive",
+    "Dept": "Civil",
+    "ID": "132-002-700"
+  },
+  {
+    "Name": "Md. Aminul Islam",
+    "Designation": "Executive",
+    "Dept": "Civil",
+    "ID": "172-024-700"
+  },
+  {
+    "Name": "Iqbal Hossain",
+    "Designation": "Executive",
+    "Dept": "ECE",
+    "ID": "091-017-700"
+  },
+  {
+    "Name": "Md. Mizanur Rahman",
+    "Designation": "Executive",
+    "Dept": "Business",
+    "ID": "132-005-700"
+  },
+  {
+    "Name": "Taslima Khatun",
+    "Designation": "Executive",
+    "Dept": "Library",
+    "ID": "132-001-700"
+  },
+  {
+    "Name": "Md. Masud Hossain",
+    "Designation": "Executive",
+    "Dept": "Admission",
+    "ID": "181-037-700"
+  },
+  {
+    "Name": "Sharmistha Debnath",
+    "Designation": "Executive",
+    "Dept": "Admission",
+    "ID": "191-004-700"
+  },
+  {
+    "Name": "Mst. Shazia Khatun",
+    "Designation": "Executive",
+    "Dept": "Admission",
+    "ID": "223-003-700"
+  },
+  {
+    "Name": "Ayesha Akhter",
+    "Designation": "Executive",
+    "Dept": "Admission",
+    "ID": "223-004-700"
+  },
+  {
+    "Name": "Md. Mahmodul Hasan",
+    "Designation": "Executive",
+    "Dept": "Admission",
+    "ID": "223-005-700"
+  },
+  {
+    "Name": "Md. Nasim Howlader",
+    "Designation": "Executive",
+    "Dept": "Student  Affairs",
+    "ID": "223-019-700"
+  },
+  {
+    "Name": "Yeasrib Hassan",
+    "Designation": "Executive",
+    "Dept": "Digital  Marketing",
+    "ID": "223-018-700"
+  },
+  {
+    "Name": "Mohammad Sadnan Sakib Khan",
+    "Designation": "Executive",
+    "Dept": "Digital  Marketing",
+    "ID": "223-007-700"
+  },
+  {
+    "Name": "Md. Jahid Hassan",
+    "Designation": "PRO",
+    "Dept": "Admission",
+    "ID": "161-015-700"
+  },
+  {
+    "Name": "Kapil Roy",
+    "Designation": "Graphic Designer",
+    "Dept": "Student  Affairs",
+    "ID": "223-025-700"
+  },
+  {
+    "Name": "Zakir Hossain Jihan",
+    "Designation": "Asst. Of Consultant\n",
+    "Dept": "Admin",
+    "ID": "223-026-800"
+  },
+  {
+    "Name": "Mr. Arpito Sagma",
+    "Designation": "Office Assistant",
+    "Dept": "Admin",
+    "ID": "082-020-800"
+  },
+  {
+    "Name": "Md. Ohidul Islam",
+    "Designation": "Office Assistant",
+    "Dept": "Registar's Office",
+    "ID": "173-010-800"
+  },
+  {
+    "Name": "Md.Habibur Rahman",
+    "Designation": "Office Assistant",
+    "Dept": "Accounts",
+    "ID": "093-016-800"
+  },
+  {
+    "Name": "Mohammad Ali",
+    "Designation": "Office Assistant",
+    "Dept": "Library",
+    "ID": "062-016-800"
+  },
+  {
+    "Name": "Md.Miraz Hossain",
+    "Designation": "Office Assistant",
+    "Dept": "Library",
+    "ID": "072-027-800"
+  },
+  {
+    "Name": "Md. Farid Al-Mamun",
+    "Designation": "Office Assistant",
+    "Dept": "CIVIL",
+    "ID": "183-005-800"
+  },
+  {
+    "Name": "Md. Kabir Hossen",
+    "Designation": "O.S.S",
+    "Dept": "Admin",
+    "ID": "131-012-800"
+  },
+  {
+    "Name": "Md. Sharif",
+    "Designation": "O.S.S",
+    "Dept": "Admin",
+    "ID": "223-022-800"
+  },
+  {
+    "Name": "Md. Imon",
+    "Designation": "O.S.S",
+    "Dept": "Registar's Office",
+    "ID": "223-021-800"
+  },
+  {
+    "Name": "Md. Hafizur Rahman",
+    "Designation": "O.S.S",
+    "Dept": "Admission",
+    "ID": "072-025-800"
+  },
+  {
+    "Name": "Md. Jihad Howlader",
+    "Designation": "O.S.S",
+    "Dept": "Admission",
+    "ID": "223-024-800"
+  },
+  {
+    "Name": "Md. Nazrul Islam",
+    "Designation": "O.S.S",
+    "Dept": "Business",
+    "ID": "033-007-800"
+  },
+  {
+    "Name": "Md. Shohel Mia",
+    "Designation": "O.S.S",
+    "Dept": "Business",
+    "ID": "053-006-800"
+  },
+  {
+    "Name": "Md. Shahid Mia",
+    "Designation": "O.S.S",
+    "Dept": "CIVIL",
+    "ID": "083-021-800"
+  },
+  {
+    "Name": "Md. Tuhin Hawlader",
+    "Designation": "O.S.S",
+    "Dept": "CIVIL",
+    "ID": "223-023-800"
+  },
+  {
+    "Name": "Md. Lokman Hossain",
+    "Designation": "O.S.S",
+    "Dept": "English",
+    "ID": "093-020-800"
+  },
+  {
+    "Name": "Md. Iqbal Hossain",
+    "Designation": "O.S.S",
+    "Dept": "ECE",
+    "ID": "051-013-800"
+  },
+  {
+    "Name": "Md. Abdul Kadir",
+    "Designation": "O.S.S",
+    "Dept": "ECE",
+    "ID": "111-017-800"
+  },
+  {
+    "Name": "H.M. Ruhan",
+    "Designation": "Lab Assistant",
+    "Dept": "IT",
+    "ID": "101-029-800"
+  },
+  {
+    "Name": "S. M. Shafiqul Islam\n Lalon",
+    "Designation": "Lab Assistant",
+    "Dept": "IT",
+    "ID": "121-030-800"
+  },
+  {
+    "Name": "Md. Azijur Rahman",
+    "Designation": "Lab Assistant",
+    "Dept": "IT",
+    "ID": "183-021-800"
+  },
+  {
+    "Name": "Sofikar Rahman",
+    "Designation": "Lab Assistant",
+    "Dept": "IT",
+    "ID": "183-009-800"
+  },
+  {
+    "Name": "Md. Al-Mamun",
+    "Designation": "Lab Technician",
+    "Dept": "ECE",
+    "ID": "101-011-840"
+  },
+  {
+    "Name": "Md. Shafikul ISlam",
+    "Designation": "Lab Technician",
+    "Dept": "ECE",
+    "ID": "131-013-800"
+  },
+  {
+    "Name": "Abdul Malek",
+    "Designation": "Lab Technician",
+    "Dept": "CIVIL",
+    "ID": "222-006-800"
+  },
+  {
+    "Name": "Ashikur Rahman",
+    "Designation": "Lab Technician",
+    "Dept": "CIVIL",
+    "ID": "223-008-800"
+  },
+  {
+    "Name": "Md. Khalilur Rahman",
+    "Designation": "Electrician",
+    "Dept": "Admin",
+    "ID": "182-021-800"
+  },
+  {
+    "Name": "Md. Nomanul Islam",
+    "Designation": "Security Supervisor",
+    "Dept": "Admin",
+    "ID": "152-011-800"
+  },
+  {
+    "Name": "Sumon Sadu",
+    "Designation": "Guard",
+    "Dept": "Admin",
+    "ID": "101-028-800"
+  },
+  {
+    "Name": "Md. Abdul Malek",
+    "Designation": "Guard",
+    "Dept": "Admin",
+    "ID": "101-026-800"
+  },
+  {
+    "Name": "Md. Golam Mostafa",
+    "Designation": "Guard",
+    "Dept": "Admin",
+    "ID": "101-024-800"
+  },
+  {
+    "Name": "Tara Askara",
+    "Designation": "Guard",
+    "Dept": "Admin",
+    "ID": "111-016-800"
+  },
+  {
+    "Name": "Md. Walid",
+    "Designation": "Driver",
+    "Dept": "Admin",
+    "ID": "052-009-800"
+  },
+  {
+    "Name": "Bakul Chandra",
+    "Designation": "Driver",
+    "Dept": "Admin",
+    "ID": "092-019-800"
+  },
+  {
+    "Name": "Md. Mustafizur Rahman",
+    "Designation": "Driver",
+    "Dept": "Admin",
+    "ID": "173-009-800"
+  },
+  {
+    "Name": "Md. Sagor Miah",
+    "Designation": "Driver",
+    "Dept": "VC Office",
+    "ID": "231-003-800"
+  },
+  {
+    "Name": "Md. Aslam Hossain",
+    "Designation": "Driver",
+    "Dept": "Adviser office",
+    "ID": "233-"
+  }
+]

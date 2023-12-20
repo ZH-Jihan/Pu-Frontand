@@ -8,6 +8,7 @@ import {
   faHouseCircleCheck,
   faMoneyBillTrendUp,
   faNewspaper,
+  faPerson,
   faRectangleList,
   faRectangleXmark,
   faUsers,
@@ -45,6 +46,12 @@ const NewHomePageV2 = () => {
       name: "All Faculty",
       icon: faUsers,
       navigate: "/faculty",
+      permission: "user",
+    },
+    {
+      name: "All Employee",
+      icon: faPerson,
+      navigate: "/emploeey",
       permission: "user",
     },
     {

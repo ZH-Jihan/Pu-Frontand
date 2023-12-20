@@ -9,6 +9,7 @@ import ClassRoomView from "./Component/Page/All Report/ClassRoomView";
 import CreateUser from "./Component/Page/All Report/CreateUser";
 import EntryAbsentReport from "./Component/Page/All Report/EntryAbsentReport";
 import AllFacultys from "./Component/Page/All Report/Faculty List/AllFacultys";
+import EmploeeyList from "./Component/Page/All Report/Faculty List/EmploeeyList";
 import FacultyDetails from "./Component/Page/All Report/Faculty List/FacultyDetails";
 import TClassDetail from "./Component/Page/All Report/FacultyClassList/TClassDetail";
 import TeacherTotalClass from "./Component/Page/All Report/FacultyClassList/TeacherTotalClass";
@@ -55,6 +56,8 @@ function App() {
             
             <Route path="/faculty" index element={<AllFacultys />} />
             <Route path="/faculty/:id" element={<FacultyDetails />} />
+            
+            <Route path="/emploeey" element={<EmploeeyList />} />
 
             {/* Program List Wise Details */}
             <Route path="/program" element={<AllProgram />} />
