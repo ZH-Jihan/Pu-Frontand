@@ -231,7 +231,7 @@ const RutineTable = ({
                   data={[
                     // { field: "", header: "This Report Is Under Working. Review other reports until the the is done." }
                     { field: "", header: "Day" },
-                    { field: "", header: "Day Class Slot" },
+                    { field: "", header: "Number Of Slot" },
                     { field: "", header: "Total Class" },
                     { field: "", header: "Civil" },
                     { field: "", header: "CSE/EEE" },

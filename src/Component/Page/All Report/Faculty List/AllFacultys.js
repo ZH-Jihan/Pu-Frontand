@@ -310,10 +310,10 @@ const AllFacultys = () => {
             <>
               <div className="mt-4 lg:w-5/6 m-auto grid lg:grid-cols-5 md:grid-cols-2 sm:grid-cols-1 justify-items-center">
                 <Button details={btnData.jobTypeBtn} />
-                <Button details={btnData.marritedBtn} />
                 <Button details={btnData.designationdBtn} />
                 <Button details={btnData.departmentBtn} />
                 <Button details={btnData.universityBtn} other={universitys} />
+                <Button details={btnData.marritedBtn} />
               </div>
               <div className="mt-4 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-12 justify-items-center">
                 {filterFaculty(facultys).map((faculty) => (
