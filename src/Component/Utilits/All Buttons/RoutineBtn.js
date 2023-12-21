@@ -50,10 +50,11 @@ const useRoutineBtn = ({onChange,filterselect}) => {
         function: { onChange },
         btnName: "reportType",
         option: [
-          { value: "", name: "Main Routine" },
+          { value: "", name: "Weekly Class Report" },
+          { value: "main", name: "Main Routine" },
           { value: "slotWise", name: "Slot Wise Report" },
-          { value: "roomWise", name: "Room Wise Report" },
-          { value: "weekly", name: "Weekly Class Report" },
+          { value: "roomWise", name: "Room Wise Report" }
+          
         ],
       };
 

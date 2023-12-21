@@ -291,10 +291,7 @@ const RoutinDetail = () => {
               </td>
               <td class="px-6 text-bold py-4 whitespace-nowrap font-medium text-gray-900">
                 <p>
-                  {filterDayWise(day.value).calculatePersent(
-                    day.tslot,
-                    day.value,
-                    filterDayWise(day.value).data.length
+                  {filterDayWise(day.value).calculatePersent(day.tslot,day.value,filterDayWise(day.value).data.length
                   )}{" "}
                   %
                 </p>

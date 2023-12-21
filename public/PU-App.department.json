@@ -106,6 +106,24 @@
           { "name": "06:30 PM - 08:30 PM" },
           { "name": "07:55 PM - 09:10 PM" }
         ]
+      },
+      {
+        "name": "Total",
+        "value": [
+          { "name": "08:30 AM - 11:10 AM" },
+          { "name": "09:00 AM - 11:40 AM" },
+          { "name": "10:25 AM - 11:40 AM" },
+          { "name": "11:30 AM - 02:10 PM" },
+          { "name": "11:50 AM - 01:05 PM" },
+          { "name": "01:15 PM - 02:30 PM" },
+          { "name": "02:30 PM - 05:00 PM" },
+          { "name": "02:40 PM - 03:55 PM" },
+          { "name": "04:05 PM - 06:30 PM" },
+          { "name": "05:00 PM - 07:40 PM" },
+          { "name": "06:30 PM - 07:45 PM" },
+          { "name": "06:30 PM - 08:30 PM" },
+          { "name": "07:55 PM - 09:10 PM" }
+        ]
       }
     ],
     "data": [
@@ -117,7 +135,7 @@
         "time": "08:00 AM - 09:30 AM",
         "room": "104",
         "faculty": "NIR",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -128,7 +146,7 @@
         "time": "08:00 AM - 09:30 AM",
         "room": "105",
         "faculty": "TDS",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -139,7 +157,7 @@
         "time": "08:00 AM - 09:30 AM",
         "room": "115",
         "faculty": "FSN",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -150,7 +168,7 @@
         "time": "08:00 AM - 09:30 AM",
         "room": "125",
         "faculty": "BAT",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -161,7 +179,7 @@
         "time": "08:00 AM - 09:30 AM",
         "room": "204",
         "faculty": "FTT",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -172,7 +190,7 @@
         "time": "08:00 AM - 09:30 AM",
         "room": "301",
         "faculty": "MKG",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -183,7 +201,7 @@
         "time": "08:00 AM - 09:30 AM",
         "room": "304",
         "faculty": "KIZ",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -194,7 +212,7 @@
         "time": "08:00 AM - 09:30 AM",
         "room": "310",
         "faculty": "AMT",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -205,7 +223,7 @@
         "time": "08:00 AM - 09:30 AM",
         "room": "313",
         "faculty": "AFS",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -216,7 +234,7 @@
         "time": "08:00 AM - 09:30 AM",
         "room": "319",
         "faculty": "THS",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -227,7 +245,7 @@
         "time": "08:00 AM - 09:30 AM",
         "room": "320",
         "faculty": "FEK",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -238,7 +256,7 @@
         "time": "08:00 AM - 09:30 AM",
         "room": "410",
         "faculty": "KLC",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "44"
       },
       {
@@ -249,7 +267,7 @@
         "time": "08:00 AM - 09:30 AM",
         "room": "413",
         "faculty": "MLI",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "44"
       },
       {
@@ -260,7 +278,7 @@
         "time": "08:00 AM - 09:30 AM",
         "room": "419",
         "faculty": "SPY",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -271,7 +289,7 @@
         "time": "08:00 AM - 09:30 AM",
         "room": "420",
         "faculty": "SAJ",
-        "drpartment": "MBA",
+        "drpartment": "Business",
         "peogram": "65"
       },
       {
@@ -282,7 +300,7 @@
         "time": "08:00 AM - 09:30 AM",
         "room": "424",
         "faculty": "SUN",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "44"
       },
       {
@@ -293,7 +311,7 @@
         "time": "08:00 AM - 09:30 AM",
         "room": "501",
         "faculty": "MTU",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -304,7 +322,7 @@
         "time": "08:00 AM - 09:30 AM",
         "room": "502",
         "faculty": "Zkn",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "44"
       },
       {
@@ -315,7 +333,7 @@
         "time": "08:00 AM - 09:30 AM",
         "room": "506",
         "faculty": "SYI",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "37"
       },
       {
@@ -326,7 +344,7 @@
         "time": "08:00 AM - 09:30 AM",
         "room": "510",
         "faculty": "ARA",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "44"
       },
       {
@@ -337,7 +355,7 @@
         "time": "08:00 AM - 09:30 AM",
         "room": "513",
         "faculty": "PRN",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "44"
       },
       {
@@ -348,7 +366,7 @@
         "time": "08:00 AM - 09:30 AM",
         "room": "519",
         "faculty": "GLM",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -359,7 +377,7 @@
         "time": "08:00 AM - 09:30 AM",
         "room": "520",
         "faculty": "AHB",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "44"
       },
       {
@@ -370,7 +388,7 @@
         "time": "08:00 AM - 09:30 AM",
         "room": "524",
         "faculty": "ASS",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "44"
       },
       {
@@ -381,7 +399,7 @@
         "time": "08:00 AM - 09:30 AM",
         "room": "601",
         "faculty": "SIF",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -392,7 +410,7 @@
         "time": "08:00 AM - 09:30 AM",
         "room": "610",
         "faculty": "ARM",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -403,7 +421,7 @@
         "time": "08:00 AM - 09:30 AM",
         "room": "613",
         "faculty": "LKN",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -414,7 +432,7 @@
         "time": "09:35 AM - 11:05 AM",
         "room": "104",
         "faculty": "SPY",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -425,7 +443,7 @@
         "time": "09:35 AM - 11:05 AM",
         "room": "105",
         "faculty": "KIZ",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -436,7 +454,7 @@
         "time": "09:35 AM - 11:05 AM",
         "room": "115",
         "faculty": "ALI",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -447,7 +465,7 @@
         "time": "09:35 AM - 11:05 AM",
         "room": "125",
         "faculty": "SHH",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -458,7 +476,7 @@
         "time": "09:35 AM - 11:05 AM",
         "room": "204",
         "faculty": "LKN",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -469,7 +487,7 @@
         "time": "09:35 AM - 11:05 AM",
         "room": "301",
         "faculty": "GLM",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -480,7 +498,7 @@
         "time": "09:35 AM - 11:05 AM",
         "room": "304",
         "faculty": "SIF",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -491,7 +509,7 @@
         "time": "09:35 AM - 11:05 AM",
         "room": "310",
         "faculty": "Mme",
-        "drpartment": "MBA",
+        "drpartment": "Business",
         "peogram": "65"
       },
       {
@@ -502,7 +520,7 @@
         "time": "09:35 AM - 11:05 AM",
         "room": "313",
         "faculty": "SAJ",
-        "drpartment": "MBA",
+        "drpartment": "Business",
         "peogram": "65"
       },
       {
@@ -513,7 +531,7 @@
         "time": "09:35 AM - 11:05 AM",
         "room": "319",
         "faculty": "FSN",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -524,7 +542,7 @@
         "time": "09:35 AM - 11:05 AM",
         "room": "320",
         "faculty": "MKG",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -535,7 +553,7 @@
         "time": "09:35 AM - 11:05 AM",
         "room": "324",
         "faculty": "RhP",
-        "drpartment": "MBA",
+        "drpartment": "Business",
         "peogram": "65"
       },
       {
@@ -546,7 +564,7 @@
         "time": "09:35 AM - 11:05 AM",
         "room": "401",
         "faculty": "HED",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -557,7 +575,7 @@
         "time": "09:35 AM - 11:05 AM",
         "room": "410",
         "faculty": "FTS",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "44"
       },
       {
@@ -568,7 +586,7 @@
         "time": "09:35 AM - 11:05 AM",
         "room": "413",
         "faculty": "PRN",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "44"
       },
       {
@@ -579,7 +597,7 @@
         "time": "09:35 AM - 11:05 AM",
         "room": "419",
         "faculty": "RAN",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -590,7 +608,7 @@
         "time": "09:35 AM - 11:05 AM",
         "room": "420",
         "faculty": "AHB",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "44"
       },
       {
@@ -601,7 +619,7 @@
         "time": "09:35 AM - 11:05 AM",
         "room": "424",
         "faculty": "OVI",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -612,7 +630,7 @@
         "time": "09:35 AM - 11:05 AM",
         "room": "501",
         "faculty": "RAF",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -623,7 +641,7 @@
         "time": "09:35 AM - 11:05 AM",
         "room": "502",
         "faculty": "SUN",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "44"
       },
       {
@@ -634,7 +652,7 @@
         "time": "09:35 AM - 11:05 AM",
         "room": "506",
         "faculty": "SYI",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "37"
       },
       {
@@ -645,7 +663,7 @@
         "time": "09:35 AM - 11:05 AM",
         "room": "510",
         "faculty": "ASS",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "44"
       },
       {
@@ -656,7 +674,7 @@
         "time": "09:35 AM - 11:05 AM",
         "room": "513",
         "faculty": "KLC",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "44"
       },
       {
@@ -667,7 +685,7 @@
         "time": "09:35 AM - 11:05 AM",
         "room": "519",
         "faculty": "ADR",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -678,7 +696,7 @@
         "time": "09:35 AM - 11:05 AM",
         "room": "520",
         "faculty": "Zkn",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "44"
       },
       {
@@ -689,7 +707,7 @@
         "time": "09:35 AM - 11:05 AM",
         "room": "524",
         "faculty": "ARA",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "44"
       },
       {
@@ -700,7 +718,7 @@
         "time": "09:35 AM - 11:05 AM",
         "room": "601",
         "faculty": "THS",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -711,7 +729,7 @@
         "time": "09:35 AM - 11:05 AM",
         "room": "610",
         "faculty": "TDS",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -722,7 +740,7 @@
         "time": "09:35 AM - 11:05 AM",
         "room": "613",
         "faculty": "MOS",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -733,7 +751,7 @@
         "time": "11:10 AM - 12:40 PM",
         "room": "104",
         "faculty": "NIR",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -744,7 +762,7 @@
         "time": "11:10 AM - 12:40 PM",
         "room": "105",
         "faculty": "FTS",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "44"
       },
       {
@@ -755,7 +773,7 @@
         "time": "11:10 AM - 12:40 PM",
         "room": "115",
         "faculty": "HED",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -766,7 +784,7 @@
         "time": "11:10 AM - 12:40 PM",
         "room": "125",
         "faculty": "SHH",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -777,7 +795,7 @@
         "time": "11:10 AM - 12:40 PM",
         "room": "204",
         "faculty": "BAT",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -788,7 +806,7 @@
         "time": "11:10 AM - 12:40 PM",
         "room": "301",
         "faculty": "FRK",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -799,7 +817,7 @@
         "time": "11:10 AM - 12:40 PM",
         "room": "304",
         "faculty": "MTU",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -810,7 +828,7 @@
         "time": "11:10 AM - 12:40 PM",
         "room": "310",
         "faculty": "MVN",
-        "drpartment": "MBA",
+        "drpartment": "Business",
         "peogram": "65"
       },
       {
@@ -821,7 +839,7 @@
         "time": "11:10 AM - 12:40 PM",
         "room": "313",
         "faculty": "SHS",
-        "drpartment": "MBA",
+        "drpartment": "Business",
         "peogram": "65"
       },
       {
@@ -832,7 +850,7 @@
         "time": "11:10 AM - 12:40 PM",
         "room": "319",
         "faculty": "ADR",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -843,7 +861,7 @@
         "time": "11:10 AM - 12:40 PM",
         "room": "320",
         "faculty": "ADZ",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -854,7 +872,7 @@
         "time": "11:10 AM - 12:40 PM",
         "room": "324",
         "faculty": "Mme",
-        "drpartment": "MBA",
+        "drpartment": "Business",
         "peogram": "65"
       },
       {
@@ -865,7 +883,7 @@
         "time": "11:10 AM - 12:40 PM",
         "room": "401",
         "faculty": "ADK",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -876,7 +894,7 @@
         "time": "11:10 AM - 12:40 PM",
         "room": "410",
         "faculty": "RAF",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -887,7 +905,7 @@
         "time": "11:10 AM - 12:40 PM",
         "room": "413",
         "faculty": "KIZ",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -898,7 +916,7 @@
         "time": "11:10 AM - 12:40 PM",
         "room": "420",
         "faculty": "RNC",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "44"
       },
       {
@@ -909,7 +927,7 @@
         "time": "11:10 AM - 12:40 PM",
         "room": "424",
         "faculty": "IIZ",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -920,7 +938,7 @@
         "time": "11:10 AM - 12:40 PM",
         "room": "501",
         "faculty": "AMT",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -931,7 +949,7 @@
         "time": "11:10 AM - 12:40 PM",
         "room": "502",
         "faculty": "ASS",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "44"
       },
       {
@@ -942,7 +960,7 @@
         "time": "11:10 AM - 12:40 PM",
         "room": "510",
         "faculty": "IRA",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "37"
       },
       {
@@ -953,7 +971,7 @@
         "time": "11:10 AM - 12:40 PM",
         "room": "513",
         "faculty": "KLC",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "44"
       },
       {
@@ -964,7 +982,7 @@
         "time": "11:10 AM - 12:40 PM",
         "room": "519",
         "faculty": "ALI",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -975,7 +993,7 @@
         "time": "11:10 AM - 12:40 PM",
         "room": "520",
         "faculty": "AHB",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "44"
       },
       {
@@ -986,7 +1004,7 @@
         "time": "11:10 AM - 12:40 PM",
         "room": "601",
         "faculty": "RAN",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -997,7 +1015,7 @@
         "time": "11:10 AM - 12:40 PM",
         "room": "610",
         "faculty": "FTT",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1008,7 +1026,7 @@
         "time": "11:10 AM - 12:40 PM",
         "room": "613",
         "faculty": "ZAH",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1019,7 +1037,7 @@
         "time": "11:10 AM - 12:40 PM",
         "room": "615",
         "faculty": "AZM",
-        "drpartment": "ELT",
+        "drpartment": "English",
         "peogram": "52"
       },
       {
@@ -1030,7 +1048,7 @@
         "time": "02:15 PM - 03:45 PM",
         "room": "104",
         "faculty": "MAO",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1041,7 +1059,7 @@
         "time": "02:15 PM - 03:45 PM",
         "room": "105",
         "faculty": "TDS",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1052,7 +1070,7 @@
         "time": "02:15 PM - 03:45 PM",
         "room": "115",
         "faculty": "OLI",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1063,7 +1081,7 @@
         "time": "02:15 PM - 03:45 PM",
         "room": "125",
         "faculty": "SBY",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1074,7 +1092,7 @@
         "time": "02:15 PM - 03:45 PM",
         "room": "204",
         "faculty": "BMD",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1085,7 +1103,7 @@
         "time": "02:15 PM - 03:45 PM",
         "room": "301",
         "faculty": "MLH",
-        "drpartment": "MBA",
+        "drpartment": "Business",
         "peogram": "65"
       },
       {
@@ -1096,7 +1114,7 @@
         "time": "02:15 PM - 03:45 PM",
         "room": "304",
         "faculty": "ADZ",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1107,7 +1125,7 @@
         "time": "02:15 PM - 03:45 PM",
         "room": "310",
         "faculty": "SAJ",
-        "drpartment": "MBA",
+        "drpartment": "Business",
         "peogram": "65"
       },
       {
@@ -1118,7 +1136,7 @@
         "time": "02:15 PM - 03:45 PM",
         "room": "313",
         "faculty": "DZR",
-        "drpartment": "MBA",
+        "drpartment": "Business",
         "peogram": "65"
       },
       {
@@ -1129,7 +1147,7 @@
         "time": "02:15 PM - 03:45 PM",
         "room": "319",
         "faculty": "IPS",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1140,7 +1158,7 @@
         "time": "02:15 PM - 03:45 PM",
         "room": "320",
         "faculty": "TSR",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1151,7 +1169,7 @@
         "time": "02:15 PM - 03:45 PM",
         "room": "324",
         "faculty": "HZM",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1162,7 +1180,7 @@
         "time": "02:15 PM - 03:45 PM",
         "room": "401",
         "faculty": "EJS",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1173,7 +1191,7 @@
         "time": "02:15 PM - 03:45 PM",
         "room": "410",
         "faculty": "PPP",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "44"
       },
       {
@@ -1184,7 +1202,7 @@
         "time": "02:15 PM - 03:45 PM",
         "room": "413",
         "faculty": "ORN",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "44"
       },
       {
@@ -1195,7 +1213,7 @@
         "time": "02:15 PM - 03:45 PM",
         "room": "419",
         "faculty": "RAF",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1206,7 +1224,7 @@
         "time": "02:15 PM - 03:45 PM",
         "room": "420",
         "faculty": "SDP",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "44"
       },
       {
@@ -1217,7 +1235,7 @@
         "time": "02:15 PM - 03:45 PM",
         "room": "424",
         "faculty": "ADB",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1228,7 +1246,7 @@
         "time": "02:15 PM - 03:45 PM",
         "room": "501",
         "faculty": "AFS",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1239,7 +1257,7 @@
         "time": "02:15 PM - 03:45 PM",
         "room": "502",
         "faculty": "SFF",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "44"
       },
       {
@@ -1250,7 +1268,7 @@
         "time": "02:15 PM - 03:45 PM",
         "room": "510",
         "faculty": "UNH",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "44"
       },
       {
@@ -1261,7 +1279,7 @@
         "time": "02:15 PM - 03:45 PM",
         "room": "513",
         "faculty": "MJD",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "44"
       },
       {
@@ -1272,7 +1290,7 @@
         "time": "02:15 PM - 03:45 PM",
         "room": "519",
         "faculty": "ADK",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1283,7 +1301,7 @@
         "time": "02:15 PM - 03:45 PM",
         "room": "520",
         "faculty": "BSM",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "44"
       },
       {
@@ -1294,7 +1312,7 @@
         "time": "02:15 PM - 03:45 PM",
         "room": "524",
         "faculty": "KZI",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "44"
       },
       {
@@ -1305,7 +1323,7 @@
         "time": "02:15 PM - 03:45 PM",
         "room": "601",
         "faculty": "FRK",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1316,7 +1334,7 @@
         "time": "02:15 PM - 03:45 PM",
         "room": "610",
         "faculty": "ESH",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1327,7 +1345,7 @@
         "time": "02:15 PM - 03:45 PM",
         "room": "613",
         "faculty": "FEK",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1338,7 +1356,7 @@
         "time": "02:15 PM - 03:45 PM",
         "room": "615",
         "faculty": "AZM",
-        "drpartment": "ELT",
+        "drpartment": "English",
         "peogram": "52"
       },
       {
@@ -1349,7 +1367,7 @@
         "time": "03:50 PM - 05:20 PM",
         "room": "104",
         "faculty": "TMN",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1360,7 +1378,7 @@
         "time": "03:50 PM - 05:20 PM",
         "room": "105",
         "faculty": "EJS",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1371,7 +1389,7 @@
         "time": "03:50 PM - 05:20 PM",
         "room": "115",
         "faculty": "BMD",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1382,7 +1400,7 @@
         "time": "03:50 PM - 05:20 PM",
         "room": "125",
         "faculty": "SYT",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1393,7 +1411,7 @@
         "time": "03:50 PM - 05:20 PM",
         "room": "204",
         "faculty": "MAO",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1404,7 +1422,7 @@
         "time": "03:50 PM - 05:20 PM",
         "room": "301",
         "faculty": "OAS",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1415,7 +1433,7 @@
         "time": "03:50 PM - 05:20 PM",
         "room": "304",
         "faculty": "ADZ",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1426,7 +1444,7 @@
         "time": "03:50 PM - 05:20 PM",
         "room": "310",
         "faculty": "MLH",
-        "drpartment": "MBA",
+        "drpartment": "Business",
         "peogram": "65"
       },
       {
@@ -1437,7 +1455,7 @@
         "time": "03:50 PM - 05:20 PM",
         "room": "313",
         "faculty": "RIO",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1448,7 +1466,7 @@
         "time": "03:50 PM - 05:20 PM",
         "room": "320",
         "faculty": "RID",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "37"
       },
       {
@@ -1459,7 +1477,7 @@
         "time": "03:50 PM - 05:20 PM",
         "room": "324",
         "faculty": "MRS",
-        "drpartment": "MBA",
+        "drpartment": "Business",
         "peogram": "65"
       },
       {
@@ -1470,7 +1488,7 @@
         "time": "03:50 PM - 05:20 PM",
         "room": "401",
         "faculty": "SUT",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1481,7 +1499,7 @@
         "time": "03:50 PM - 05:20 PM",
         "room": "410",
         "faculty": "SFF",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "37"
       },
       {
@@ -1492,7 +1510,7 @@
         "time": "03:50 PM - 05:20 PM",
         "room": "413",
         "faculty": "KMD",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "44"
       },
       {
@@ -1503,7 +1521,7 @@
         "time": "03:50 PM - 05:20 PM",
         "room": "419",
         "faculty": "NIR",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1514,7 +1532,7 @@
         "time": "03:50 PM - 05:20 PM",
         "room": "420",
         "faculty": "TFR",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "44"
       },
       {
@@ -1525,7 +1543,7 @@
         "time": "03:50 PM - 05:20 PM",
         "room": "424",
         "faculty": "DZR",
-        "drpartment": "MBA",
+        "drpartment": "Business",
         "peogram": "65"
       },
       {
@@ -1536,7 +1554,7 @@
         "time": "03:50 PM - 05:20 PM",
         "room": "501",
         "faculty": "Zkn",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "44"
       },
       {
@@ -1547,7 +1565,7 @@
         "time": "03:50 PM - 05:20 PM",
         "room": "502",
         "faculty": "PPP",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "44"
       },
       {
@@ -1558,7 +1576,7 @@
         "time": "03:50 PM - 05:20 PM",
         "room": "510",
         "faculty": "UTS",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "44"
       },
       {
@@ -1569,7 +1587,7 @@
         "time": "03:50 PM - 05:20 PM",
         "room": "513",
         "faculty": "FEK",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "44"
       },
       {
@@ -1580,7 +1598,7 @@
         "time": "03:50 PM - 05:20 PM",
         "room": "519",
         "faculty": "MCN",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1591,7 +1609,7 @@
         "time": "03:50 PM - 05:20 PM",
         "room": "520",
         "faculty": "PAL",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "44"
       },
       {
@@ -1602,7 +1620,7 @@
         "time": "03:50 PM - 05:20 PM",
         "room": "524",
         "faculty": "ORN",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "44"
       },
       {
@@ -1613,7 +1631,7 @@
         "time": "03:50 PM - 05:20 PM",
         "room": "601",
         "faculty": "SBY",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1624,7 +1642,7 @@
         "time": "03:50 PM - 05:20 PM",
         "room": "610",
         "faculty": "MFB",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1635,7 +1653,7 @@
         "time": "03:50 PM - 05:20 PM",
         "room": "613",
         "faculty": "ADB",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1646,7 +1664,7 @@
         "time": "03:50 PM - 05:20 PM",
         "room": "615",
         "faculty": "AZM",
-        "drpartment": "ELT",
+        "drpartment": "English",
         "peogram": "52"
       },
       {
@@ -1657,7 +1675,7 @@
         "time": "05:25 PM - 06:55 PM",
         "room": "105",
         "faculty": "EJS",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1668,7 +1686,7 @@
         "time": "05:25 PM - 06:55 PM",
         "room": "115",
         "faculty": "OAS",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1679,7 +1697,7 @@
         "time": "05:25 PM - 06:55 PM",
         "room": "125",
         "faculty": "ABZ",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1690,7 +1708,7 @@
         "time": "05:25 PM - 06:55 PM",
         "room": "204",
         "faculty": "TMN",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1701,7 +1719,7 @@
         "time": "05:25 PM - 06:55 PM",
         "room": "301",
         "faculty": "SYT",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1712,7 +1730,7 @@
         "time": "05:25 PM - 06:55 PM",
         "room": "304",
         "faculty": "MCN",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1723,7 +1741,7 @@
         "time": "05:25 PM - 06:55 PM",
         "room": "310",
         "faculty": "AAR",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1734,7 +1752,7 @@
         "time": "05:25 PM - 06:55 PM",
         "room": "313",
         "faculty": "DOM",
-        "drpartment": "MBA",
+        "drpartment": "Business",
         "peogram": "65"
       },
       {
@@ -1745,7 +1763,7 @@
         "time": "05:25 PM - 06:55 PM",
         "room": "319",
         "faculty": "DCP",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1756,7 +1774,7 @@
         "time": "05:25 PM - 06:55 PM",
         "room": "320",
         "faculty": "PKA",
-        "drpartment": "MBA",
+        "drpartment": "Business",
         "peogram": "65"
       },
       {
@@ -1767,7 +1785,7 @@
         "time": "05:25 PM - 06:55 PM",
         "room": "324",
         "faculty": "ADU",
-        "drpartment": "MBA",
+        "drpartment": "Business",
         "peogram": "65"
       },
       {
@@ -1778,7 +1796,7 @@
         "time": "05:25 PM - 06:55 PM",
         "room": "401",
         "faculty": "TKR",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1789,7 +1807,7 @@
         "time": "05:25 PM - 06:55 PM",
         "room": "410",
         "faculty": "TFR",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "44"
       },
       {
@@ -1800,7 +1818,7 @@
         "time": "05:25 PM - 06:55 PM",
         "room": "413",
         "faculty": "UNH",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "44"
       },
       {
@@ -1811,7 +1829,7 @@
         "time": "05:25 PM - 06:55 PM",
         "room": "419",
         "faculty": "NRD",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1822,7 +1840,7 @@
         "time": "05:25 PM - 06:55 PM",
         "room": "420",
         "faculty": "PPP",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "44"
       },
       {
@@ -1833,7 +1851,7 @@
         "time": "05:25 PM - 06:55 PM",
         "room": "502",
         "faculty": "UTS",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "44"
       },
       {
@@ -1844,7 +1862,7 @@
         "time": "05:25 PM - 06:55 PM",
         "room": "510",
         "faculty": "BSM",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "44"
       },
       {
@@ -1855,7 +1873,7 @@
         "time": "05:25 PM - 06:55 PM",
         "room": "513",
         "faculty": "KMD",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "44"
       },
       {
@@ -1866,7 +1884,7 @@
         "time": "05:25 PM - 06:55 PM",
         "room": "519",
         "faculty": "JOY",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1877,7 +1895,7 @@
         "time": "05:25 PM - 06:55 PM",
         "room": "520",
         "faculty": "PAL",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "44"
       },
       {
@@ -1888,7 +1906,7 @@
         "time": "05:25 PM - 06:55 PM",
         "room": "524",
         "faculty": "SjH",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "44"
       },
       {
@@ -1899,7 +1917,7 @@
         "time": "05:25 PM - 06:55 PM",
         "room": "601",
         "faculty": "SUT",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1910,7 +1928,7 @@
         "time": "05:25 PM - 06:55 PM",
         "room": "613",
         "faculty": "SYJ",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1921,7 +1939,7 @@
         "time": "07:00 PM - 08:30 PM",
         "room": "105",
         "faculty": "JDI",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1932,7 +1950,7 @@
         "time": "07:00 PM - 08:30 PM",
         "room": "115",
         "faculty": "SYJ",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1943,7 +1961,7 @@
         "time": "07:00 PM - 08:30 PM",
         "room": "125",
         "faculty": "JIN",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1954,7 +1972,7 @@
         "time": "07:00 PM - 08:30 PM",
         "room": "204",
         "faculty": "TTA",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1965,7 +1983,7 @@
         "time": "07:00 PM - 08:30 PM",
         "room": "301",
         "faculty": "SHF",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1976,7 +1994,7 @@
         "time": "07:00 PM - 08:30 PM",
         "room": "304",
         "faculty": "SAY",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -1987,7 +2005,7 @@
         "time": "07:00 PM - 08:30 PM",
         "room": "310",
         "faculty": "ADU",
-        "drpartment": "MBA",
+        "drpartment": "Business",
         "peogram": "65"
       },
       {
@@ -1998,7 +2016,7 @@
         "time": "07:00 PM - 08:30 PM",
         "room": "313",
         "faculty": "BMS",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -2009,7 +2027,7 @@
         "time": "07:00 PM - 08:30 PM",
         "room": "319",
         "faculty": "MTA",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -2020,7 +2038,7 @@
         "time": "07:00 PM - 08:30 PM",
         "room": "324",
         "faculty": "SZR",
-        "drpartment": "MBA",
+        "drpartment": "Business",
         "peogram": "65"
       },
       {
@@ -2031,7 +2049,7 @@
         "time": "07:00 PM - 08:30 PM",
         "room": "401",
         "faculty": "ABZ",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -2042,7 +2060,7 @@
         "time": "07:00 PM - 08:30 PM",
         "room": "419",
         "faculty": "TFA",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -2053,7 +2071,7 @@
         "time": "07:00 PM - 08:30 PM",
         "room": "424",
         "faculty": "DMN",
-        "drpartment": "MBA",
+        "drpartment": "Business",
         "peogram": "65"
       },
       {
@@ -2064,7 +2082,7 @@
         "time": "07:00 PM - 08:30 PM",
         "room": "510",
         "faculty": "KUH",
-        "drpartment": "MBA",
+        "drpartment": "Business",
         "peogram": "65"
       },
       {
@@ -2075,7 +2093,7 @@
         "time": "07:00 PM - 08:30 PM",
         "room": "519",
         "faculty": "HEN",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -2086,7 +2104,7 @@
         "time": "07:00 PM - 08:30 PM",
         "room": "601",
         "faculty": "TKR",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -2097,7 +2115,7 @@
         "time": "07:00 PM - 08:30 PM",
         "room": "610",
         "faculty": "HAD",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -2108,7 +2126,7 @@
         "time": "07:00 PM - 08:30 PM",
         "room": "613",
         "faculty": "AAR",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -2119,7 +2137,7 @@
         "time": "08:35 PM - 10:05 PM",
         "room": "104",
         "faculty": "SAY",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -2130,7 +2148,7 @@
         "time": "08:35 PM - 10:05 PM",
         "room": "105",
         "faculty": "TFA",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -2141,7 +2159,7 @@
         "time": "08:35 PM - 10:05 PM",
         "room": "115",
         "faculty": "SHF",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -2152,7 +2170,7 @@
         "time": "08:35 PM - 10:05 PM",
         "room": "204",
         "faculty": "HAD",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -2163,7 +2181,7 @@
         "time": "08:35 PM - 10:05 PM",
         "room": "301",
         "faculty": "SYJ",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -2174,7 +2192,7 @@
         "time": "08:35 PM - 10:05 PM",
         "room": "304",
         "faculty": "HEN",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -2185,7 +2203,7 @@
         "time": "08:35 PM - 10:05 PM",
         "room": "310",
         "faculty": "DCP",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -2196,7 +2214,7 @@
         "time": "08:35 PM - 10:05 PM",
         "room": "313",
         "faculty": "JOY",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -2207,7 +2225,7 @@
         "time": "08:35 PM - 10:05 PM",
         "room": "319",
         "faculty": "BMS",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -2218,7 +2236,7 @@
         "time": "08:35 PM - 10:05 PM",
         "room": "419",
         "faculty": "MTA",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -2229,7 +2247,7 @@
         "time": "08:35 PM - 10:05 PM",
         "room": "519",
         "faculty": "JIN",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "47"
       },
       {
@@ -2240,7 +2258,7 @@
         "time": "11:30 AM - 01:30 PM",
         "room": "410",
         "faculty": "AZM",
-        "drpartment": "ELT",
+        "drpartment": "English",
         "peogram": "52"
       },
       {
@@ -2251,7 +2269,7 @@
         "time": "11:30 AM - 01:30 PM",
         "room": "413",
         "faculty": "SAR",
-        "drpartment": "ELT",
+        "drpartment": "English",
         "peogram": "52"
       },
       {
@@ -2262,7 +2280,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "601",
         "faculty": "OLI",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -2273,7 +2291,7 @@
         "time": "02:00 PM - 04:00 PM",
         "room": "410",
         "faculty": "AZM",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -2284,7 +2302,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "125",
         "faculty": "OLI",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -2295,7 +2313,7 @@
         "time": "04:05 PM - 05:20 PM",
         "room": "125",
         "faculty": "OLI",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -2306,7 +2324,7 @@
         "time": "04:05 PM - 06:30 PM",
         "room": "601",
         "faculty": "TTA",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -2317,7 +2335,7 @@
         "time": "06:30 PM - 09:10 PM",
         "room": "502",
         "faculty": "IQA",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "26"
       },
       {
@@ -2328,7 +2346,7 @@
         "time": "06:30 PM - 07:45 PM",
         "room": "601",
         "faculty": "TTA",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -2339,7 +2357,7 @@
         "time": "07:55 PM - 09:10 PM",
         "room": "601",
         "faculty": "TTA",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -2350,7 +2368,7 @@
         "time": "08:30 AM - 09:45 AM",
         "room": "204",
         "faculty": "LMH",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -2361,7 +2379,7 @@
         "time": "09:00 AM - 10:15 AM",
         "room": "304",
         "faculty": "DZR",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -2372,7 +2390,7 @@
         "time": "09:00 AM - 10:15 AM",
         "room": "310",
         "faculty": "DOM",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -2383,7 +2401,7 @@
         "time": "09:00 AM - 10:15 AM",
         "room": "324",
         "faculty": "NBA",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -2394,7 +2412,7 @@
         "time": "09:00 AM - 10:15 AM",
         "room": "401",
         "faculty": "TVS",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -2405,7 +2423,7 @@
         "time": "09:00 AM - 10:15 AM",
         "room": "420",
         "faculty": "PRN",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -2416,7 +2434,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "204",
         "faculty": "SHK",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -2427,7 +2445,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "301",
         "faculty": "MRS",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -2438,7 +2456,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "304",
         "faculty": "HIP",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -2449,7 +2467,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "310",
         "faculty": "ADU",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -2460,7 +2478,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "313",
         "faculty": "SAA",
-        "drpartment": "ECO",
+        "drpartment": "Business",
         "peogram": "19"
       },
       {
@@ -2471,7 +2489,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "319",
         "faculty": "WAT",
-        "drpartment": "ECO",
+        "drpartment": "Business",
         "peogram": "19"
       },
       {
@@ -2482,7 +2500,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "324",
         "faculty": "TVS",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -2493,7 +2511,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "410",
         "faculty": "KLC",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -2504,7 +2522,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "413",
         "faculty": "NSN",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -2515,7 +2533,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "419",
         "faculty": "SOB",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -2526,7 +2544,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "519",
         "faculty": "OVI",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -2537,7 +2555,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "601",
         "faculty": "TNI",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -2548,7 +2566,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "502",
         "faculty": "PRN",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -2559,7 +2577,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "502",
         "faculty": "PRN",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -2570,7 +2588,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "204",
         "faculty": "HBH",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -2581,7 +2599,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "301",
         "faculty": "YRH",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -2592,7 +2610,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "304",
         "faculty": "NAR",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -2603,7 +2621,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "310",
         "faculty": "ADU",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -2614,7 +2632,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "313",
         "faculty": "PKA",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -2625,7 +2643,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "319",
         "faculty": "FQI",
-        "drpartment": "ECO",
+        "drpartment": "Business",
         "peogram": "19"
       },
       {
@@ -2636,7 +2654,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "320",
         "faculty": "SAA",
-        "drpartment": "ECO",
+        "drpartment": "Business",
         "peogram": "19"
       },
       {
@@ -2647,7 +2665,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "324",
         "faculty": "SHK",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -2658,7 +2676,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "401",
         "faculty": "UNH",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -2669,7 +2687,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "410",
         "faculty": "KEC",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -2680,7 +2698,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "413",
         "faculty": "LMH",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -2691,7 +2709,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "419",
         "faculty": "NSN",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -2702,7 +2720,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "424",
         "faculty": "NBA",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -2713,7 +2731,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "520",
         "faculty": "TVS",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -2724,7 +2742,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "601",
         "faculty": "TNI",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -2735,7 +2753,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "610",
         "faculty": "SOB",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -2746,7 +2764,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "613",
         "faculty": "SLL",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -2757,7 +2775,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "204",
         "faculty": "SHK",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -2768,7 +2786,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "301",
         "faculty": "MVN",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -2779,7 +2797,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "304",
         "faculty": "SAA",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -2790,7 +2808,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "310",
         "faculty": "YRH",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -2801,7 +2819,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "313",
         "faculty": "MRS",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -2812,7 +2830,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "319",
         "faculty": "LBN",
-        "drpartment": "ECO",
+        "drpartment": "Business",
         "peogram": "19"
       },
       {
@@ -2823,7 +2841,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "320",
         "faculty": "PKA",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -2834,7 +2852,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "401",
         "faculty": "KLC",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -2845,7 +2863,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "410",
         "faculty": "KMN",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -2856,7 +2874,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "413",
         "faculty": "PRN",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -2867,7 +2885,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "424",
         "faculty": "RNC",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -2878,7 +2896,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "519",
         "faculty": "HZM",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -2889,7 +2907,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "520",
         "faculty": "HBH",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -2900,7 +2918,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "524",
         "faculty": "MTU",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -2911,7 +2929,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "610",
         "faculty": "MFB",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -2922,7 +2940,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "204",
         "faculty": "TNI",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -2933,7 +2951,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "301",
         "faculty": "PKA",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -2944,7 +2962,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "304",
         "faculty": "MVN",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -2955,7 +2973,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "310",
         "faculty": "MLH",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -2966,7 +2984,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "401",
         "faculty": "RNC",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -2977,7 +2995,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "410",
         "faculty": "SUN",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -2988,7 +3006,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "413",
         "faculty": "ZSS",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -2999,7 +3017,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "419",
         "faculty": "SDP",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "40"
       },
       {
@@ -3010,7 +3028,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "420",
         "faculty": "IAM",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -3021,7 +3039,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "424",
         "faculty": "KLC",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -3032,7 +3050,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "501",
         "faculty": "IRA",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -3043,7 +3061,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "610",
         "faculty": "MFB",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -3054,7 +3072,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "613",
         "faculty": "SLL",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -3065,7 +3083,7 @@
         "time": "04:05 PM - 05:20 PM",
         "room": "304",
         "faculty": "SHS",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -3076,7 +3094,7 @@
         "time": "04:05 PM - 05:20 PM",
         "room": "310",
         "faculty": "MLH",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -3087,7 +3105,7 @@
         "time": "04:05 PM - 05:20 PM",
         "room": "319",
         "faculty": "MHH",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -3098,7 +3116,7 @@
         "time": "04:05 PM - 05:20 PM",
         "room": "401",
         "faculty": "SjH",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -3109,7 +3127,7 @@
         "time": "04:05 PM - 05:20 PM",
         "room": "410",
         "faculty": "ZSS",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -3120,7 +3138,7 @@
         "time": "04:05 PM - 05:20 PM",
         "room": "424",
         "faculty": "IAM",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -3131,7 +3149,7 @@
         "time": "04:05 PM - 05:20 PM",
         "room": "519",
         "faculty": "HZM",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -3142,7 +3160,7 @@
         "time": "05:30 PM - 06:45 PM",
         "room": "424",
         "faculty": "HSK",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -3153,7 +3171,7 @@
         "time": "06:30 PM - 07:45 PM",
         "room": "510",
         "faculty": "TSR",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -3164,7 +3182,7 @@
         "time": "06:30 PM - 07:45 PM",
         "room": "513",
         "faculty": "RIO",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -3175,7 +3193,7 @@
         "time": "06:30 PM - 07:45 PM",
         "room": "519",
         "faculty": "MFB",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -3186,7 +3204,7 @@
         "time": "06:30 PM - 07:45 PM",
         "room": "601",
         "faculty": "TTA",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -3197,7 +3215,7 @@
         "time": "06:30 PM - 07:45 PM",
         "room": "610",
         "faculty": "HZM",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -3208,7 +3226,7 @@
         "time": "06:30 PM - 07:45 PM",
         "room": "613",
         "faculty": "MJD",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -3219,7 +3237,7 @@
         "time": "06:30 PM - 07:45 PM",
         "room": "313",
         "faculty": "SHS",
-        "drpartment": "MBA",
+        "drpartment": "Business",
         "peogram": "65"
       },
       {
@@ -3230,7 +3248,7 @@
         "time": "06:30 PM - 07:45 PM",
         "room": "304",
         "faculty": "MHH",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "26"
       },
       {
@@ -3241,7 +3259,7 @@
         "time": "06:30 PM - 07:45 PM",
         "room": "310",
         "faculty": "WAT",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "26"
       },
       {
@@ -3252,7 +3270,7 @@
         "time": "07:55 PM - 09:10 PM",
         "room": "304",
         "faculty": "MHH",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "26"
       },
       {
@@ -3263,7 +3281,7 @@
         "time": "07:55 PM - 09:10 PM",
         "room": "310",
         "faculty": "WAT",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "26"
       },
       {
@@ -3274,7 +3292,7 @@
         "time": "07:55 PM - 09:10 PM",
         "room": "510",
         "faculty": "TSR",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -3285,7 +3303,7 @@
         "time": "07:55 PM - 09:10 PM",
         "room": "513",
         "faculty": "RIO",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -3296,7 +3314,7 @@
         "time": "07:55 PM - 09:10 PM",
         "room": "519",
         "faculty": "MFB",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -3307,7 +3325,7 @@
         "time": "07:55 PM - 09:10 PM",
         "room": "601",
         "faculty": "TTA",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -3318,7 +3336,7 @@
         "time": "07:55 PM - 09:10 PM",
         "room": "610",
         "faculty": "HZM",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -3329,7 +3347,7 @@
         "time": "07:55 PM - 09:10 PM",
         "room": "613",
         "faculty": "MJD",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -3340,7 +3358,7 @@
         "time": "09:00 AM - 10:15 AM",
         "room": "304",
         "faculty": "LBN",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -3351,7 +3369,7 @@
         "time": "09:00 AM - 10:15 AM",
         "room": "313",
         "faculty": "ADU",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -3362,7 +3380,7 @@
         "time": "09:00 AM - 10:15 AM",
         "room": "320",
         "faculty": "AHB",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "40"
       },
       {
@@ -3373,7 +3391,7 @@
         "time": "09:00 AM - 10:15 AM",
         "room": "324",
         "faculty": "NBA",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -3384,7 +3402,7 @@
         "time": "09:00 AM - 10:15 AM",
         "room": "410",
         "faculty": "MJD",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -3395,7 +3413,7 @@
         "time": "09:00 AM - 10:15 AM",
         "room": "413",
         "faculty": "SUN",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -3406,7 +3424,7 @@
         "time": "09:00 AM - 10:15 AM",
         "room": "513",
         "faculty": "KEC",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -3417,7 +3435,7 @@
         "time": "09:00 AM - 10:15 AM",
         "room": "601",
         "faculty": "SAR",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -3428,7 +3446,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "204",
         "faculty": "TVS",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -3439,7 +3457,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "301",
         "faculty": "KEC",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -3450,7 +3468,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "304",
         "faculty": "MVN",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -3461,7 +3479,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "313",
         "faculty": "MRS",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -3472,7 +3490,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "324",
         "faculty": "SAR",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -3483,7 +3501,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "401",
         "faculty": "FTS",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "40"
       },
       {
@@ -3494,7 +3512,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "410",
         "faculty": "SUN",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -3505,7 +3523,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "413",
         "faculty": "AVS",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -3516,7 +3534,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "420",
         "faculty": "JAL",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -3527,7 +3545,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "501",
         "faculty": "DZR",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -3538,7 +3556,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "502",
         "faculty": "NBA",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -3549,7 +3567,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "510",
         "faculty": "MOS",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -3560,7 +3578,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "513",
         "faculty": "AHB",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "40"
       },
       {
@@ -3571,7 +3589,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "601",
         "faculty": "TNI",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -3582,7 +3600,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "610",
         "faculty": "SHK",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -3593,7 +3611,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "613",
         "faculty": "FRK",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -3604,7 +3622,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "104",
         "faculty": "OLI",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -3615,7 +3633,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "105",
         "faculty": "NSN",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -3626,7 +3644,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "204",
         "faculty": "HBH",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -3637,7 +3655,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "301",
         "faculty": "ADU",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -3648,7 +3666,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "310",
         "faculty": "NAR",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -3659,7 +3677,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "313",
         "faculty": "FQI",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -3670,7 +3688,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "319",
         "faculty": "LBN",
-        "drpartment": "ECO",
+        "drpartment": "Business",
         "peogram": "19"
       },
       {
@@ -3681,7 +3699,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "320",
         "faculty": "TNI",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -3692,7 +3710,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "324",
         "faculty": "SHK",
-        "drpartment": "ECO",
+        "drpartment": "Business",
         "peogram": "19"
       },
       {
@@ -3703,7 +3721,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "410",
         "faculty": "SUN",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -3714,7 +3732,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "413",
         "faculty": "LMH",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -3725,7 +3743,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "419",
         "faculty": "AVS",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -3736,7 +3754,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "420",
         "faculty": "SDP",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "40"
       },
       {
@@ -3747,7 +3765,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "424",
         "faculty": "PRN",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -3758,7 +3776,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "502",
         "faculty": "NBA",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -3769,7 +3787,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "513",
         "faculty": "KZI",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "40"
       },
       {
@@ -3780,7 +3798,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "520",
         "faculty": "Zkn",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "40"
       },
       {
@@ -3791,7 +3809,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "524",
         "faculty": "ZSS",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -3802,7 +3820,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "601",
         "faculty": "TVS",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -3813,7 +3831,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "610",
         "faculty": "HIP",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -3824,7 +3842,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "613",
         "faculty": "MOS",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -3835,7 +3853,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "104",
         "faculty": "OLI",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -3846,7 +3864,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "105",
         "faculty": "NSN",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -3857,7 +3875,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "204",
         "faculty": "SAR",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -3868,7 +3886,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "301",
         "faculty": "ADU",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -3879,7 +3897,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "310",
         "faculty": "SHS",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -3890,7 +3908,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "319",
         "faculty": "LBN",
-        "drpartment": "ECO",
+        "drpartment": "Business",
         "peogram": "19"
       },
       {
@@ -3901,7 +3919,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "320",
         "faculty": "YRH",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -3912,7 +3930,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "324",
         "faculty": "SHK",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -3923,7 +3941,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "413",
         "faculty": "KEC",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -3934,7 +3952,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "420",
         "faculty": "AZM",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -3945,7 +3963,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "424",
         "faculty": "FTS",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -3956,7 +3974,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "501",
         "faculty": "DZR",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -3967,7 +3985,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "520",
         "faculty": "HBH",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -3978,7 +3996,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "601",
         "faculty": "TVS",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -3989,7 +4007,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "613",
         "faculty": "MOS",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -4000,7 +4018,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "105",
         "faculty": "NSN",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -4011,7 +4029,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "301",
         "faculty": "YRH",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -4022,7 +4040,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "304",
         "faculty": "TNI",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -4033,7 +4051,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "310",
         "faculty": "SjH",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -4044,7 +4062,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "313",
         "faculty": "MVN",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -4055,7 +4073,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "324",
         "faculty": "NBA",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -4066,7 +4084,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "410",
         "faculty": "PPP",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "40"
       },
       {
@@ -4077,7 +4095,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "413",
         "faculty": "Zkn",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "40"
       },
       {
@@ -4088,7 +4106,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "420",
         "faculty": "STQ",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -4099,7 +4117,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "424",
         "faculty": "ZSS",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -4110,7 +4128,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "501",
         "faculty": "DZR",
-        "drpartment": "ECO",
+        "drpartment": "Business",
         "peogram": "19"
       },
       {
@@ -4121,7 +4139,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "513",
         "faculty": "SUN",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -4132,7 +4150,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "519",
         "faculty": "IPS",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -4143,7 +4161,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "601",
         "faculty": "FRK",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -4154,7 +4172,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "613",
         "faculty": "SLL",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -4165,7 +4183,7 @@
         "time": "04:05 PM - 05:20 PM",
         "room": "105",
         "faculty": "NSN",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -4176,7 +4194,7 @@
         "time": "04:05 PM - 05:20 PM",
         "room": "301",
         "faculty": "DZR",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -4187,7 +4205,7 @@
         "time": "04:05 PM - 05:20 PM",
         "room": "304",
         "faculty": "SHS",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -4198,7 +4216,7 @@
         "time": "04:05 PM - 05:20 PM",
         "room": "310",
         "faculty": "NAR",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -4209,7 +4227,7 @@
         "time": "04:05 PM - 05:20 PM",
         "room": "410",
         "faculty": "PPP",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "40"
       },
       {
@@ -4220,7 +4238,7 @@
         "time": "04:05 PM - 05:20 PM",
         "room": "419",
         "faculty": "IRA",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -4231,7 +4249,7 @@
         "time": "04:05 PM - 05:20 PM",
         "room": "424",
         "faculty": "SDP",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "40"
       },
       {
@@ -4242,7 +4260,7 @@
         "time": "04:05 PM - 05:20 PM",
         "room": "502",
         "faculty": "KZI",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "40"
       },
       {
@@ -4253,7 +4271,7 @@
         "time": "04:05 PM - 05:20 PM",
         "room": "601",
         "faculty": "JDI",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -4264,7 +4282,7 @@
         "time": "04:05 PM - 05:20 PM",
         "room": "613",
         "faculty": "OVI",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -4275,7 +4293,7 @@
         "time": "05:30 PM - 06:45 PM",
         "room": "410",
         "faculty": "IAM",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -4286,7 +4304,7 @@
         "time": "06:30 PM - 07:45 PM",
         "room": "125",
         "faculty": "IPS",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -4297,7 +4315,7 @@
         "time": "06:30 PM - 07:45 PM",
         "room": "310",
         "faculty": "YRH",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "26"
       },
       {
@@ -4308,7 +4326,7 @@
         "time": "06:30 PM - 07:45 PM",
         "room": "502",
         "faculty": "SAA",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "26"
       },
       {
@@ -4319,7 +4337,7 @@
         "time": "06:30 PM - 07:45 PM",
         "room": "513",
         "faculty": "FRK",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -4330,7 +4348,7 @@
         "time": "06:30 PM - 07:45 PM",
         "room": "519",
         "faculty": "OVI",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -4341,7 +4359,7 @@
         "time": "06:30 PM - 07:45 PM",
         "room": "601",
         "faculty": "OLI",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -4352,7 +4370,7 @@
         "time": "06:30 PM - 07:45 PM",
         "room": "610",
         "faculty": "RIO",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -4363,7 +4381,7 @@
         "time": "06:30 PM - 07:45 PM",
         "room": "613",
         "faculty": "SLL",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -4374,7 +4392,7 @@
         "time": "06:30 PM - 08:30 PM",
         "room": "304",
         "faculty": "FQI",
-        "drpartment": "MBA",
+        "drpartment": "Business",
         "peogram": "65"
       },
       {
@@ -4385,7 +4403,7 @@
         "time": "07:55 PM - 09:10 PM",
         "room": "125",
         "faculty": "IPS",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -4396,7 +4414,7 @@
         "time": "07:55 PM - 09:10 PM",
         "room": "310",
         "faculty": "YRH",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "26"
       },
       {
@@ -4407,7 +4425,7 @@
         "time": "07:55 PM - 09:10 PM",
         "room": "502",
         "faculty": "SAA",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "26"
       },
       {
@@ -4418,7 +4436,7 @@
         "time": "07:55 PM - 09:10 PM",
         "room": "513",
         "faculty": "FRK",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -4429,7 +4447,7 @@
         "time": "07:55 PM - 09:10 PM",
         "room": "519",
         "faculty": "OVI",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -4440,7 +4458,7 @@
         "time": "07:55 PM - 09:10 PM",
         "room": "601",
         "faculty": "OLI",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -4451,7 +4469,7 @@
         "time": "07:55 PM - 09:10 PM",
         "room": "610",
         "faculty": "RIO",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -4462,7 +4480,7 @@
         "time": "07:55 PM - 09:10 PM",
         "room": "613",
         "faculty": "SLL",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -4473,7 +4491,7 @@
         "time": "08:30 AM - 09:45 AM",
         "room": "204",
         "faculty": "LMH",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -4484,7 +4502,7 @@
         "time": "09:00 AM - 10:15 AM",
         "room": "304",
         "faculty": "DZR",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -4495,7 +4513,7 @@
         "time": "09:00 AM - 10:15 AM",
         "room": "310",
         "faculty": "DOM",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -4506,7 +4524,7 @@
         "time": "09:00 AM - 10:15 AM",
         "room": "324",
         "faculty": "NBA",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -4517,7 +4535,7 @@
         "time": "09:00 AM - 10:15 AM",
         "room": "401",
         "faculty": "TVS",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -4528,7 +4546,7 @@
         "time": "09:00 AM - 10:15 AM",
         "room": "420",
         "faculty": "PRN",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -4539,7 +4557,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "204",
         "faculty": "SHK",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -4550,7 +4568,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "301",
         "faculty": "MRS",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -4561,7 +4579,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "304",
         "faculty": "HIP",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -4572,7 +4590,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "310",
         "faculty": "ADU",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -4583,7 +4601,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "313",
         "faculty": "SAA",
-        "drpartment": "ECO",
+        "drpartment": "Business",
         "peogram": "19"
       },
       {
@@ -4594,7 +4612,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "319",
         "faculty": "WAT",
-        "drpartment": "ECO",
+        "drpartment": "Business",
         "peogram": "19"
       },
       {
@@ -4605,7 +4623,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "324",
         "faculty": "TVS",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -4616,7 +4634,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "410",
         "faculty": "KLC",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -4627,7 +4645,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "413",
         "faculty": "NSN",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -4638,7 +4656,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "519",
         "faculty": "MFB",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -4649,7 +4667,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "601",
         "faculty": "TNI",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -4660,7 +4678,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "613",
         "faculty": "DOM",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -4671,7 +4689,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "204",
         "faculty": "HBH",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -4682,7 +4700,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "301",
         "faculty": "YRH",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -4693,7 +4711,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "304",
         "faculty": "NAR",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -4704,7 +4722,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "310",
         "faculty": "ADU",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -4715,7 +4733,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "313",
         "faculty": "PKA",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -4726,7 +4744,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "319",
         "faculty": "FQI",
-        "drpartment": "ECO",
+        "drpartment": "Business",
         "peogram": "19"
       },
       {
@@ -4737,7 +4755,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "320",
         "faculty": "SAA",
-        "drpartment": "ECO",
+        "drpartment": "Business",
         "peogram": "19"
       },
       {
@@ -4748,7 +4766,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "324",
         "faculty": "SHK",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -4759,7 +4777,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "401",
         "faculty": "UNH",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -4770,7 +4788,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "413",
         "faculty": "LMH",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -4781,7 +4799,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "419",
         "faculty": "NSN",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -4792,7 +4810,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "424",
         "faculty": "NBA",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -4803,7 +4821,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "519",
         "faculty": "NRD",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -4814,7 +4832,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "520",
         "faculty": "TVS",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -4825,7 +4843,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "601",
         "faculty": "TNI",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -4836,7 +4854,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "613",
         "faculty": "SLL",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -4847,7 +4865,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "204",
         "faculty": "SHK",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -4858,7 +4876,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "301",
         "faculty": "MVN",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -4869,7 +4887,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "304",
         "faculty": "SAA",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -4880,7 +4898,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "310",
         "faculty": "YRH",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -4891,7 +4909,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "313",
         "faculty": "MRS",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -4902,7 +4920,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "319",
         "faculty": "LBN",
-        "drpartment": "ECO",
+        "drpartment": "Business",
         "peogram": "19"
       },
       {
@@ -4913,7 +4931,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "320",
         "faculty": "PKA",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -4924,7 +4942,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "401",
         "faculty": "KLC",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -4935,7 +4953,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "410",
         "faculty": "KMN",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -4946,7 +4964,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "413",
         "faculty": "PRN",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -4957,7 +4975,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "419",
         "faculty": "ZSS",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -4968,7 +4986,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "424",
         "faculty": "RNC",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -4979,7 +4997,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "502",
         "faculty": "KZI",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "40"
       },
       {
@@ -4990,7 +5008,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "519",
         "faculty": "NRD",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -5001,7 +5019,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "520",
         "faculty": "HBH",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -5012,7 +5030,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "524",
         "faculty": "MTU",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -5023,7 +5041,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "601",
         "faculty": "ESH",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -5034,7 +5052,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "610",
         "faculty": "OLI",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -5045,7 +5063,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "115",
         "faculty": "MOS",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -5056,7 +5074,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "204",
         "faculty": "TNI",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -5067,7 +5085,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "301",
         "faculty": "PKA",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -5078,7 +5096,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "304",
         "faculty": "MVN",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -5089,7 +5107,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "310",
         "faculty": "MLH",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -5100,7 +5118,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "401",
         "faculty": "RNC",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -5111,7 +5129,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "410",
         "faculty": "SUN",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -5122,7 +5140,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "413",
         "faculty": "ZSS",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -5133,7 +5151,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "419",
         "faculty": "SDP",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "40"
       },
       {
@@ -5144,7 +5162,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "420",
         "faculty": "IAM",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -5155,7 +5173,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "424",
         "faculty": "KLC",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -5166,7 +5184,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "501",
         "faculty": "IRA",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -5177,7 +5195,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "502",
         "faculty": "KZI",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "40"
       },
       {
@@ -5188,7 +5206,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "519",
         "faculty": "TSR",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -5199,7 +5217,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "613",
         "faculty": "SLL",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -5210,7 +5228,7 @@
         "time": "04:05 PM - 05:20 PM",
         "room": "115",
         "faculty": "MOS",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -5221,7 +5239,7 @@
         "time": "04:05 PM - 05:20 PM",
         "room": "304",
         "faculty": "SHS",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -5232,7 +5250,7 @@
         "time": "04:05 PM - 05:20 PM",
         "room": "310",
         "faculty": "MLH",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -5243,7 +5261,7 @@
         "time": "04:05 PM - 05:20 PM",
         "room": "319",
         "faculty": "MHH",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -5254,7 +5272,7 @@
         "time": "04:05 PM - 05:20 PM",
         "room": "401",
         "faculty": "SjH",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -5265,7 +5283,7 @@
         "time": "04:05 PM - 05:20 PM",
         "room": "410",
         "faculty": "ZSS",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -5276,7 +5294,7 @@
         "time": "04:05 PM - 05:20 PM",
         "room": "424",
         "faculty": "IAM",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -5287,7 +5305,7 @@
         "time": "04:05 PM - 05:20 PM",
         "room": "601",
         "faculty": "IIZ",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -5298,7 +5316,7 @@
         "time": "04:05 PM - 05:20 PM",
         "room": "610",
         "faculty": "JDI",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -5309,7 +5327,7 @@
         "time": "05:30 PM - 06:45 PM",
         "room": "424",
         "faculty": "HSK",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -5320,7 +5338,7 @@
         "time": "06:30 PM - 07:45 PM",
         "room": "115",
         "faculty": "ESH",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -5331,7 +5349,7 @@
         "time": "06:30 PM - 07:45 PM",
         "room": "125",
         "faculty": "OVI",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -5342,7 +5360,7 @@
         "time": "06:30 PM - 07:45 PM",
         "room": "304",
         "faculty": "MVI",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "26"
       },
       {
@@ -5353,7 +5371,7 @@
         "time": "06:30 PM - 07:45 PM",
         "room": "310",
         "faculty": "MVN",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "26"
       },
       {
@@ -5364,7 +5382,7 @@
         "time": "06:30 PM - 07:45 PM",
         "room": "513",
         "faculty": "MOS",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -5375,7 +5393,7 @@
         "time": "06:30 PM - 07:45 PM",
         "room": "601",
         "faculty": "JDI",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -5386,7 +5404,7 @@
         "time": "06:30 PM - 07:45 PM",
         "room": "613",
         "faculty": "SLL",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -5397,7 +5415,7 @@
         "time": "06:30 PM - 08:30 PM",
         "room": "313",
         "faculty": "SHS",
-        "drpartment": "MBA",
+        "drpartment": "Business",
         "peogram": "65"
       },
       {
@@ -5408,7 +5426,7 @@
         "time": "07:55 PM - 09:10 PM",
         "room": "115",
         "faculty": "ESH",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -5419,7 +5437,7 @@
         "time": "07:55 PM - 09:10 PM",
         "room": "125",
         "faculty": "OVI",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -5430,7 +5448,7 @@
         "time": "07:55 PM - 09:10 PM",
         "room": "304",
         "faculty": "MVI",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "26"
       },
       {
@@ -5441,7 +5459,7 @@
         "time": "07:55 PM - 09:10 PM",
         "room": "310",
         "faculty": "MVN",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "26"
       },
       {
@@ -5452,7 +5470,7 @@
         "time": "07:55 PM - 09:10 PM",
         "room": "513",
         "faculty": "MOS",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -5463,7 +5481,7 @@
         "time": "07:55 PM - 09:10 PM",
         "room": "601",
         "faculty": "JDI",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -5474,7 +5492,7 @@
         "time": "07:55 PM - 09:10 PM",
         "room": "613",
         "faculty": "SLL",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -5485,7 +5503,7 @@
         "time": "09:00 AM - 10:15 AM",
         "room": "304",
         "faculty": "LBN",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -5496,7 +5514,7 @@
         "time": "09:00 AM - 10:15 AM",
         "room": "313",
         "faculty": "ADU",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -5507,7 +5525,7 @@
         "time": "09:00 AM - 10:15 AM",
         "room": "320",
         "faculty": "AHB",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "40"
       },
       {
@@ -5518,7 +5536,7 @@
         "time": "09:00 AM - 10:15 AM",
         "room": "324",
         "faculty": "NBA",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -5529,7 +5547,7 @@
         "time": "09:00 AM - 10:15 AM",
         "room": "410",
         "faculty": "MJD",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -5540,7 +5558,7 @@
         "time": "09:00 AM - 10:15 AM",
         "room": "413",
         "faculty": "SUN",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -5551,7 +5569,7 @@
         "time": "09:00 AM - 10:15 AM",
         "room": "601",
         "faculty": "SAR",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -5562,7 +5580,7 @@
         "time": "09:00 AM - 10:15 AM",
         "room": "610",
         "faculty": "SOB",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -5573,7 +5591,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "204",
         "faculty": "TVS",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -5584,7 +5602,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "301",
         "faculty": "KEC",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -5595,7 +5613,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "304",
         "faculty": "MVN",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -5606,7 +5624,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "313",
         "faculty": "MRS",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -5617,7 +5635,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "324",
         "faculty": "SAR",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -5628,7 +5646,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "401",
         "faculty": "FTS",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "40"
       },
       {
@@ -5639,7 +5657,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "410",
         "faculty": "SUN",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -5650,7 +5668,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "413",
         "faculty": "AVS",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -5661,7 +5679,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "420",
         "faculty": "JAL",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -5672,7 +5690,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "501",
         "faculty": "DZR",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -5683,7 +5701,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "513",
         "faculty": "AHB",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "40"
       },
       {
@@ -5694,7 +5712,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "601",
         "faculty": "TNI",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -5705,7 +5723,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "610",
         "faculty": "SHK",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -5716,7 +5734,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "613",
         "faculty": "SOB",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -5727,7 +5745,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "204",
         "faculty": "HBH",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -5738,7 +5756,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "301",
         "faculty": "ADU",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -5749,7 +5767,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "310",
         "faculty": "NAR",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -5760,7 +5778,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "313",
         "faculty": "FQI",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -5771,7 +5789,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "319",
         "faculty": "LBN",
-        "drpartment": "ECO",
+        "drpartment": "Business",
         "peogram": "19"
       },
       {
@@ -5782,7 +5800,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "320",
         "faculty": "TNI",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -5793,7 +5811,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "324",
         "faculty": "SHK",
-        "drpartment": "ECO",
+        "drpartment": "Business",
         "peogram": "19"
       },
       {
@@ -5804,7 +5822,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "410",
         "faculty": "SUN",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -5815,7 +5833,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "413",
         "faculty": "LMH",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -5826,7 +5844,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "419",
         "faculty": "AVS",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -5837,7 +5855,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "420",
         "faculty": "SDP",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "40"
       },
       {
@@ -5848,7 +5866,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "424",
         "faculty": "PRN",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -5859,7 +5877,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "510",
         "faculty": "ESH",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -5870,7 +5888,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "513",
         "faculty": "KZI",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "40"
       },
       {
@@ -5881,7 +5899,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "519",
         "faculty": "IIZ",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -5892,7 +5910,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "520",
         "faculty": "Zkn",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "40"
       },
       {
@@ -5903,7 +5921,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "524",
         "faculty": "ZSS",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -5914,7 +5932,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "601",
         "faculty": "TVS",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -5925,7 +5943,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "610",
         "faculty": "HIP",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -5936,7 +5954,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "105",
         "faculty": "JDI",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -5947,7 +5965,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "204",
         "faculty": "SAR",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -5958,7 +5976,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "301",
         "faculty": "ADU",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -5969,7 +5987,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "310",
         "faculty": "SHS",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -5980,7 +5998,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "319",
         "faculty": "LBN",
-        "drpartment": "ECO",
+        "drpartment": "Business",
         "peogram": "19"
       },
       {
@@ -5991,7 +6009,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "320",
         "faculty": "YRH",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -6002,7 +6020,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "324",
         "faculty": "SHK",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -6013,7 +6031,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "413",
         "faculty": "PRN",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -6024,7 +6042,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "419",
         "faculty": "ZSS",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -6035,7 +6053,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "420",
         "faculty": "AZM",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -6046,7 +6064,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "424",
         "faculty": "FTS",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -6057,7 +6075,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "501",
         "faculty": "DZR",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -6068,7 +6086,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "520",
         "faculty": "HBH",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -6079,7 +6097,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "601",
         "faculty": "TVS",
-        "drpartment": "ENG",
+        "drpartment": "English",
         "peogram": "10"
       },
       {
@@ -6090,7 +6108,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "613",
         "faculty": "KEC",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -6101,7 +6119,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "105",
         "faculty": "JDI",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -6112,7 +6130,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "301",
         "faculty": "YRH",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -6123,7 +6141,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "304",
         "faculty": "TNI",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -6134,7 +6152,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "310",
         "faculty": "SjH",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -6145,7 +6163,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "313",
         "faculty": "MVN",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -6156,7 +6174,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "324",
         "faculty": "NBA",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -6167,7 +6185,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "410",
         "faculty": "PPP",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "40"
       },
       {
@@ -6178,7 +6196,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "413",
         "faculty": "PRN",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -6189,7 +6207,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "420",
         "faculty": "STQ",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -6200,7 +6218,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "424",
         "faculty": "ZSS",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -6211,7 +6229,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "501",
         "faculty": "DZR",
-        "drpartment": "ECO",
+        "drpartment": "Business",
         "peogram": "19"
       },
       {
@@ -6222,7 +6240,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "513",
         "faculty": "SUN",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -6233,7 +6251,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "519",
         "faculty": "ANI",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -6244,7 +6262,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "613",
         "faculty": "SLL",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -6255,7 +6273,7 @@
         "time": "04:05 PM - 05:20 PM",
         "room": "301",
         "faculty": "DZR",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -6266,7 +6284,7 @@
         "time": "04:05 PM - 05:20 PM",
         "room": "304",
         "faculty": "SHS",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -6277,7 +6295,7 @@
         "time": "04:05 PM - 05:20 PM",
         "room": "310",
         "faculty": "NAR",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -6288,7 +6306,7 @@
         "time": "04:05 PM - 05:20 PM",
         "room": "410",
         "faculty": "PPP",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "40"
       },
       {
@@ -6299,7 +6317,7 @@
         "time": "04:05 PM - 05:20 PM",
         "room": "419",
         "faculty": "IRA",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -6310,7 +6328,7 @@
         "time": "04:05 PM - 05:20 PM",
         "room": "424",
         "faculty": "SDP",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "40"
       },
       {
@@ -6321,7 +6339,7 @@
         "time": "04:05 PM - 05:20 PM",
         "room": "502",
         "faculty": "KZI",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "40"
       },
       {
@@ -6332,7 +6350,7 @@
         "time": "04:05 PM - 05:20 PM",
         "room": "519",
         "faculty": "HZM",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -6343,7 +6361,7 @@
         "time": "05:30 PM - 06:45 PM",
         "room": "410",
         "faculty": "IAM",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -6354,7 +6372,7 @@
         "time": "06:30 PM - 07:45 PM",
         "room": "105",
         "faculty": "JDI",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -6365,7 +6383,7 @@
         "time": "06:30 PM - 07:45 PM",
         "room": "304",
         "faculty": "SAJ",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "26"
       },
       {
@@ -6376,7 +6394,7 @@
         "time": "06:30 PM - 07:45 PM",
         "room": "310",
         "faculty": "PKA",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "26"
       },
       {
@@ -6387,7 +6405,7 @@
         "time": "06:30 PM - 07:45 PM",
         "room": "501",
         "faculty": "IIZ",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -6398,7 +6416,7 @@
         "time": "06:30 PM - 07:45 PM",
         "room": "510",
         "faculty": "RIO",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -6409,7 +6427,7 @@
         "time": "06:30 PM - 07:45 PM",
         "room": "513",
         "faculty": "ESH",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -6420,7 +6438,7 @@
         "time": "06:30 PM - 07:45 PM",
         "room": "519",
         "faculty": "ABA",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -6431,7 +6449,7 @@
         "time": "06:30 PM - 07:45 PM",
         "room": "601",
         "faculty": "HZM",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -6442,7 +6460,7 @@
         "time": "07:55 PM - 09:10 PM",
         "room": "105",
         "faculty": "JDI",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -6453,7 +6471,7 @@
         "time": "07:55 PM - 09:10 PM",
         "room": "304",
         "faculty": "SAJ",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "26"
       },
       {
@@ -6464,7 +6482,7 @@
         "time": "07:55 PM - 09:10 PM",
         "room": "310",
         "faculty": "PKA",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "26"
       },
       {
@@ -6475,7 +6493,7 @@
         "time": "07:55 PM - 09:10 PM",
         "room": "501",
         "faculty": "IIZ",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -6486,7 +6504,7 @@
         "time": "07:55 PM - 09:10 PM",
         "room": "510",
         "faculty": "RIO",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -6497,7 +6515,7 @@
         "time": "07:55 PM - 09:10 PM",
         "room": "513",
         "faculty": "ESH",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -6508,7 +6526,7 @@
         "time": "07:55 PM - 09:10 PM",
         "room": "519",
         "faculty": "ABA",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -6519,7 +6537,7 @@
         "time": "07:55 PM - 09:10 PM",
         "room": "601",
         "faculty": "HZM",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -6530,7 +6548,7 @@
         "time": "08:30 AM - 11:10 AM",
         "room": "410",
         "faculty": "KZI",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "40"
       },
       {
@@ -6541,7 +6559,7 @@
         "time": "08:30 AM - 11:10 AM",
         "room": "501",
         "faculty": "NBA",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -6552,7 +6570,7 @@
         "time": "08:30 AM - 11:10 AM",
         "room": "502",
         "faculty": "JAL",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -6563,7 +6581,7 @@
         "time": "09:00 AM - 11:40 AM",
         "room": "304",
         "faculty": "RhP",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -6574,7 +6592,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "519",
         "faculty": "MFB",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -6585,7 +6603,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "601",
         "faculty": "OVI",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -6596,7 +6614,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "610",
         "faculty": "ANI",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -6607,7 +6625,7 @@
         "time": "10:25 AM - 11:40 AM",
         "room": "613",
         "faculty": "IPS",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -6618,7 +6636,7 @@
         "time": "11:30 AM - 02:10 PM",
         "room": "105",
         "faculty": "FTS",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -6629,7 +6647,7 @@
         "time": "11:30 AM - 02:10 PM",
         "room": "304",
         "faculty": "NAR",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -6640,7 +6658,7 @@
         "time": "11:30 AM - 02:10 PM",
         "room": "413",
         "faculty": "SDP",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "40"
       },
       {
@@ -6651,7 +6669,7 @@
         "time": "11:30 AM - 02:10 PM",
         "room": "501",
         "faculty": "NBA",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -6662,7 +6680,7 @@
         "time": "11:30 AM - 02:10 PM",
         "room": "502",
         "faculty": "JAL",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -6673,7 +6691,7 @@
         "time": "11:30 AM - 02:10 PM",
         "room": "510",
         "faculty": "IRA",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -6684,7 +6702,7 @@
         "time": "11:30 AM - 02:10 PM",
         "room": "513",
         "faculty": "KZI",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "40"
       },
       {
@@ -6695,7 +6713,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "104",
         "faculty": "IIZ",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -6706,7 +6724,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "519",
         "faculty": "NRD",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -6717,7 +6735,7 @@
         "time": "11:50 AM - 01:05 PM",
         "room": "601",
         "faculty": "TSR",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -6728,7 +6746,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "104",
         "faculty": "IIZ",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -6739,7 +6757,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "519",
         "faculty": "NRD",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -6750,7 +6768,7 @@
         "time": "01:15 PM - 02:30 PM",
         "room": "610",
         "faculty": "MOS",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -6761,7 +6779,7 @@
         "time": "02:30 PM - 05:00 PM",
         "room": "105",
         "faculty": "FTS",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -6772,7 +6790,7 @@
         "time": "02:30 PM - 05:00 PM",
         "room": "501",
         "faculty": "IRA",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -6783,7 +6801,7 @@
         "time": "02:30 PM - 05:00 PM",
         "room": "502",
         "faculty": "JAL",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -6794,7 +6812,7 @@
         "time": "02:30 PM - 05:00 PM",
         "room": "510",
         "faculty": "SDP",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "40"
       },
       {
@@ -6805,7 +6823,7 @@
         "time": "02:30 PM - 05:00 PM",
         "room": "513",
         "faculty": "KZI",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "40"
       },
       {
@@ -6816,7 +6834,7 @@
         "time": "02:40 PM - 03:55 PM",
         "room": "610",
         "faculty": "DOM",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -6827,7 +6845,7 @@
         "time": "02:40 PM - 05:20 PM",
         "room": "310",
         "faculty": "MLH",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "25"
       },
       {
@@ -6838,7 +6856,7 @@
         "time": "04:05 PM - 05:20 PM",
         "room": "519",
         "faculty": "HZM",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "45"
       },
       {
@@ -6849,7 +6867,7 @@
         "time": "04:05 PM - 06:30 PM",
         "room": "524",
         "faculty": "RIO",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -6860,7 +6878,7 @@
         "time": "05:00 PM - 07:40 PM",
         "room": "501",
         "faculty": "IRA",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -6871,7 +6889,7 @@
         "time": "05:00 PM - 07:40 PM",
         "room": "502",
         "faculty": "IAM",
-        "drpartment": "ECE",
+        "drpartment": "CSE/EEE",
         "peogram": "38"
       },
       {
@@ -6882,7 +6900,7 @@
         "time": "06:30 PM - 07:45 PM",
         "room": "104",
         "faculty": "TSR",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -6893,7 +6911,7 @@
         "time": "06:30 PM - 07:45 PM",
         "room": "301",
         "faculty": "PKA",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "26"
       },
       {
@@ -6904,7 +6922,7 @@
         "time": "06:30 PM - 07:45 PM",
         "room": "310",
         "faculty": "IQA",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "26"
       },
       {
@@ -6915,7 +6933,7 @@
         "time": "06:30 PM - 08:30 PM",
         "room": "313",
         "faculty": "KUH",
-        "drpartment": "MBA",
+        "drpartment": "Business",
         "peogram": "65"
       },
       {
@@ -6926,7 +6944,7 @@
         "time": "06:30 PM - 07:45 PM",
         "room": "501",
         "faculty": "MFB",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -6937,7 +6955,7 @@
         "time": "06:30 PM - 07:45 PM",
         "room": "510",
         "faculty": "NRD",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -6948,7 +6966,7 @@
         "time": "06:30 PM - 07:45 PM",
         "room": "513",
         "faculty": "IIZ",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -6959,7 +6977,7 @@
         "time": "06:30 PM - 07:45 PM",
         "room": "519",
         "faculty": "TTA",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -6970,7 +6988,7 @@
         "time": "06:30 PM - 07:45 PM",
         "room": "601",
         "faculty": "IPS",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -6981,7 +6999,7 @@
         "time": "07:55 PM - 09:10 PM",
         "room": "104",
         "faculty": "TSR",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -6992,7 +7010,7 @@
         "time": "07:55 PM - 09:10 PM",
         "room": "301",
         "faculty": "PKA",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "26"
       },
       {
@@ -7003,7 +7021,7 @@
         "time": "07:55 PM - 09:10 PM",
         "room": "310",
         "faculty": "IQA",
-        "drpartment": "BBA",
+        "drpartment": "Business",
         "peogram": "26"
       },
       {
@@ -7014,7 +7032,7 @@
         "time": "07:55 PM - 09:10 PM",
         "room": "501",
         "faculty": "MFB",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -7025,7 +7043,7 @@
         "time": "07:55 PM - 09:10 PM",
         "room": "510",
         "faculty": "NRD",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -7036,7 +7054,7 @@
         "time": "07:55 PM - 09:10 PM",
         "room": "513",
         "faculty": "IIZ",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -7047,7 +7065,7 @@
         "time": "07:55 PM - 09:10 PM",
         "room": "519",
         "faculty": "TTA",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       },
       {
@@ -7058,7 +7076,7 @@
         "time": "07:55 PM - 09:10 PM",
         "room": "601",
         "faculty": "IPS",
-        "drpartment": "CE",
+        "drpartment": "Civil",
         "peogram": "46"
       }
     ]

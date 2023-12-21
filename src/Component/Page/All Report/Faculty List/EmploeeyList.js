@@ -31,6 +31,7 @@ const EmploeeyList = () => {
         <h1 className="font-bold text-4xl mt-4 mb-8 text-center">
         Employee List
             </h1>
+            <p className="text-center mb-4 text-red-800 text-lg">Total Employee : {filterFaculty(emploeey).length}</p>
       <div className="mt-4 mb-4 lg:w-full m-auto grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 justify-items-center">
       
         <Button details={btnData.emploeeyDesignation} />

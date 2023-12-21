@@ -121,9 +121,9 @@ if (filterselect.semester === "") {
       </div>
       <div className="mt-4 mb-4 lg:w-full m-auto grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 justify-items-center">
         {<Button details={data.semesterBtn} />}
-        { filterselect.semester && <Button details={data.dateBtn} />}
-        { filterselect.date && <Button details={data.reportTypeBtn} />}
-        {filterselect.reportType === "" && filterselect.date && (
+        { filterselect.semester && <Button details={data.reportTypeBtn} />}
+        { filterselect.reportType !== "" && filterselect.semester && <Button details={data.dateBtn} />}
+        {filterselect.reportType !== "" && filterselect.date && (
           <>
             <Button details={data.departmentBtn} />
             <Button details={data.classRoomBtn} other={classRooms} />
@@ -132,7 +132,7 @@ if (filterselect.semester === "") {
         )}
       </div>
       { 
-       filterselect.semester &&  filterselect.date && (
+       filterselect.semester &&   (
           <RutineTable
           data={filter(semFilterData)}
           data2={daySlot}
@@ -140,6 +140,7 @@ if (filterselect.semester === "") {
           classroom = {classRooms}
           columns={tableHead}
           name={filterselect.reportType}
+          date={filterselect.date}
         />
         
       )}

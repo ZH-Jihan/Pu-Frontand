@@ -9,8 +9,9 @@ const RutineTable = ({
   classroom = null,
   columns = null,
   hover = true,
+  date = null,
   other = null,
-  atAGlance=null,
+  atAGlance = null,
   striped = true,
 }) => {
   const { data: facultyDatas } = useFatchData(
@@ -49,7 +50,7 @@ const RutineTable = ({
                 {tdata.day}
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                {tdata.drpartment}
+                Dept. Of {tdata.drpartment}
               </td>
               {other &&
                 other.map((col) => (
@@ -93,7 +94,7 @@ const RutineTable = ({
   };
 
   //*****.. This Funtion Show Class Room Wise Daily Class Count ..*****//
-  const roomWiseClass = ()=>{
+  const roomWiseClass = () => {
     const filters = (times) => {
       let datas;
       if (times) {
@@ -107,7 +108,7 @@ const RutineTable = ({
           classroom.map((room) => (
             <tr className={` ${hover && "hover"} ${striped && "striped"}`}>
               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-              {data2[0]?.name}
+                {data2[0]?.name}
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                 {room.roomnum}
@@ -119,35 +120,83 @@ const RutineTable = ({
                 {filters(room.roomnum).length}
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-900">
-              {data2[0]?.value.length}
+                {data2[0]?.value.length}
               </td>
             </tr>
           ))}
       </>
     );
-  }
+  };
 
   //*****.. Weekly Class At a Glance Report ..*****//
-  const weeklyAtAGlance = () =>{
-
+  const weeklyAtAGlance = () => {
+    const classFilterWDay = (day) => {
+      const rutinData = atAGlance.data;
+      let data;
+      let civil;
+      let Eng;
+      let ece;
+      let bus;
+      if (day) {
+        if (day === "Total") {
+          data = rutinData;
+        } else {
+          data = rutinData.filter((el) => el.day === day);
+        }
+      }
+      if (data) {
+        civil = data.filter((el) => el.drpartment === "Civil");
+        Eng = data.filter((el) => el.drpartment === "English");
+        ece = data.filter((el) => el.drpartment === "CSE/EEE");
+        bus = data.filter((el) => el.drpartment === "Business");
+      }
+      return { data, civil, Eng, ece, bus };
+    };
+    const slot = (value, day) => {
+      if (day === "Total") {
+        return 70;
+      }
+      return value;
+    };
     return (
       <>
         {atAGlance &&
-          atAGlance.timeSlot.map((room) => (
+          atAGlance.timeSlot.map((day) => (
             <tr className={` ${hover && "hover"} ${striped && "striped"}`}>
               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-              {room.name}
+                {day.name}
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-              {room.value.length}
+                {slot(day.value.length, day.name)}
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                {classFilterWDay(day.name).data.length}
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                {classFilterWDay(day.name).civil.length}
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                {classFilterWDay(day.name).ece.length}
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                {classFilterWDay(day.name).bus.length}
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                {classFilterWDay(day.name).Eng.length}
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                {Math.round(
+                  (classFilterWDay(day.name).data.length /
+                    (classroom.length * slot(day.value.length, day.name))) *
+                    100
+                )}{" "}
+                %
               </td>
             </tr>
           ))}
       </>
     );
-  }
-
-
+  };
 
   //****.. Component Main Funtion Return ..*****//
   return (
@@ -156,8 +205,8 @@ const RutineTable = ({
         <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
           <div class="overflow-hidden">
             <table class="w-full m-auto">
-              {name === "" && <TableHead data={columns}></TableHead>}
-              {name === "slotWise" && (
+              {name === "main" && date !== "" && <TableHead data={columns}></TableHead>}
+              {name === "slotWise" && date !== "" &&  (
                 <TableHead
                   data={[
                     { field: "", header: "Selected Day" },
@@ -166,7 +215,7 @@ const RutineTable = ({
                   ]}
                 ></TableHead>
               )}
-              {name === "roomWise" && (
+              {name === "roomWise" && date !== "" &&  (
                 <TableHead
                   data={[
                     { field: "", header: "Selected Day" },
@@ -177,19 +226,27 @@ const RutineTable = ({
                   ]}
                 ></TableHead>
               )}
-              {name === "weekly" && (
+              {name === "" &&  (
                 <TableHead
                   data={[
-                    { field: "", header: "This Report Is Under Working. Review other reports until the the is done." }
+                    // { field: "", header: "This Report Is Under Working. Review other reports until the the is done." }
+                    { field: "", header: "Day" },
+                    { field: "", header: "Day Class Slot" },
+                    { field: "", header: "Total Class" },
+                    { field: "", header: "Civil" },
+                    { field: "", header: "CSE/EEE" },
+                    { field: "", header: "Business" },
+                    { field: "", header: "English" },
+                    { field: "", header: "Capacity Utilized" },
                   ]}
                 ></TableHead>
               )}
               {/* <TableBody columns={columns} data={data}/> */}
               <tbody>
-                {name === "" && mainReport()}
-                {name === "slotWise" && slotWiseClass()}
-                {name === "roomWise" && roomWiseClass()}
-                {/* {name === "weekly" && weeklyAtAGlance()} */}
+                {name === "main" && date !== "" && mainReport()}
+                {name === "slotWise"  && date !== "" &&  slotWiseClass()}
+                {name === "roomWise" && date !== "" &&  roomWiseClass()}
+                {name === "" && weeklyAtAGlance()}
               </tbody>
             </table>
           </div>
