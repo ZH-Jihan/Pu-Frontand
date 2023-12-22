@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import useFatchData from "../../../Hooks/useFatchData";
 import useRoutineBtn from "../../../Utilits/All Buttons/RoutineBtn";
 import Button from "../../../Utilits/Button";
+import Loading from "../../Sheared Page/Loading";
 import RutineTable from "./RutineTable";
 const RutinMainPage = () => {
   // const {rutinDatas} = useFatchData('https://pu-server-1.onrender.com/routin')
@@ -25,16 +26,8 @@ const RutinMainPage = () => {
     const { name, value } = e.target;
     setFilterselect((prev) => ({ ...prev, [name]: value }));
   };
-if (filterselect.reportType !== "") {
-  filterselect.department = ""
-  filterselect.timeslot = ""
-  filterselect.room = ""
-}
-if (filterselect.semester === "") {
-  filterselect.date = ""
-  filterselect.timeslot = ""
-  filterselect.room = ""
-}
+  const data = useRoutineBtn({ onChange, filterselect });
+
   //*****.. Filter Data By Or Try Semestr Wise ..*****//
   const filterDataSemWise = () => {
     let data = [];
@@ -64,7 +57,7 @@ if (filterselect.semester === "") {
   const daySlot = dayWiseSlotFind(semDaySlot);
 
   //*****.. Load All Filter btn ..*****//
-  const data = useRoutineBtn({ onChange, filterselect });
+  
 
   //*****.. Data Filtar Funtion ..*****/
   const filter = (data = []) => {
@@ -132,7 +125,7 @@ if (filterselect.semester === "") {
         )}
       </div>
       { 
-       filterselect.semester &&   (
+       filterselect.semester && classRooms.length ?  (
           <RutineTable
           data={filter(semFilterData)}
           data2={daySlot}
@@ -143,7 +136,7 @@ if (filterselect.semester === "") {
           date={filterselect.date}
         />
         
-      )}
+      ) : (<Loading/>)}
     </div>
   );
 };

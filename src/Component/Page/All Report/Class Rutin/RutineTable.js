@@ -154,7 +154,12 @@ const RutineTable = ({
     };
     const slot = (value, day) => {
       if (day === "Total") {
-        return 70;
+        let sum = 0;
+        // Iterate over each object and add its capacity to the sum
+        for (let i = 0; i < atAGlance.timeSlot.length; i++) {
+          sum += Number(atAGlance.timeSlot[i].value.length);
+        }
+        return sum;
       }
       return value;
     };
@@ -205,8 +210,10 @@ const RutineTable = ({
         <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
           <div class="overflow-hidden">
             <table class="w-full m-auto">
-              {name === "main" && date !== "" && <TableHead data={columns}></TableHead>}
-              {name === "slotWise" && date !== "" &&  (
+              {name === "main" && date !== "" && (
+                <TableHead data={columns}></TableHead>
+              )}
+              {name === "slotWise" && date !== "" && (
                 <TableHead
                   data={[
                     { field: "", header: "Selected Day" },
@@ -215,7 +222,7 @@ const RutineTable = ({
                   ]}
                 ></TableHead>
               )}
-              {name === "roomWise" && date !== "" &&  (
+              {name === "roomWise" && date !== "" && (
                 <TableHead
                   data={[
                     { field: "", header: "Selected Day" },
@@ -226,7 +233,7 @@ const RutineTable = ({
                   ]}
                 ></TableHead>
               )}
-              {name === "" &&  (
+              {name === "" && (
                 <TableHead
                   data={[
                     // { field: "", header: "This Report Is Under Working. Review other reports until the the is done." }
@@ -244,8 +251,8 @@ const RutineTable = ({
               {/* <TableBody columns={columns} data={data}/> */}
               <tbody>
                 {name === "main" && date !== "" && mainReport()}
-                {name === "slotWise"  && date !== "" &&  slotWiseClass()}
-                {name === "roomWise" && date !== "" &&  roomWiseClass()}
+                {name === "slotWise" && date !== "" && slotWiseClass()}
+                {name === "roomWise" && date !== "" && roomWiseClass()}
                 {name === "" && weeklyAtAGlance()}
               </tbody>
             </table>
