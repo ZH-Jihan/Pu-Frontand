@@ -26,7 +26,7 @@
   {
     "Name": "Mohammad Faridul Hassan",
     "Designation": "Sr. Asst. Registrar",
-    "Dept": "Civil",
+    "Dept": "Coordination Office",
     "ID": "091-018-700"
   },
   {
@@ -38,7 +38,7 @@
   {
     "Name": "Nargis Sultana",
     "Designation": "Asst. Registrar",
-    "Dept": "English",
+    "Dept": "Coordination Office",
     "ID": "073-011-700"
   },
   {
@@ -104,19 +104,19 @@
   {
     "Name": "Rifha Sanjida Himi",
     "Designation": "Sr. Executive",
-    "Dept": "Civil",
+    "Dept": "Coordination Office",
     "ID": "192-062-700"
   },
   {
     "Name": "Mirza Hasan Mortuza",
     "Designation": "Sr. Executive",
-    "Dept": "ECE",
+    "Dept": "Coordination Office",
     "ID": "121-011-700"
   },
   {
     "Name": "Hasina Akter Lubna",
     "Designation": "Sr. Executive",
-    "Dept": "Business",
+    "Dept": "Coordination Office",
     "ID": "121-005-700"
   },
   {
@@ -188,25 +188,25 @@
   {
     "Name": "Md. Farid Ahmed Khan",
     "Designation": "Executive",
-    "Dept": "Civil",
+    "Dept": "Coordination Office",
     "ID": "132-002-700"
   },
   {
     "Name": "Md. Aminul Islam",
     "Designation": "Executive",
-    "Dept": "Civil",
+    "Dept": "Coordination Office",
     "ID": "172-024-700"
   },
   {
     "Name": "Iqbal Hossain",
     "Designation": "Executive",
-    "Dept": "ECE",
+    "Dept": "Coordination Office",
     "ID": "091-017-700"
   },
   {
     "Name": "Md. Mizanur Rahman",
     "Designation": "Executive",
-    "Dept": "Business",
+    "Dept": "Coordination Office",
     "ID": "132-005-700"
   },
   {
@@ -277,14 +277,14 @@
   },
   {
     "Name": "Zakir Hossain Jihan",
-    "Designation": "Asst. Of Consultant",
+    "Designation": "Asst. Of Consultant\n",
     "Dept": "Admin",
     "ID": "223-026-800"
   },
   {
     "Name": "Mr. Arpito Sagma",
     "Designation": "Office Assistant",
-    "Dept": "Admin",
+    "Dept": "VC Office & Admin",
     "ID": "082-020-800"
   },
   {
@@ -314,19 +314,19 @@
   {
     "Name": "Md. Farid Al-Mamun",
     "Designation": "Office Assistant",
-    "Dept": "CIVIL",
+    "Dept": "Coordination Office",
     "ID": "183-005-800"
   },
   {
     "Name": "Md. Kabir Hossen",
     "Designation": "O.S.S",
-    "Dept": "Admin",
+    "Dept": "VC Office & Admin",
     "ID": "131-012-800"
   },
   {
     "Name": "Md. Sharif",
     "Designation": "O.S.S",
-    "Dept": "Admin",
+    "Dept": "VC Office & Admin",
     "ID": "223-022-800"
   },
   {
@@ -350,43 +350,43 @@
   {
     "Name": "Md. Nazrul Islam",
     "Designation": "O.S.S",
-    "Dept": "Business",
+    "Dept": "Coordination Office",
     "ID": "033-007-800"
   },
   {
     "Name": "Md. Shohel Mia",
     "Designation": "O.S.S",
-    "Dept": "Business",
+    "Dept": "Coordination Office",
     "ID": "053-006-800"
   },
   {
     "Name": "Md. Shahid Mia",
     "Designation": "O.S.S",
-    "Dept": "CIVIL",
+    "Dept": "Coordination Office",
     "ID": "083-021-800"
   },
   {
     "Name": "Md. Tuhin Hawlader",
     "Designation": "O.S.S",
-    "Dept": "CIVIL",
+    "Dept": "Coordination Office",
     "ID": "223-023-800"
   },
   {
     "Name": "Md. Lokman Hossain",
     "Designation": "O.S.S",
-    "Dept": "English",
+    "Dept": "Coordination Office",
     "ID": "093-020-800"
   },
   {
     "Name": "Md. Iqbal Hossain",
     "Designation": "O.S.S",
-    "Dept": "ECE",
+    "Dept": "Coordination Office",
     "ID": "051-013-800"
   },
   {
     "Name": "Md. Abdul Kadir",
     "Designation": "O.S.S",
-    "Dept": "ECE",
+    "Dept": "Coordination Office",
     "ID": "111-017-800"
   },
   {
@@ -416,25 +416,25 @@
   {
     "Name": "Md. Al-Mamun",
     "Designation": "Lab Technician",
-    "Dept": "ECE",
+    "Dept": "Coordination Office",
     "ID": "101-011-840"
   },
   {
     "Name": "Md. Shafikul ISlam",
     "Designation": "Lab Technician",
-    "Dept": "ECE",
+    "Dept": "Coordination Office",
     "ID": "131-013-800"
   },
   {
     "Name": "Abdul Malek",
     "Designation": "Lab Technician",
-    "Dept": "CIVIL",
+    "Dept": "Coordination Office",
     "ID": "222-006-800"
   },
   {
     "Name": "Ashikur Rahman",
     "Designation": "Lab Technician",
-    "Dept": "CIVIL",
+    "Dept": "Coordination Office",
     "ID": "223-008-800"
   },
   {
