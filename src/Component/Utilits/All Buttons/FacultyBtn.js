@@ -109,15 +109,13 @@ const FacultyBtn = ({onChange,selecteditem}) => {
           { value: "Accounts", name: "Accounts" },
           { value: "Admin", name: "Admin" },
           { value: "Admission", name: "Admission" },
-          { value: "Adviser office", name: "Adviser office" },
           { value: "Coordination Office", name: "Coordination Office" },
           { value: "Controller Section", name: "Controller Section" },
           { value: "Digital  Marketing", name: "Digital  Marketing" },
           { value: "IT", name: "IT" },
           { value: "Library", name: "Library" },
           { value: "Registar's Office", name: "Registar's Office" },
-          { value: "Student  Affairs", name: "Student  Affairs" },
-          { value: "VC Office", name: "VC Office" }
+          { value: "Student  Affairs", name: "Student  Affairs" }
         ],
       };
 

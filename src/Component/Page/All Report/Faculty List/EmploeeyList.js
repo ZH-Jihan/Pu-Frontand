@@ -44,13 +44,13 @@ const EmploeeyList = () => {
               style={{ width: "360px" }}
               className="card sm:w-96 bg-base-100 pt-4 rounded-2xl overflow-hidden shadow-2xl "
             >
-              {/* <figure>
+              <figure>
                 <img
                   className="rounded h-32"
-                  src={faculty.imgurl ? faculty.imgurl : checkSex(faculty)}
-                  alt={faculty.initialname}
+                  src={emploey.imgurl}
+                  alt="Img"
                 />
-              </figure> */}
+              </figure>
               <div className="card-body">
                 <h2 className="card-title">
                   {emploey.Name}
