@@ -10,13 +10,14 @@ const tableHead = [
   { field: "", header: "CSE" },
   { field: "", header: "ECO" },
   { field: "", header: "EEE" },
+  { field: "", header: "MBA" },
   { field: "", header: "EMBA" },
   { field: "", header: "ENG" },
   { field: "", header: "MAELT" },
   { field: "", header: "ETE" },
   { field: "", header: "IBUS" },
   { field: "", header: "IENG" },
-  { field: "", header: "MBA" },
+  
   { field: "", header: "PMBA" },
 ];
 const years = [
