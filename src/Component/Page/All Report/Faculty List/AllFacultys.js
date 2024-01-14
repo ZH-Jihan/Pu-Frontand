@@ -27,9 +27,17 @@ const universitys = [
 ];
 
 const AllFacultys = () => {
-  const { data: facultys, loading } = useFatchData(
+  const { data: faculty, loading } = useFatchData(
     "https://pu-server-1.onrender.com/faculty"
   );
+  const activeFaculty = (datas = [])=>{
+    let faculty = datas;
+    if (faculty) {
+      faculty = faculty.filter((el)=> el.status === "Active")
+    }
+    return faculty;
+  }
+  const facultys = activeFaculty(faculty)
   const [chake, setchake] = useState(false);
   const [selecteditem, setSelecteditem] = useState({
     department: "",
