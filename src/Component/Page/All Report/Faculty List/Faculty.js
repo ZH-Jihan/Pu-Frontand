@@ -1,14 +1,22 @@
 import moment from "moment";
 import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
 import Ffaculty from "../../../../asecets/faculty/Female-faculty.png";
 import Mfaculty from "../../../../asecets/faculty/male-faculty.png";
+import auth from "../../../../firebase.init";
+import useAdmin from "../../../Hooks/Admin";
 
 const Faculty = ({ setOrder, faculty }) => {
   const navigate = useNavigate();
+  const [user, loading] = useAuthState(auth);
+  const [admin] = useAdmin(user);
 
-  const navigateToDetail = (id, setOrder, faculty) => {
+  const navigateToDetail = (id) => {
     navigate(`/faculty/${id}`);
+  };
+  const navigateToEdit = (id) => {
+    navigate(`/updatefaculty/${id}`);
   };
   const jdate = new Date(faculty.doj);
   const bdate = new Date(faculty.dob);
@@ -129,12 +137,21 @@ const Faculty = ({ setOrder, faculty }) => {
         {faculty.roomnum ? <h2>Room Num : {faculty.roomnum}</h2> : <h1></h1>}
       </div>
       <div className="card-actions text-center pt-4 ">
-        <button
-          onClick={() => navigateToDetail(faculty._id, faculty)}
+        {
+          admin?(
+            <button
+          onClick={() => navigateToEdit(faculty._id)}
           className="w-full pl-8 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center "
         >
-          Details
+          Edit
         </button>
+          ):(<button
+            onClick={() => navigateToDetail(faculty._id )}
+            className="w-full pl-8 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center "
+          >
+            Details
+          </button>)
+        }
       </div>
     </div>
   );

@@ -3,6 +3,7 @@ import {
   faBarsProgress,
   faCalendarDays,
   faChartPie,
+  faCircleXmark,
   faCodeBranch,
   faFilePen,
   faHouseCircleCheck,
@@ -64,6 +65,12 @@ const NewHomePageV2 = () => {
       name: "Credit Fee Analyze",
       icon: faMoneyBillTrendUp,
       navigate: "/tutionfee",
+      permission: "user",
+    },
+    {
+      name: "EX-Emploeey",
+      icon: faCircleXmark,
+      navigate: "/exemploeey",
       permission: "user",
     },
     {
