@@ -6,48 +6,31 @@ import useFatchData from '../../../../Hooks/useFatchData';
 const EditFaculty = () => {
     const {id} = useParams();
   // const navigate = useNavigate();
-  const {data:faculty} = useFatchData(`https://pu-server-1.onrender.com/faculty/${id}`);
+  const {data:faculty,setData} = useFatchData(`https://pu-server-1.onrender.com/faculty/${id}`);
+  
+  
     
     const handleOrder = (event) => {
       event.preventDefault();
-      const facultyinfo = {
-        image: event.target.image?.files[0],
-        name: event.target.name?.value,
-        initialname: event.target.initialname?.value,
-        id: event.target.fId?.value,
-        pnumber: event.target.pnumber?.value,
-        furlimg: event.target.furlimg?.value,
-        designation: event.target.designation?.value,
-        dipartment: event.target.dipartment?.value,
-        email: event.target.email?.value,
-        university: event.target.university?.value,
-        doj: event.target.doj?.value,
-        dob: event.target.dob?.value,
-        jobtype: event.target.jobtype?.value,
-        sex: event.target.sex?.value,
-        status: event.target.status?.value,
-        description: event.target.description?.value,
-      };
-      console.log(facultyinfo);
+      
+      
       // if (facultyinfo.dipartment || facultyinfo.designation || facultyinfo.university === "--Select Department--") {
       //   toast.error("Please Select Option")
       // } else {
-      fetch("https://pu-server-1.onrender.com/faculty", {
-        method: "POST",
+      fetch(`https://pu-server-1.onrender.com/updatefaculty/${id}`, {
+        method: "PUT",
         headers: {
           "content-type": "application/json",
         },
   
-        body: JSON.stringify(facultyinfo),
+        body: JSON.stringify(faculty),
       })
-        .then((res) => res.json())
+        .then(res => alert("Are You Sure?. You Update Info"))
         .then((data) => {
-          // console.log(data);
-          if (data.insertedId) {
+          console.log(data);
             event.target.reset();
             // Navigate("/product");
-            toast.success("Facultu Added");
-          }
+            toast.success("Facultuy Update");
         });
       // }
     };
@@ -64,37 +47,14 @@ const EditFaculty = () => {
                 </div>
                 <div class="mt-5">
                   <div class="form">
-                    <div class="md:space-y-2 mb-3">
-                      <label class="text-xs font-semibold text-gray-600 py-2">
-                        Faculty Img
-                        <abbr class="hidden" title="required">
-                          *
-                        </abbr>
-                      </label>
-                      <div class="flex items-center py-6">
-                        <div class="w-12 h-12 mr-4 flex-none rounded-xl border overflow-hidden">
-                          <img
-                            class="w-12 h-12 mr-4 object-cover"
-                            src="{URL.createObjectURL(image)}"
-                            alt="Faculty Img"
-                          />
-                        </div>
-                        <label class="cursor-pointer ">
-                          <input
-                            name="image"
-                            type="file"
-                            className="focus:outline-none text-white text-sm py-2 px-4 rounded-full bg-green-400 hover:bg-green-500 hover:shadow-lg"
-                          />
-                          {/* <input type="file" class="hidden" /> */}
-                        </label>
-                      </div>
-                    </div>
                     <div class="md:flex flex-row md:space-x-4 w-full text-xs">
                       <div class="form-control  mb-3 space-y-2 w-full text-lg">
                         <label class="font-semibold text-gray-600 py-2">
                           Faculty Name <abbr title="required">*</abbr>
                         </label>
                         <input
+                          value= {faculty.name}
+                          onChange={e=>setData({...faculty,name:e.target.value})}
                           placeholder="Full Name"
                           class="appearance-none block text-base w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
                           required="required"
@@ -110,6 +70,8 @@ const EditFaculty = () => {
                           Faculty Initial <abbr title="required">*</abbr>
                         </label>
                         <input
+                        value={faculty.initialname}
+                        onChange={e=>setData({...faculty,initialname:e.target.value})}
                           placeholder="Initial Name"
                           class="appearance-none block text-base w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
                           required="required"
@@ -125,6 +87,8 @@ const EditFaculty = () => {
                           Faculty ID<abbr title="required">*</abbr>
                         </label>
                         <input
+                        value={faculty.id}
+                        onChange={e=>setData({...faculty,id:e.target.value})}
                           placeholder="Faculty ID"
                           class="appearance-none block text-base w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
                           required="required"
@@ -140,6 +104,8 @@ const EditFaculty = () => {
                           Phone Number
                         </label>
                         <input
+                        value={`0${faculty.pnumber}`}
+                        onChange={e=>setData({...faculty,pnumber:e.target.value})}
                           placeholder="Number"
                           class="appearance-none text-base block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
                           type="text"
@@ -185,6 +151,8 @@ const EditFaculty = () => {
                           Email
                         </label>
                         <input
+                        value={faculty.email}
+                        onChange={e=>setData({...faculty,email:e.target.value})}
                           placeholder="Email Address"
                           class="appearance-none text-base block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
                           type="text"
@@ -198,6 +166,8 @@ const EditFaculty = () => {
                           Designation
                         </label>
                         <select
+                        value={faculty.designation}
+                        onChange={e=>setData({...faculty,designation:e.target.value})}
                           placeholder="Designation"
                           class="appearance-none text-base block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
                           type="text"
@@ -215,12 +185,37 @@ const EditFaculty = () => {
                         <label class="font-semibold text-gray-600 py-2">
                           Department
                         </label>
-                        
+                        <select
+                        value={faculty.dipartment}
+                        onChange={e=>setData({...faculty,dipartment:e.target.value})}
+                          placeholder="dipartment"
+                          class="appearance-none text-base block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
+                          type="text"
+                          name="dipartment"
+                        >
+                          <option>--Select Designation</option>
+                          <option>DEPARTMENT OF ELECTRICAL & COMPUTER ENGINEERING</option>
+                          <option>DEPARTMENT OF BUSINESS</option>
+                          <option>DEPARTMENT OF ENGLISH</option>
+                          <option>DEPARTMENT OF CIVIL ENGINEERING</option>
+                          <option>DEPARTMENT OF CSE</option>
+                          <option>DEPARTMENT OF EEE</option>
+                          <option>DEPARTMENT OF LAW</option>
+                          <option>COMON</option>
+                        </select>
                       </div>
                       <div class="form-control  w-full flex flex-col mb-3">
                         <label class="font-semibold text-gray-600 py-2">
                           University
                         </label>
+                        <input
+                        value={faculty.university}
+                        onChange={e=>setData({...faculty,university:e.target.value})}
+                          placeholder="University"
+                          class="appearance-none text-base block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
+                          type="text"
+                          name="university"
+                        />
                       </div>
                     </div>
                     <div class="form-control py-2 md:flex md:flex-row md:space-x-4 lg:w-full text-lg">
@@ -230,6 +225,8 @@ const EditFaculty = () => {
                           Date Of Join
                         </label>
                         <input
+                        value={faculty.doj}
+                        onChange={e=>setData({...faculty,doj:e.target.value})}
                           placeholder="Date Of Join"
                           class="appearance-none text-base block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
                           type="date"
@@ -242,6 +239,8 @@ const EditFaculty = () => {
                           Date Of Birth
                         </label>
                         <input
+                        value={faculty.dob}
+                        onChange={e=>setData({...faculty,dob:e.target.value})}
                           placeholder="Date Of Join"
                           class="appearance-none text-base block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
                           type="date"
@@ -254,6 +253,8 @@ const EditFaculty = () => {
                           Job Type<abbr title="required">*</abbr>
                         </label>
                         <select
+                        value={faculty.jobtype}
+                        onChange={e=>setData({...faculty,jobtype:e.target.value})}
                           placeholder="Faculty Job type"
                           class="appearance-none block text-base w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
                           required="required"
@@ -273,6 +274,8 @@ const EditFaculty = () => {
                           Gender<abbr title="required">*</abbr>
                         </label>
                         <select
+                        value={faculty.sex}
+                        onChange={e=>setData({...faculty,sex:e.target.value})}
                           placeholder="Faculty Job type"
                           class="appearance-none block text-base w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
                           required="required"
@@ -292,13 +295,15 @@ const EditFaculty = () => {
                           Status<abbr title="required">*</abbr>
                         </label>
                         <select
+                        value={faculty.status}
+                        onChange={e=>setData({...faculty,status:e.target.value})}
                           class="appearance-none block text-base w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
                           required="required"
                           type="text"
                           name="status"
                         >
                           <option>Active</option>
-                          <option>Close</option>
+                          <option>InActive</option>
                         </select>
                         <p class="text-red text-xs hidden">
                           Please Fill Up This Field.
@@ -311,6 +316,8 @@ const EditFaculty = () => {
                         Description
                       </label>
                       <textarea
+                      value={faculty.description}
+                      onChange={e=>setData({...faculty,description:e.target.value})}
                         name="description"
                         class="w-full min-h-[100px] text-base max-h-[300px] h-28 appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg  py-4 px-4"
                         placeholder="Enter your Faculty info"

@@ -20,7 +20,7 @@ const useFatchData = (url) => {
                 setLoading(false)
             })
     },[url])
-    return {data,loading,error}
+    return {data,setData,loading,error}
 };
 
 export default useFatchData;
