@@ -2,6 +2,7 @@ import React from "react";
 import useFatchData from "../../../Hooks/useFatchData";
 import TableHead from "../../../Utilits/Table/TableHead";
 import "../../../Utilits/Table/tabel.css";
+
 const RutineTable = ({
   data = null,
   data2 = null,
@@ -18,7 +19,29 @@ const RutineTable = ({
     "https://pu-server-1.onrender.com/faculty"
   );
 
-  //*** This funtion Convart Faculty initial Name to Full Name ***/
+//***** At A Glance Table Data Condition Wise *****//
+  const atAGlanceTblData = [
+    { field: "", header: "Day" },
+    { field: "", header: "Number Of Slot" },
+    { field: "", header: "Total Class" },
+    { field: "", header: "Civil" },
+  ]
+if (atAGlance.name === "Spring-24") {
+  atAGlanceTblData.push(
+    { field: "", header: "CSE" },
+    { field: "", header: "EEE" },
+    { field: "", header: "Business" },
+    { field: "", header: "English" },
+    { field: "", header: "Capacity Utilized" })
+} else {
+  atAGlanceTblData.push(
+    { field: "", header: "CSE/EEE" },
+    { field: "", header: "Business" },
+    { field: "", header: "English" },
+    { field: "", header: "Capacity Utilized" })
+}
+
+//*** This funtion Convart Faculty initial Name to Full Name ***/
   const findFaculty = (name) => {
     let fullName;
     if (name) {
@@ -136,6 +159,8 @@ const RutineTable = ({
       let civil;
       let Eng;
       let ece;
+      let cse;
+      let eee;
       let bus;
       if (day) {
         if (day === "Total") {
@@ -147,10 +172,15 @@ const RutineTable = ({
       if (data) {
         civil = data.filter((el) => el.drpartment === "Civil");
         Eng = data.filter((el) => el.drpartment === "English");
-        ece = data.filter((el) => el.drpartment === "CSE/EEE");
+        if (atAGlance.name === "Spring-24") {
+          cse = data.filter((el) => el.drpartment === "CSE");
+          eee = data.filter((el) => el.drpartment === "EEE");
+        } else {
+          ece = data.filter((el) => el.drpartment === "CSE/EEE");
+        }
         bus = data.filter((el) => el.drpartment === "Business");
       }
-      return { data, civil, Eng, ece, bus };
+      return { data, civil, Eng, ece, bus,cse,eee };
     };
     const slot = (value, day) => {
       if (day === "Total") {
@@ -180,9 +210,21 @@ const RutineTable = ({
               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                 {classFilterWDay(day.name).civil.length}
               </td>
-              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                {classFilterWDay(day.name).ece.length}
-              </td>
+              {atAGlance.name === "Spring-24" ? (
+                <>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                    {classFilterWDay(day.name).cse.length}
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                    {classFilterWDay(day.name).eee.length}
+                  </td>
+                </>
+              ) : (
+                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                  {classFilterWDay(day.name).ece.length}
+                </td>
+              )}
+
               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                 {classFilterWDay(day.name).bus.length}
               </td>
@@ -235,17 +277,7 @@ const RutineTable = ({
               )}
               {name === "" && (
                 <TableHead
-                  data={[
-                    // { field: "", header: "This Report Is Under Working. Review other reports until the the is done." }
-                    { field: "", header: "Day" },
-                    { field: "", header: "Number Of Slot" },
-                    { field: "", header: "Total Class" },
-                    { field: "", header: "Civil" },
-                    { field: "", header: "CSE/EEE" },
-                    { field: "", header: "Business" },
-                    { field: "", header: "English" },
-                    { field: "", header: "Capacity Utilized" },
-                  ]}
+                  data = {atAGlanceTblData}
                 ></TableHead>
               )}
               {/* <TableBody columns={columns} data={data}/> */}

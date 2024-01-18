@@ -9,7 +9,8 @@ const useRoutineBtn = ({onChange,filterselect}) => {
         option: [
           { value: "", name: "--All Department--" },
           { value: "Civil", name: "Civil" },
-          { value: "CSE/EEE", name: "CSE/EEE" },
+          { value: "CSE", name: "CSE" },
+          { value: "EEE", name: "EEE" },
           { value: "English", name: "English" },
           { value: "Business", name: "Business" },
         ],
@@ -31,6 +32,7 @@ const useRoutineBtn = ({onChange,filterselect}) => {
         btnName: "semester",
         option: [
           { value: "", name: "--Select Semester--" },
+          { value: "Spring-24", name: "Spring-24" },
           { value: "fall", name: "Fall-23" },
           { value: "summer", name: "Summer-23" }
         ],
