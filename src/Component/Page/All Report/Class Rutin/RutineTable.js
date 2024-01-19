@@ -14,10 +14,15 @@ const RutineTable = ({
   other = null,
   atAGlance = null,
   striped = true,
+  setDay= null,
+  setFilterSel = null
 }) => {
   const { data: facultyDatas } = useFatchData(
     "https://pu-server-1.onrender.com/faculty"
   );
+  
+
+  
 
 //***** At A Glance Table Data Condition Wise *****//
   const atAGlanceTblData = [
@@ -49,6 +54,12 @@ if (atAGlance.name === "Spring-24") {
     }
     return (fullName = fullName.map((data) => data.name));
   };
+
+const onClick = (day) =>{
+  
+  name = "main"
+  setDay(day)
+}
 
   //*****.. Main Report Table Body ..*****//
   const mainReport = () => {
@@ -198,8 +209,8 @@ if (atAGlance.name === "Spring-24") {
         {atAGlance &&
           atAGlance.timeSlot.map((day) => (
             <tr className={` ${hover && "hover"} ${striped && "striped"}`}>
-              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                {day.name}
+              <td  class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                <button onClick={()=> onClick(day.name) }>{day.name}</button>
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                 {slot(day.value.length, day.name)}
@@ -250,10 +261,14 @@ if (atAGlance.name === "Spring-24") {
     <div class="flex flex-col w-full">
       <div class="overflow-x-auto sm:mx-0.5 lg:mx-0.5">
         <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+          
           <div class="overflow-hidden">
             <table class="w-full m-auto">
-              {name === "main" && date !== "" && (
-                <TableHead data={columns}></TableHead>
+              { date !== "" && (
+                <>
+                 <TableHead data={columns}></TableHead>
+                </>
+                
               )}
               {name === "slotWise" && date !== "" && (
                 <TableHead
@@ -275,17 +290,17 @@ if (atAGlance.name === "Spring-24") {
                   ]}
                 ></TableHead>
               )}
-              {name === "" && (
+              {name === "" && date === "" &&(
                 <TableHead
                   data = {atAGlanceTblData}
                 ></TableHead>
               )}
               {/* <TableBody columns={columns} data={data}/> */}
               <tbody>
-                {name === "main" && date !== "" && mainReport()}
-                {name === "slotWise" && date !== "" && slotWiseClass()}
-                {name === "roomWise" && date !== "" && roomWiseClass()}
-                {name === "" && weeklyAtAGlance()}
+                {date !== "" && mainReport()}
+                {name === "slotWise" && date == "" && slotWiseClass()}
+                {name === "roomWise" && date == "" && roomWiseClass()}
+                {name === "" && date == "" && weeklyAtAGlance()}
               </tbody>
             </table>
           </div>

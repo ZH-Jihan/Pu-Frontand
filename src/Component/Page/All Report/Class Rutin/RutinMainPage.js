@@ -1,4 +1,3 @@
-import moment from "moment";
 import React, { useState } from "react";
 import useFatchData from "../../../Hooks/useFatchData";
 import useRoutineBtn from "../../../Utilits/All Buttons/RoutineBtn";
@@ -11,7 +10,8 @@ const RutinMainPage = () => {
   const { data: classRooms } = useFatchData(
     "https://pu-server-1.onrender.com/classroom"
   );
-
+  const [day,setDay] = useState("")
+  console.log(day);
   //*****.. Set Or Find Selected Item Name And Valu ..*****//
   const [filterselect, setFilterselect] = useState({
     date: "",
@@ -42,8 +42,8 @@ const RutinMainPage = () => {
   const semDaySlot = filterDataSemWise().timeSlot;
 
   //*****.. Set Or Find Date And Day Name ..*****//
-  const date = moment(filterselect.date, "YYYY/MM/DD").format("DD/MM/YYYY");
-  const day = moment(date, "DD/MM/YYYY").format("dddd");
+  // const date = moment(filterselect.date, "YYYY/MM/DD").format("DD/MM/YYYY");
+  // const day = moment(date, "DD/MM/YYYY").format("dddd");
 
   const dayWiseSlotFind = (data = []) => {
     let datas = data;
@@ -60,22 +60,22 @@ const RutinMainPage = () => {
   
 
   //*****.. Data Filtar Funtion ..*****/
-  const filter = (data = []) => {
-    let datas = data;
-    if (filterselect.department) {
-      datas = datas.filter((el) => el.drpartment === filterselect.department);
-    }
-    if (filterselect.room) {
-      datas = datas.filter((el) => el.room === filterselect.room);
-    }
-    if (filterselect.date) {
-      datas = datas.filter((el) => el.day === day);
-    }
-    if (filterselect.timeslot) {
-      datas = datas.filter((el) => el.time === filterselect.timeslot);
-    }
-    return datas;
-  };
+const filter = (data = []) => {
+  let datas = data;
+  if (filterselect.department) {
+    datas = datas.filter((el) => el.drpartment === filterselect.department);
+  }
+  if (filterselect.room) {
+    datas = datas.filter((el) => el.room === filterselect.room);
+  }
+  if (filterselect.date) {
+    datas = datas.filter((el) => el.day === day);
+  }
+  if (filterselect.timeslot) {
+    datas = datas.filter((el) => el.time === filterselect.timeslot);
+  }
+  return datas;
+};
 
   //*****.. Main Table Hade And Json Data Field Name ..*****//
   const tableHead = [
@@ -116,7 +116,7 @@ const RutinMainPage = () => {
         {<Button details={data.semesterBtn} />}
         { filterselect.semester && <Button details={data.reportTypeBtn} />}
         { filterselect.reportType !== "" && filterselect.semester && <Button details={data.dateBtn} />}
-        {filterselect.reportType !== "" && filterselect.date && (
+        {filterselect.reportType !== "" &&  (
           <>
             <Button details={data.departmentBtn} />
             <Button details={data.classRoomBtn} other={classRooms} />
@@ -133,7 +133,9 @@ const RutinMainPage = () => {
           classroom = {classRooms}
           columns={tableHead}
           name={filterselect.reportType}
-          date={filterselect.date}
+          date={day}
+          setDay = {setDay}
+          setFilterSel = {setFilterselect}
         />
         
       ) : (<Loading/>)}
