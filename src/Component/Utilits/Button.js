@@ -1,7 +1,6 @@
 import React from "react";
 
 const Button = ({ details,other }) => {
-  console.log(other);
   return (
     <div class="w-3/4  m-auto flex flex-col mb-2">
       <label class="font-semibold text-gray-600 py-2">{details.btnHade}</label>

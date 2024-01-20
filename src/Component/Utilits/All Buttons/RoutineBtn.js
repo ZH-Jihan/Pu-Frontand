@@ -61,16 +61,25 @@ const useRoutineBtn = ({onChange,filterselect}) => {
           
         ],
       };
-
-      const dateBtn = {
-        btnHade: "Select Date",
-        btnvalue: filterselect.date,
+      const dayBtn = {
+        btnHade: "Select Day",
+        btnvalue: filterselect.day,
         function: { onChange },
-        btnName: "date",
-        type:"date"
+        btnName: "day",
+        option: [
+          { value: "", name: "--Select--" },
+          { value: "Saturday", name: "Saturday" },
+          { value: "Sunday", name: "Sunday" },
+          { value: "Monday", name: "Monday" },
+          { value: "Tuesday", name: "Tuesday" },
+          { value: "Wednesday", name: "Wednesday" },
+          { value: "Thursday", name: "Thursday" },
+          { value: "Friday", name: "Friday" },
+          
+        ],
       };
     
-    return {classRoomBtn,departmentBtn,semesterBtn,timeSlotBtn,filterselect,dateBtn,reportTypeBtn};
+    return {classRoomBtn,departmentBtn,semesterBtn,timeSlotBtn,filterselect,dayBtn,reportTypeBtn};
 };
 
 export default useRoutineBtn;

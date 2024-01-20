@@ -56,9 +56,7 @@ if (atAGlance.name === "Spring-24") {
   };
 
 const onClick = (day) =>{
-  
-  name = "main"
-  setDay(day)
+  setFilterSel((prev) => ({ ...prev, ["reportType"]: "main", ["day"]: day }));
 }
 
   //*****.. Main Report Table Body ..*****//
@@ -129,6 +127,11 @@ const onClick = (day) =>{
 
   //*****.. This Funtion Show Class Room Wise Daily Class Count ..*****//
   const roomWiseClass = () => {
+    const customStyle = (value) =>{
+      if (value <= 0) {
+        return {backgroundColor:"rgb(84 83 83 / 84%)"}
+      }
+    } 
     const filters = (times) => {
       let datas;
       if (times) {
@@ -140,7 +143,7 @@ const onClick = (day) =>{
       <>
         {classroom &&
           classroom.map((room) => (
-            <tr className={` ${hover && "hover"} ${striped && "striped"}`}>
+            <tr style={customStyle(filters(room.roomnum).length)} className={` ${hover && "hover"} ${striped && "striped"}`}>
               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                 {data2[0]?.name}
               </td>
@@ -209,7 +212,7 @@ const onClick = (day) =>{
         {atAGlance &&
           atAGlance.timeSlot.map((day) => (
             <tr className={` ${hover && "hover"} ${striped && "striped"}`}>
-              <td  class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+              <td  class="text-blue-600 underline underline-offset-4 px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                 <button onClick={()=> onClick(day.name) }>{day.name}</button>
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
@@ -264,7 +267,7 @@ const onClick = (day) =>{
           
           <div class="overflow-hidden">
             <table class="w-full m-auto">
-              { date !== "" && (
+              {name === "main" && date !== "" && (
                 <>
                  <TableHead data={columns}></TableHead>
                 </>
@@ -284,23 +287,23 @@ const onClick = (day) =>{
                   data={[
                     { field: "", header: "Selected Day" },
                     { field: "", header: "Room Number" },
-                    { field: "", header: "Room Initial Name" },
+                    { field: "", header: "Room Name" },
                     { field: "", header: "Total Class" },
-                    { field: "", header: "Total Slot" },
+                    { field: "", header: "Number Of Slot" },
                   ]}
                 ></TableHead>
               )}
-              {name === "" && date === "" &&(
+              {name === "" && (
                 <TableHead
                   data = {atAGlanceTblData}
                 ></TableHead>
               )}
               {/* <TableBody columns={columns} data={data}/> */}
               <tbody>
-                {date !== "" && mainReport()}
-                {name === "slotWise" && date == "" && slotWiseClass()}
-                {name === "roomWise" && date == "" && roomWiseClass()}
-                {name === "" && date == "" && weeklyAtAGlance()}
+                {name === "main" && date !== "" && mainReport()}
+                {name === "slotWise" && date !== "" && slotWiseClass()}
+                {name === "roomWise" && date !== "" && roomWiseClass()}
+                {name === "" &&  weeklyAtAGlance()}
               </tbody>
             </table>
           </div>

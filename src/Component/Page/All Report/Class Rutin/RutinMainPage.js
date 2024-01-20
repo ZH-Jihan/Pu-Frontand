@@ -10,11 +10,11 @@ const RutinMainPage = () => {
   const { data: classRooms } = useFatchData(
     "https://pu-server-1.onrender.com/classroom"
   );
-  const [day,setDay] = useState("")
-  console.log(day);
+
+  
   //*****.. Set Or Find Selected Item Name And Valu ..*****//
   const [filterselect, setFilterselect] = useState({
-    date: "",
+    day: "",
     department: "",
     timeslot: "",
     teacher: "",
@@ -24,9 +24,11 @@ const RutinMainPage = () => {
   });
   const onChange = (e) => {
     const { name, value } = e.target;
-    setFilterselect((prev) => ({ ...prev, [name]: value }));
+    
+    setFilterselect((prev) => ({ ...prev, [name]: value }))
   };
-  const data = useRoutineBtn({ onChange, filterselect });
+  
+  const data = useRoutineBtn({ onChange, filterselect});
 
   //*****.. Filter Data By Or Try Semestr Wise ..*****//
   const filterDataSemWise = () => {
@@ -40,15 +42,15 @@ const RutinMainPage = () => {
   };
   const semFilterData = filterDataSemWise().data;
   const semDaySlot = filterDataSemWise().timeSlot;
-
+  
   //*****.. Set Or Find Date And Day Name ..*****//
   // const date = moment(filterselect.date, "YYYY/MM/DD").format("DD/MM/YYYY");
   // const day = moment(date, "DD/MM/YYYY").format("dddd");
 
   const dayWiseSlotFind = (data = []) => {
     let datas = data;
-    if (day) {
-      datas = datas.filter((el) => el.name === day);
+    if (filterselect.day) {
+      datas = datas.filter((el) => el.name === filterselect.day);
       return datas;
     } else {
       return data;
@@ -68,8 +70,8 @@ const filter = (data = []) => {
   if (filterselect.room) {
     datas = datas.filter((el) => el.room === filterselect.room);
   }
-  if (filterselect.date) {
-    datas = datas.filter((el) => el.day === day);
+  if (filterselect.day) {
+    datas = datas.filter((el) => el.day === filterselect.day);
   }
   if (filterselect.timeslot) {
     datas = datas.filter((el) => el.time === filterselect.timeslot);
@@ -94,7 +96,7 @@ const filter = (data = []) => {
       <div className=" m-auto text-center text-xl mb-4 ">
           <p>Total Room : {classRooms.length}</p>
           <h1 className="text-center text-green-700 text-2xl">
-             {filterselect.date? "Today's Total Class":"Total Class For The Week"}: {filter(semFilterData).length}
+             {filterselect.day && filterselect.semester ? "Today's Total Class":"Total Class For The Week"}: {filter(semFilterData).length}
           </h1>
           {filterselect.timeslot && !filterselect.room &&(
             <p className="text-red-500">
@@ -115,12 +117,13 @@ const filter = (data = []) => {
       <div className="mt-4 mb-4 lg:w-full m-auto grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 justify-items-center">
         {<Button details={data.semesterBtn} />}
         { filterselect.semester && <Button details={data.reportTypeBtn} />}
-        { filterselect.reportType !== "" && filterselect.semester && <Button details={data.dateBtn} />}
-        {filterselect.reportType !== "" &&  (
+        { filterselect.semester && filterselect.reportType !== "" &&<Button details={data.dayBtn} />}
+        {filterselect.semester && filterselect.reportType !== "" && filterselect.day !=="" && (
           <>
             <Button details={data.departmentBtn} />
-            <Button details={data.classRoomBtn} other={classRooms} />
-            <Button details={data.timeSlotBtn} other={daySlot[0]?.value} />
+            {filterselect.reportType === "main" &&(<><Button details={data.classRoomBtn} other={classRooms} />
+            <Button details={data.timeSlotBtn} other={daySlot[0]?.value} /></>)}
+            {/* <button class="w-3/4  m-auto flex flex-col mb-2">Retun To Weekly</button> */}
           </>
         )}
       </div>
@@ -133,8 +136,7 @@ const filter = (data = []) => {
           classroom = {classRooms}
           columns={tableHead}
           name={filterselect.reportType}
-          date={day}
-          setDay = {setDay}
+          date={filterselect.day}
           setFilterSel = {setFilterselect}
         />
         
