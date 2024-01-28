@@ -3,16 +3,18 @@ import {
   faBarsProgress,
   faCalendarDays,
   faChartPie,
+  faCirclePlus,
   faCircleXmark,
   faCodeBranch,
   faFilePen,
   faHouseCircleCheck,
   faMoneyBillTrendUp,
   faNewspaper,
+  faPeopleRoof,
   faPerson,
   faRectangleList,
   faRectangleXmark,
-  faUsers,
+  faUsers
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { signOut } from "firebase/auth";
@@ -56,6 +58,12 @@ const NewHomePageV2 = () => {
       permission: "user",
     },
     {
+      name: "Room Wise Faculty",
+      icon: faPeopleRoof,
+      navigate: "/roomwisefaculty",
+      permission: "user",
+    },
+    {
       name: "Admission Analyze",
       icon: faChartPie,
       navigate: "/studentAnalyze",
@@ -75,7 +83,7 @@ const NewHomePageV2 = () => {
     },
     {
       name: "Create User",
-      icon: faMoneyBillTrendUp,
+      icon: faCirclePlus,
       navigate: "/createuser",
       permission: "admin",
     },

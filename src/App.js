@@ -13,6 +13,7 @@ import AllFacultys from "./Component/Page/All Report/Faculty List/AllFacultys";
 import EmploeeyList from "./Component/Page/All Report/Faculty List/EmploeeyList";
 import ExFaculty from "./Component/Page/All Report/Faculty List/ExFaculty";
 import FacultyDetails from "./Component/Page/All Report/Faculty List/FacultyDetails";
+import RoomWiseFaculty from "./Component/Page/All Report/Faculty List/RoomWiseFaculty";
 import TClassDetail from "./Component/Page/All Report/FacultyClassList/TClassDetail";
 import TeacherTotalClass from "./Component/Page/All Report/FacultyClassList/TeacherTotalClass";
 import JurnalView from "./Component/Page/All Report/JurnalView";
@@ -59,6 +60,7 @@ function App() {
             <Route path="/faculty" index element={<AllFacultys />} />
             <Route path="/faculty/:id" element={<FacultyDetails />} />
             <Route path="/updatefaculty/:id" element={<EditFaculty />} />
+            <Route path="/roomwisefaculty" element={<RoomWiseFaculty/>}/>
             
             <Route path="/emploeey" element={<EmploeeyList />} />
             <Route path="/exemploeey" element={<ExFaculty />} />
