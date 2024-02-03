@@ -16,15 +16,16 @@ const RoomWiseFaculty = () => {
   console.log(selecteditem);
   const filterData = (room) => {
     let data;
+    const datas = faculty.filter((el)=>el.status === "Active")
     if (room) {
-      data = faculty.filter((el) => el.roomnum === room);
+      data = datas.filter((el) => el.roomnum === room);
     } else {
-      data = faculty.filter((el) => el.roomnum !== "");
-      
+      data = datas.filter((el) => el.roomnum !== "");
     }
     return data;
   };
   const option = [
+    { value: "Total", name: "Total", cepacity: "" },
     { value: "201-A", name: "201- A", cepacity: "2" },
     { value: "201-B", name: "201- B", cepacity: "7" },
     { value: "201-C", name: "201- C", cepacity: "7" },
@@ -42,7 +43,7 @@ const RoomWiseFaculty = () => {
     { value: "612", name: "612", cepacity: "2" },
     { value: "617-A", name: "617- A", cepacity: "4" },
     { value: "617-B", name: "617- B", cepacity: "2" },
-    { value: "Total", name: "Total", cepacity: "" },
+    
   ];
   // const roomBtn = {
   //   btnHade: "Room Number",
@@ -60,6 +61,7 @@ const RoomWiseFaculty = () => {
     { field: "pnumber", header: "Phone Number" },
   ];
   const slot = (value, day) => {
+    console.log(value);
     if (day === "Total") {
       let sum = 0;
       // Iterate over each object and add its capacity to the sum
@@ -70,13 +72,14 @@ const RoomWiseFaculty = () => {
     }
     return value;
   };
+    
   if (loading) {
     return <Loading />;
   } else {
     return (
       <div>
         <h1 className="text-center font-extrabold text-2xl underline underline-offset-1">
-          Room Number Wise Faculty
+          Room Wise Faculty
         </h1>
         {selecteditem.length !== 0 &&
           <>
@@ -95,7 +98,7 @@ const RoomWiseFaculty = () => {
                     data={[
                       { field: "", header: "Room Number" },
                       { field: "", header: "Capacity" },
-                      { field: "", header: "Occupy" },
+                      { field: "", header: "Occupied" },
                       { field: "", header: "Empty" },
                     ]}
                   />
@@ -115,11 +118,11 @@ const RoomWiseFaculty = () => {
                               setSelecteditem(filterData(row.value));
                             }}
                           >
-                            {slot(filterData(row.value).length,row.name)}
+                            {row.name === "Total" ? 43 : filterData(row.value).length}
                           </button>
                         </td>
                         <td class="px-2 py-4 whitespace-nowrap text-xl font-medium text-gray-7 00">
-                          {row.cepacity - filterData(row.value).length}
+                          {row.name === "Total" ? slot(row.cepacity,row.name) - 43 : row.cepacity - filterData(row.value).length}
                         </td>
                       </tr>
                     ))}

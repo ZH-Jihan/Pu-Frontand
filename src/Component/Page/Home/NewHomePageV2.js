@@ -36,6 +36,7 @@ const NewHomePageV2 = () => {
   //** End 1st way 2nd way method show bottom of this file  **//
 
   const [user, loading] = useAuthState(auth);
+  console.log(user);
   const [admin] = useAdmin(user);
   //** Report list array **/
   const reports = [
