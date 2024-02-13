@@ -1,6 +1,7 @@
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Toaster } from "react-hot-toast";
 import { Route, Routes } from "react-router-dom";
+import HostelMemberAdd from "./Component/Dashbord/HostelMemberAdd";
 import useAdmin from "./Component/Hooks/Admin";
 import CompanyInfo from "./Component/Page/About/CompanyInfo";
 import AllDepartment from "./Component/Page/All Report/AllDepartment";
@@ -16,6 +17,7 @@ import FacultyDetails from "./Component/Page/All Report/Faculty List/FacultyDeta
 import RoomWiseFaculty from "./Component/Page/All Report/Faculty List/RoomWiseFaculty";
 import TClassDetail from "./Component/Page/All Report/FacultyClassList/TClassDetail";
 import TeacherTotalClass from "./Component/Page/All Report/FacultyClassList/TeacherTotalClass";
+import HostelMember from "./Component/Page/All Report/HostelMember";
 import JurnalView from "./Component/Page/All Report/JurnalView";
 import AllCourse from "./Component/Page/All Report/Program Wise Detail/AllCourse";
 import AllProgram from "./Component/Page/All Report/Program Wise Detail/AllProgram";
@@ -96,6 +98,10 @@ function App() {
             <Route path="/routine" element={<RutinMainPage />}></Route>
             
             <Route path="/createuser" element={ admin &&  <CreateUser/>}></Route>
+
+            <Route path="/hostelmember" element={ <HostelMember/>}></Route>
+
+            <Route path="/addhostelmember" element={ <HostelMemberAdd/>}></Route>
             
             <Route path="*" element={<Notpound></Notpound>}></Route>
           </Route>

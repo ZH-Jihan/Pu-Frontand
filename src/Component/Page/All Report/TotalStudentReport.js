@@ -167,7 +167,7 @@ const TotalStudentReport = () => {
   };
 
   const droppedStudent = () => {
-
+    
     const filterStudent = (sem) => {
       let fRegStudent;
       let fAddmiStudent;
