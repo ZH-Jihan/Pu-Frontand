@@ -7,6 +7,7 @@ import {
   faCircleXmark,
   faCodeBranch,
   faFilePen,
+  faHotel,
   faHouseCircleCheck,
   faMoneyBillTrendUp,
   faNewspaper,
@@ -57,6 +58,18 @@ const NewHomePageV2 = () => {
       icon: faPerson,
       navigate: "/emploeey",
       permission: "user",
+    },
+    {
+      name: "Girl Hostel Member",
+      icon: faHotel,
+      navigate: "/hostelmember",
+      permission: "user",
+    },
+    {
+      name: "Add Hostel Member",
+      icon: faHotel,
+      navigate: "/addhostelmember",
+      permission: "admin",
     },
     {
       name: "Room Wise Faculty",
