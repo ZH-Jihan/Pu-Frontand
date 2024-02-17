@@ -3,17 +3,19 @@ import useFatchData from '../../Hooks/useFatchData';
 import Table from '../../Utilits/Table/Table';
 
 const HostelMember = () => {
-    const { data: totalReg } = useFatchData("allregStudent.json");
+    
     const { data: hostelmember } = useFatchData("https://pu-server-1.onrender.com/hostelmember");
 
-    const student = totalReg.find((el)=> el.ar === "232224")
-    console.log(student);
+    
     const detailtableHead = [
         { field: "joinDate", header: "Join Date" },
         { field: "name", header: "Name" },
         { field: "id", header: "Id" },
         { field: "number", header: "Number" },
         { field: "department", header: "Department" },
+        { field: "flat", header: "Flat" },
+        { field: "room", header: "Room" },
+        { field: "seat", header: "Seat" },
         { field: "batch", header: "Batch" },
         { field: "semester", header: "Semester" },
         
