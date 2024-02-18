@@ -22,7 +22,7 @@ const HostelMember = () => {
       ];
     return (
         <div>
-            <h1 className='text-2xl pb-4 text-center font-bold'>Hostel Member List</h1>
+            <h1 className='text-2xl pb-4 text-center font-bold'>Women Hostel Member</h1>
             <Table columns={detailtableHead} data={hostelmember} />
         </div>
     );
