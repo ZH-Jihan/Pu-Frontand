@@ -1,8 +1,6 @@
-import { useAuthState } from "react-firebase-hooks/auth";
 import { Toaster } from "react-hot-toast";
 import { Route, Routes } from "react-router-dom";
 import HostelMemberAdd from "./Component/Dashbord/HostelMemberAdd";
-import useAdmin from "./Component/Hooks/Admin";
 import CompanyInfo from "./Component/Page/About/CompanyInfo";
 import AllDepartment from "./Component/Page/All Report/AllDepartment";
 import RutinMainPage from "./Component/Page/All Report/Class Rutin/RutinMainPage";
@@ -29,24 +27,28 @@ import ViewAbsentReport from "./Component/Page/All Report/ViewAbsentReport";
 import AdmissonFrom from "./Component/Page/Apply From/AdmissonFrom";
 import RegistrationFrom from "./Component/Page/Apply From/RegistrationFrom";
 import NewHomePageV2 from "./Component/Page/Home/NewHomePageV2";
-import CheckUser from "./Component/Page/Security/CheckUser";
-import RequireAuth from "./Component/Page/Security/RequireAuth";
+import MyRequireAuth from "./Component/Page/Security/MyRequireAuth";
 import Notpound from "./Component/Page/Sheared Page/Notpound";
-import Login from "./Component/Page/SingUp & Login/Login";
-import auth from "./firebase.init";
+import MyLogin from "./Component/Page/SingUp & Login/MyLogin";
+import MySingUp from "./Component/Page/SingUp & Login/MySingUp";
+import Unothorize from "./Component/Page/SingUp & Login/Unothorize";
 // axios.defaults.url("http://localhost:5000/api/v1")
+// const token = Cookies.get('token')
+    
+    // const token = document.cookie.split('; ').find(row => row.startsWith('token=')).split('=')[1];
+    // const decodedData = JSON.parse(atob(token.split('.')[1]));
+    // console.log(decodedData);
 
 function App() {
-  const [user, loading] = useAuthState(auth);
-  const [admin] = useAdmin(user);
+  
   return (
     <>
       <div>
         {/* <Navber></Navber> */}
         <Routes>
           {/* Main Open Page */}
-          <Route path="/checkuser" element={<CheckUser/>}/>
-          <Route path="/" element={<RequireAuth><NewHomePageV2/></RequireAuth>}>
+          <Route path="/" element={<MyRequireAuth><NewHomePageV2/></MyRequireAuth>}>
+            
             {/* Faculty Total Class */}
             <Route path="/teacherclass"  element={<TeacherTotalClass />} />
             <Route path="/teacherclass/:id" element={<TClassDetail />} />
@@ -59,7 +61,7 @@ function App() {
 
             {/* All Faculty List & Details */}
             
-            <Route path="/faculty" index element={<AllFacultys />} />
+            <Route path="/faculty" element={<AllFacultys/>}/>
             <Route path="/faculty/:id" element={<FacultyDetails />} />
             <Route path="/updatefaculty/:id" element={<EditFaculty />} />
             <Route path="/roomwisefaculty" element={<RoomWiseFaculty/>}/>
@@ -97,17 +99,21 @@ function App() {
             <Route path="/registarfrom" element={<RegistrationFrom />} />
             <Route path="/routine" element={<RutinMainPage />}></Route>
             
-            <Route path="/createuser" element={ admin &&  <CreateUser/>}></Route>
+            <Route path="/createuser" element={ <CreateUser/>}></Route>
 
             <Route path="/hostelmember" element={ <HostelMember/>}></Route>
 
             <Route path="/addhostelmember" element={ <HostelMemberAdd/>}></Route>
             
             <Route path="*" element={<Notpound></Notpound>}></Route>
+            <Route path="/unothorize" element={<Unothorize/>}></Route>
+            
           </Route>
           
-            <Route path="/login" element={<Login />}></Route>
+            {/* <Route path="/login" element={<Login />}></Route> */}
+            <Route path="/mylogin" element={<MyLogin/>}></Route>
             <Route path="/about" element={<CompanyInfo />}></Route>
+            <Route path="/mysingup" element={<MySingUp/>}></Route>
           {/* Class Rutin Related Page */}
           {/* <Route path="/classrutin" element={<HomePage/>}/> */}
         </Routes>

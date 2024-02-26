@@ -9,7 +9,9 @@ const useFatchData = (url) => {
     useEffect(()=>{
         setLoading(true);
             axios
-            .get(url)
+            .get(url, {
+                withCredentials: true,
+              })
             .then((response)=>{
                 setData(response.data);
             })
