@@ -3,7 +3,6 @@ import Cookies from "js-cookie";
 import React from "react";
 import toast from "react-hot-toast";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import SocileLogin from "../Sheared Page/SocileLogin";
 const url = "https://pu-server-1.onrender.com/api/v1/user/login";
 
 const MyLogin = () => {
@@ -50,14 +49,20 @@ const MyLogin = () => {
 
   return (
     <section class="bg-blueGray-50">
-      <div class="w-full lg:w-4/12 px-4 mx-auto pt-6">
+      <div class="w-full lg:w-4/12  mx-auto pt-28">
         <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-200 border-0">
           <div class="rounded-t mb-0 px-6 py-6 pb-0">
-            <div class="text-center mb-6">
-              <h6 class="text-blueGray-500 text-3xl font-bold">Log In with</h6>
+            <div class="text-center mb-2">
+              <h6 class="text-blueGray-500 text-3xl font-bold">Log In PU MIS</h6>
             </div>
-            <SocileLogin></SocileLogin>
-            <div class="divider">OR</div>
+                    <img
+                      src="https://i.ibb.co/6XHn9Dm/pu-logo-1-1.png"
+                      class="h-32  w-32 m-auto "
+                      alt="Windster Logo"
+                    />
+                    {/* <span class="self-center whitespace-nowrap">PU MIS</span> */}
+            {/* <SocileLogin></SocileLogin> */}
+            <div class="divider">With</div>
           </div>
           <div class="flex-auto px-4 lg:px-10 py-10 pt-0">
             <form onSubmit={handleLogin} className="pb-4">
@@ -120,8 +125,8 @@ const MyLogin = () => {
             </form>
             <span class="ml-2">
               You don't have an account?
-              <Link to="#" class="text-xs ml-2 text-blue-500 font-semibold">
-                Please Contact Admin ( Kamal Sir )
+              <Link to="#" class="text-base ml-2 text-blue-500 font-medium">
+                Please Contact Admin( Kamal Sir )
               </Link>
             </span>
           </div>
