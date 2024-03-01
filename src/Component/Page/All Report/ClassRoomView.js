@@ -3,7 +3,7 @@ import useFatchData from '../../Hooks/useFatchData';
 import Table from '../../Utilits/Table/Table';
 
 const ClassRoomView = () => {
-  const {data:classRooms} = useFatchData('https://pu-server-1.onrender.com/classroom');
+  const {data:classRooms} = useFatchData('https://pu-server-1.onrender.com/api/v1/classroom');
   const totalCapacity =()=>{
     let sum = 0;
 

@@ -9,7 +9,7 @@ const AddSemester = () => {
           id: event.target.semesterId?.value,
           description: event.target.description?.value,
         };
-        fetch("https://pu-server-1.onrender.com/semester", {
+        fetch("https://pu-server-1.onrender.com/api/v1/semester", {
           method: "POST",
           headers: {
             "content-type": "application/json",

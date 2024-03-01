@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import useFatchData from "../../Hooks/useFatchData";
 
 const RegistrationFrom = () => {
-  const {data:districts} = useFatchData('https://pu-server-1.onrender.com/district');
-  const {data:upazilas} = useFatchData('https://pu-server-1.onrender.com/upazila');
+  const {data:districts} = useFatchData('https://pu-server-1.onrender.com/api/v1/district');
+  const {data:upazilas} = useFatchData('https://pu-server-1.onrender.com/api/v1/upazila');
   const [selecteditem, setSelecteditem] = useState('');
   const handleInputChange = (e) => {
     setSelecteditem(e.target.value);

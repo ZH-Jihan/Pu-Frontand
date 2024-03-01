@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import useFatchData from '../../Hooks/useFatchData';
 
 const AllDepartment = () => {
-  const {data:departments} = useFatchData('https://pu-server-1.onrender.com/department');
+  const {data:departments} = useFatchData('https://pu-server-1.onrender.com/api/v1/department');
   const [selecteditem,setSelecteditem] = useState({
     department:""
   })
@@ -17,9 +17,9 @@ const AllDepartment = () => {
     }
     return data;
   }
-  const tableHead = [
-    {field:"",header:""},
-  ]
+  // const tableHead = [
+  //   {field:"",header:""},
+  // ]
   return (
     <div className="mx-2">
       <p className='text-center font-bold text-3xl my-8'>Department List</p>

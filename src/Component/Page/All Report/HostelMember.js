@@ -4,9 +4,9 @@ import Table from '../../Utilits/Table/Table';
 
 const HostelMember = () => {
     
-    const { data: hostelmember } = useFatchData("https://pu-server-1.onrender.com/hostelmember");
+    const { data: hostelmember,error } = useFatchData("https://pu-server-1.onrender.com/api/v1/hostelmember");
 
-    
+    console.log(error);
     const detailtableHead = [
         { field: "joinDate", header: "Join Date" },
         { field: "name", header: "Name" },
@@ -20,6 +20,12 @@ const HostelMember = () => {
         { field: "semester", header: "Semester" },
         
       ];
+      if (error) {
+        return (
+            <h1>{error?.response?.data?.error
+            }</h1>
+        )
+      }
     return (
         <div>
             <h1 className='text-2xl pb-4 text-center font-bold'>Women Hostel Member</h1>

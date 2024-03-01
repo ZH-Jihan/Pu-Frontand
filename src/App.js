@@ -5,7 +5,6 @@ import CompanyInfo from "./Component/Page/About/CompanyInfo";
 import AllDepartment from "./Component/Page/All Report/AllDepartment";
 import RutinMainPage from "./Component/Page/All Report/Class Rutin/RutinMainPage";
 import ClassRoomView from "./Component/Page/All Report/ClassRoomView";
-import CreateUser from "./Component/Page/All Report/CreateUser";
 import EditFaculty from "./Component/Page/All Report/Edit & Delete Info/Edit Info/EditFaculty";
 import EntryAbsentReport from "./Component/Page/All Report/EntryAbsentReport";
 import AllFacultys from "./Component/Page/All Report/Faculty List/AllFacultys";
@@ -48,7 +47,6 @@ function App() {
         <Routes>
           {/* Main Open Page */}
           <Route path="/" element={<MyRequireAuth><NewHomePageV2/></MyRequireAuth>}>
-            
             {/* Faculty Total Class */}
             <Route path="/teacherclass"  element={<TeacherTotalClass />} />
             <Route path="/teacherclass/:id" element={<TClassDetail />} />
@@ -66,7 +64,7 @@ function App() {
             <Route path="/updatefaculty/:id" element={<EditFaculty />} />
             <Route path="/roomwisefaculty" element={<RoomWiseFaculty/>}/>
             
-            <Route path="/emploeey" element={<EmploeeyList />} />
+            <Route path="/empoleey" element={<EmploeeyList />} />
             <Route path="/exemploeey" element={<ExFaculty />} />
 
             {/* Program List Wise Details */}
@@ -99,9 +97,9 @@ function App() {
             <Route path="/registarfrom" element={<RegistrationFrom />} />
             <Route path="/routine" element={<RutinMainPage />}></Route>
             
-            <Route path="/createuser" element={ <CreateUser/>}></Route>
+            <Route path="/createUser" element={ <MySingUp/>}></Route>
 
-            <Route path="/hostelmember" element={ <HostelMember/>}></Route>
+            <Route path="/womenhostel" element={ <HostelMember/>}></Route>
 
             <Route path="/addhostelmember" element={ <HostelMemberAdd/>}></Route>
             

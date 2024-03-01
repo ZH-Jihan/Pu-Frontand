@@ -6,7 +6,7 @@ import useFatchData from '../../../../Hooks/useFatchData';
 const EditFaculty = () => {
     const {id} = useParams();
   // const navigate = useNavigate();
-  const {data:faculty,setData} = useFatchData(`https://pu-server-1.onrender.com/faculty/${id}`);
+  const {data:faculty,setData} = useFatchData(`https://pu-server-1.onrender.com/api/v1/faculty/${id}`);
   
   
     
@@ -17,7 +17,7 @@ const EditFaculty = () => {
       // if (facultyinfo.dipartment || facultyinfo.designation || facultyinfo.university === "--Select Department--") {
       //   toast.error("Please Select Option")
       // } else {
-      fetch(`https://pu-server-1.onrender.com/updatefaculty/${id}`, {
+      fetch(`https://pu-server-1.onrender.com/api/v1/updatefaculty/${id}`, {
         method: "PUT",
         headers: {
           "content-type": "application/json",

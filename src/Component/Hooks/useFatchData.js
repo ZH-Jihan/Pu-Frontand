@@ -1,17 +1,14 @@
-import axios from 'axios';
+import axios from "axios";
 import { useEffect, useState } from 'react';
-
 const useFatchData = (url) => {
-    const [data,setData] = useState([]);
-    const [loading,setLoading] = useState(false);
+    const [loading,setLoading] = useState(true);
+    const [data,setData] = useState([])
     const [error,setError] = useState(null);
 
     useEffect(()=>{
         setLoading(true);
             axios
-            .get(url, {
-                withCredentials: true,
-              })
+            .get(url)
             .then((response)=>{
                 setData(response.data);
             })

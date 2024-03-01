@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import useFatchData from "../../Hooks/useFatchData";
 
 const ViewAbsentReport = () => {
-  const {data:apsentDatas} = useFatchData('https://pu-server-1.onrender.com/facultyabsent');
-  const {data:facultys} = useFatchData('https://pu-server-1.onrender.com/faculty');
+  const {data:apsentDatas} = useFatchData('https://pu-server-1.onrender.com/api/v1/facultyabsent');
+  const {data:facultys} = useFatchData('https://pu-server-1.onrender.com/api/v1/faculty');
   const [chake, setchake] = useState(true);
   const [filterselect, setFilterselect] = useState({
     date: "",

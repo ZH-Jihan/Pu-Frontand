@@ -4,8 +4,8 @@ import useFatchData from "../../../Hooks/useFatchData";
 import Loading from "../../Sheared Page/Loading";
 
 const TeacherTotalClass = () => {
-  const {data:facultys,loading} = useFatchData('https://pu-server-1.onrender.com/faculty');
-  const {data:routindetail} = useFatchData('https://pu-server-1.onrender.com/routin');
+  const {data:facultys,loading} = useFatchData('https://pu-server-1.onrender.com/api/v1/faculty');
+  const {data:routindetail} = useFatchData('https://pu-server-1.onrender.com/api/v1/routin');
   const [selecteditem, setSelecteditem] = useState({
     department: "",
     jobtype: "",

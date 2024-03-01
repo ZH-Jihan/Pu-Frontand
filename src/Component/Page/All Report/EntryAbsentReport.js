@@ -4,9 +4,9 @@ import { toast } from "react-hot-toast";
 import useFatchData from "../../Hooks/useFatchData";
 
 const EntryAbsentReport = () => {
-  const {data:routindetail} = useFatchData('https://pu-server-1.onrender.com/routin');
-  const {data:classroom} = useFatchData('https://pu-server-1.onrender.com/classroom');
-  const {data:facultys,loading} = useFatchData('https://pu-server-1.onrender.com/faculty');
+  const {data:routindetail} = useFatchData('https://pu-server-1.onrender.com/api/v1/routin');
+  const {data:classroom} = useFatchData('https://pu-server-1.onrender.com/api/v1/classroom');
+  const {data:facultys} = useFatchData('https://pu-server-1.onrender.com/api/v1/faculty');
   const [filterselect, setFilterselect] = useState({
     date: "",
     department: "",
@@ -226,7 +226,7 @@ const EntryAbsentReport = () => {
         slot:tslot,
         room:room,
     };
-    fetch("https://pu-server-1.onrender.com/facultyabsent", {
+    fetch("https://pu-server-1.onrender.com/api/v1/facultyabsent", {
           // method: "POST",
           headers: {
             "content-type": "application/json",

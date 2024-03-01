@@ -6,7 +6,7 @@ const Token = user =>{
         const email = user?.user?.email;
         const currentUser = {email: email};
         if(email){
-            fetch(`https://pu-server-1.onrender.com/user/${email}`, {
+            fetch(`https://pu-server-1.onrender.com/api/v1/user/${email}`, {
                 method:'PUT',
                 headers: {
                     'content-type': 'application/json'

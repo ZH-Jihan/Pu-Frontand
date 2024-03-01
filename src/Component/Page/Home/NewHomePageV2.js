@@ -1,30 +1,9 @@
-import {
-  faBan,
-  faBarsProgress,
-  faCalendarDays,
-  faChartPie,
-  faCirclePlus,
-  faCircleXmark,
-  faCodeBranch,
-  faFilePen,
-  faHotel,
-  faHouseCircleCheck,
-  faMoneyBillTrendUp,
-  faNewspaper,
-  faPeopleRoof,
-  faPerson,
-  faRectangleList,
-  faRectangleXmark,
-  faUsers
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { signOut } from "firebase/auth";
 import React from "react";
-import { useAuthState } from "react-firebase-hooks/auth";
 import { Helmet } from "react-helmet";
-import { Outlet } from "react-router-dom";
-import auth from "../../../firebase.init";
-import useAdmin from "../../Hooks/Admin";
+import { Outlet, useNavigate } from "react-router-dom";
+import useFatchData from "../../Hooks/useFatchData";
+import FontWosamIcon from "../../Utilits/FontWosamIcon";
+import { getUserRole } from "../Security/myAuth";
 import Loading from "../Sheared Page/Loading";
 
 const NewHomePageV2 = () => {
@@ -35,138 +14,48 @@ const NewHomePageV2 = () => {
   // script.async = true;
   // document.body.appendChild(script);
   //** End 1st way 2nd way method show bottom of this file  **//
+  const { data: reports, loading } = useFatchData("menuList.json");
+  const viewReport = reports[0]?.value;
+  const addData = reports[1]?.value;
 
-  const [user, loading] = useAuthState(auth);
-  console.log(user);
-  const [admin] = useAdmin(user);
-  //** Report list array **/
-  const reports = [
-    {
-      name: "Routine",
-      icon: faCalendarDays,
-      navigate: "/routine",
-      permission: "user",
-    },
-    {
-      name: "All Faculty",
-      icon: faUsers,
-      navigate: "/faculty",
-      permission: "user",
-    },
-    {
-      name: "All Employee",
-      icon: faPerson,
-      navigate: "/emploeey",
-      permission: "user",
-    },
-    {
-      name: "Girl Hostel Member",
-      icon: faHotel,
-      navigate: "/hostelmember",
-      permission: "user",
-    },
-    {
-      name: "Add Hostel Member",
-      icon: faHotel,
-      navigate: "/addhostelmember",
-      permission: "admin",
-    },
-    {
-      name: "Room Wise Faculty",
-      icon: faPeopleRoof,
-      navigate: "/roomwisefaculty",
-      permission: "user",
-    },
-    {
-      name: "Admission Analyze",
-      icon: faChartPie,
-      navigate: "/studentAnalyze",
-      permission: "user",
-    },
-    {
-      name: "Credit Fee Analyze",
-      icon: faMoneyBillTrendUp,
-      navigate: "/tutionfee",
-      permission: "user",
-    },
-    {
-      name: "EX-Emploeey",
-      icon: faCircleXmark,
-      navigate: "/exemploeey",
-      permission: "user",
-    },
-    {
-      name: "Create User",
-      icon: faCirclePlus,
-      navigate: "/createuser",
-      permission: "admin",
-    },
-    {
-      name: "Faculty Wise Class",
-      icon: faRectangleList,
-      navigate: "/teacherclass",
-      permission: "admin",
-    },
-    {
-      name: "Check Faculty Absent",
-      icon: faRectangleXmark,
-      navigate: "/absentreportview",
-      permission: "admin",
-    },
-    {
-      name: "Program Wise Details",
-      icon: faCodeBranch,
-      navigate: "/program",
-      permission: "admin",
-    },
-    {
-      name: "Program Wise Class",
-      icon: faBarsProgress,
-      navigate: "/programClasscount",
-      permission: "admin",
-    },
-    {
-      name: "Class Room List",
-      icon: faHouseCircleCheck,
-      navigate: "/classroom",
-      permission: "user",
-    },
-    {
-      name: "Faculty Absent Entry",
-      icon: faBan,
-      navigate: "/absentreportentry",
-      permission: "admin",
-    },
-    {
-      name: "Journal View",
-      icon: faNewspaper,
-      navigate: "/viewJournal",
-      permission: "admin",
-    },
-    {
-      name: "Admission Form",
-      icon: faFilePen,
-      navigate: "/admisonfrom",
-      permission: "admin",
-    },
-    {
-      name: "Regester Form",
-      icon: faFilePen,
-      navigate: "/registarfrom",
-      permission: "admin",
-    },
-  ];
+console.log(viewReport);
+  const userDat = getUserRole();
+  const navigate = useNavigate();
 
-  const filterUserAccess = () => {
-    let filterReport;
-    if (user) {
-      filterReport = reports.filter((el) => el.permission === "user");
-    }
-    if (admin) {
-      filterReport = reports;
-    }
-    return filterReport;
+  const logouthandelar = () => {
+    localStorage.removeItem('authToken')
+            navigate("/mylogin");
+    // axios
+    //   .post("http://localhost:5000/api/v1/user/logout", userDat.data)
+    //   .then((respons) => {
+    //     try {
+    //       if (respons.status) {
+    //         localStorage.removeItem('authToken')
+    //         navigate("/mylogin");
+    //       }
+    //     } catch (error) {
+    //       console.log(error);
+    //     }
+    //   });
   };
+
+  const filterUserAccess = (value) => {
+    let filterReportPermission;
+    let filterReportrole;
+    if (userDat.role) {
+      filterReportrole = value?.filter((el) => el.role.includes(userDat.role));
+    }
+    if (userDat.role === "admin") {
+      filterReportrole = value;
+    }
+    if (userDat.role === "user" || userDat.role === "editor") {
+      filterReportPermission = filterReportrole?.filter((el) =>
+        userDat.permission.includes(el.name));
+      return filterReportPermission;
+    }
+    return filterReportrole;
+  };
+console.log(filterUserAccess(viewReport));
   if (loading) {
     return <Loading></Loading>;
   } else {
@@ -244,13 +133,8 @@ const NewHomePageV2 = () => {
                     </svg>
                   </button>
                   <div>
-                    <button
-                      className="btn btn-ghost"
-                      onClick={() => {
-                        signOut(auth);
-                      }}
-                    >
-                      {user ? "Log Out" : "LogIN"}
+                    <button className="btn btn-ghost" onClick={logouthandelar}>
+                      {userDat ? "Log Out" : "LogIN"}
                     </button>
                   </div>
                 </div>
@@ -293,21 +177,39 @@ const NewHomePageV2 = () => {
                           </div>
                         </form>
                       </li>
-                      {filterUserAccess().map((report) => (
-                        <li>
-                          <a
-                            href={report.navigate}
-                            class="text-base text-gray-900 font-normal rounded-lg flex items-center p-2 hover:bg-gray-100 group"
-                          >
-                            <FontAwesomeIcon
-                              class="w-6 h-6 text-gray-500 group-hover:text-gray-900 transition duration-75"
-                              fill="currentColor"
-                              icon={report.icon}
-                            />
-                            <span class="ml-3">{report.name}</span>
-                          </a>
-                        </li>
-                      ))}
+                      <details className="mx-8 " open>
+                        <summary>View Reports</summary>
+                        <ul>
+                          {filterUserAccess(viewReport)?.map((report) => (
+                            <li>
+                              <a
+                                href={report.navigate}
+                                class="text-base text-gray-900 font-normal rounded-lg flex items-center p-2 hover:bg-gray-100 group"
+                              >
+                                <FontWosamIcon name={report.name} />
+                                <span class="ml-3">{report.name}</span>
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      </details>
+                      {userDat.role === "admin" || userDat.role === "editor" ?
+                        <details className="mx-8" open>
+                        <summary>Entry Data For Report</summary>
+                        <ul>
+                          {filterUserAccess(addData)?.map((report) => (
+                            <li>
+                              <a
+                                href={report.navigate}
+                                class="text-base text-gray-900 font-normal rounded-lg flex items-center p-2 hover:bg-gray-100 group"
+                              >
+                                <FontWosamIcon name={report.name} />
+                                <span class="ml-3">{report.name}</span>
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      </details>:""}
                     </ul>
                   </div>
                 </div>

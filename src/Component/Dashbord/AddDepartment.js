@@ -11,7 +11,7 @@ const AddDepartment = () => {
           description: event.target.description?.value,
         };
         console.log(department)
-        fetch("https://pu-server-1.onrender.com/department", {
+        fetch("https://pu-server-1.onrender.com/api/v1/department", {
           method: "POST",
           headers: {
             "content-type": "application/json",

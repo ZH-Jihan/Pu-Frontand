@@ -1,52 +1,55 @@
-import axios from 'axios';
-import Cookies from 'js-cookie';
-import React from 'react';
-import toast from 'react-hot-toast';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
-import SocileLogin from '../Sheared Page/SocileLogin';
-const url = "http://localhost:5000/api/v1/user/login";
-
+import axios from "axios";
+import Cookies from "js-cookie";
+import React from "react";
+import toast from "react-hot-toast";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import SocileLogin from "../Sheared Page/SocileLogin";
+const url = "https://pu-server-1.onrender.com/api/v1/user/login";
 
 const MyLogin = () => {
-    const navigate = useNavigate();
-    const location = useLocation();
-    const token = Cookies.get('token')
-    console.log(token);
-    let from = location.state?.from?.pathname || "/";
-    const handleLogin = async (event) => {
-        event.preventDefault();
-    
-        const singUpInfo = {
-          email: event.target.email.value,
-          password: event.target.password.value
-        };
-    
-        try {
-          const response = await axios.post(url, JSON.stringify(singUpInfo), {
-            headers: { "Content-Type": "application/json" },
-          });
-          toast.success(response?.data?.message);
+  const navigate = useNavigate();
+  const location = useLocation();
 
-          if(response?.data?.token){
-            navigate(from, { replace: true });
-          }
+  let from = location.state?.from?.pathname || "/";
+  const handleLogin = async (event) => {
+    event.preventDefault();
 
-          Cookies.set('token', response?.data?.token , { expires: 7, secure: true });
-          //clear state and controlled inputs
-          event.target.reset();
-        } catch (err) {
-          if (!err?.response) {
-            toast.error("No Server Response");
-          } else if (err.response?.status === 409) {
-            toast.error("Username Taken");
-          } else {
-            toast.error("Registration Failed");
-          }
-        }
-      };
+    const loginUser = {
+      email: event.target.email.value,
+      password: event.target.password.value,
+    };
 
-    return (
-        <section class="bg-blueGray-50">
+    try {
+      const response = await axios.post(url, loginUser);
+
+      const token = response?.data.token;
+      Cookies.set("accessToken", token);
+      const expirationTime = new Date().getTime() + 10 * 60 * 1000;
+      const tokenData = { token, expirationTime };
+
+      if (token) {
+        localStorage.setItem("authToken", JSON.stringify(tokenData));
+        toast.success(response?.data?.message);
+        navigate(from, { replace: true });
+      }
+
+      // Cookies.set('token', response?.data?.token , { expires: 7, secure: true});
+      //clear state and controlled inputs
+      event.target.reset();
+    } catch (err) {
+      console.log(err);
+      if (!err?.response) {
+        toast.error("No Server Response");
+      } else if (err.response?.status === 409) {
+        toast.error("Username Taken");
+      } else {
+        toast.error(err?.response?.data?.error);
+      }
+    }
+  };
+
+  return (
+    <section class="bg-blueGray-50">
       <div class="w-full lg:w-4/12 px-4 mx-auto pt-6">
         <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-200 border-0">
           <div class="rounded-t mb-0 px-6 py-6 pb-0">
@@ -106,7 +109,8 @@ const MyLogin = () => {
                 </a>
               </div>
               <div class="text-center mt-6">
-                <button type='submit'
+                <button
+                  type="submit"
                   class="btn text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
                 >
                   {" "}
@@ -114,18 +118,17 @@ const MyLogin = () => {
                 </button>
               </div>
             </form>
-            <span class="ml-2"
-            >You don't have an account?
-            <Link
-              to="#"
-              class="text-xs ml-2 text-blue-500 font-semibold"
-              >Please Contact Admin ( Kamal Sir )</Link>
-              </span>
+            <span class="ml-2">
+              You don't have an account?
+              <Link to="#" class="text-xs ml-2 text-blue-500 font-semibold">
+                Please Contact Admin ( Kamal Sir )
+              </Link>
+            </span>
           </div>
         </div>
       </div>
     </section>
-    );
+  );
 };
 
 export default MyLogin;

@@ -5,13 +5,13 @@ import Button from "../../../Utilits/Button";
 import Loading from "../../Sheared Page/Loading";
 import RutineTable from "./RutineTable";
 const RutinMainPage = () => {
-  // const {rutinDatas} = useFatchData('https://pu-server-1.onrender.com/routin')
+  // const {rutinDatas} = useFatchData('https://pu-server-1.onrender.com/api/v1/routin')
   const { data: rutinDatas } = useFatchData("PU-App.department.json");
-  const { data: classRooms } = useFatchData(
-    "https://pu-server-1.onrender.com/classroom"
+  const { data: classRoom } = useFatchData(
+    "https://pu-server-1.onrender.com/api/v1/classroom"
   );
-
-  
+    const classRooms = classRoom.data
+  console.log(classRoom);
   //*****.. Set Or Find Selected Item Name And Valu ..*****//
   const [filterselect, setFilterselect] = useState({
     day: "",
@@ -94,7 +94,7 @@ const filter = (data = []) => {
       <div>
       <h1 className="text-center text-3xl mb-4">Class Routine</h1>
       <div className=" m-auto text-center text-xl mb-4 ">
-          <p>Total Room : {classRooms.length}</p>
+          <p>Total Room : {classRooms?.length}</p>
           <h1 className="text-center text-green-700 text-2xl">
              {filterselect.day && filterselect.semester ? "Today's Total Class":"Total Class For The Week"}: {filter(semFilterData).length}
           </h1>
@@ -106,7 +106,7 @@ const filter = (data = []) => {
               ) : (
                 <span className="text-red-500">
                   Empty Class Room :{" "}
-                  {classRooms.length -
+                  {classRooms?.length -
                     filter(semFilterData).length}
                 </span>
               )}

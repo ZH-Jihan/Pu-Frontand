@@ -18,7 +18,7 @@ const RutineTable = ({
   setFilterSel = null
 }) => {
   const { data: facultyDatas } = useFatchData(
-    "https://pu-server-1.onrender.com/faculty"
+    "https://pu-server-1.onrender.com/api/v1/faculty"
   );
   
 
@@ -56,7 +56,7 @@ if (atAGlance.name === "Spring-24") {
   };
 
 const onClick = (day) =>{
-  setFilterSel((prev) => ({ ...prev, ["reportType"]: "main", ["day"]: day }));
+  setFilterSel((prev) => ({ ...prev, "reportType": "main", "day": day }));
 }
 
   //*****.. Main Report Table Body ..*****//

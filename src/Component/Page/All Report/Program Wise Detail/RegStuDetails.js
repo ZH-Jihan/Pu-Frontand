@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import useFatchData from "../../../Hooks/useFatchData";
 
 const RegStuDetails = () => {
-  const {data:studentsinfo} = useFatchData('https://pu-server-1.onrender.com/regstudent');
+  const {data:studentsinfo} = useFatchData('https://pu-server-1.onrender.com/api/v1/regstudent');
   const { id } = useParams();
 
   const filterStudent = (datas = []) => {

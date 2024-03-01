@@ -12,7 +12,7 @@ const HostelMemberAdd = () => {
 
   const student = totalReg.find((el) => el.ar === id);
   
-  if (id.length == 6 && student === undefined) {
+  if (id.length === 6 && student === undefined) {
     alert("Please Provied a valide Id")
   }
   const memberAdd = (event) => {
@@ -35,7 +35,7 @@ const HostelMemberAdd = () => {
       joinDate: event.target.joindate.value,
       department: student?.mainProgramName,
     };
-    fetch("https://pu-server-1.onrender.com/hostelmember", {
+    fetch("https://pu-server-1.onrender.com/api/v1/hostelmember", {
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -7,7 +7,7 @@ const MyRequireAuth = ({children}) => {
 const [check,setCheck] = useState(false)
   useEffect(() => {
     const checkAuthentication = async () => {
-      if (!isAuthenticated() || tokenExpireChek() === true) {
+      if (!isAuthenticated() || tokenExpireChek() === false) {
         // Redirect to the login page if not authenticated
         return navigate("/mylogin");
       } 

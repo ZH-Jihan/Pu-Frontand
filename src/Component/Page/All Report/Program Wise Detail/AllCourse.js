@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import useFatchData from "../../../Hooks/useFatchData";
 
 const AllCourse = () => {
-  const {data:courses} = useFatchData('https://pu-server-1.onrender.com/course');
+  const {data:courses} = useFatchData('https://pu-server-1.onrender.com/api/v1/course');
   // const [selecteditem, setSelecteditem] = useState({
   //   department: "",
   //   program: "",

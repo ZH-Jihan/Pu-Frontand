@@ -27,13 +27,14 @@ const universitys = [
 ];
 
 const AllFacultys = () => {
-  const { data: faculty, loading } = useFatchData(
-    "https://pu-server-1.onrender.com/faculty"
+  const { data: faculty ,error} = useFatchData(
+    "https://pu-server-1.onrender.com/api/v1/faculty"
   );
+  console.log(error,faculty);
   const activeFaculty = (datas = [])=>{
     let faculty = datas;
     if (faculty) {
-      faculty = faculty.filter((el)=> el.status === "Active")
+      faculty = faculty?.filter((el)=> el.status === "Active")
     }
     return faculty;
   }
@@ -72,7 +73,7 @@ const AllFacultys = () => {
         const todayDay = today.getDate();
         
         const todayData = [];
-        const thisMonthData = [];
+        // const thisMonthData = [];
         const otherData = [];
         const dataShort = (data) =>{
           data.sort((a, b) => {
@@ -144,11 +145,11 @@ const AllFacultys = () => {
       }
 
       if (selecteditem.marrited === "Unmarried") {
-        data = data.filter((el) => el.marritStatus == "Unmarried");
+        data = data.filter((el) => el.marritStatus === "Unmarried");
         return sortDataMonthWise(data)
       }
 
-      data = data.filter((el) => el.marritStatus == selecteditem.marrited);
+      data = data.filter((el) => el.marritStatus === selecteditem.marrited);
     }
     if (selecteditem.designation) {
       data = data.filter((el) => el.designation === selecteditem.designation);

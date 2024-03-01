@@ -1,0 +1,80 @@
+[
+  {
+    "name": "View Report",
+    "value": [
+      {
+        "name": "Routine",
+        "navigate": "/routine",
+        "role": ["user", "editor", "admin"]
+      },
+
+      {
+        "name": "Faculty List",
+        "navigate": "/faculty",
+        "role": ["user", "editor", "admin"]
+      },
+      {
+        "name": "Empoleey List",
+        "navigate": "/empoleey",
+        "role": ["user", "editor", "admin"]
+      },
+      {
+        "name": "Women Hostel Member",
+        "navigate": "/womenhostel",
+        "role": ["user", "editor", "admin"]
+      },
+      {
+        "name": "Admi & Reg Analyze",
+        "icon": "faCalendarDays",
+        "navigate": "/studentAnalyze",
+        "role": ["user", "editor", "admin"]
+      },
+      {
+        "name": "Room Wise Faculty",
+        "icon": "faCalendarDays",
+        "navigate": "/roomwisefaculty",
+        "role": ["user", "editor", "admin"]
+      }
+    ]
+  },
+  {
+    "name": "Entry Data",
+    "value": [
+      {
+        "name": "Create User",
+        "navigate": "/createUser",
+        "role": ["editor", "admin"]
+      },
+      {
+        "name": "Add Routine",
+        "icon": "faCalendarDays",
+        "navigate": "/addroutine",
+        "role": ["editor", "admin"]
+      },
+      {
+        "name": "Entry Faculty",
+        "icon": "faCalendarDays",
+        "navigate": "/addfaculty",
+        "role": ["editor", "admin"]
+      },
+      {
+        "name": "Empoleey Entry",
+        "icon": "faCalendarDays",
+        "navigate": "/empoleey",
+        "role": ["editor", "admin"]
+      },
+      {
+        "name": "Add Hostel Member",
+        "icon": "faCalendarDays",
+        "navigate": "/womenhostel",
+        "role": ["editor", "admin"]
+      },
+      {
+        "name": "Add Room Wise Faculty",
+        "icon": "faCalendarDays",
+        "navigate": "/roomwisefaculty",
+        "role": ["user", "editor", "admin"]
+      }
+    ]
+  }
+]
