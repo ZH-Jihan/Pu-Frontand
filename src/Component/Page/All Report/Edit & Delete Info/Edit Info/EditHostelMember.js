@@ -8,7 +8,7 @@ import useFatchData from '../../../../Hooks/useFatchData';
 const EditHostelMember = () => {
     const {id} = useParams();
     const testUrl = `http://localhost:5000/api/v1/hostelmember/${id}`
-    const mainUrl = `https://pu-server-1.onrender.com/api/v1/faculty/${id}`
+    const mainUrl = `https://pu-server-1.onrender.com/api/v1/hostelmember/${id}`
     const {data:mamber,error} = useFatchData(mainUrl);
    
     const [update, setUpdate] = useState({});
