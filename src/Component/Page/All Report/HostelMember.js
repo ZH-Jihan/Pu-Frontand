@@ -49,7 +49,7 @@ const user = getUserRole()
     return (
         <div>
             <h1 className='text-2xl pb-4 text-center font-bold'>Women Hostel Member</h1>
-            <div class="form-control lg:ml-16 w-1/6 flex flex-col mb-3">
+            <div class="form-control lg:ml-16 lg:w-1/6 flex flex-col mb-3">
             <label class="font-semibold text-gray-600 py-2">Select Department</label>
             <select class="appearance-none text-base block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4" value={selectedName} onChange={handleSelectChange}>
                 <option value="">--- Select ---</option>

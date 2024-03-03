@@ -9,7 +9,7 @@ const EditHostelMember = () => {
     const {id} = useParams();
     const testUrl = `http://localhost:5000/api/v1/hostelmember/${id}`
     const mainUrl = `https://pu-server-1.onrender.com/api/v1/faculty/${id}`
-    const {data:mamber,error} = useFatchData(testUrl);
+    const {data:mamber,error} = useFatchData(mainUrl);
    
     const [update, setUpdate] = useState({});
     const navigate = useNavigate()
@@ -34,7 +34,7 @@ console.log(update);
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${token}`,
       };
-      const respons = await axios.put(testUrl,update,{headers})
+      const respons = await axios.put(mainUrl,update,{headers})
       if (respons.data.status) {
         toast.success(respons.data.status)
         setUpdate({})
@@ -57,7 +57,7 @@ console.log(update);
                 </div>
                 <div class="mt-5">
                   <div class="form">
-                    <div class="md:grid grid grid-cols-4 gap-4 w-full text-xs">
+                    <div class="md:grid grid lg:grid-cols-4 gap-4 w-full text-xs">
                       <div class="form-control  mb-3 space-y-2 w-full text-base">
                         <label class="font-semibold text-gray-600 text-xl py-2">
                           Student Id

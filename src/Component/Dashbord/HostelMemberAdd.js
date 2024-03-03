@@ -73,7 +73,7 @@ const HostelMemberAdd = () => {
                 </div>
                 <div class="mt-5">
                   <div class="form">
-                    <div class="md:grid grid grid-cols-4 gap-4 w-full text-xs">
+                    <div class="md:grid grid lg:grid-cols-4 gap-4 w-full text-xs">
                       <div class="form-control  mb-3 space-y-2 w-full text-base">
                         <label class="font-semibold text-gray-600 text-xl py-2">
                           Student Id

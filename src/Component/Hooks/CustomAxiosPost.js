@@ -9,7 +9,7 @@ const CustomAxiosPost = async (url, data) => {
         'Authorization': `Bearer ${token}`,
     };
     try {
-        const response = await axios.post(`${testUrl}${url}`, data, {headers});
+        const response = await axios.post(`${mainUrl}${url}`, data, {headers});
         return response.data;
     } catch (error) {
         throw error;

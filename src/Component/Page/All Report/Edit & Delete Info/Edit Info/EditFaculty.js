@@ -14,7 +14,7 @@ const EditFaculty = () => {
     const testUrl = `http://localhost:5000/api/v1/faculty/${id}`
     const mainUrl = `https://pu-server-1.onrender.com/api/v1/faculty/${id}`
   // const navigate = useNavigate();
-  const {data:facultys,setData,loading} = useFatchData(testUrl);
+  const {data:facultys,setData,loading} = useFatchData(mainUrl);
   
   const [update, setUpdate] = useState({})
     
@@ -52,7 +52,7 @@ const EditFaculty = () => {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${token}`,
       };
-      const respons = await axios.put(testUrl,update,{headers})
+      const respons = await axios.put(mainUrl,update,{headers})
       console.log(respons);
 if (respons.data) {
   setUpdate({})
