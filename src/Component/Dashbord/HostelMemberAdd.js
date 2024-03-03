@@ -48,6 +48,7 @@ const HostelMemberAdd = () => {
       console.log('Post successful:', result);
       if (result.status === "Success") {
         toast.success("Successfully Add Member");
+        setId("")
       event.target.reset()
       }
       

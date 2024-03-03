@@ -33,7 +33,6 @@ if (loading === false) {
     option: [
       { value: "user", name: "User" },
       { value: "editor", name: "Editor" },
-      { value: "admin", name: "Admin" },
     ],
   };
 
