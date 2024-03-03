@@ -1,3 +1,4 @@
+import Cookies from "js-cookie";
 
 
 
@@ -14,6 +15,7 @@
             return true;
           } else {
             // Token has expired or has no valid expiration time
+            Cookies.remove("accessToken")
             localStorage.removeItem('authToken');
             console.log('Token has expired or has no valid expiration time.');
           }

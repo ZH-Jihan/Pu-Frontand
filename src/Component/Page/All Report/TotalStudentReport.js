@@ -294,7 +294,7 @@ const TotalStudentReport = () => {
       const day = arr.filter((el) => el.programType === "Day");
       const evening = arr.filter((el) => el.programType === "Evening");
       const weekend = arr.filter((el) => el.programType === "Weekend");
-      return { arr, day, evening, weekend };
+      return { arr, day, evening, weekend ,fall,spring,summer};
     };
     console.log(findyear("2021"));
     return (
@@ -302,6 +302,9 @@ const TotalStudentReport = () => {
         <TableHead data={[
           {field: "", header: "Semester"},
           {field: "", header: "Total"},
+          {field: "", header: "Spring"},
+          {field: "", header: "Summer"},
+          {field: "", header: "Fall"},
           {field: "", header: "Day"},
           {field: "", header: "Evening"},
           {field: "", header: "Weekend"},
@@ -315,6 +318,15 @@ const TotalStudentReport = () => {
               </td>
               <td class=" px-6 py-4 whitespace-nowrap text-base font-bold text-green-600">
                 <p>{findyear(year.year).arr.length}</p>
+              </td>
+              <td class=" px-6 py-4 whitespace-nowrap text-base font-bold text-indigo-400">
+                <p>{findyear(year.year).spring.length}</p>
+              </td>
+              <td class=" px-6 py-4 whitespace-nowrap text-base font-bold text-blue-600">
+                <p>{findyear(year.year).summer.length}</p>
+              </td>
+              <td class=" px-6 py-4 whitespace-nowrap text-base font-bold text-orange-400">
+                <p>{findyear(year.year).fall.length}</p>
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-base font-medium text-gray-900">
                 <p>{findyear(year.year).day.length}</p>

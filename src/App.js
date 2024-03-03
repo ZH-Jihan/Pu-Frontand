@@ -6,6 +6,7 @@ import AllDepartment from "./Component/Page/All Report/AllDepartment";
 import RutinMainPage from "./Component/Page/All Report/Class Rutin/RutinMainPage";
 import ClassRoomView from "./Component/Page/All Report/ClassRoomView";
 import EditFaculty from "./Component/Page/All Report/Edit & Delete Info/Edit Info/EditFaculty";
+import EditHostelMember from "./Component/Page/All Report/Edit & Delete Info/Edit Info/EditHostelMember";
 import EntryAbsentReport from "./Component/Page/All Report/EntryAbsentReport";
 import AllFacultys from "./Component/Page/All Report/Faculty List/AllFacultys";
 import EmploeeyList from "./Component/Page/All Report/Faculty List/EmploeeyList";
@@ -100,8 +101,8 @@ function App() {
             <Route path="/createUser" element={ <MySingUp/>}></Route>
 
             <Route path="/womenhostel" element={ <HostelMember/>}></Route>
-
-            <Route path="/addhostelmember" element={ <HostelMemberAdd/>}></Route>
+            <Route path="/addwomenhostel" element={ <HostelMemberAdd/>}></Route>
+            <Route path="/edithostelmember/:id" element={ <EditHostelMember/>}></Route>
             
             <Route path="*" element={<Notpound></Notpound>}></Route>
             <Route path="/unothorize" element={<Unothorize/>}></Route>

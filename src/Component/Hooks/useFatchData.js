@@ -4,11 +4,17 @@ const useFatchData = (url) => {
     const [loading,setLoading] = useState(true);
     const [data,setData] = useState([])
     const [error,setError] = useState(null);
-
+    const token = JSON.parse(localStorage.getItem('authToken'))?.token
+    
+    const headers = {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`,
+    };
     useEffect(()=>{
+        
         setLoading(true);
             axios
-            .get(url)
+            .get(url,{headers})
             .then((response)=>{
                 setData(response.data);
             })
@@ -18,7 +24,7 @@ const useFatchData = (url) => {
             .finally(()=>{
                 setLoading(false)
             })
-    },[url])
+    },[url,token])
     return {data,setData,loading,error}
 };
 

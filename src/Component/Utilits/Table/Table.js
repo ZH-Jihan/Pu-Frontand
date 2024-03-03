@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./tabel.css";
 
 const Table = ({
@@ -6,10 +7,12 @@ const Table = ({
   columns = null,
   hover = true,
   other = null,
+  funtion = false,
   user = null,
   striped = true,
 }) => {
-    console.log(data);
+  const navigate = useNavigate();
+  console.log(data);
   const getCaps = (head, field) => {
     if (head) return head.toUpperCase();
     return field.toUpperCase();
@@ -20,8 +23,9 @@ const Table = ({
         <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
           <div class="overflow-hidden">
             <table class="min-w-full">
-              <thead class="bg-amber-200 border-b"
-              style={{position: "sticky", top: "0" }}
+              <thead
+                class="bg-amber-200 border-b"
+                style={{ position: "sticky", top: "0" }}
               >
                 <tr>
                   {columns &&
@@ -33,12 +37,20 @@ const Table = ({
                         {getCaps(head.header, head.field)}
                       </th>
                     ))}
-                    {other &&
-                        other.map((col) => (
-                          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                            {col.header}
-                          </td>
-                        ))}
+                  {funtion === true && (
+                    <th
+                      scope="col"
+                      class="text-sm font-larg text-gray-900 px-2 py-4 text-left"
+                    >
+                      Button
+                    </th>
+                  )}
+                  {other &&
+                    other.map((col) => (
+                      <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                        {col.header}
+                      </td>
+                    ))}
                 </tr>
               </thead>
               <tbody>
@@ -52,6 +64,20 @@ const Table = ({
                           {row[col.field]}
                         </td>
                       ))}
+
+                      {funtion === true && (
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                          <button
+                          className="btn btn-ghost btn- rounded-2xl border-2 border-red-400"
+                            onClick={() =>
+                              navigate(`/edithostelmember/${row._id}`)
+                            }
+                          >
+                            Edit Member
+                          </button>
+                        </td>
+                      )}
+
                       {other &&
                         other.map((col) => (
                           <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">

@@ -60,19 +60,19 @@
       {
         "name": "Empoleey Entry",
         "icon": "faCalendarDays",
-        "navigate": "/empoleey",
+        "navigate": "/entryempoleey",
         "role": ["editor", "admin"]
       },
       {
         "name": "Add Hostel Member",
         "icon": "faCalendarDays",
-        "navigate": "/womenhostel",
+        "navigate": "/addwomenhostel",
         "role": ["editor", "admin"]
       },
       {
         "name": "Add Room Wise Faculty",
         "icon": "faCalendarDays",
-        "navigate": "/roomwisefaculty",
+        "navigate": "/addroomwisefaculty",
         "role": ["user", "editor", "admin"]
       }
     ]

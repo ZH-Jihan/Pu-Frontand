@@ -1,64 +1,49 @@
-import React, { useState } from "react";
-import toast from "react-hot-toast";
-import CustomAxiosPost from "../Hooks/CustomAxiosPost";
-import useFatchData from "../Hooks/useFatchData";
-const testUrl = `http://localhost:5000/api/v1/hostelmember`
-    const mainUrl = `https://pu-server-1.onrender.com/api/v1/hostelmember`
-const HostelMemberAdd = () => {
-  const { data: totalReg } = useFatchData("allregStudent.json");
-  const { data: admission } = useFatchData("admissionStuInfo.json");
-  const [id, setId] = useState("");
-  const onChange = (e) => {
-    e.preventDefault();
-    setId(e.target.value);
-  };
+import axios from 'axios';
+import moment from 'moment';
+import React, { useState } from 'react';
+import toast from 'react-hot-toast';
+import { useNavigate, useParams } from 'react-router-dom';
+import useFatchData from '../../../../Hooks/useFatchData';
 
-  let student = totalReg.find((el) => el.ar === id);
-  if (student === undefined) {
-    student = admission.find((el)=> el.AR === id)
-  }
+const EditHostelMember = () => {
+    const {id} = useParams();
+    const testUrl = `http://localhost:5000/api/v1/hostelmember/${id}`
+    const mainUrl = `https://pu-server-1.onrender.com/api/v1/faculty/${id}`
+    const {data:mamber,error} = useFatchData(testUrl);
+   
+    const [update, setUpdate] = useState({});
+    const navigate = useNavigate()
 
-  if (id.length === 6 && student === undefined) {
-    alert("Please Provied a valide Id")
-  }
-  const memberAdd = async (event) => {
-    event.preventDefault();
-    let name;
-    if (student?.name === "") {
-      name = event.target.name.value;
-    } else {
-      name = student?.name;
-    }
-    const studentInfo = {
-      name: name,
-      id: student?.ar,
-      number: `0${student?.contactNum}`,
-      batch: student?.programType,
-      semester: student?.semesterName,
-      flate: event.target.flat.value,
-      room: event.target.room.value,
-      seat: event.target.seat.value,
-      joinDate: event.target.joindate.value,
-      department: student?.mainProgramName,
-    };
-    try {
-      const result = await CustomAxiosPost("/hostelmember", studentInfo);
-
-      // Handle the result (e.g., show a success message)
-      console.log('Post successful:', result);
-      if (result.status === "Success") {
-        toast.success("Successfully Add Member");
-      event.target.reset()
+    if (mamber.length) {
+        if (!update.name) {
+          setUpdate(mamber[0])
+        }
       }
-      
-  } catch (error) {
-      // Handle errors (e.g., show an error message)
-      console.error('Post failed:', error);
-  }
-  };
-  return (
-    <div>
-      <form onSubmit={memberAdd}>
+      const joinDate = moment(update?.joinDate).format("YYYY-MM-DD");
+      const onChange = (e) => {
+        const { name, value } = e.target;
+        setUpdate((prev) => ({ ...prev, [name]: value }));
+      };
+
+      const updateMember = async (event) =>{
+        event.preventDefault();
+console.log(update);
+        const token = JSON.parse(localStorage.getItem('authToken'))?.token
+        console.log(token);
+        const headers = {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`,
+      };
+      const respons = await axios.put(testUrl,update,{headers})
+      if (respons.data.status) {
+        toast.success(respons.data.status)
+        setUpdate({})
+        navigate("/womenhostel")
+      }
+      }
+    return (
+        <div>
+            <form onSubmit={updateMember}>
         <div class="w-full relative flex items-center justify-center bg-center bg-gray-50 py-4 px-4 sm:px-6 lg:px-8  bg-no-repeat bg-cover relative items-center">
           <div class="absolute opacity-60 inset-0 z-0"></div>
           <div class="w-full space-y-8 p-10 bg-white rounded-xl shadow-lg z-10">
@@ -66,7 +51,7 @@ const HostelMemberAdd = () => {
               <div class="flex flex-col ">
                 <div class="flex flex-col sm:flex-row items-center">
                   <h2 class="font-semibold text-3xl mr-auto">
-                    Add Hostel Member{" "}
+                    Update Hostel Member{" "}
                   </h2>
                   <div class="w-full sm:w-auto sm:ml-auto mt-3 sm:mt-0"></div>
                 </div>
@@ -85,7 +70,8 @@ const HostelMemberAdd = () => {
                           class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
                           required="required"
                           onChange={onChange}
-                          value={id}
+                          value={update.id}
+                          disabled
                           type="text"
                           name="id"
                         />
@@ -98,10 +84,8 @@ const HostelMemberAdd = () => {
                           </span>
                         </label>
                         <input
-                        placeholder={!student?.name || !student?.Name ? "Plese Input Name" : ""}
-                          value ={
-                            student?.name || student?.Name || ""
-                          }
+                          value ={update.name || ""}
+                          onChange={onChange}
                           class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
                           type="text"
                           name="name"
@@ -119,7 +103,9 @@ const HostelMemberAdd = () => {
                           class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
                           required
                           type="text"
-                          name="flat"
+                          onChange={onChange}
+                          value={update.flate || ""}
+                          name="flate"
                         />
                       </div>
                       <div class="form-control  mb-3 space-y-2 w-full text-base">
@@ -133,6 +119,8 @@ const HostelMemberAdd = () => {
                           placeholder="Room Number"
                           class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
                           required
+                          onChange={onChange}
+                          value={update.room || ""}
                           type="text"
                           name="room"
                         />
@@ -149,6 +137,8 @@ const HostelMemberAdd = () => {
                           class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
                           required
                           type="text"
+                          onChange={onChange}
+                          value={update.seat || ""}
                           name="seat"
                         />
                       </div>
@@ -164,7 +154,9 @@ const HostelMemberAdd = () => {
                           class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
                           required
                           type="date"
-                          name="joindate"
+                          onChange={onChange}
+                          value={joinDate}
+                          name="joinDate"
                         />
                       </div>
                     </div>
@@ -183,8 +175,8 @@ const HostelMemberAdd = () => {
           </div>
         </div>
       </form>
-    </div>
-  );
+        </div>
+    );
 };
 
-export default HostelMemberAdd;
+export default EditHostelMember;

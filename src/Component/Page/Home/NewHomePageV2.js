@@ -1,3 +1,4 @@
+import Cookies from "js-cookie";
 import React from "react";
 import { Helmet } from "react-helmet";
 import { Outlet, useNavigate } from "react-router-dom";
@@ -19,10 +20,12 @@ const NewHomePageV2 = () => {
   const addData = reports[1]?.value;
 
 console.log(viewReport);
+console.log(reports);
   const userDat = getUserRole();
   const navigate = useNavigate();
 
   const logouthandelar = () => {
+    Cookies.remove("accessToken")
     localStorage.removeItem('authToken')
             navigate("/mylogin");
     // axios
@@ -55,7 +58,6 @@ console.log(viewReport);
     }
     return filterReportrole;
   };
-console.log(filterUserAccess(viewReport));
   if (loading) {
     return <Loading></Loading>;
   } else {
