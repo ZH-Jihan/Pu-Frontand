@@ -82,12 +82,13 @@ if (loading === false) {
     };
 
     const respons = await CustomAxiosPost("/user/singup",newUser);
-    
-    if (respons?.data?.status === "Success") {
-      toast.success("Successfully Create User")
+console.log(respons);
+    if (respons?.status === "Success") {
+      
       setSelectAll(false)
       setSelectedItems([])
       setSelectRole({ role :"user"})
+      toast.success("Successfully Create User")
     }
     event.target.reset()
   };
