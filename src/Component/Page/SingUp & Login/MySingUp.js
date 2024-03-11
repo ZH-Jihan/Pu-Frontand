@@ -1,6 +1,6 @@
-import axios from "axios";
 import React, { useState } from "react";
 import toast from "react-hot-toast";
+import CustomAxiosPost from "../../Hooks/CustomAxiosPost";
 import useFatchData from "../../Hooks/useFatchData";
 import Button from "../../Utilits/Button";
 import Loading from "../Sheared Page/Loading";
@@ -15,7 +15,7 @@ const MySingUp = () => {
   const viewReport = menuList[0]?.value;
   const addData = menuList[1]?.value;
   let menulist ;
-  console.log(selectedItems);
+
 if (loading === false) {
   
  menulist = viewReport.concat(addData)
@@ -80,9 +80,9 @@ if (loading === false) {
       role: selectedRole.role,
       permission:selectedItems
     };
-    const respons = await axios.post("https://pu-server-1.onrender.com/api/v1/user/singup",JSON.stringify(newUser),{
-      headers: { 'Content-Type': 'application/json' }
-    })
+
+    const respons = await CustomAxiosPost("/user/singup",newUser);
+    
     if (respons?.data?.status === "Success") {
       toast.success("Successfully Create User")
       setSelectAll(false)
