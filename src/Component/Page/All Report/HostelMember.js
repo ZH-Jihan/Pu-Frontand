@@ -46,9 +46,23 @@ const user = getUserRole()
             }</h1>
         )
       }
+      const counteMemberDepWise = (name) =>{
+        let data;
+        if (name) {
+            data = hostelmember.filter((el)=> el.department === name)
+        }
+        return data.length
+      }
     return (
         <div>
             <h1 className='text-2xl pb-4 text-center font-bold'>Women Hostel Member</h1>
+            <h1 className='text-lg pb-2 text-center font-bold'>Total : {hostelmember.length}</h1>
+            <h2 className='lg:w-1/4 m-auto text-center font-bold grid grid-cols-3'>
+                {
+                uniqueNames.map((name)=>(
+                    <span>{`${name} : ${counteMemberDepWise(name)} `}</span>
+                ))
+                }</h2>
             <div class="form-control lg:ml-16 lg:w-1/6 flex flex-col mb-3">
             <label class="font-semibold text-gray-600 py-2">Select Department</label>
             <select class="appearance-none text-base block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4" value={selectedName} onChange={handleSelectChange}>
