@@ -27,20 +27,21 @@ const HostelMemberAdd = () => {
     if (student?.name === "") {
       name = event.target.name.value;
     } else {
-      name = student?.name;
+      name = student?.name || student?.Name;
     }
     const studentInfo = {
       name: name,
-      id: student?.ar,
+      id: student?.ar || student?.AR,
       number: `0${student?.contactNum}`,
       batch: student?.programType,
-      semester: student?.semesterName,
+      semester: student?.semesterName || student?.semester,
       flate: event.target.flat.value,
       room: event.target.room.value,
       seat: event.target.seat.value,
       joinDate: event.target.joindate.value,
-      department: student?.mainProgramName,
+      department: student?.mainProgramName || student?.programName,
     };
+    console.log(studentInfo);
     try {
       const result = await CustomAxiosPost("/hostelmember", studentInfo);
 

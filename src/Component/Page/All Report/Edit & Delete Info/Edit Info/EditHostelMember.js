@@ -93,6 +93,21 @@ console.log(update);
                       </div>
                       <div class="form-control  mb-3 space-y-2 w-full text-base">
                         <label class="font-semibold text-gray-600 text-xl py-2">
+                          Phone Number
+                          <span title="required" className="text-red-500">
+                            *
+                          </span>
+                        </label>
+                        <input
+                          value ={update.number || ""}
+                          onChange={onChange}
+                          class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
+                          type="text"
+                          name="number"
+                        />
+                      </div>
+                      <div class="form-control  mb-3 space-y-2 w-full text-base">
+                        <label class="font-semibold text-gray-600 text-xl py-2">
                           Flat Number
                           <span title="required" className="text-red-500">
                             *
