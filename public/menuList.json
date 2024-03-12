@@ -3,6 +3,11 @@
     "name": "View Report",
     "value": [
       {
+        "name": "All Users",
+        "navigate": "/alluser",
+        "role": ["admin"]
+      },
+      {
         "name": "Routine",
         "navigate": "/routine",
         "role": ["user", "editor", "admin"]

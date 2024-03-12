@@ -23,6 +23,7 @@ import RegStuDetails from "./Component/Page/All Report/Program Wise Detail/RegSt
 import ProgramWiseCount from "./Component/Page/All Report/ProgramWiseCount";
 import TotalStudentReport from "./Component/Page/All Report/TotalStudentReport";
 import TutionFee from "./Component/Page/All Report/TutionFee";
+import ViewAllUser from "./Component/Page/All Report/UserManagement/ViewAllUser";
 import ViewAbsentReport from "./Component/Page/All Report/ViewAbsentReport";
 import AdmissonFrom from "./Component/Page/Apply From/AdmissonFrom";
 import RegistrationFrom from "./Component/Page/Apply From/RegistrationFrom";
@@ -99,6 +100,8 @@ function App() {
             <Route path="/routine" element={<RutinMainPage />}></Route>
             
             <Route path="/createUser" element={ <MySingUp/>}></Route>
+            <Route path="/alluser" element={ <ViewAllUser/>}></Route>
+
 
             <Route path="/womenhostel" element={ <HostelMember/>}></Route>
             <Route path="/addwomenhostel" element={ <HostelMemberAdd/>}></Route>
