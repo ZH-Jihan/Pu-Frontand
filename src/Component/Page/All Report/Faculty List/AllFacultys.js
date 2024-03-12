@@ -27,9 +27,7 @@ const universitys = [
 ];
 
 const AllFacultys = () => {
-  const { data: faculty ,error} = useFatchData(
-    "https://pu-server-1.onrender.com/api/v1/faculty"
-  );
+  const { data: faculty ,error} = useFatchData("/faculty");
   console.log(error,faculty);
   const activeFaculty = (datas = [])=>{
     let faculty = datas;

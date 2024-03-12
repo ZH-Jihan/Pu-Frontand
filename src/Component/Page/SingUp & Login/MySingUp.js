@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import toast from "react-hot-toast";
 import CustomAxiosPost from "../../Hooks/CustomAxiosPost";
-import useFatchData from "../../Hooks/useFatchData";
+import useLocalDataFatch from "../../Hooks/localDataFatch";
 import Button from "../../Utilits/Button";
 import Loading from "../Sheared Page/Loading";
 
 const MySingUp = () => {
-  const { data: menuList ,loading} = useFatchData("menuList.json");
+  const { data: menuList ,loading} = useLocalDataFatch("menuList.json");
   const [selectAll, setSelectAll] = useState(false);
   const [selectedItems, setSelectedItems] = useState([]);
   const [selectedRole, setSelectRole] = useState({

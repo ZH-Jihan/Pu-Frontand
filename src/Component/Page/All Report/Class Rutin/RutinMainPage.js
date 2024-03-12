@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import useLocalDataFatch from "../../../Hooks/localDataFatch";
 import useFatchData from "../../../Hooks/useFatchData";
 import useRoutineBtn from "../../../Utilits/All Buttons/RoutineBtn";
 import Button from "../../../Utilits/Button";
@@ -6,10 +7,8 @@ import Loading from "../../Sheared Page/Loading";
 import RutineTable from "./RutineTable";
 const RutinMainPage = () => {
   // const {rutinDatas} = useFatchData('https://pu-server-1.onrender.com/api/v1/routin')
-  const { data: rutinDatas } = useFatchData("PU-App.department.json");
-  const { data: classRoom } = useFatchData(
-    "https://pu-server-1.onrender.com/api/v1/classroom"
-  );
+  const { data: rutinDatas } = useLocalDataFatch("PU-App.department.json");
+  const { data: classRoom } = useFatchData("/classroom");
     const classRooms = classRoom.data
   console.log(classRoom);
   //*****.. Set Or Find Selected Item Name And Valu ..*****//
@@ -100,14 +99,14 @@ const filter = (data = []) => {
           </h1>
           {filterselect.timeslot && !filterselect.room &&(
             <p className="text-red-500">
-              {filter(semFilterData).length >=
+              {filter(semFilterData)?.length >=
               classRooms.length ? (
                 <span className="text-green-700">Empty Class Room : 0</span>
               ) : (
                 <span className="text-red-500">
                   Empty Class Room :{" "}
                   {classRooms?.length -
-                    filter(semFilterData).length}
+                    filter(semFilterData)?.length}
                 </span>
               )}
             </p>

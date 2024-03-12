@@ -5,7 +5,7 @@ import { getUserRole } from '../Security/myAuth';
 
 const HostelMember = () => {
     
-    const { data: hostelmember,error } = useFatchData("https://pu-server-1.onrender.com/api/v1/hostelmember");
+    const { data: hostelmember,error } = useFatchData("/hostelmember");
     const [selectedName, setSelectedName] = useState('');
 const user = getUserRole()
     

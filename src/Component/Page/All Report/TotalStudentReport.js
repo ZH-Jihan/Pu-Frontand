@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import useFatchData from "../../Hooks/useFatchData";
+import useLocalDataFatch from "../../Hooks/localDataFatch";
 import useStuAnalyzeBtn from "../../Utilits/All Buttons/StuAnalyzeBtn";
 import Button from "../../Utilits/Button";
 import TableHead from "../../Utilits/Table/TableHead";
@@ -44,9 +44,9 @@ const years = [
   { year: "2003" },
 ];
 const TotalStudentReport = () => {
-  const { data: totalReg } = useFatchData("allregStudent.json");
-  const { data: semesters } = useFatchData("semester.json");
-  const { data: studentsinfo } = useFatchData("admissionStuInfo.json");
+  const { data: totalReg } = useLocalDataFatch("allregStudent.json");
+  const { data: semesters } = useLocalDataFatch("semester.json");
+  const { data: studentsinfo } = useLocalDataFatch("admissionStuInfo.json");
 
   const [filterselect, setFilterselect] = useState({
     mainReport: "",
@@ -148,6 +148,7 @@ const TotalStudentReport = () => {
         (el) => el.programName === "PMBA" || el.mainProgramName === "PMBA"
       );
     }
+
     return {
       datas,
       bba,
@@ -228,13 +229,31 @@ const TotalStudentReport = () => {
     );
   };
 
+  let tableHead;
+
   const addmisonTableBody = (arry, name) => {
+    tableHead = [
+      { field: "", header: "Total" },
+      { field: filterSem(arry, name).ce.length, header: "CE" },
+      { field: filterSem(arry, name).cse.length, header: "CSE" },
+      { field: filterSem(arry, name).eee.length, header: "EEE" },
+      { field: filterSem(arry, name).eng.length, header: "ENG" },
+      { field: filterSem(arry, name).maelt.length, header: "MAELT" },
+      { field: filterSem(arry, name).ete.length, header: "ETE" },
+      { field: filterSem(arry, name).ieng.length, header: "IENG" },
+      { field: filterSem(arry, name).bba.length, header: "BBA" },
+      { field: filterSem(arry, name).mba.length, header: "MBA" },
+      { field: filterSem(arry, name).emba.length, header: "EMBA" },
+      { field: filterSem(arry, name).eco.length, header: "ECO" },
+      { field: filterSem(arry, name).ibus.length, header: "IBUS" },
+      { field: filterSem(arry, name).pmba.length, header: "PMBA" },
+    ];
     return (
       <>
         <td class="px-2 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
           {filterSem(arry, name).bba.length}
         </td>
-        <td class="px-2 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+          <td class="px-2 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
           {filterSem(arry, name).ce.length}
         </td>
         <td class="px-2 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
@@ -447,7 +466,6 @@ const TotalStudentReport = () => {
   const totalSem = () => {
     const finddata = (parms) => {
       const data = studentsinfo.filter((el) => el.semester === parms);
-      console.log(data);
       return data;
     };
     const findyear = (parms) => {
@@ -515,10 +533,10 @@ const TotalStudentReport = () => {
           )}
       </div>
 
-      {filterselect.mainReport == "admission" &&
+      {filterselect.mainReport === "admission" &&
         filterselect.addSubReport === "yearwsem" &&
         yearTotal()}
-      {filterselect.mainReport == "admission" &&
+      {filterselect.mainReport === "admission" &&
         filterselect.addSubReport === "yearwprm" &&
         totalSem()}
       {filterselect.mainReport === "regaster" &&
@@ -531,7 +549,7 @@ const TotalStudentReport = () => {
       {(filterselect.mainReport === "regaster" &&
         filterselect.regSubReport === "fullDetail") ||
       (filterselect.mainReport === "admission" &&
-        filterselect.addSubReport == "semwprm") ? (
+        filterselect.addSubReport === "semwprm") ? (
         <table class=" min-w-full">
           <TableHead data={tableHead} condetionalHead={"Semester"} />
           <tbody>

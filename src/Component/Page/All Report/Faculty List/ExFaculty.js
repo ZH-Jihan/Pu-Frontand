@@ -4,9 +4,7 @@ import Mfaculty from "../../../../asecets/faculty/male-faculty.png";
 import useFatchData from '../../../Hooks/useFatchData';
 
 const ExFaculty = () => {
-    const { data: faculty, loading } = useFatchData(
-        "https://pu-server-1.onrender.com/api/v1/faculty"
-      );
+    const { data: faculty, loading } = useFatchData("/faculty");
 
       const activeFaculty = (datas = [])=>{
         let faculty = datas;

@@ -5,7 +5,7 @@ import useFatchData from '../../../Hooks/useFatchData';
 const FacultyDetails = () => {
     const { id} = useParams();
   // const navigate = useNavigate();
-  const {data} = useFatchData(`https://pu-server-1.onrender.com/api/v1/faculty/${id}`);
+  const {data} = useFatchData(`/faculty/${id}`);
   const product = data;
   const navigate = useNavigate()
   return (

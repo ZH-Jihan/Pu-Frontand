@@ -17,9 +17,7 @@ const RutineTable = ({
   setDay= null,
   setFilterSel = null
 }) => {
-  const { data: facultyDatas } = useFatchData(
-    "https://pu-server-1.onrender.com/api/v1/faculty"
-  );
+  const { data: facultyDatas } = useFatchData("/faculty");
   
 
   

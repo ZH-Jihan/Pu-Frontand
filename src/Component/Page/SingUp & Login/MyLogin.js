@@ -23,7 +23,7 @@ const MyLogin = () => {
 
       const token = response?.data.token;
       Cookies.set("accessToken", token);
-      const expirationTime = new Date().getTime() + 120 * 60 * 1000;
+      const expirationTime = new Date().getTime() + 180 * 60 * 1000;
       const tokenData = { token, expirationTime };
 
       if (token) {
@@ -46,10 +46,10 @@ const MyLogin = () => {
       }
     }
   };
-
+  
   return (
     <section class="bg-blueGray-50">
-      <div class="w-full lg:w-4/12  mx-auto lg:pt-28">
+      <div class="w-full lg:w-4/12  mx-auto lg:pt-8">
         <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-200 border-0">
           <div class="rounded-t mb-0 px-6 py-6 pb-0">
             <div class="text-center mb-2">

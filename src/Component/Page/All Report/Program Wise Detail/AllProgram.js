@@ -3,13 +3,12 @@ import { useNavigate } from "react-router-dom";
 import useFatchData from "../../../Hooks/useFatchData";
 
 const AllProgram = () => {
-  const {data:programs} = useFatchData('https://pu-server-1.onrender.com/api/v1/program');
-  const {data:studentsinfo} = useFatchData('https://pu-server-1.onrender.com/api/v1/regstudent');
-  const {data:courses} = useFatchData('https://pu-server-1.onrender.com/api/v1/course');
+  const {data:programs} = useFatchData('/program');
+  const {data:studentsinfo} = useFatchData('/regstudent');
+  const {data:courses} = useFatchData('/course');
   const [selecteditem, setSelecteditem] = useState({
     department: "",
   });
-  
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;

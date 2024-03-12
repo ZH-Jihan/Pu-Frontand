@@ -4,9 +4,9 @@ import useFatchData from "../../../Hooks/useFatchData";
 
 const RoutinDetail = () => {
   // const [routindetail, setRoutindetail] = useState([]);
-  const { data:routindetail } = useFatchData("https://pu-server-1.onrender.com/api/v1/routin");
-  const { data:classroom } = useFatchData("https://pu-server-1.onrender.com/api/v1/classroom");
-  const { data:facultys } = useFatchData("https://pu-server-1.onrender.com/api/v1/faculty");
+  const { data:routindetail } = useFatchData("/routin");
+  const { data:classroom } = useFatchData("/classroom");
+  const { data:facultys } = useFatchData("/faculty");
   const [schake, setSchake] = useState(false);
   const [dchake, setDchake] = useState(false);
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import useFatchData from '../../Hooks/useFatchData';
 
 const AllDepartment = () => {
-  const {data:departments} = useFatchData('https://pu-server-1.onrender.com/api/v1/department');
+  const {data:departments} = useFatchData('/department');
   const [selecteditem,setSelecteditem] = useState({
     department:""
   })

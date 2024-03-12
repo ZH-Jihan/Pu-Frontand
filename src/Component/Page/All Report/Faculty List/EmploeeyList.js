@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import useFatchData from "../../../Hooks/useFatchData";
+import useLocalDataFatch from "../../../Hooks/localDataFatch";
 import FacultyBtn from "../../../Utilits/All Buttons/FacultyBtn";
 import Button from "../../../Utilits/Button";
 
 const EmploeeyList = () => {
-  const { data: emploeey } = useFatchData("employee.json");
+  const { data: emploeey } = useLocalDataFatch("employee.json");
   const [selecteditem, setSelecteditem] = useState({
     department: "",
     designation: "",

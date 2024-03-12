@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import useFatchData from "../../Hooks/useFatchData";
 
 const ProgramWiseCount = () => {
-  const {data:routindetail} = useFatchData('https://pu-server-1.onrender.com/api/v1/routin');
-  const {data:programs} = useFatchData('https://pu-server-1.onrender.com/api/v1/program');
+  const {data:routindetail} = useFatchData('/routin');
+  const {data:programs} = useFatchData('/program');
   const [selecteditem, setSelecteditem] = useState({
     department: "",
     jobtype: "",

@@ -1,8 +1,8 @@
-import axios from 'axios';
 import moment from 'moment';
 import React, { useState } from 'react';
 import toast from 'react-hot-toast';
 import { useNavigate, useParams } from 'react-router-dom';
+import PutCustomAxios from '../../../../Hooks/PutCustomAxios';
 import useFatchData from '../../../../Hooks/useFatchData';
 import Loading from '../../../Sheared Page/Loading';
 
@@ -11,10 +11,8 @@ import Loading from '../../../Sheared Page/Loading';
 const EditFaculty = () => {
     const {id} = useParams();
     const navigate = useNavigate()
-    const testUrl = `http://localhost:5000/api/v1/faculty/${id}`
-    const mainUrl = `https://pu-server-1.onrender.com/api/v1/faculty/${id}`
   // const navigate = useNavigate();
-  const {data:facultys,setData,loading} = useFatchData(mainUrl);
+  const {data:facultys,setData,loading} = useFatchData(`/faculty/${id}`);
   
   const [update, setUpdate] = useState({})
     
@@ -46,15 +44,10 @@ const EditFaculty = () => {
       // if (facultyinfo.dipartment || facultyinfo.designation || facultyinfo.university === "--Select Department--") {
       //   toast.error("Please Select Option")
       // } else {
-        const token = JSON.parse(localStorage.getItem('authToken'))?.token
-        console.log(token);
-        const headers = {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`,
-      };
-      const respons = await axios.put(mainUrl,update,{headers})
+      const respons = await PutCustomAxios(`/faculty/${id}`,update)
       console.log(respons);
-if (respons.data) {
+
+if (respons) {
   setUpdate({})
   toast.success("Faculty Edit Success")
   navigate("/faculty")
@@ -392,7 +385,7 @@ if (respons.data) {
                           type="submit"
                           class="mb-2 md:mb-0 bg-green-400 px-5 py-2 text-lg shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-green-500"
                         >
-                          Save
+                          Update
                         </button>
                       </div>
                     </div>

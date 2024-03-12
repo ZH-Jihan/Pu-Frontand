@@ -1,15 +1,13 @@
-import axios from 'axios';
 import moment from 'moment';
 import React, { useState } from 'react';
 import toast from 'react-hot-toast';
 import { useNavigate, useParams } from 'react-router-dom';
+import PutCustomAxios from '../../../../Hooks/PutCustomAxios';
 import useFatchData from '../../../../Hooks/useFatchData';
 
 const EditHostelMember = () => {
     const {id} = useParams();
-    const testUrl = `http://localhost:5000/api/v1/hostelmember/${id}`
-    const mainUrl = `https://pu-server-1.onrender.com/api/v1/hostelmember/${id}`
-    const {data:mamber,error} = useFatchData(mainUrl);
+    const {data:mamber,error} = useFatchData(`/hostelmember/${id}`);
    
     const [update, setUpdate] = useState({});
     const navigate = useNavigate()
@@ -27,16 +25,11 @@ const EditHostelMember = () => {
 
       const updateMember = async (event) =>{
         event.preventDefault();
-console.log(update);
-        const token = JSON.parse(localStorage.getItem('authToken'))?.token
-        console.log(token);
-        const headers = {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`,
-      };
-      const respons = await axios.put(mainUrl,update,{headers})
-      if (respons.data.status) {
-        toast.success(respons.data.status)
+
+      const respons = await PutCustomAxios(`/hostelmember/${id}`,update)
+
+      if (respons.status) {
+        toast.success(respons.status)
         setUpdate({})
         navigate("/womenhostel")
       }
@@ -180,7 +173,7 @@ console.log(update);
                         type="submit"
                         class="mb-2 md:mb-0 bg-green-400 px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-green-500"
                       >
-                        Save
+                        Update
                       </button>
                     </div>
                   </div>

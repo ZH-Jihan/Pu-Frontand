@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import useFatchData from "../../../Hooks/useFatchData";
 
 const TClassDetail = () => {
-  const {data:routindetail} = useFatchData('https://pu-server-1.onrender.com/api/v1/routin');
+  const {data:routindetail} = useFatchData('/routin');
   const navigate = useNavigate()
   const { id } = useParams();
   const data = routindetail.filter((el) => el.teacher === id);

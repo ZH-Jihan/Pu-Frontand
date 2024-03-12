@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import toast from "react-hot-toast";
 import CustomAxiosPost from "../Hooks/CustomAxiosPost";
-import useFatchData from "../Hooks/useFatchData";
+import useLocalDataFatch from "../Hooks/localDataFatch";
 const testUrl = `http://localhost:5000/api/v1/hostelmember`
     const mainUrl = `https://pu-server-1.onrender.com/api/v1/hostelmember`
 const HostelMemberAdd = () => {
-  const { data: totalReg } = useFatchData("allregStudent.json");
-  const { data: admission } = useFatchData("admissionStuInfo.json");
+  const { data: totalReg } = useLocalDataFatch("allregStudent.json");
+  const { data: admission } = useLocalDataFatch("admissionStuInfo.json");
   const [id, setId] = useState("");
   const onChange = (e) => {
     e.preventDefault();

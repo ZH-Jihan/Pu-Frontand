@@ -1,9 +1,9 @@
 import React from 'react';
-import useFatchData from '../../Hooks/useFatchData';
+import useLocalDataFatch from '../../Hooks/localDataFatch';
 import Table from '../../Utilits/Table/Table';
 
 const TutionFee = () => {
-    const { data: tutionfeeData } = useFatchData("tutionFee.json");
+    const { data: tutionfeeData } = useLocalDataFatch("tutionFee.json");
     const tableHead = [
         { field: "department", header: "Program" },
         { field: "2023", header: "" },

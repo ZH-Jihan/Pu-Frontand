@@ -1,12 +1,11 @@
 import axios from "axios";
-import { useEffect, useState } from 'react';
-const useFatchData = (url) => {
+import { useEffect, useState } from "react";
+
+const useLocalDataFatch = (url) => {
     const [loading,setLoading] = useState(true);
     const [data,setData] = useState([])
     const [error,setError] = useState(null);
     const token = JSON.parse(localStorage.getItem('authToken'))?.token
-    const textUrl = ""
-    const serverUrl = "https://pu-server-1.onrender.com/api/v1"
     
     useEffect(()=>{
         const headers = {
@@ -15,7 +14,7 @@ const useFatchData = (url) => {
         };
         setLoading(true);
             axios
-            .get(`${serverUrl}${url}`,{headers})
+            .get(url,{headers})
             .then((response)=>{
                 setData(response.data);
             })
@@ -29,4 +28,4 @@ const useFatchData = (url) => {
     return {data,setData,loading,error}
 };
 
-export default useFatchData;
+export default useLocalDataFatch;
