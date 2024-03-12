@@ -229,25 +229,23 @@ const TotalStudentReport = () => {
     );
   };
 
-  let tableHead;
-
   const addmisonTableBody = (arry, name) => {
-    tableHead = [
-      { field: "", header: "Total" },
-      { field: filterSem(arry, name).ce.length, header: "CE" },
-      { field: filterSem(arry, name).cse.length, header: "CSE" },
-      { field: filterSem(arry, name).eee.length, header: "EEE" },
-      { field: filterSem(arry, name).eng.length, header: "ENG" },
-      { field: filterSem(arry, name).maelt.length, header: "MAELT" },
-      { field: filterSem(arry, name).ete.length, header: "ETE" },
-      { field: filterSem(arry, name).ieng.length, header: "IENG" },
-      { field: filterSem(arry, name).bba.length, header: "BBA" },
-      { field: filterSem(arry, name).mba.length, header: "MBA" },
-      { field: filterSem(arry, name).emba.length, header: "EMBA" },
-      { field: filterSem(arry, name).eco.length, header: "ECO" },
-      { field: filterSem(arry, name).ibus.length, header: "IBUS" },
-      { field: filterSem(arry, name).pmba.length, header: "PMBA" },
-    ];
+    // tableHead = [
+    //   { field: "", header: "Total" },
+    //   { field: filterSem(arry, name).ce.length, header: "CE" },
+    //   { field: filterSem(arry, name).cse.length, header: "CSE" },
+    //   { field: filterSem(arry, name).eee.length, header: "EEE" },
+    //   { field: filterSem(arry, name).eng.length, header: "ENG" },
+    //   { field: filterSem(arry, name).maelt.length, header: "MAELT" },
+    //   { field: filterSem(arry, name).ete.length, header: "ETE" },
+    //   { field: filterSem(arry, name).ieng.length, header: "IENG" },
+    //   { field: filterSem(arry, name).bba.length, header: "BBA" },
+    //   { field: filterSem(arry, name).mba.length, header: "MBA" },
+    //   { field: filterSem(arry, name).emba.length, header: "EMBA" },
+    //   { field: filterSem(arry, name).eco.length, header: "ECO" },
+    //   { field: filterSem(arry, name).ibus.length, header: "IBUS" },
+    //   { field: filterSem(arry, name).pmba.length, header: "PMBA" },
+    // ];
     return (
       <>
         <td class="px-2 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
