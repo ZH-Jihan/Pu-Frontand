@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import useFatchData from '../../Hooks/useFatchData';
-import Table from '../../Utilits/Table/Table';
-import { getUserRole } from '../Security/myAuth';
+import useFatchData from '../../../Hooks/useFatchData';
+import Table from '../../../Utilits/Table/Table';
+import { getUserRole } from '../../Security/myAuth';
 
 const HostelMember = () => {
     

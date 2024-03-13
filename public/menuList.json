@@ -57,7 +57,7 @@
         "role": ["editor", "admin"]
       },
       {
-        "name": "Entry Faculty",
+        "name": "Faculty Entry",
         "icon": "faCalendarDays",
         "navigate": "/addfaculty",
         "role": ["editor", "admin"]

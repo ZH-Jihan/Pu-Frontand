@@ -217,13 +217,13 @@ console.log(reports);
                 </div>
               </div>
             </aside>
-            <div
+            {/* <div
               class="bg-gray-900 opacity-50 hidden fixed inset-0 z-10"
               id="sidebarBackdrop"
-            ></div>
+            ></div> */}
             <div
               id="main-content"
-              class="h-full w-full pt-8 bg-gray-50 relative overflow-y-auto lg:ml-52 lg:mr-2"
+              class="h-full w-full pt-8 bg-gray-50 relative overflow-y-aut lg:ml-60 lg:mr-2"
             >
               <Outlet></Outlet>
             </div>

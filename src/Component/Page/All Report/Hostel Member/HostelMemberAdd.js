@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import toast from "react-hot-toast";
-import CustomAxiosPost from "../Hooks/CustomAxiosPost";
-import useLocalDataFatch from "../Hooks/localDataFatch";
+import CustomAxiosPost from "../../../Hooks/CustomAxiosPost";
+import useLocalDataFatch from "../../../Hooks/localDataFatch";
 const testUrl = `http://localhost:5000/api/v1/hostelmember`
     const mainUrl = `https://pu-server-1.onrender.com/api/v1/hostelmember`
 const HostelMemberAdd = () => {

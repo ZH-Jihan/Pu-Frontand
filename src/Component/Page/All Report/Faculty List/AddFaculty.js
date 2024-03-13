@@ -1,12 +1,7 @@
 import React from "react";
 import { toast } from "react-hot-toast";
-import useDepartment from "../../Hooks/useDepartment";
-import useUniversity from "../../Hooks/useUniversity";
 
 const Addproduct = () => {
-  const [departments] = useDepartment();
-  const [universitys] = useUniversity();
-  const sliceDepartment = departments.slice(0, 4);
   const handleOrder = (event) => {
     event.preventDefault();
     const facultyinfo = {
@@ -222,9 +217,7 @@ const Addproduct = () => {
                         name="dipartment"
                       >
                         <option alt="not">--Select Department--</option>
-                        {sliceDepartment.map((department) => (
-                          <option>{department.name}</option>
-                        ))}
+                        
                       </select>
                     </div>
                     <div class="form-control  w-full flex flex-col mb-3">
@@ -239,9 +232,7 @@ const Addproduct = () => {
                         name="university"
                       >
                         <option alt="not">--Select University--</option>
-                        {universitys.map((university) => (
-                          <option>{university.name}</option>
-                        ))}
+                        
                       </select>
                     </div>
                   </div>

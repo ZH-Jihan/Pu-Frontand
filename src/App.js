@@ -1,21 +1,22 @@
 import { Toaster } from "react-hot-toast";
 import { Route, Routes } from "react-router-dom";
-import HostelMemberAdd from "./Component/Dashbord/HostelMemberAdd";
 import CompanyInfo from "./Component/Page/About/CompanyInfo";
 import AllDepartment from "./Component/Page/All Report/AllDepartment";
 import RutinMainPage from "./Component/Page/All Report/Class Rutin/RutinMainPage";
 import ClassRoomView from "./Component/Page/All Report/ClassRoomView";
 import EditFaculty from "./Component/Page/All Report/Edit & Delete Info/Edit Info/EditFaculty";
 import EditHostelMember from "./Component/Page/All Report/Edit & Delete Info/Edit Info/EditHostelMember";
+import EmploeeyList from "./Component/Page/All Report/Employee/EmploeeyList";
 import EntryAbsentReport from "./Component/Page/All Report/EntryAbsentReport";
+import AddFaculty from "./Component/Page/All Report/Faculty List/AddFaculty";
 import AllFacultys from "./Component/Page/All Report/Faculty List/AllFacultys";
-import EmploeeyList from "./Component/Page/All Report/Faculty List/EmploeeyList";
 import ExFaculty from "./Component/Page/All Report/Faculty List/ExFaculty";
 import FacultyDetails from "./Component/Page/All Report/Faculty List/FacultyDetails";
 import RoomWiseFaculty from "./Component/Page/All Report/Faculty List/RoomWiseFaculty";
 import TClassDetail from "./Component/Page/All Report/FacultyClassList/TClassDetail";
 import TeacherTotalClass from "./Component/Page/All Report/FacultyClassList/TeacherTotalClass";
-import HostelMember from "./Component/Page/All Report/HostelMember";
+import HostelMember from "./Component/Page/All Report/Hostel Member/HostelMember";
+import HostelMemberAdd from "./Component/Page/All Report/Hostel Member/HostelMemberAdd";
 import JurnalView from "./Component/Page/All Report/JurnalView";
 import AllCourse from "./Component/Page/All Report/Program Wise Detail/AllCourse";
 import AllProgram from "./Component/Page/All Report/Program Wise Detail/AllProgram";
@@ -63,6 +64,7 @@ function App() {
             
             <Route path="/faculty" element={<AllFacultys/>}/>
             <Route path="/faculty/:id" element={<FacultyDetails />} />
+            <Route path="/addfaculty" element={<AddFaculty/>} />
             <Route path="/updatefaculty/:id" element={<EditFaculty />} />
             <Route path="/roomwisefaculty" element={<RoomWiseFaculty/>}/>
             
