@@ -12,7 +12,7 @@ const EditHostelMember = () => {
   const [update, setUpdate] = useState({});
   const navigate = useNavigate();
 
-  if (mamber.length) {
+  if (mamber.status) {
     if (!update.name) {
       setUpdate(mamber?.data[0]);
     }
