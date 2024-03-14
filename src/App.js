@@ -15,6 +15,7 @@ import FacultyDetails from "./Component/Page/All Report/Faculty List/FacultyDeta
 import RoomWiseFaculty from "./Component/Page/All Report/Faculty List/RoomWiseFaculty";
 import TClassDetail from "./Component/Page/All Report/FacultyClassList/TClassDetail";
 import TeacherTotalClass from "./Component/Page/All Report/FacultyClassList/TeacherTotalClass";
+import DetailsHostelMember from "./Component/Page/All Report/Hostel Member/DetailsHostelMember";
 import HostelMember from "./Component/Page/All Report/Hostel Member/HostelMember";
 import HostelMemberAdd from "./Component/Page/All Report/Hostel Member/HostelMemberAdd";
 import JurnalView from "./Component/Page/All Report/JurnalView";
@@ -108,6 +109,7 @@ function App() {
             <Route path="/womenhostel" element={ <HostelMember/>}></Route>
             <Route path="/addwomenhostel" element={ <HostelMemberAdd/>}></Route>
             <Route path="/edithostelmember/:id" element={ <EditHostelMember/>}></Route>
+            <Route path="/datails/:id" element={ <DetailsHostelMember/>}></Route>
             
             <Route path="*" element={<Notpound></Notpound>}></Route>
             <Route path="/unothorize" element={<Unothorize/>}></Route>

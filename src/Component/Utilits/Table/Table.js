@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { getUserRole } from "../../Page/Security/myAuth";
 import "./tabel.css";
 
 const Table = ({
@@ -12,7 +13,11 @@ const Table = ({
   striped = true,
 }) => {
   const navigate = useNavigate();
-  console.log(data);
+  const users = getUserRole()
+  let role = false
+  if (users.role === "user") {
+    role = true
+    }
   const getCaps = (head, field) => {
     if (head) return head.toUpperCase();
     return field.toUpperCase();
@@ -65,7 +70,7 @@ const Table = ({
                         </td>
                       ))}
 
-                      {funtion === true && (
+                      {funtion === true && role === false ? (
                         <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                           <button
                           className="btn btn-ghost btn- rounded-2xl border-2 border-red-400"
@@ -76,7 +81,18 @@ const Table = ({
                             Edit Member
                           </button>
                         </td>
-                      )}
+                      ) : (
+                          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                            <button
+                            className="btn btn-ghost btn- rounded-2xl border-2 border-red-400"
+                              onClick={() =>
+                                navigate(`/datails/${row._id}`)
+                              }
+                            >
+                              Details
+                            </button>
+                          </td>
+                        )}
 
                       {other &&
                         other.map((col) => (

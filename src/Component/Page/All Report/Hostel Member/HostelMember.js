@@ -75,7 +75,9 @@ const user = getUserRole()
             <Table 
             columns={detailtableHead} 
             data={data} 
-            funtion={['admin','editor'].includes(user.role)  && true} />
+            funtion={true} 
+            
+            />
         </div>
     );
 };
