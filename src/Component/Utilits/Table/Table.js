@@ -42,14 +42,27 @@ const Table = ({
                         {getCaps(head.header, head.field)}
                       </th>
                     ))}
-                  {funtion === true && (
+                  {funtion === true && role === false ? (
+                    <>
                     <th
                       scope="col"
                       class="text-sm font-larg text-gray-900 px-2 py-4 text-left"
                     >
-                      Button
+                      Details Button
                     </th>
-                  )}
+                    <th
+                    scope="col"
+                    class="text-sm font-larg text-gray-900 px-2 py-4 text-left"
+                  >
+                    Edit Button
+                  </th>
+                  </>
+                  ):(<th
+                    scope="col"
+                    class="text-sm font-larg text-gray-900 px-2 py-4 text-left"
+                  >
+                    Button
+                  </th>)}
                   {other &&
                     other.map((col) => (
                       <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
@@ -71,7 +84,19 @@ const Table = ({
                       ))}
 
                       {funtion === true && role === false ? (
+                        <>
+                        
                         <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                        <button
+                        className="btn btn-ghost btn- rounded-2xl border-2 border-red-400"
+                          onClick={() =>
+                            navigate(`/datails/${row._id}`)
+                          }
+                        >
+                          Details
+                        </button>
+                      </td>
+                      <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                           <button
                           className="btn btn-ghost btn- rounded-2xl border-2 border-red-400"
                             onClick={() =>
@@ -81,6 +106,7 @@ const Table = ({
                             Edit Member
                           </button>
                         </td>
+                      </>
                       ) : (
                           <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                             <button
