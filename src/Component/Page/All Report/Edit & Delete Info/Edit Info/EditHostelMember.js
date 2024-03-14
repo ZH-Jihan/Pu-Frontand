@@ -14,7 +14,7 @@ const EditHostelMember = () => {
 
   if (mamber.length) {
     if (!update.name) {
-      setUpdate(mamber[0]);
+      setUpdate(mamber?.data[0]);
     }
   }
   const joinDate = moment(update?.joinDate).format("YYYY-MM-DD");
