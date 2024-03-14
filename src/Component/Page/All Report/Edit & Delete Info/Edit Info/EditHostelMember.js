@@ -1,42 +1,42 @@
-import moment from 'moment';
-import React, { useState } from 'react';
-import toast from 'react-hot-toast';
-import { useNavigate, useParams } from 'react-router-dom';
-import PutCustomAxios from '../../../../Hooks/PutCustomAxios';
-import useFatchData from '../../../../Hooks/useFatchData';
+import moment from "moment";
+import React, { useState } from "react";
+import toast from "react-hot-toast";
+import { useNavigate, useParams } from "react-router-dom";
+import PutCustomAxios from "../../../../Hooks/PutCustomAxios";
+import useFatchData from "../../../../Hooks/useFatchData";
 
 const EditHostelMember = () => {
-    const {id} = useParams();
-    const {data:mamber,error} = useFatchData(`/hostelmember/${id}`);
-   
-    const [update, setUpdate] = useState({});
-    const navigate = useNavigate()
+  const { id } = useParams();
+  const { data: mamber, error } = useFatchData(`/hostelmember/${id}`);
 
-    if (mamber.length) {
-        if (!update.name) {
-          setUpdate(mamber[0])
-        }
-      }
-      const joinDate = moment(update?.joinDate).format("YYYY-MM-DD");
-      const onChange = (e) => {
-        const { name, value } = e.target;
-        setUpdate((prev) => ({ ...prev, [name]: value }));
-      };
+  const [update, setUpdate] = useState({});
+  const navigate = useNavigate();
 
-      const updateMember = async (event) =>{
-        event.preventDefault();
+  if (mamber.length) {
+    if (!update.name) {
+      setUpdate(mamber[0]);
+    }
+  }
+  const joinDate = moment(update?.joinDate).format("YYYY-MM-DD");
+  const onChange = (e) => {
+    const { name, value } = e.target;
+    setUpdate((prev) => ({ ...prev, [name]: value }));
+  };
 
-      const respons = await PutCustomAxios(`/hostelmember/${id}`,update)
+  const updateMember = async (event) => {
+    event.preventDefault();
 
-      if (respons.status) {
-        toast.success(respons.status)
-        setUpdate({})
-        navigate("/womenhostel")
-      }
-      }
-    return (
-        <div>
-            <form onSubmit={updateMember}>
+    const respons = await PutCustomAxios(`/hostelmember/${id}`, update);
+
+    if (respons.status) {
+      toast.success(respons.status);
+      setUpdate({});
+      navigate("/womenhostel");
+    }
+  };
+  return (
+    <div>
+      <form onSubmit={updateMember}>
         <div class="w-full relative flex items-center justify-center bg-center bg-gray-50 py-4 px-4 sm:px-6 lg:px-8  bg-no-repeat bg-cover relative items-center">
           <div class="absolute opacity-60 inset-0 z-0"></div>
           <div class="w-full space-y-8 p-10 bg-white rounded-xl shadow-lg z-10">
@@ -77,7 +77,7 @@ const EditHostelMember = () => {
                           </span>
                         </label>
                         <input
-                          value ={update.name || ""}
+                          value={update.name || ""}
                           onChange={onChange}
                           class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
                           type="text"
@@ -92,7 +92,7 @@ const EditHostelMember = () => {
                           </span>
                         </label>
                         <input
-                          value ={update.number || ""}
+                          value={update.number || ""}
                           onChange={onChange}
                           class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
                           type="text"
@@ -168,6 +168,80 @@ const EditHostelMember = () => {
                         />
                       </div>
                     </div>
+                    <div class="md:grid grid lg:grid-cols-4 gap-4 w-full text-xs">
+                      <div class="form-control  mb-3 space-y-2 w-full text-base">
+                        <label class="font-semibold text-gray-600 text-xl py-2">
+                        Local Guardian Name
+                        </label>
+                        <input
+                          class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
+                          onChange={onChange}
+                          value={update.localguardian || ""}
+                          type="text"
+                          name="localguardian"
+                        />
+                      </div>
+                      <div class="form-control  mb-3 space-y-2 w-full text-base">
+                        <label class="font-semibold text-gray-600 text-xl py-2">
+                        Local Guardian Number
+                        </label>
+                        <input
+                          class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
+                          onChange={onChange}
+                          value={update.localguardiannumber || ""}
+                          type="text"
+                          name="localguardiannumber"
+                        />
+                      </div>
+                      <div class="form-control  mb-3 space-y-2 w-full text-base">
+                        <label class="font-semibold text-gray-600 text-xl py-2">
+                        Father Name
+                        </label>
+                        <input
+                          class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
+                          onChange={onChange}
+                          value={update.father || ""}
+                          type="text"
+                          name="father"
+                        />
+                      </div>
+                      <div class="form-control  mb-3 space-y-2 w-full text-base">
+                        <label class="font-semibold text-gray-600 text-xl py-2">
+                        Father Number
+                        </label>
+                        <input
+                          class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
+                          onChange={onChange}
+                          value={update.fathernumber || ""}
+                          type="text"
+                          name="fathernumber"
+                        />
+                      </div>
+                      <div class="form-control  mb-3 space-y-2 w-full text-base">
+                        <label class="font-semibold text-gray-600 text-xl py-2">
+                        Mother Name
+                        </label>
+                        <input
+                          class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
+                          onChange={onChange}
+                          value={update.mother || ""}
+                          type="text"
+                          name="mother"
+                        />
+                      </div>
+                      <div class="form-control  mb-3 space-y-2 w-full text-base">
+                        <label class="font-semibold text-gray-600 text-xl py-2">
+                        Mother Number
+                        </label>
+                        <input
+                          class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
+                          onChange={onChange}
+                          value={update.mothernumber || ""}
+                          type="text"
+                          name="mothernumber"
+                        />
+                      </div>
+                    </div>
                     <div class="form-control mt-5 text-right md:space-x-3 md:block flex flex-col-reverse">
                       <button
                         type="submit"
@@ -183,8 +257,8 @@ const EditHostelMember = () => {
           </div>
         </div>
       </form>
-        </div>
-    );
+    </div>
+  );
 };
 
 export default EditHostelMember;
