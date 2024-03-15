@@ -11,7 +11,6 @@ const EditHostelMember = () => {
 
   const [update, setUpdate] = useState({});
   const navigate = useNavigate();
-
   if (mamber.status) {
     if (!update.name) {
       setUpdate(mamber?.data[0]);
@@ -22,7 +21,7 @@ const EditHostelMember = () => {
     const { name, value } = e.target;
     setUpdate((prev) => ({ ...prev, [name]: value }));
   };
-
+console.log(update);
   const updateMember = async (event) => {
     event.preventDefault();
 
@@ -100,21 +99,30 @@ const EditHostelMember = () => {
                         />
                       </div>
                       <div class="form-control  mb-3 space-y-2 w-full text-base">
-                        <label class="font-semibold text-gray-600 text-xl py-2">
+                        <label class="font-semibold text-gray-600 py-2">
                           Flat Number
-                          <span title="required" className="text-red-500">
-                            *
-                          </span>
                         </label>
-                        <input
-                          placeholder="Input Flat Number"
-                          class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
-                          required
-                          type="text"
+                        <select
+                          autocomplete="None"
                           onChange={onChange}
-                          value={update.flate || ""}
+                          value={update.flat}
+                          class="appearance-none text-base block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
+                          type="text"
+                          required
                           name="flate"
-                        />
+                        >
+                          <option>{update.flate}</option>
+                          <option>North_1</option>
+                          <option>South_1</option>
+                          <option>North_2</option>
+                          <option>South_2</option>
+                          <option>North_3</option>
+                          <option>South_3</option>
+                          <option>North_4</option>
+                          <option>South_4</option>
+                          <option>North_5</option>
+                          <option>South_5</option>
+                        </select>
                       </div>
                       <div class="form-control  mb-3 space-y-2 w-full text-base">
                         <label class="font-semibold text-gray-600 text-xl py-2">

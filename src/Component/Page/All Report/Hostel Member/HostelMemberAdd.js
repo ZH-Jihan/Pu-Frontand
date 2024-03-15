@@ -10,15 +10,22 @@ const HostelMemberAdd = () => {
     e.preventDefault();
     setId(e.target.value);
   };
-
+  const [selectFlat,setSelectFlat] = useState({
+    flat :""
+  })
+  const handleInputChange=(e)=>{
+    const {name,value} = e.target;
+    setSelectFlat((prev)=>({...prev, [name]: value}))
+  }
   let student = totalReg.find((el) => el.ar === id);
   if (student === undefined) {
-    student = admission.find((el)=> el.AR === id)
+    student = admission.find((el) => el.AR === id);
   }
 
   if (id.length === 6 && student === undefined) {
-    alert("Please Provied a valide Id")
+    alert("Please Provied a valide Id");
   }
+  console.log(selectFlat.flat);
   const memberAdd = async (event) => {
     event.preventDefault();
     let name;
@@ -27,13 +34,14 @@ const HostelMemberAdd = () => {
     } else {
       name = student?.name || student?.Name;
     }
+    
     const studentInfo = {
       name: name,
       id: student?.ar || student?.AR,
       number: `0${student?.contactNum}`,
       batch: student?.programType,
       semester: student?.semesterName || student?.semester,
-      flate: event.target.flat.value,
+      flate: selectFlat.flat,
       room: event.target.room.value,
       seat: event.target.seat.value,
       joinDate: event.target.joindate.value,
@@ -44,17 +52,16 @@ const HostelMemberAdd = () => {
       const result = await CustomAxiosPost("/hostelmember", studentInfo);
 
       // Handle the result (e.g., show a success message)
-      console.log('Post successful:', result);
+      console.log("Post successful:", result);
       if (result.status === "Success") {
         toast.success("Successfully Add Member");
-        setId("")
-      event.target.reset()
+        setId("");
+        event.target.reset();
       }
-      
-  } catch (error) {
+    } catch (error) {
       // Handle errors (e.g., show an error message)
-      console.error('Post failed:', error);
-  }
+      console.error("Post failed:", error);
+    }
   };
   return (
     <div>
@@ -98,29 +105,42 @@ const HostelMemberAdd = () => {
                           </span>
                         </label>
                         <input
-                        placeholder={!student?.name || !student?.Name ? "Plese Input Name" : ""}
-                          value ={
-                            student?.name || student?.Name || ""
+                          placeholder={
+                            !student?.name || !student?.Name
+                              ? "Plese Input Name"
+                              : ""
                           }
+                          value={student?.name || student?.Name || ""}
                           class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
                           type="text"
                           name="name"
                         />
                       </div>
                       <div class="form-control  mb-3 space-y-2 w-full text-base">
-                        <label class="font-semibold text-gray-600 text-xl py-2">
+                        <label class="font-semibold text-gray-600 py-2">
                           Flat Number
-                          <span title="required" className="text-red-500">
-                            *
-                          </span>
                         </label>
-                        <input
-                          placeholder="Input Flat Number"
-                          class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
-                          required
+                        <select
+                          autocomplete="None"
+                          onChange={handleInputChange}
+                          value={selectFlat.flat}
+                          class="appearance-none text-base block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
                           type="text"
+                          required
                           name="flat"
-                        />
+                        >
+                          <option value={""}>--Select Flat--</option>
+                          <option>North_1</option>
+                          <option>South_1</option>
+                          <option>North_2</option>
+                          <option>South_2</option>
+                          <option>North_3</option>
+                          <option>South_3</option>
+                          <option>North_4</option>
+                          <option>South_4</option>
+                          <option>North_5</option>
+                          <option>South_5</option>
+                        </select>
                       </div>
                       <div class="form-control  mb-3 space-y-2 w-full text-base">
                         <label class="font-semibold text-gray-600 text-xl py-2">
