@@ -33,6 +33,14 @@ const Table = ({
                 style={{ position: "sticky", top: "0" }}
               >
                 <tr>
+                  {funtion === true && role === true &&
+                    <th
+                    scope="col"
+                    class="text-sm font-larg text-gray-900 px-2 py-4 text-left"
+                  >
+                    Button
+                  </th>
+                  }
                   {columns &&
                     columns.map((head) => (
                       <th
@@ -42,27 +50,21 @@ const Table = ({
                         {getCaps(head.header, head.field)}
                       </th>
                     ))}
-                  {funtion === true && role === false ? (
+                  {funtion === true && role === false &&
                     <>
                     <th
                       scope="col"
                       class="text-sm font-larg text-gray-900 px-2 py-4 text-left"
                     >
-                      Details Button
+                      Button
                     </th>
                     <th
                     scope="col"
                     class="text-sm font-larg text-gray-900 px-2 py-4 text-left"
                   >
-                    Edit Button
+                  Button
                   </th>
-                  </>
-                  ):(<th
-                    scope="col"
-                    class="text-sm font-larg text-gray-900 px-2 py-4 text-left"
-                  >
-                    Button
-                  </th>)}
+                  </>}
                   {other &&
                     other.map((col) => (
                       <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
@@ -77,18 +79,10 @@ const Table = ({
                     <tr
                       className={` ${hover && "hover"} ${striped && "striped"}`}
                     >
-                      {columns.map((col) => (
-                        <td class="px-2 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                          {row[col.field]}
-                        </td>
-                      ))}
-
-                      {funtion === true && role === false ? (
-                        <>
-                        
-                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                      {funtion === true && role === true &&
+                        <td class=" py-1 whitespace-nowrap text-sm font-medium text-gray-900">
                         <button
-                        className="btn btn-ghost btn- rounded-2xl border-2 border-red-400"
+                        className="rounded-2xl border-2 border-red-400 px-4 py-1"
                           onClick={() =>
                             navigate(`/datails/${row._id}`)
                           }
@@ -96,9 +90,29 @@ const Table = ({
                           Details
                         </button>
                       </td>
-                      <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                      }
+                      {columns.map((col) => (
+                        <td class="px-2 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                          {row[col.field]}
+                        </td>
+                      ))}
+
+                      {funtion === true && role === false &&
+                        <>
+                        
+                        <td class="py-1 whitespace-nowrap text-sm font-medium text-gray-900">
+                        <button
+                        className=" rounded-2xl border-2 border-red-400 px-4 py-1"
+                          onClick={() =>
+                            navigate(`/datails/${row._id}`)
+                          }
+                        >
+                          Details
+                        </button>
+                      </td>
+                      <td class="py-1 whitespace-nowrap text-sm font-medium text-gray-900">
                           <button
-                          className="btn btn-ghost btn- rounded-2xl border-2 border-red-400"
+                          className="rounded-2xl border-2 border-red-400 px-4 py-1"
                             onClick={() =>
                               navigate(`/edithostelmember/${row._id}`)
                             }
@@ -106,19 +120,7 @@ const Table = ({
                             Edit Member
                           </button>
                         </td>
-                      </>
-                      ) : (
-                          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                            <button
-                            className="btn btn-ghost btn- rounded-2xl border-2 border-red-400"
-                              onClick={() =>
-                                navigate(`/datails/${row._id}`)
-                              }
-                            >
-                              Details
-                            </button>
-                          </td>
-                        )}
+                      </>}
 
                       {other &&
                         other.map((col) => (
