@@ -76,7 +76,8 @@ const user = getUserRole()
             columns={detailtableHead} 
             data={data} 
             funtion={true} 
-            
+            editpathname={"edithostelmember"}
+            detailPath={"datailshosMember"}
             />
         </div>
     );

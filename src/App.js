@@ -109,7 +109,7 @@ function App() {
             <Route path="/womenhostel" element={ <HostelMember/>}></Route>
             <Route path="/addwomenhostel" element={ <HostelMemberAdd/>}></Route>
             <Route path="/edithostelmember/:id" element={ <EditHostelMember/>}></Route>
-            <Route path="/datails/:id" element={ <DetailsHostelMember/>}></Route>
+            <Route path="/datailshosMember/:id" element={ <DetailsHostelMember/>}></Route>
             
             <Route path="*" element={<Notpound></Notpound>}></Route>
             <Route path="/unothorize" element={<Unothorize/>}></Route>
