@@ -21,6 +21,7 @@ const DetailsHostelMember = () => {
           <p className="text-xl ">Id_ : {member?.id}</p>
           <p className="text-xl ">Department_ : {member?.department}</p>
           <p className="text-xl ">Semester_ : {member?.semester}</p>
+          <p className="text-xl ">Batch_ : {member?.batch}</p>
 
           <p className="text-xl ">Number_ : {member?.number}</p>
           <p className="text-xl ">JoinDate_ : {member?.joinDate}</p>

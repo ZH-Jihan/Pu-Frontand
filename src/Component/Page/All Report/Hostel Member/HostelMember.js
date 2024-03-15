@@ -10,16 +10,14 @@ const HostelMember = () => {
 const user = getUserRole()
     
     const detailtableHead = [
-        { field: "joinDate", header: "Join Date" },
+        
         { field: "name", header: "Name" },
         { field: "number", header: "Number" },
-        { field: "department", header: "Department" },
         { field: "flate", header: "Flat" },
         { field: "room", header: "Room" },
         { field: "seat", header: "Seat" },
-        { field: "batch", header: "Batch" },
-        { field: "semester", header: "Semester" },
-        { field: "id", header: "Id" },
+        { field: "joinDate", header: "Join Date" },
+        { field: "department", header: "Depa." },
 
       ];
 
