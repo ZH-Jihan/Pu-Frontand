@@ -55,7 +55,7 @@ const user = getUserRole()
         <div>
             <h1 className='text-2xl pb-4 text-center font-bold'>Women Hostel Member</h1>
             <h1 className='text-lg pb-2 text-center font-bold'>Total : {hostelmember?.length}</h1>
-            <h2 className='lg:w-1/4 m-auto text-center font-bold grid grid-cols-3'>
+            <h2 className='lg:w-1/4 m-auto text-center font-bold grid grid-cols-4'>
                 {
                 uniqueNames.map((name)=>(
                     <span>{`${name} : ${counteMemberDepWise(name)} `}</span>
