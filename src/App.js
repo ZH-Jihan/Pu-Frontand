@@ -25,6 +25,7 @@ import RegStuDetails from "./Component/Page/All Report/Program Wise Detail/RegSt
 import ProgramWiseCount from "./Component/Page/All Report/ProgramWiseCount";
 import TotalStudentReport from "./Component/Page/All Report/TotalStudentReport";
 import TutionFee from "./Component/Page/All Report/TutionFee";
+import LogInUserInfo from "./Component/Page/All Report/UserManagement/LogInUserInfo";
 import ViewAllUser from "./Component/Page/All Report/UserManagement/ViewAllUser";
 import ViewAbsentReport from "./Component/Page/All Report/ViewAbsentReport";
 import AdmissonFrom from "./Component/Page/Apply From/AdmissonFrom";
@@ -52,6 +53,7 @@ function App() {
           {/* Main Open Page */}
           <Route path="/" element={<MyRequireAuth><NewHomePageV2/></MyRequireAuth>}>
             {/* Faculty Total Class */}
+            <Route path="/" element={<LogInUserInfo/>}/>
             <Route path="/teacherclass"  element={<TeacherTotalClass />} />
             <Route path="/teacherclass/:id" element={<TClassDetail />} />
 

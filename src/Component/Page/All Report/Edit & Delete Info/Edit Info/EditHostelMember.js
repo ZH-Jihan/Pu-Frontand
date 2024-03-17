@@ -21,7 +21,7 @@ const EditHostelMember = () => {
     const { name, value } = e.target;
     setUpdate((prev) => ({ ...prev, [name]: value }));
   };
-console.log(update);
+  console.log(update);
   const updateMember = async (event) => {
     event.preventDefault();
 
@@ -179,7 +179,7 @@ console.log(update);
                     <div class="md:grid grid lg:grid-cols-4 gap-4 w-full text-xs">
                       <div class="form-control  mb-3 space-y-2 w-full text-base">
                         <label class="font-semibold text-gray-600 text-xl py-2">
-                        Local Guardian Name
+                          Local Guardian Name
                         </label>
                         <input
                           class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
@@ -191,7 +191,7 @@ console.log(update);
                       </div>
                       <div class="form-control  mb-3 space-y-2 w-full text-base">
                         <label class="font-semibold text-gray-600 text-xl py-2">
-                        Local Guardian Number
+                          Local Guardian Number
                         </label>
                         <input
                           class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
@@ -203,7 +203,7 @@ console.log(update);
                       </div>
                       <div class="form-control  mb-3 space-y-2 w-full text-base">
                         <label class="font-semibold text-gray-600 text-xl py-2">
-                        Father Name
+                          Father Name
                         </label>
                         <input
                           class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
@@ -215,7 +215,7 @@ console.log(update);
                       </div>
                       <div class="form-control  mb-3 space-y-2 w-full text-base">
                         <label class="font-semibold text-gray-600 text-xl py-2">
-                        Father Number
+                          Father Number
                         </label>
                         <input
                           class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
@@ -227,7 +227,7 @@ console.log(update);
                       </div>
                       <div class="form-control  mb-3 space-y-2 w-full text-base">
                         <label class="font-semibold text-gray-600 text-xl py-2">
-                        Mother Name
+                          Mother Name
                         </label>
                         <input
                           class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
@@ -239,7 +239,7 @@ console.log(update);
                       </div>
                       <div class="form-control  mb-3 space-y-2 w-full text-base">
                         <label class="font-semibold text-gray-600 text-xl py-2">
-                        Mother Number
+                          Mother Number
                         </label>
                         <input
                           class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
@@ -250,10 +250,18 @@ console.log(update);
                         />
                       </div>
                     </div>
-                    <div class="form-control mt-5 text-right md:space-x-3 md:block flex flex-col-reverse">
+
+                    <div class=" mt-5 text-right md:space-x-3 md:block flex flex-col-reverse">
+                      <button
+                        type="button"
+                        class="mb-2 md:mb-0 bg-slate-800 px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-orange-400"
+                        onClick={() => navigate(-1)}
+                      >
+                        Back
+                      </button>
                       <button
                         type="submit"
-                        class="mb-2 md:mb-0 bg-green-400 px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-green-500"
+                        class=" mb-2 md:mb-0 bg-green-400 px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-green-500"
                       >
                         Update
                       </button>
