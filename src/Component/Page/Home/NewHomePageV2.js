@@ -2,7 +2,7 @@ import Cookies from "js-cookie";
 import React from "react";
 import { Helmet } from "react-helmet";
 import { Outlet, useNavigate } from "react-router-dom";
-import useLocalDataFatch from "../../Hooks/localDataFatch";
+import reports from "../../../data/menuList.json";
 import FontWosamIcon from "../../Utilits/FontWosamIcon";
 import { getUserRole } from "../Security/myAuth";
 import Loading from "../Sheared Page/Loading";
@@ -15,7 +15,6 @@ const NewHomePageV2 = () => {
   // script.async = true;
   // document.body.appendChild(script);
   //** End 1st way 2nd way method show bottom of this file  **//
-  const { data: reports, loading } = useLocalDataFatch("menuList.json");
   const viewReport = reports[0]?.value;
   const addData = reports[1]?.value;
 
@@ -58,7 +57,7 @@ console.log(reports);
     }
     return filterReportrole;
   };
-  if (loading) {
+  if (!reports) {
     return <Loading></Loading>;
   } else {
     return (

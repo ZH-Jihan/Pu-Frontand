@@ -2,7 +2,7 @@ import React from "react";
 import useFatchData from "../../../Hooks/useFatchData";
 
 const LogInUserInfo = () => {
-  const { data: userInfo } = useFatchData("/user/me");
+  const { data: userInfo } = useFatchData("/user/current");
   const user = userInfo.data;
   return (
     <div class="bg-white overflow-hidden shadow rounded-lg border lg:w-2/4 m-auto">

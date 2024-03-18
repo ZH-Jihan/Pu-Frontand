@@ -25,6 +25,7 @@ import RegStuDetails from "./Component/Page/All Report/Program Wise Detail/RegSt
 import ProgramWiseCount from "./Component/Page/All Report/ProgramWiseCount";
 import TotalStudentReport from "./Component/Page/All Report/TotalStudentReport";
 import TutionFee from "./Component/Page/All Report/TutionFee";
+import EditUserForAdmin from "./Component/Page/All Report/UserManagement/EditUserForAdmin";
 import LogInUserInfo from "./Component/Page/All Report/UserManagement/LogInUserInfo";
 import ViewAllUser from "./Component/Page/All Report/UserManagement/ViewAllUser";
 import ViewAbsentReport from "./Component/Page/All Report/ViewAbsentReport";
@@ -106,6 +107,7 @@ function App() {
             
             <Route path="/createUser" element={ <MySingUp/>}></Route>
             <Route path="/alluser" element={ <ViewAllUser/>}></Route>
+            <Route path="/alluser/edituserforadmin/:id" element={ <EditUserForAdmin/>}></Route>
 
 
             <Route path="/womenhostel" element={ <HostelMember/>}></Route>

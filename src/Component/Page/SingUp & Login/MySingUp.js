@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import toast from "react-hot-toast";
+import menuList from "../../../data/menuList.json";
 import CustomAxiosPost from "../../Hooks/CustomAxiosPost";
-import useLocalDataFatch from "../../Hooks/localDataFatch";
 import Button from "../../Utilits/Button";
 import Loading from "../Sheared Page/Loading";
 
 const MySingUp = () => {
-  const { data: menuList ,loading} = useLocalDataFatch("menuList.json");
   const [selectAll, setSelectAll] = useState(false);
   const [selectedItems, setSelectedItems] = useState([]);
   const [selectedRole, setSelectRole] = useState({
@@ -14,10 +13,10 @@ const MySingUp = () => {
   });
   const viewReport = menuList[0]?.value;
   const addData = menuList[1]?.value;
+  console.log(viewReport);
   let menulist ;
 
-if (loading === false) {
-  
+if (viewReport && addData) {
  menulist = viewReport.concat(addData)
 }
   
@@ -38,7 +37,7 @@ if (loading === false) {
 
   const filterMenuList = (value) => {
     let menu;
-    if (selectedRole.role && loading === false) {
+    if (selectedRole.role && menuList) {
       menu = value.filter((el) => el.role.includes(selectedRole.role));
     }
     return menu;
@@ -92,7 +91,7 @@ console.log(respons);
     }
     event.target.reset()
   };
-  if (loading === true) {
+  if (!menuList) {
     return <Loading/>
   }else{
   return (

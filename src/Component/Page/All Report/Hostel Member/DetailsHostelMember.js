@@ -23,8 +23,7 @@ const DetailsHostelMember = () => {
               <img
                   class="w-48 h-44 lg:pt-4"
                   src="https://res.cloudinary.com/dgctadcb2/image/upload/v1710672276/qllzxq5dyhcaotylvzag.jpg"
-                  alt="Student Image"
-                />
+                  alt="Student Image"/>
                 <div>
                 
                   <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">
