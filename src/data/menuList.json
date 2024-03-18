@@ -19,13 +19,18 @@
         "role": ["user", "editor", "admin"]
       },
       {
-        "name": "Empoleey List",
-        "navigate": "/empoleey",
+        "name": "Women Hostel Member",
+        "navigate": "/womenhostel",
         "role": ["user", "editor", "admin"]
       },
       {
-        "name": "Women Hostel Member",
-        "navigate": "/womenhostel",
+        "name": "Tution Fee Analyze",
+        "navigate": "/tutionfee",
+        "role": ["user", "editor", "admin"]
+      },
+      {
+        "name": "Empoleey List",
+        "navigate": "/empoleey",
         "role": ["user", "editor", "admin"]
       },
       {
@@ -36,6 +41,11 @@
       {
         "name": "Room Wise Faculty",
         "navigate": "/roomwisefaculty",
+        "role": ["user", "editor", "admin"]
+      },
+      {
+        "name": "Class Room List",
+        "navigate": "/classroom",
         "role": ["user", "editor", "admin"]
       }
     ]
