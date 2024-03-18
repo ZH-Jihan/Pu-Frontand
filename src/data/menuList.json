@@ -30,13 +30,11 @@
       },
       {
         "name": "Admi & Reg Analyze",
-        "icon": "faCalendarDays",
         "navigate": "/studentAnalyze",
         "role": ["user", "editor", "admin"]
       },
       {
         "name": "Room Wise Faculty",
-        "icon": "faCalendarDays",
         "navigate": "/roomwisefaculty",
         "role": ["user", "editor", "admin"]
       }
@@ -58,15 +56,15 @@
         "role": ["editor", "admin"]
       },
       {
-        "name": "Empoleey Entry",
-        "icon": "faCalendarDays",
-        "navigate": "/entryempoleey",
-        "role": ["editor", "admin"]
-      },
-      {
         "name": "Add Hostel Member",
         "icon": "faCalendarDays",
         "navigate": "/addwomenhostel",
+        "role": ["editor", "admin"]
+      },
+      {
+        "name": "Empoleey Entry",
+        "icon": "faCalendarDays",
+        "navigate": "/entryempoleey",
         "role": ["editor", "admin"]
       }
     ]

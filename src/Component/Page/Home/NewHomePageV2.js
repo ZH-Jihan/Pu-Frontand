@@ -18,8 +18,6 @@ const NewHomePageV2 = () => {
   const viewReport = reports[0]?.value;
   const addData = reports[1]?.value;
 
-console.log(viewReport);
-console.log(reports);
   const userDat = getUserRole();
   const navigate = useNavigate();
 

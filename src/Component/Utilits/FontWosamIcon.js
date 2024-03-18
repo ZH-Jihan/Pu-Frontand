@@ -1,8 +1,8 @@
 import {
-    faCalendarDays,
-    faHotel,
-    faPerson,
-    faUsers
+  faCalendarDays,
+  faHotel,
+  faPerson,
+  faUsers
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
@@ -10,13 +10,13 @@ import React from 'react';
 const FontWosamIcon = ({ name }) => {
     const getFontAwesomeIcon = (nemuName) => {
         switch (nemuName) {
-          case 'Routine':
+          case 'Routines':
             return faCalendarDays;
-          case 'Faculty List':
+          case 'Faculty Lists':
             return faUsers;
-          case 'All Employee':
+          case 'All Employees':
             return faPerson;
-          case 'Girl Hostel Member':
+          case 'Women Hostel Members':
             return faHotel;
           default:
             return null; // You can handle default or unknown icons as needed
