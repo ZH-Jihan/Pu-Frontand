@@ -146,27 +146,71 @@ const EditUserForAdmin = () => {
                       </div>
                       
                     </div>
-                    <div className="grid lg:grid-cols-3 gap-2">
-                      <label class="inline-flex items-center mt-2">
-                            <input
-                              type="checkbox"
-                              checked={selectAll}
-                              onChange={handleSelectAllChange}
-                              class="form-checkbox h-5 w-5 text-red-600"
-                            />
-                            <span class="ml-2 text-gray-700">All</span>
-                          </label>
-                        {menulist && filterMenuList(menulist)?.map((menu) => (
-                          <label class="inline-flex items-center mt-2">
-                            <input
-                              type="checkbox"
-                              checked={selectAll || selectedItems.includes(menu.name)}
-                              onChange={() => handleCheckboxChange(menu.name)}
-                              class="form-checkbox h-5 w-5 text-red-600"
-                            />
-                            <span class="ml-2 text-gray-700">{menu.name}</span>
-                          </label>
-                        ))}
+                    <label class="inline-flex items-center mt-2">
+                        <input
+                          type="checkbox"
+                          checked={selectAll}
+                          onChange={handleSelectAllChange}
+                          class="form-checkbox h-5 w-5 text-red-600"
+                        />
+                        <span class="ml-2 text-gray-700">All</span>
+                      </label>
+                      <div class="md:grid grid lg:grid-cols-2 gap-4 w-full text-base">
+                        <div>
+                          <h1 class="text-2xl font-bold text-gray-800 dark:text-white my-1">
+                            Report List
+                          </h1>
+
+                          <div className="grid lg:grid-cols-2 gap-2">
+                            {menulist &&
+                              filterMenuList(viewReport)?.map((menu) => (
+                                <label class="inline-flex items-center mt-2">
+                                  <input
+                                    type="checkbox"
+                                    checked={
+                                      selectAll ||
+                                      selectedItems.includes(menu.name)
+                                    }
+                                    onChange={() =>
+                                      handleCheckboxChange(menu.name)
+                                    }
+                                    class="form-checkbox h-5 w-5 text-red-600"
+                                  />
+                                  <span class="ml-2 text-gray-700">
+                                    {menu.name}
+                                  </span>
+                                </label>
+                              ))}
+                          </div>
+                        </div>
+                        <div>
+                          {update.role !== "user" && (
+                            <h1 class="text-2xl font-bold text-gray-800 dark:text-white my-1">
+                              Data Entry
+                            </h1>
+                          )}
+                          <div className="grid lg:grid-cols-2 gap-2 pb-4">
+                            {menulist &&
+                              filterMenuList(addData)?.map((menu) => (
+                                <label class="inline-flex items-center mt-2">
+                                  <input
+                                    type="checkbox"
+                                    checked={
+                                      selectAll ||
+                                      selectedItems.includes(menu.name)
+                                    }
+                                    onChange={() =>
+                                      handleCheckboxChange(menu.name)
+                                    }
+                                    class="form-checkbox h-5 w-5 text-red-600"
+                                  />
+                                  <span class="ml-2 text-gray-700">
+                                    {menu.name}
+                                  </span>
+                                </label>
+                              ))}
+                          </div>
+                        </div>
                       </div>
                     <div class=" mt-5 text-right md:space-x-3 md:block flex flex-col-reverse">
                       <button

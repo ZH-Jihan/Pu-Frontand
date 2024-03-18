@@ -50,12 +50,7 @@
         "navigate": "/createUser",
         "role": ["admin"]
       },
-      {
-        "name": "Add Routine",
-        "icon": "faCalendarDays",
-        "navigate": "/addroutine",
-        "role": ["editor", "admin"]
-      },
+
       {
         "name": "Faculty Entry",
         "icon": "faCalendarDays",
@@ -72,12 +67,6 @@
         "name": "Add Hostel Member",
         "icon": "faCalendarDays",
         "navigate": "/addwomenhostel",
-        "role": ["editor", "admin"]
-      },
-      {
-        "name": "Add Room Wise Faculty",
-        "icon": "faCalendarDays",
-        "navigate": "/addroomwisefaculty",
         "role": ["editor", "admin"]
       }
     ]

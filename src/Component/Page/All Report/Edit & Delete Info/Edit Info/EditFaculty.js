@@ -259,6 +259,19 @@ if (respons) {
                             name="university"
                           />
                         </div>
+                        <div class="form-control  w-full flex flex-col mb-3">
+                          <label class="font-semibold text-gray-600 py-2">
+                            Seat Room
+                          </label>
+                          <input
+                          value={update?.roomnum}
+                          onChange={onChange}
+                            placeholder="University"
+                            class="appearance-none text-base block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
+                            type="text"
+                            name="university"
+                          />
+                        </div>
                         {/* Job Type */}
                         <div class="form-control  w-2/4 flex flex-col mb-3">
                           <label class="font-semibold text-gray-600 py-2">

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import toast from "react-hot-toast";
 import menuList from "../../../data/menuList.json";
 import CustomAxiosPost from "../../Hooks/CustomAxiosPost";
-import Button from "../../Utilits/Button";
 import Loading from "../Sheared Page/Loading";
 
 const MySingUp = () => {
@@ -14,25 +13,15 @@ const MySingUp = () => {
   const viewReport = menuList[0]?.value;
   const addData = menuList[1]?.value;
   console.log(viewReport);
-  let menulist ;
+  let menulist;
 
-if (viewReport && addData) {
- menulist = viewReport.concat(addData)
-}
-  
+  if (viewReport && addData) {
+    menulist = viewReport.concat(addData);
+  }
+
   const onChange = (e) => {
     const { name, value } = e.target;
     setSelectRole((prev) => ({ ...prev, [name]: value }));
-  };
-  const roleBtn = {
-    btnHade: "Select Role",
-    btnvalue: selectedRole.role,
-    function: { onChange },
-    btnName: "role",
-    option: [
-      { value: "user", name: "User" },
-      { value: "editor", name: "Editor" },
-    ],
   };
 
   const filterMenuList = (value) => {
@@ -44,7 +33,6 @@ if (viewReport && addData) {
   };
 
   const handleCheckboxChange = (id) => {
-
     if (selectAll) {
       // If selectAll is true, unselect all checkboxes
       setSelectAll(false);
@@ -65,7 +53,9 @@ if (viewReport && addData) {
 
   const handleSelectAllChange = () => {
     setSelectAll(!selectAll);
-    setSelectedItems(selectAll ? [] : filterMenuList(menulist).map(item => item.name));
+    setSelectedItems(
+      selectAll ? [] : filterMenuList(menulist).map((item) => item.name)
+    );
   };
 
   const handleRegister = async (event) => {
@@ -77,112 +67,171 @@ if (viewReport && addData) {
       demo: event.target.password.value,
       confirmPassword: event.target.password.value,
       role: selectedRole.role,
-      permission:selectedItems
+      permission: selectedItems,
     };
 
-    const respons = await CustomAxiosPost("/user/singup",newUser);
-console.log(respons);
+    const respons = await CustomAxiosPost("/user/singup", newUser);
+    console.log(respons);
     if (respons?.status === "Success") {
-      
-      setSelectAll(false)
-      setSelectedItems([])
-      setSelectRole({ role :"user"})
-      toast.success("Successfully Create User")
+      setSelectAll(false);
+      setSelectedItems([]);
+      setSelectRole({ role: "user" });
+      toast.success("Successfully Create User");
     }
-    event.target.reset()
+    event.target.reset();
   };
   if (!menuList) {
-    return <Loading/>
-  }else{
-  return (
-    <div>
-      <div class=" bg-gray-100 py-6 flex flex-col justify-center w-full">
-        <div class="relative py-3  sm:mx-auto">
-          <div class="relative px-4 py-10 bg-white mx-8 md:mx-0 shadow rounded-3xl sm:p-10">
-            <div class=" mx-auto">
-              <div class="flex items-center space-x-5">
-                <div class="h-8 w-14 bg-yellow-200 rounded-full flex flex-shrink-0 justify-center items-center text-yellow-500 text-2xl font-mono">
-                  i
-                </div>
-                <div class="block pl-2 font-semibold text-xl self-start text-gray-700">
-                  <h2 class="leading-relaxed">Create A User</h2>
+    return <Loading />;
+  } else {
+    return (
+      <div>
+        <div class=" bg-gray-100  flex flex-col justify-center w-full">
+          <form onSubmit={handleRegister}>
+            <div class="w-full relative flex items-center justify-center bg-center bg-gray-50 py-4 px-4 sm:px-6 lg:px-8  bg-no-repeat bg-cover relative items-center">
+              <div class="absolute opacity-60 inset-0 z-0"></div>
+              <div class="w-full space-y-8 p-10 bg-white rounded-xl shadow-lg z-10">
+                <div class="grid  gap-8 grid-cols-1">
+                  <div class="flex flex-col ">
+                    <div class="form">
+                      <div class="md:grid grid lg:grid-cols-4 gap-4 w-full text-xs">
+                        <div class="form-control  mb-3 space-y-2 w-full text-base">
+                          <label class="font-semibold text-gray-600 text-xl py-2">
+                            User Name
+                          </label>
+                          <input
+                            type="text"
+                            name="name"
+                            required
+                            class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
+                            placeholder="Name"
+                          />
+                        </div>
+                        <div class="form-control  mb-3 space-y-2 w-full text-base">
+                          <label class="font-semibold text-gray-600 text-xl py-2">
+                            User Email
+                          </label>
+                          <input
+                            type="email"
+                            name="email"
+                            required
+                            class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
+                            placeholder="ex: demo@gmail.com"
+                          />
+                        </div>
+                        <div class="form-control  mb-3 space-y-2 w-full text-base">
+                          <label class="font-semibold text-gray-600 text-xl py-2">
+                            User Password
+                          </label>
+                          <input
+                            type="text"
+                            name="password"
+                            required
+                            class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
+                            placeholder="password"
+                          />
+                        </div>
+                        <div class="form-control  mb-3 space-y-2 w-full text-base">
+                          <label class="font-semibold text-gray-600 py-2">
+                            User Role
+                          </label>
+                          <select
+                            autocomplete="None"
+                            onChange={onChange}
+                            value={selectedRole.role}
+                            class="appearance-none text-base block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
+                            type="text"
+                            required
+                            name="role"
+                          >
+                            <option value={"user"}>User</option>
+                            <option value={"editor"}>Editor</option>
+                          </select>
+                        </div>
+                      </div>
+                      <label class="inline-flex items-center mt-2">
+                        <input
+                          type="checkbox"
+                          checked={selectAll}
+                          onChange={handleSelectAllChange}
+                          class="form-checkbox h-5 w-5 text-red-600"
+                        />
+                        <span class="ml-2 text-gray-700">All</span>
+                      </label>
+                      <div class="md:grid grid lg:grid-cols-2 gap-4 w-full text-base">
+                        <div>
+                          <h1 class="text-2xl font-bold text-gray-800 dark:text-white my-1">
+                            Report List
+                          </h1>
+
+                          <div className="grid lg:grid-cols-2 gap-2">
+                            {menulist &&
+                              filterMenuList(viewReport)?.map((menu) => (
+                                <label class="inline-flex items-center mt-2">
+                                  <input
+                                    type="checkbox"
+                                    checked={
+                                      selectAll ||
+                                      selectedItems.includes(menu.name)
+                                    }
+                                    onChange={() =>
+                                      handleCheckboxChange(menu.name)
+                                    }
+                                    class="form-checkbox h-5 w-5 text-red-600"
+                                  />
+                                  <span class="ml-2 text-gray-700">
+                                    {menu.name}
+                                  </span>
+                                </label>
+                              ))}
+                          </div>
+                        </div>
+                        <div>
+                          {selectedRole.role !== "user" && (
+                            <h1 class="text-2xl font-bold text-gray-800 dark:text-white my-1">
+                              Data Entry
+                            </h1>
+                          )}
+                          <div className="grid lg:grid-cols-2 gap-2 pb-4">
+                            {menulist &&
+                              filterMenuList(addData)?.map((menu) => (
+                                <label class="inline-flex items-center mt-2">
+                                  <input
+                                    type="checkbox"
+                                    checked={
+                                      selectAll ||
+                                      selectedItems.includes(menu.name)
+                                    }
+                                    onChange={() =>
+                                      handleCheckboxChange(menu.name)
+                                    }
+                                    class="form-checkbox h-5 w-5 text-red-600"
+                                  />
+                                  <span class="ml-2 text-gray-700">
+                                    {menu.name}
+                                  </span>
+                                </label>
+                              ))}
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-control mt-5 text-right md:space-x-3 md:block flex flex-col-reverse">
+                        <button
+                          type="submit"
+                          class="mb-2 md:mb-0 bg-green-400 px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-green-500"
+                        >
+                          Create User
+                        </button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <form onSubmit={handleRegister}>
-                <div class="divide-y divide-gray-200">
-                  <div className="grid lg:grid-cols-2 gap-8">
-                    <div class="py-4 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
-                      <div class="flex flex-col">
-                        <label class="leading-loose">User Name</label>
-                        <input
-                          type="text"
-                          name="name"
-                          class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
-                          placeholder="Name"
-                        />
-                      </div>
-                      <div class="flex flex-col">
-                        <label class="leading-loose">User Email</label>
-                        <input
-                          type="email"
-                          name="email"
-                          class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
-                          placeholder="ex: demo@gmail.com"
-                        />
-                      </div>
-                      <div class="flex flex-col">
-                        <label class="leading-loose">User Password</label>
-                        <input
-                          type="text"
-                          name="password"
-                          class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
-                          placeholder="password"
-                        />
-                      </div>
-                    </div>
-                    <div className="pt-4">
-                      <Button details={roleBtn} />
-                      <div className="grid lg:grid-cols-3 gap-2">
-                      <label class="inline-flex items-center mt-2">
-                            <input
-                              type="checkbox"
-                              checked={selectAll}
-                              onChange={handleSelectAllChange}
-                              class="form-checkbox h-5 w-5 text-red-600"
-                            />
-                            <span class="ml-2 text-gray-700">All</span>
-                          </label>
-                        {menulist && filterMenuList(menulist)?.map((menu) => (
-                          <label class="inline-flex items-center mt-2">
-                            <input
-                              type="checkbox"
-                              checked={selectAll || selectedItems.includes(menu.name)}
-                              onChange={() => handleCheckboxChange(menu.name)}
-                              class="form-checkbox h-5 w-5 text-red-600"
-                            />
-                            <span class="ml-2 text-gray-700">{menu.name}</span>
-                          </label>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="pt-4 flex items-center space-x-4">
-                    <button
-                      type="submit"
-                      class="bg-blue-500 flex justify-center items-center w-full text-white px-4 py-3 rounded-md focus:outline-none"
-                    >
-                      Create
-                    </button>
-                  </div>
-                </div>
-              </form>
             </div>
-          </div>
+          </form>
         </div>
       </div>
-    </div>
-  );}
+    );
+  }
 };
 
 export default MySingUp;
