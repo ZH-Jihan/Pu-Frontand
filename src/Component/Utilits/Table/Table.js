@@ -8,10 +8,13 @@ const Table = ({
   columns = null,
   hover = true,
   other = null,
-  funtion = false,
+  edit = false,
+  details = false,
+  deleted = false,
   user = null,
   editpathname = null,
   detailPath = null,
+  deletePath = null,
   striped = true,
 }) => {
   const navigate = useNavigate();
@@ -35,7 +38,7 @@ const Table = ({
                 style={{ position: "sticky", top: "0" }}
               >
                 <tr>
-                  {funtion === true && users.role && (
+                  {details === true && users.role && (
                     <th
                       scope="col"
                       class="text-sm font-larg text-gray-900 px-2 py-4 text-left"
@@ -52,7 +55,15 @@ const Table = ({
                         {getCaps(head.header, head.field)}
                       </th>
                     ))}
-                  {funtion === true && role === true && (
+                  {edit === true && role === true && (
+                    <th
+                      scope="col"
+                      class="text-sm font-larg text-gray-900 px-2 py-4 text-left"
+                    >
+                      Button
+                    </th>
+                  )}
+                  {deleted === true && role === true && (
                     <th
                       scope="col"
                       class="text-sm font-larg text-gray-900 px-2 py-4 text-left"
@@ -74,7 +85,7 @@ const Table = ({
                     <tr
                       className={` ${hover && "hover"} ${striped && "striped"}`}
                     >
-                      {funtion === true && users.role && (
+                      {details === true && users.role && (
                         <td class=" py-1 whitespace-nowrap text-sm font-medium text-gray-900">
                           <button
                             className="rounded-2xl border-2 border-red-400 px-4 py-1"
@@ -90,7 +101,7 @@ const Table = ({
                         </td>
                       ))}
 
-                      {funtion === true && role === true && (
+                      {edit === true && role === true && (
                         <td class="py-1 whitespace-nowrap text-sm font-medium text-gray-900">
                           <button
                             className="rounded-2xl border-2 border-red-400 px-4 py-1"
@@ -99,6 +110,18 @@ const Table = ({
                             }
                           >
                             Edit
+                          </button>
+                        </td>
+                      )}
+                      {deleted === true && users.role === "admin" && (
+                        <td class="py-1 whitespace-nowrap text-sm font-medium text-gray-900">
+                          <button
+                            className="rounded-2xl border-2 border-red-400 px-4 py-1"
+                            onClick={() =>
+                              deletePath(row._id)
+                            }
+                          >
+                            Delete
                           </button>
                         </td>
                       )}

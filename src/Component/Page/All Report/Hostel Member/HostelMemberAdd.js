@@ -25,7 +25,7 @@ const HostelMemberAdd = () => {
   if (id.length === 6 && student === undefined) {
     alert("Please Provied a valide Id");
   }
-  console.log(selectFlat.flat);
+  
   const memberAdd = async (event) => {
     event.preventDefault();
     let name;

@@ -61,19 +61,21 @@
 
       {
         "name": "Faculty Entry",
-        "icon": "faCalendarDays",
         "navigate": "/addfaculty",
         "role": ["editor", "admin"]
       },
       {
         "name": "Add Hostel Member",
-        "icon": "faCalendarDays",
         "navigate": "/addwomenhostel",
         "role": ["editor", "admin"]
       },
       {
+        "name": "Entry ClassRoom Info",
+        "navigate": "/entryclassroom",
+        "role": ["editor", "admin"]
+      },
+      {
         "name": "Empoleey Entry",
-        "icon": "faCalendarDays",
         "navigate": "/entryempoleey",
         "role": ["editor", "admin"]
       }

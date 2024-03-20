@@ -19,7 +19,7 @@ const ViewAllUser = () => {
       <div class="text-gray-900 lg:ml-8">
           <h1 class="text-3xl text-center ">All Users</h1>
         <div class="px-3 py-4 flex justify-center">
-          <Table columns={tableHead} data={filterUser} funtion= {true} editpathname={"alluser/edituserforadmin"}/>
+          <Table columns={tableHead} data={filterUser} edit={true} editpathname={"alluser/edituserforadmin"}/>
         </div>
     </div>
   );

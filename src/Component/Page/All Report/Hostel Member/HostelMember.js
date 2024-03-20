@@ -73,7 +73,8 @@ const user = getUserRole()
             <Table 
             columns={detailtableHead} 
             data={data} 
-            funtion={true} 
+            details={true}
+            edit={true}
             editpathname={"edithostelmember"}
             detailPath={"datailshosMember"}
             />

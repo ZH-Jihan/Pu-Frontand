@@ -2,8 +2,10 @@ import { Toaster } from "react-hot-toast";
 import { Route, Routes } from "react-router-dom";
 import CompanyInfo from "./Component/Page/About/CompanyInfo";
 import AllDepartment from "./Component/Page/All Report/AllDepartment";
+import AddClassRoom from "./Component/Page/All Report/Class Room/AddClassRoom";
+import ClassRoomView from "./Component/Page/All Report/Class Room/ClassRoomView";
+import EditClassRoom from "./Component/Page/All Report/Class Room/EditClassRoom";
 import RutinMainPage from "./Component/Page/All Report/Class Rutin/RutinMainPage";
-import ClassRoomView from "./Component/Page/All Report/ClassRoomView";
 import EditFaculty from "./Component/Page/All Report/Edit & Delete Info/Edit Info/EditFaculty";
 import EditHostelMember from "./Component/Page/All Report/Edit & Delete Info/Edit Info/EditHostelMember";
 import EmploeeyList from "./Component/Page/All Report/Employee/EmploeeyList";
@@ -94,6 +96,8 @@ function App() {
 
             {/* Class Room List */}
             <Route path="/classroom" element={<ClassRoomView />} />
+            <Route path="/entryclassroom" element={<AddClassRoom />} />
+            <Route path="/editClassRoom/:id" element={<EditClassRoom />} />
 
             {/* Jurnal View List */}
             <Route path="/viewJournal" element={<JurnalView />} />
