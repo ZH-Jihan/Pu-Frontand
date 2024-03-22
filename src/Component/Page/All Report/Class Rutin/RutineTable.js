@@ -154,9 +154,6 @@ const onClick = (day) =>{
               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-900">
                 {filters(room.roomnum).length}
               </td>
-              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-900">
-                {data2[0]?.value.length}
-              </td>
             </tr>
           ))}
       </>
@@ -262,7 +259,7 @@ const onClick = (day) =>{
     <div class="flex flex-col w-full">
       <div class="overflow-x-auto sm:mx-0.5 lg:mx-0.5">
         <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
-          
+        {name === "roomWise" && date !== "" &&  <h1 className="text-center text-lg mb-2"> Total Slot : {data2[0]?.value.length}</h1>}
           <div class="overflow-hidden">
             <table class="w-full m-auto">
               {name === "main" && date !== "" && (
@@ -287,7 +284,6 @@ const onClick = (day) =>{
                     { field: "", header: "Room Number" },
                     { field: "", header: "Room Name" },
                     { field: "", header: "Total Class" },
-                    { field: "", header: "Number Of Slot" },
                   ]}
                 ></TableHead>
               )}

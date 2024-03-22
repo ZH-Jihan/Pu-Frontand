@@ -5,13 +5,14 @@ import AllDepartment from "./Component/Page/All Report/AllDepartment";
 import AddClassRoom from "./Component/Page/All Report/Class Room/AddClassRoom";
 import ClassRoomView from "./Component/Page/All Report/Class Room/ClassRoomView";
 import EditClassRoom from "./Component/Page/All Report/Class Room/EditClassRoom";
+import EntryRoutine from "./Component/Page/All Report/Class Rutin/EntryRoutine";
 import RutinMainPage from "./Component/Page/All Report/Class Rutin/RutinMainPage";
-import EditFaculty from "./Component/Page/All Report/Edit & Delete Info/Edit Info/EditFaculty";
 import EditHostelMember from "./Component/Page/All Report/Edit & Delete Info/Edit Info/EditHostelMember";
 import EmploeeyList from "./Component/Page/All Report/Employee/EmploeeyList";
 import EntryAbsentReport from "./Component/Page/All Report/EntryAbsentReport";
 import AddFaculty from "./Component/Page/All Report/Faculty List/AddFaculty";
 import AllFacultys from "./Component/Page/All Report/Faculty List/AllFacultys";
+import EditFaculty from "./Component/Page/All Report/Faculty List/EditFaculty";
 import ExFaculty from "./Component/Page/All Report/Faculty List/ExFaculty";
 import FacultyDetails from "./Component/Page/All Report/Faculty List/FacultyDetails";
 import RoomWiseFaculty from "./Component/Page/All Report/Faculty List/RoomWiseFaculty";
@@ -104,10 +105,11 @@ function App() {
 
             {/* Addmission From */}
             <Route path="/admisonfrom" element={<AdmissonFrom />} />
-
-            {/* Regester From */}
             <Route path="/registarfrom" element={<RegistrationFrom />} />
+
+            {/* Class Routine Related Path */}
             <Route path="/routine" element={<RutinMainPage />}></Route>
+            <Route path="/entryroutine" element={<EntryRoutine />}></Route>
             
             <Route path="/createUser" element={ <MySingUp/>}></Route>
             <Route path="/alluser" element={ <ViewAllUser/>}></Route>
