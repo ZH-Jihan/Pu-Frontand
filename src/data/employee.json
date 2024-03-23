@@ -1,0 +1,562 @@
+[
+  {
+    "Name": "Prof. Dr. Md. Abdul Mannan",
+    "Designation": "Vice Chancellor",
+    "Dept": "VC",
+    "ID": "232-035-700",
+    "imgurl": "https://i.ibb.co/bBGtCsP/VC-Sir.png"
+  },
+  {
+    "Name": "Md. Ruhul Amin",
+    "Designation": "Registrar",
+    "Dept": "Registar's Office",
+    "ID": "222-026-700",
+    "imgurl": "https://i.ibb.co/L1JmSFN/Ruhul-Amin.png"
+  },
+  {
+    "Name": "Md. Sakir Hossain",
+    "Designation": "Additional Registrar",
+    "Dept": "Registar's Office",
+    "ID": "233-024-700",
+    "imgurl": "https://i.ibb.co/PGwBpT1/Sakir-Hossain.png"
+  },
+  {
+    "Name": "Mohammad Faridul Hassan",
+    "Designation": "Sr. Asst. Registrar",
+    "Dept": "Coordination Office",
+    "ID": "091-018-700",
+    "imgurl": "https://i.ibb.co/cg4yyMF/Faridul-Hassan.png"
+  },
+  {
+    "Name": "Kanij Sultana",
+    "Designation": "Asst. Registrar",
+    "Dept": "Controller Section",
+    "ID": "091-026-700",
+    "imgurl": "https://i.ibb.co/0qC6RDh/Kanij-sultana.png"
+  },
+  {
+    "Name": "Nargis Sultana",
+    "Designation": "Asst. Registrar",
+    "Dept": "Coordination Office",
+    "ID": "073-011-700",
+    "imgurl": "https://i.ibb.co/3Yk14VN/Nargis-sultana.png"
+  },
+  {
+    "Name": "Rumana Ahmed",
+    "Designation": "Deputy Controller",
+    "Dept": "Controller Section",
+    "ID": "221-006-700",
+    "imgurl": "https://i.ibb.co/Kmy0K8t/Rumana-Ahmed.png"
+  },
+  {
+    "Name": "Md. Hanifur Rahman",
+    "Designation": "System Administrator",
+    "Dept": "IT",
+    "ID": "062-013-700",
+    "imgurl": "https://i.ibb.co/56vSk5Q/Hanifur-Rahman.png"
+  },
+  {
+    "Name": "Md. Abdul Goffar",
+    "Designation": "Head of Admission",
+    "Dept": "Admission",
+    "ID": "223-006-700",
+    "imgurl": "https://i.ibb.co/pzMNRYz/Abdul-Goffer.png"
+  },
+  {
+    "Name": "Manjurul Haque Khan",
+    "Designation": "Head of Student Affairs",
+    "Dept": "Student  Affairs",
+    "ID": "223-020-700",
+    "imgurl": "https://i.ibb.co/PFDpMPp/Manjurul-haque.png"
+  },
+  {
+    "Name": "Mohammad Tarequl Islam",
+    "Designation": "Asst. Director",
+    "Dept": "Accounts",
+    "ID": "072-011-700",
+    "imgurl": "https://i.ibb.co/H7cHk7M/Tarequl-islam.png"
+  },
+  {
+    "Name": "Sagira Banu",
+    "Designation": "Sr. Executive",
+    "Dept": "Registar's Office",
+    "ID": "121-010-700",
+    "imgurl": "https://i.ibb.co/xMqCHLB/Sagira-banu.png"
+  },
+  {
+    "Name": "Md. Eqbal Hossain",
+    "Designation": "Sr. Executive",
+    "Dept": "Registar's Office",
+    "ID": "121-023-700",
+    "imgurl": "https://i.ibb.co/7p0CTVx/Eqbal-Hossain.png"
+  },
+  {
+    "Name": "Debanjana Basak",
+    "Designation": "Sr. Executive",
+    "Dept": "Registar's Office",
+    "ID": "212-013-700",
+    "imgurl": "https://i.ibb.co/J7HmGkx/Debanjana-Basak.png"
+  },
+  {
+    "Name": "Morshedur Rahaman",
+    "Designation": "Sr. Executive",
+    "Dept": "Accounts",
+    "ID": "182-009-700",
+    "imgurl": "https://i.ibb.co/0DTktFh/Morshedur-rahman.png"
+  },
+  {
+    "Name": "Rifha Sanjida Himi",
+    "Designation": "Sr. Executive",
+    "Dept": "Coordination Office",
+    "ID": "192-062-700",
+    "imgurl": "https://i.ibb.co/xCKcFhL/Sanjida-himi.png"
+  },
+  {
+    "Name": "Mirza Hasan Mortuza",
+    "Designation": "Sr. Executive",
+    "Dept": "Coordination Office",
+    "ID": "121-011-700",
+    "imgurl": "https://i.ibb.co/cDFMzfq/Mirza-hasan-Mortuza.png"
+  },
+  {
+    "Name": "Hasina Akter Lubna",
+    "Designation": "Sr. Executive",
+    "Dept": "Coordination Office",
+    "ID": "121-005-700",
+    "imgurl": "https://i.ibb.co/kQt67PK/Lubna.png"
+  },
+  {
+    "Name": "Md. Abdun Noor",
+    "Designation": "Sr. Executive",
+    "Dept": "Admin",
+    "ID": "062-006-700",
+    "imgurl": "https://i.ibb.co/qjPjY3c/Abdun-Nur.png"
+  },
+  {
+    "Name": "Subrina",
+    "Designation": "Sr. Executive",
+    "Dept": "Admin",
+    "ID": "212-012-700",
+    "imgurl": "https://i.ibb.co/zSZd99b/Subrina-Eti.png"
+  },
+  {
+    "Name": "Fahmida Akter Khan",
+    "Designation": "Sr. Executive",
+    "Dept": "Admission",
+    "ID": "091-019-700",
+    "imgurl": "https://i.ibb.co/pywtC4V/Fahmida-Akter.png"
+  },
+  {
+    "Name": "Nahida Sharkar",
+    "Designation": "Asst. Executive",
+    "Dept": "Registar's Office",
+    "ID": "222-007-700",
+    "imgurl": "https://i.ibb.co/18SqBsQ/Nahida-Sharkar.png"
+  },
+  {
+    "Name": "Sobuz Ahammad",
+    "Designation": "Asst. Executive",
+    "Dept": "Library",
+    "ID": "233-004-700",
+    "imgurl": "https://i.ibb.co/yfxkBKt/Sobuz-ahammad.png"
+  },
+  {
+    "Name": "Ashrafy Jahan Chowdhury",
+    "Designation": "Asst. Executive",
+    "Dept": "Admin",
+    "ID": "232-001-700",
+    "imgurl": "https://i.ibb.co/YkntXFs/Ashrafy-Jahan.png"
+  },
+  {
+    "Name": "Umme Fatama",
+    "Designation": "Asst. Executive",
+    "Dept": "Controller Section",
+    "ID": "222-008-700",
+    "imgurl": "https://i.ibb.co/Pj1jG13/Umme-Fatema.png"
+  },
+  {
+    "Name": "Afroza Khanom",
+    "Designation": "Executive",
+    "Dept": "Controller Section",
+    "ID": "121-022-700",
+    "imgurl": "https://i.ibb.co/ypVL0zR/Afroza-Khanom.png"
+  },
+  {
+    "Name": "Shamsur Rahman",
+    "Designation": "Executive",
+    "Dept": "Accounts",
+    "ID": "071-029-700",
+    "imgurl": "https://i.ibb.co/gb1Pc0Q/Shamsur-rahman.png"
+  },
+  {
+    "Name": "Najnin Ferdous Supta",
+    "Designation": "Executive",
+    "Dept": "Accounts",
+    "ID": "232-002-700",
+    "imgurl": "https://i.ibb.co/ns3yJzk/Najnin-Supta.png"
+  },
+  {
+    "Name": "Md. Farid Ahmed Khan",
+    "Designation": "Executive",
+    "Dept": "Coordination Office",
+    "ID": "132-002-700",
+    "imgurl": "https://i.ibb.co/jr9Xfyc/Farid-Ahmed-Khan.png"
+  },
+  {
+    "Name": "Md. Aminul Islam",
+    "Designation": "Executive",
+    "Dept": "Coordination Office",
+    "ID": "172-024-700",
+    "imgurl": "https://i.ibb.co/f98wBZY/Aminul-Islam.png"
+  },
+  {
+    "Name": "Iqbal Hossain",
+    "Designation": "Executive",
+    "Dept": "Coordination Office",
+    "ID": "091-017-700",
+    "imgurl": "https://i.ibb.co/cxKzwMd/Iqbal-Hossain.png"
+  },
+  {
+    "Name": "Md. Mizanur Rahman",
+    "Designation": "Executive",
+    "Dept": "Coordination Office",
+    "ID": "132-005-700",
+    "imgurl": "https://i.ibb.co/HXpB12X/Mizanur-rahman.png"
+  },
+  {
+    "Name": "Taslima Khatun",
+    "Designation": "Executive",
+    "Dept": "Library",
+    "ID": "132-001-700",
+    "imgurl": "https://i.ibb.co/7yhGrwy/Taslima-Khatun.png"
+  },
+  {
+    "Name": "Md. Masud Hossain",
+    "Designation": "Executive",
+    "Dept": "Admission",
+    "ID": "181-037-700",
+    "imgurl": "https://i.ibb.co/RcXBjbg/Masud-hossain.png"
+  },
+  {
+    "Name": "Sharmistha Debnath",
+    "Designation": "Executive",
+    "Dept": "Admission",
+    "ID": "191-004-700",
+    "imgurl": "https://i.ibb.co/C5P00yV/Sharmistha-debnat.png"
+  },
+  {
+    "Name": "Mst. Shazia Khatun",
+    "Designation": "Executive",
+    "Dept": "Admission",
+    "ID": "223-003-700",
+    "imgurl": "https://i.ibb.co/0cWnnDk/Shazia-Khatun.png"
+  },
+  {
+    "Name": "Ayesha Akhter",
+    "Designation": "Executive",
+    "Dept": "Admission",
+    "ID": "223-004-700",
+    "imgurl": "https://i.ibb.co/n3w2B8J/Ayesha-aktar.png"
+  },
+  {
+    "Name": "Md. Mahmodul Hasan",
+    "Designation": "Executive",
+    "Dept": "Admission",
+    "ID": "223-005-700",
+    "imgurl": "https://i.ibb.co/5nP7m6s/Mahmodul-hasan.png"
+  },
+  {
+    "Name": "Md. Nasim Howlader",
+    "Designation": "Executive",
+    "Dept": "Student  Affairs",
+    "ID": "223-019-700",
+    "imgurl": "https://i.ibb.co/GTJR5RD/Nasim-Howlader.png"
+  },
+  {
+    "Name": "Yeasrib Hassan",
+    "Designation": "Executive",
+    "Dept": "Digital  Marketing",
+    "ID": "223-018-700",
+    "imgurl": "https://i.ibb.co/8dJZBnr/Yeasrib-Hasan.png"
+  },
+  {
+    "Name": "Sadnan Sakib Khan",
+    "Designation": "Executive",
+    "Dept": "Digital  Marketing",
+    "ID": "223-007-700",
+    "imgurl": "https://i.ibb.co/Qd5TNdx/Sadnan-Sakib.png"
+  },
+  {
+    "Name": "Md. Jahid Hassan",
+    "Designation": "PRO",
+    "Dept": "Admission",
+    "ID": "161-015-700",
+    "imgurl": "https://i.ibb.co/pnWfWhS/Jahid-hasan.png"
+  },
+  {
+    "Name": "Kapil Roy",
+    "Designation": "Graphic Designer",
+    "Dept": "Student  Affairs",
+    "ID": "223-025-700",
+    "imgurl": "https://i.ibb.co/mT7f19L/Kapil-Roy.png"
+  },
+  {
+    "Name": "Zakir Hossain Jihan",
+    "Designation": "Asst. Of Consultant",
+    "Dept": "Admin",
+    "ID": "223-026-800",
+    "imgurl": "https://i.ibb.co/XsRqjVY/Jihan.png"
+  },
+  {
+    "Name": "Mr. Arpito Sagma",
+    "Designation": "Office Assistant",
+    "Dept": "VC Office & Admin",
+    "ID": "082-020-800",
+    "imgurl": "https://i.ibb.co/ZJVPxVW/Arpito.png"
+  },
+  {
+    "Name": "Md. Ohidul Islam",
+    "Designation": "Office Assistant",
+    "Dept": "Registar's Office",
+    "ID": "173-010-800",
+    "imgurl": "https://i.ibb.co/YTGGdDw/Ohidul-Islam.png"
+  },
+  {
+    "Name": "Md.Habibur Rahman",
+    "Designation": "Office Assistant",
+    "Dept": "Accounts",
+    "ID": "093-016-800",
+    "imgurl": "https://i.ibb.co/NtJ5jNR/Habibur-Rahman.png"
+  },
+  {
+    "Name": "Mohammad Ali",
+    "Designation": "Office Assistant",
+    "Dept": "Library",
+    "ID": "062-016-800",
+    "imgurl": "https://i.ibb.co/THD39zN/Mohammad-Ali.png"
+  },
+  {
+    "Name": "Md.Miraz Hossain",
+    "Designation": "Office Assistant",
+    "Dept": "Library",
+    "ID": "072-027-800",
+    "imgurl": "https://i.ibb.co/WPXWBLW/Miraj-Hossain.png"
+  },
+  {
+    "Name": "Md. Farid Al-Mamun",
+    "Designation": "Office Assistant",
+    "Dept": "Coordination Office",
+    "ID": "183-005-800",
+    "imgurl": "https://i.ibb.co/0cxYt1H/Farid-al-manun.png"
+  },
+  {
+    "Name": "Md. Kabir Hossen",
+    "Designation": "O.S.S",
+    "Dept": "VC Office & Admin",
+    "ID": "131-012-800",
+    "imgurl": "https://i.ibb.co/VCx2vB6/Kabir-Hossen.png"
+  },
+  {
+    "Name": "Md. Sharif",
+    "Designation": "O.S.S",
+    "Dept": "VC Office & Admin",
+    "ID": "223-022-800",
+    "imgurl": "https://i.ibb.co/8gtJYb1/Sharif.png"
+  },
+  {
+    "Name": "Md. Imon",
+    "Designation": "O.S.S",
+    "Dept": "Registar's Office",
+    "ID": "223-021-800",
+    "imgurl": "https://i.ibb.co/Wfb51rP/Imon.png"
+  },
+  {
+    "Name": "Md. Hafizur Rahman",
+    "Designation": "O.S.S",
+    "Dept": "Admission",
+    "ID": "072-025-800",
+    "imgurl": "https://i.ibb.co/64YWVVw/Hafizur-Rahman.png"
+  },
+  {
+    "Name": "Md. Jihad Howlader",
+    "Designation": "O.S.S",
+    "Dept": "Admission",
+    "ID": "223-024-800",
+    "imgurl": "https://i.ibb.co/8bMs4Y8/Jihad-Howlader.png"
+  },
+  {
+    "Name": "Md. Nazrul Islam",
+    "Designation": "O.S.S",
+    "Dept": "Coordination Office",
+    "ID": "033-007-800",
+    "imgurl": "https://i.ibb.co/q0MQhjs/Nazrul-Islam.png"
+  },
+  {
+    "Name": "Md. Shohel Mia",
+    "Designation": "O.S.S",
+    "Dept": "Coordination Office",
+    "ID": "053-006-800",
+    "imgurl": "https://i.ibb.co/d040pPN/Sholhal-Miah.png"
+  },
+  {
+    "Name": "Md. Shahid Mia",
+    "Designation": "O.S.S",
+    "Dept": "Coordination Office",
+    "ID": "083-021-800",
+    "imgurl": "https://i.ibb.co/z4cYLX9/Shahid-Mia.png"
+  },
+  {
+    "Name": "Md. Tuhin Hawlader",
+    "Designation": "O.S.S",
+    "Dept": "Coordination Office",
+    "ID": "223-023-800",
+    "imgurl": "https://i.ibb.co/Qp4yHs1/Tuhin.png"
+  },
+  {
+    "Name": "Md. Lokman Hossain",
+    "Designation": "O.S.S",
+    "Dept": "Coordination Office",
+    "ID": "093-020-800",
+    "imgurl": "https://i.ibb.co/tJQ2F5X/Lokman.png"
+  },
+  {
+    "Name": "Md. Iqbal Hossain",
+    "Designation": "O.S.S",
+    "Dept": "Coordination Office",
+    "ID": "051-013-800",
+    "imgurl": "https://i.ibb.co/WH4rKDb/Iqbal-Hossain.png"
+  },
+  {
+    "Name": "Md. Abdul Kadir",
+    "Designation": "O.S.S",
+    "Dept": "Coordination Office",
+    "ID": "111-017-800",
+    "imgurl": "https://i.ibb.co/Rbtspgh/Abdul-Kadir.png"
+  },
+  {
+    "Name": "H.M. Ruhan",
+    "Designation": "Lab Assistant",
+    "Dept": "IT",
+    "ID": "101-029-800",
+    "imgurl": "https://i.ibb.co/pQy5sNn/Ruhan.png"
+  },
+  {
+    "Name": "S.M. Shafiqul Islam Lalon",
+    "Designation": "Lab Assistant",
+    "Dept": "IT",
+    "ID": "121-030-800",
+    "imgurl": "https://i.ibb.co/F56djk6/Lalon.png"
+  },
+  {
+    "Name": "Md. Azijur Rahman",
+    "Designation": "Lab Assistant",
+    "Dept": "IT",
+    "ID": "183-021-800",
+    "imgurl": "https://i.ibb.co/gPmzzx0/Azijur-Rahman.png"
+  },
+  {
+    "Name": "Md. Al-Mamun",
+    "Designation": "Lab Technician",
+    "Dept": "Coordination Office",
+    "ID": "101-011-840",
+    "imgurl": "https://i.ibb.co/jrJnMtK/Mamun-Lab-T.png"
+  },
+  {
+    "Name": "Md. Shafikul ISlam",
+    "Designation": "Lab Technician",
+    "Dept": "Coordination Office",
+    "ID": "131-013-800",
+    "imgurl": "https://i.ibb.co/vV5n84p/Shafikul-Islam.png"
+  },
+  {
+    "Name": "Abdul Malek",
+    "Designation": "Lab Technician",
+    "Dept": "Coordination Office",
+    "ID": "222-006-800",
+    "imgurl": "https://i.ibb.co/2S5cMLX/Abdul-Malek-Lab-T.png"
+  },
+  {
+    "Name": "Ashikur Rahman",
+    "Designation": "Lab Technician",
+    "Dept": "Coordination Office",
+    "ID": "223-008-800",
+    "imgurl": ""
+  },
+  {
+    "Name": "Md. Khalilur Rahman",
+    "Designation": "Electrician",
+    "Dept": "Admin",
+    "ID": "182-021-800",
+    "imgurl": ""
+  },
+  {
+    "Name": "Md. Nomanul Islam",
+    "Designation": "Security Supervisor",
+    "Dept": "Admin",
+    "ID": "152-011-800",
+    "imgurl": "https://i.ibb.co/YLNdBJ9/Noman-S.png"
+  },
+  {
+    "Name": "Sumon Sadu",
+    "Designation": "Guard",
+    "Dept": "Admin",
+    "ID": "101-028-800",
+    "imgurl": ""
+  },
+  {
+    "Name": "Md. Abdul Malek",
+    "Designation": "Guard",
+    "Dept": "Admin",
+    "ID": "101-026-800",
+    "imgurl": ""
+  },
+  {
+    "Name": "Md. Golam Mostafa",
+    "Designation": "Guard",
+    "Dept": "Admin",
+    "ID": "101-024-800",
+    "imgurl": "https://i.ibb.co/ssnDjqF/Golam-Mostafa.png"
+  },
+  {
+    "Name": "Tara Askara",
+    "Designation": "Guard",
+    "Dept": "Admin",
+    "ID": "111-016-800",
+    "imgurl": "https://i.ibb.co/TKvYq9q/Tara-Askara.png"
+  },
+  {
+    "Name": "Md. Walid",
+    "Designation": "Driver",
+    "Dept": "Admin",
+    "ID": "052-009-800",
+    "imgurl": "https://i.ibb.co/DbyFVDY/Wahid-D.png"
+  },
+  {
+    "Name": "Bakul Chandra",
+    "Designation": "Driver",
+    "Dept": "Admin",
+    "ID": "092-019-800",
+    "imgurl": "https://i.ibb.co/X2df0Ld/Bakul.png"
+  },
+  {
+    "Name": "Md. Mustafizur Rahman",
+    "Designation": "Driver",
+    "Dept": "Admin",
+    "ID": "173-009-800",
+    "imgurl": ""
+  },
+  {
+    "Name": "Md. Sagor Miah",
+    "Designation": "Driver",
+    "Dept": "Admin",
+    "ID": "231-003-800",
+    "imgurl": "https://i.ibb.co/3dcvjKP/Sagor-Miah.png"
+  },
+  {
+    "Name": "Md. Aslam Hossain",
+    "Designation": "Driver",
+    "Dept": "Admin",
+    "ID": "233-",
+    "imgurl": "https://i.ibb.co/9gM4yJJ/Aslam-Hossain.png"
+  }
+]

@@ -34,6 +34,8 @@ import ViewAllUser from "./Component/Page/All Report/UserManagement/ViewAllUser"
 import ViewAbsentReport from "./Component/Page/All Report/ViewAbsentReport";
 import AdmissonFrom from "./Component/Page/Apply From/AdmissonFrom";
 import RegistrationFrom from "./Component/Page/Apply From/RegistrationFrom";
+import PostConvoTeam from "./Component/Page/Convocation Team/PostConvoTeam";
+import ViewTeam from "./Component/Page/Convocation Team/ViewTeam";
 import NewHomePageV2 from "./Component/Page/Home/NewHomePageV2";
 import MyRequireAuth from "./Component/Page/Security/MyRequireAuth";
 import Notpound from "./Component/Page/Sheared Page/Notpound";
@@ -42,23 +44,29 @@ import MySingUp from "./Component/Page/SingUp & Login/MySingUp";
 import Unothorize from "./Component/Page/SingUp & Login/Unothorize";
 // axios.defaults.url("http://localhost:5000/api/v1")
 // const token = Cookies.get('token')
-    
-    // const token = document.cookie.split('; ').find(row => row.startsWith('token=')).split('=')[1];
-    // const decodedData = JSON.parse(atob(token.split('.')[1]));
-    // console.log(decodedData);
+
+// const token = document.cookie.split('; ').find(row => row.startsWith('token=')).split('=')[1];
+// const decodedData = JSON.parse(atob(token.split('.')[1]));
+// console.log(decodedData);
 
 function App() {
-  
   return (
     <>
       <div>
         {/* <Navber></Navber> */}
         <Routes>
           {/* Main Open Page */}
-          <Route path="/" element={<MyRequireAuth><NewHomePageV2/></MyRequireAuth>}>
+          <Route
+            path="/"
+            element={
+              <MyRequireAuth>
+                <NewHomePageV2 />
+              </MyRequireAuth>
+            }
+          >
             {/* Faculty Total Class */}
-            <Route path="/" element={<LogInUserInfo/>}/>
-            <Route path="/teacherclass"  element={<TeacherTotalClass />} />
+            <Route path="/" element={<LogInUserInfo />} />
+            <Route path="/teacherclass" element={<TeacherTotalClass />} />
             <Route path="/teacherclass/:id" element={<TClassDetail />} />
 
             {/* Program Wise Total Class */}
@@ -68,13 +76,13 @@ function App() {
             <Route path="/absentreportview" element={<ViewAbsentReport />} />
 
             {/* All Faculty List & Details */}
-            
-            <Route path="/faculty" element={<AllFacultys/>}/>
+
+            <Route path="/faculty" element={<AllFacultys />} />
             <Route path="/faculty/:id" element={<FacultyDetails />} />
-            <Route path="/addfaculty" element={<AddFaculty/>} />
+            <Route path="/addfaculty" element={<AddFaculty />} />
             <Route path="/updatefaculty/:id" element={<EditFaculty />} />
-            <Route path="/roomwisefaculty" element={<RoomWiseFaculty/>}/>
-            
+            <Route path="/roomwisefaculty" element={<RoomWiseFaculty />} />
+
             <Route path="/empoleey" element={<EmploeeyList />} />
             <Route path="/exemploeey" element={<ExFaculty />} />
 
@@ -85,9 +93,9 @@ function App() {
 
             {/* Student Info Addmission & Reg */}
             <Route path="/studentAnalyze" element={<TotalStudentReport />} />
-            
+
             {/* Student Tution Fee Info */}
-            <Route path="/tutionfee" element={<TutionFee/>} />
+            <Route path="/tutionfee" element={<TutionFee />} />
 
             {/* Faculty Absent Report Entry */}
             <Route path="/absentreportentry" element={<EntryAbsentReport />} />
@@ -110,26 +118,37 @@ function App() {
             {/* Class Routine Related Path */}
             <Route path="/routine" element={<RutinMainPage />}></Route>
             <Route path="/entryroutine" element={<EntryRoutine />}></Route>
-            
-            <Route path="/createUser" element={ <MySingUp/>}></Route>
-            <Route path="/alluser" element={ <ViewAllUser/>}></Route>
-            <Route path="/alluser/edituserforadmin/:id" element={ <EditUserForAdmin/>}></Route>
+
+            <Route path="/createUser" element={<MySingUp />}></Route>
+            <Route path="/alluser" element={<ViewAllUser />}></Route>
+            <Route
+              path="/alluser/edituserforadmin/:id"
+              element={<EditUserForAdmin />}
+            ></Route>
+
+            <Route path="/entryconvoteam" element={<PostConvoTeam/>}/>
+            <Route path="/viewteam" element={<ViewTeam/>}/>
 
 
-            <Route path="/womenhostel" element={ <HostelMember/>}></Route>
-            <Route path="/addwomenhostel" element={ <HostelMemberAdd/>}></Route>
-            <Route path="/edithostelmember/:id" element={ <EditHostelMember/>}></Route>
-            <Route path="/datailshosMember/:id" element={ <DetailsHostelMember/>}></Route>
-            
+            <Route path="/womenhostel" element={<HostelMember />}></Route>
+            <Route path="/addwomenhostel" element={<HostelMemberAdd />}></Route>
+            <Route
+              path="/edithostelmember/:id"
+              element={<EditHostelMember />}
+            ></Route>
+            <Route
+              path="/datailshosMember/:id"
+              element={<DetailsHostelMember />}
+            ></Route>
+
             <Route path="*" element={<Notpound></Notpound>}></Route>
-            <Route path="/unothorize" element={<Unothorize/>}></Route>
-            
+            <Route path="/unothorize" element={<Unothorize />}></Route>
           </Route>
-          
-            {/* <Route path="/login" element={<Login />}></Route> */}
-            <Route path="/mylogin" element={<MyLogin/>}></Route>
-            <Route path="/about" element={<CompanyInfo />}></Route>
-            <Route path="/mysingup" element={<MySingUp/>}></Route>
+
+          {/* <Route path="/login" element={<Login />}></Route> */}
+          <Route path="/mylogin" element={<MyLogin />}></Route>
+          <Route path="/about" element={<CompanyInfo />}></Route>
+          <Route path="/mysingup" element={<MySingUp />}></Route>
           {/* Class Rutin Related Page */}
           {/* <Route path="/classrutin" element={<HomePage/>}/> */}
         </Routes>

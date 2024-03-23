@@ -24,6 +24,11 @@
         "role": ["user", "editor", "admin"]
       },
       {
+        "name": "Convocation Team",
+        "navigate": "/viewteam",
+        "role": ["user", "editor", "admin"]
+      },
+      {
         "name": "Tution Fee Analyze",
         "navigate": "/tutionfee",
         "role": ["user", "editor", "admin"]
@@ -67,6 +72,11 @@
       {
         "name": "Add Hostel Member",
         "navigate": "/addwomenhostel",
+        "role": ["editor", "admin"]
+      },
+      {
+        "name": "Entry Convocation Team",
+        "navigate": "/entryconvoteam",
         "role": ["editor", "admin"]
       },
       {
