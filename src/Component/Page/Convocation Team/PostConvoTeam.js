@@ -2,10 +2,17 @@ import React, { useState } from "react";
 import toast from "react-hot-toast";
 import employe from "../../../data/employee.json";
 import CustomAxiosPost from "../../Hooks/CustomAxiosPost";
+import useFatchData from "../../Hooks/useFatchData";
 const PostConvoTeam = () => {
+  const { data: allFaculty } = useFatchData("/faculty");
   const [selectAll, setSelectAll] = useState(false);
   const [selectedItems, setSelectedItems] = useState([]);
   const [selectedName, setSelectedName] = useState("");
+
+  const facultyList = allFaculty.filter((el) => el.status === "Active")
+
+const allMember = employe.concat(facultyList);
+
   const handleCheckboxChange = (id) => {
     if (selectAll) {
       // If selectAll is true, unselect all checkboxes
@@ -25,15 +32,15 @@ const PostConvoTeam = () => {
     }
   };
 
-  const uniqueNames = Array.from(new Set(employe.map((item) => item.Dept)));
+  const uniqueNames = Array.from(new Set(allMember.map((item) => item.Dept || item.designation)));
   const handleSelectChange = (event) => {
     setSelectedName(event.target.value);
   };
   let data;
   if (selectedName) {
-    data = employe.filter((el) => el.Dept === selectedName);
+    data = allMember.filter((el) => el.Dept === selectedName || el.designation === selectedName);
   } else {
-    data = employe;
+    data = allMember;
   }
 
   const hendleTeamPost = async (e) =>{
@@ -129,15 +136,15 @@ const PostConvoTeam = () => {
                                     type="checkbox"
                                     checked={
                                       selectAll ||
-                                      selectedItems.includes(menu.Name)
+                                      selectedItems.includes(menu.Name || menu.name)
                                     }
                                     onChange={() =>
-                                      handleCheckboxChange(menu.Name)
+                                      handleCheckboxChange(menu.Name || menu.name)
                                     }
                                     class="form-checkbox h-5 w-5 text-red-600"
                                   />
                                   <span class="ml-2 text-gray-700">
-                                    {menu.Name}
+                                    {menu.Name || menu.name}
                                   </span>
                                 </label>
                               ))}

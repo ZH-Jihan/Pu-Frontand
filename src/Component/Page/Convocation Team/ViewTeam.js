@@ -3,7 +3,7 @@ import useFatchData from "../../Hooks/useFatchData";
 
 const ViewTeam = () => {
   const { data: allTeam } = useFatchData("/convocationTeam");
-  console.log(allTeam);
+  
   return (
     <div>
       <h2 className="font-bold text-2xl text-center pb-2">
