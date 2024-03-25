@@ -32,13 +32,14 @@ const allMember = employe.concat(facultyList);
     }
   };
 
-  const uniqueNames = Array.from(new Set(allMember.map((item) => item.Dept || item.designation)));
+  const uniqueNames = Array.from(new Set(allMember.map((item) => item.Dept || item.dipartment)));
+  console.log(uniqueNames);
   const handleSelectChange = (event) => {
     setSelectedName(event.target.value);
   };
   let data;
   if (selectedName) {
-    data = allMember.filter((el) => el.Dept === selectedName || el.designation === selectedName);
+    data = allMember.filter((el) => el.Dept === selectedName || el.dipartment === selectedName);
   } else {
     data = allMember;
   }
@@ -48,6 +49,7 @@ const allMember = employe.concat(facultyList);
     const teamData = {
         teamName : e.target.teamName.value,
         teamLeader : e.target.teamLeader.value,
+        teamSecretary : e.target.teamSecretary.value,
         teamMember : selectedItems
     }
     const respons = await CustomAxiosPost("/convocationTeam",teamData)
@@ -76,13 +78,13 @@ const allMember = employe.concat(facultyList);
                     <div class="md:grid grid lg:grid-cols-4 gap-4 w-full text-xs">
                       <div class="form-control  mb-3 space-y-2 w-full text-base">
                         <label class="font-semibold text-gray-600 text-xl py-2">
-                          Team Name
+                          Commitee Name
                           <span title="required" className="text-red-500">
                             *
                           </span>
                         </label>
                         <input
-                        placeholder="Type Team Name"
+                        placeholder="Type Commitee Name"
                           class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
                           required
                           type="text"
@@ -91,17 +93,32 @@ const allMember = employe.concat(facultyList);
                       </div>
                       <div class="form-control  mb-3 space-y-2 w-full text-base">
                         <label class="font-semibold text-gray-600 text-xl py-2">
-                          Team Leader
+                          Convener
                           <span title="required" className="text-red-500">
                             *
                           </span>
                         </label>
                         <input
-                        placeholder="Type Leader Name"
+                        placeholder="Type Convener Name"
                           class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
                           required
                           type="text"
                           name="teamLeader"
+                        />
+                      </div>
+                      <div class="form-control  mb-3 space-y-2 w-full text-base">
+                        <label class="font-semibold text-gray-600 text-xl py-2">
+                          Member Secretary
+                          <span title="required" className="text-red-500">
+                            *
+                          </span>
+                        </label>
+                        <input
+                        placeholder="Member Secretary Name"
+                          class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
+                          required
+                          type="text"
+                          name="teamSecretary"
                         />
                       </div>
                       <div class="form-control  mb-3 space-y-2 w-full text-base">

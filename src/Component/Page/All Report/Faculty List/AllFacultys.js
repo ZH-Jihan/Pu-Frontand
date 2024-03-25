@@ -4,39 +4,9 @@ import FacultyBtn from "../../../Utilits/All Buttons/FacultyBtn";
 import Button from "../../../Utilits/Button";
 import Loading from "../../Sheared Page/Loading";
 import Faculty from "./Faculty";
-const universitys = [
-  { id: "1", name: "University of Dhaka" },
-  { id: "2", name: "BUET" },
-  { id: "3", name: "RUET" },
-  { id: "4", name: "Rajshahi University" },
-  { id: "5", name: "Jahangirnagar University" },
-  { id: "6", name: "North South University" },
-  { id: "7", name: "Jagannath University" },
-  { id: "8", name: "University of Chittagong" },
-  { id: "9", name: "Ahsanullah University" },
-  { id: "10", name: "University of Oklahoma" },
-  { id: "11", name: "Brac University" },
-  { id: "12", name: "Anglia Ruskin University" },
-  { id: "13", name: "Asian Institute of Technology" },
-  { id: "14", name: "Cardiff University" },
-  { id: "15", name: "Daffodil University" },
-  { id: "16", name: "Indian Institute of Technology" },
-  { id: "17", name: "IUBAT" },
-  { id: "18", name: "Shahjalal University" },
-  { id: "19", name: "University of East London" },
-];
 
 const AllFacultys = () => {
-  const { data: faculty ,error} = useFatchData("/faculty");
-  console.log(error,faculty);
-  const activeFaculty = (datas = [])=>{
-    let faculty = datas;
-    if (faculty) {
-      faculty = faculty?.filter((el)=> el.status === "Active")
-    }
-    return faculty;
-  }
-  const facultys = activeFaculty(faculty)
+  const { data: faculty, error } = useFatchData("/faculty");
   const [chake, setchake] = useState(false);
   const [selecteditem, setSelecteditem] = useState({
     department: "",
@@ -45,17 +15,22 @@ const AllFacultys = () => {
     university: "",
     marrited: "",
   });
-  const [countFaculty] = useState({
-    professor: "Professor",
-    associateProf: "Associate Professor",
-    assistantProf: "Assistant Professor",
-    lecturer: "Lecturer",
-  });
+
+  //**** Filter & Set Only Active Faculty For Showing ****//
+  const activeFaculty = (datas = []) => {
+    let faculty = datas;
+    if (faculty) {
+      faculty = faculty?.filter((el) => el.status === "Active");
+    }
+    return faculty;
+  };
+  const facultys = activeFaculty(faculty);
+
   const onChange = (e) => {
     const { name, value } = e.target;
     setSelecteditem((prev) => ({ ...prev, [name]: value }));
   };
-  
+
   //*****.. Load All Filter btn ..*****//
   const btnData = FacultyBtn({ onChange, selecteditem });
 
@@ -64,68 +39,69 @@ const AllFacultys = () => {
     selecteditem.university = "";
   }
 
-  //*****.. ..*****//
-  const sortDataMonthWise = (data) =>{
+  //*****.. Funtion For Match & Sort Faculty Married Date Wise ..*****//
+  const sortDataMonthWise = (data) => {
     const today = new Date();
-        const todayMonth = today.getMonth();
-        const todayDay = today.getDate();
-        
-        const todayData = [];
-        // const thisMonthData = [];
-        const otherData = [];
-        const dataShort = (data) =>{
-          data.sort((a, b) => {
-            let dateA;
-            let dateB;
-            if (a.marritStatus  === "Unmarried" && b.marritStatus  === "Unmarried") {
-              dateA = new Date(a.dob);
-              dateB = new Date(b.dob);
-            } else {
-              dateA = new Date(a.marritStatus);
-              dateB = new Date(b.marritStatus);
-            }
-        
-            // Sort by month first
-            const monthComparison = dateA.getMonth() - dateB.getMonth();
-            if (monthComparison !== 0) {
-                return monthComparison;
-            }
-        
-            // If the month is the same, sort by day
-            const dayComparison = dateA.getDate() - dateB.getDate();
-            if (dayComparison !== 0) {
-                return dayComparison;
-            }
-  
-            return a.name.localeCompare(b.name);
-        });
+    const todayMonth = today.getMonth();
+    const todayDay = today.getDate();
+    const todayData = [];
+    // const thisMonthData = [];
+    const otherData = [];
+    const dataShort = (data) => {
+      data.sort((a, b) => {
+        let dateA;
+        let dateB;
+        if (a.marritStatus === "Unmarried" && b.marritStatus === "Unmarried") {
+          dateA = new Date(a.dob);
+          dateB = new Date(b.dob);
+        } else {
+          dateA = new Date(a.marritStatus);
+          dateB = new Date(b.marritStatus);
         }
-        data.forEach(person => {
-          let dob;
-          if (person.marritStatus === "Unmarried") {
-            dob = new Date(person.dob);
-          } else {
-            dob = new Date(person.marritStatus);
-          }
-            if (dob.getMonth() === todayMonth && dob.getDate() > todayDay) {
-              if (dob.getMonth() === todayMonth && dob.getDate() === todayDay) {
-                todayData.push(person)
-              }
-              todayData.push(person);
-            } else {
-                otherData.push(person);
-            }
-        });
-        
-        dataShort(todayData);
-        dataShort(otherData);
+        // Sort by month first
+        const monthComparison = dateA.getMonth() - dateB.getMonth();
+        if (monthComparison !== 0) {
+          return monthComparison;
+        }
+        // If the month is the same, sort by day
+        const dayComparison = dateA.getDate() - dateB.getDate();
+        if (dayComparison !== 0) {
+          return dayComparison;
+        }
+        return a.name.localeCompare(b.name);
+      });
+    };
+    data.forEach((person) => {
+      let dob;
+      if (person.marritStatus === "Unmarried") {
+        dob = new Date(person.dob);
+      } else {
+        dob = new Date(person.marritStatus);
+      }
+      if (dob.getMonth() === todayMonth && dob.getDate() > todayDay) {
+        if (dob.getMonth() === todayMonth && dob.getDate() === todayDay) {
+          todayData.push(person);
+        }
+        todayData.push(person);
+      } else {
+        otherData.push(person);
+      }
+    });
+    dataShort(todayData);
+    dataShort(otherData);
+    const sortedData = todayData.concat(otherData);
+    return sortedData;
+  };
+  
+  //**** Collect Select Btn Data From Faculty Array ****//
+  const universitys = Array.from(
+    new Set(facultys.map((el) => el.university).filter((uni) => uni !== ""))
+  );
+  const department = Array.from(
+    new Set(facultys.map((el) => el.dipartment).filter((uni) => uni !== ""))
+  );
 
-      const sortedData = todayData.concat(otherData);
-      return sortedData;
-  }
-
-
-  //*****.. Funtion Work From filtering faculty ..*****//
+  //*****.. Filtering faculty Selected Value Wise ..*****//
   const filterFaculty = (facultys = []) => {
     let data = facultys;
     if (selecteditem.department) {
@@ -138,13 +114,12 @@ const AllFacultys = () => {
             el.marritStatus !== "" &&
             el.marritStatus !== "Unmarried" &&
             el.marritStatus !== "Seperated"
-        )
-      return sortDataMonthWise(data)
+        );
+        return sortDataMonthWise(data);
       }
-
       if (selecteditem.marrited === "Unmarried") {
         data = data.filter((el) => el.marritStatus === "Unmarried");
-        return sortDataMonthWise(data)
+        return sortDataMonthWise(data);
       }
 
       data = data.filter((el) => el.marritStatus === selecteditem.marrited);
@@ -161,39 +136,17 @@ const AllFacultys = () => {
     return data;
   };
 
-  //*****.. This Funtion filtering faculty Designation..*****//
-  const designationFilter = (facultys = []) => {
-    let data = facultys;
-    let professor;
-    let associateProf;
-    let assistantProf;
-    let lecturer;
-    if (countFaculty.professor) {
-      professor = data.filter(
-        (el) => el.designation === countFaculty.professor
-      );
-    }
-    if (countFaculty.associateProf) {
-      associateProf = data.filter(
-        (el) => el.designation === countFaculty.associateProf
-      );
-    }
-    if (countFaculty.assistantProf) {
-      assistantProf = data.filter(
-        (el) => el.designation === countFaculty.assistantProf
-      );
-    }
-    if (countFaculty.lecturer) {
-      lecturer = data.filter((el) => el.designation === countFaculty.lecturer);
-    }
-    return { professor, associateProf, assistantProf, lecturer };
-  };
+  //*****..Filtering faculty Designation for show number..*****//
+  const professor = facultys.filter((el) => el.designation === "Professor");
+  const associateProf = facultys.filter((el) => el.designation === "Associate Professor");
+  const assistantProf = facultys.filter((el) => el.designation === "Assistant Professor");
+  const lecturer = facultys.filter((el) => el.designation === "Lecturer");
 
   const changeTable = (name) => {
     setSelecteditem({ university: name });
     setchake(false);
   };
-  
+
   const universitycount = () => {
     const filters = (university) => {
       let data;
@@ -230,14 +183,14 @@ const AllFacultys = () => {
               <tr class=" border-b">
                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                   {/* <p>{routin.sldate?.find((el)=>el===date)}</p> */}
-                  <p>{university.name}</p>
+                  <p>{university}</p>
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                   {/* <p>{routin.sldate?.find((el)=>el===date)}</p> */}
-                  <button onClick={() => changeTable(university.name)}>
+                  <button onClick={() => changeTable(university)}>
                     <u>
-                      {filterFaculty(filters(university.name)).length > 0 ? (
-                        <>{filterFaculty(filters(university.name)).length}</>
+                      {filterFaculty(filters(university)).length > 0 ? (
+                        <>{filterFaculty(filters(university)).length}</>
                       ) : (
                         <></>
                       )}
@@ -263,27 +216,20 @@ const AllFacultys = () => {
             </h1>
             <p className="text-center mb-4 text-red-800">
               <span className="text-base p-2">
-                Professor :{" "}
-                {filterFaculty(designationFilter(facultys).professor).length}
+                Professor : {filterFaculty(professor).length}
               </span>
               <span className="text-base p-2">
                 Associate Professor :{" "}
-                {
-                  filterFaculty(designationFilter(facultys).associateProf)
-                    .length
-                }
+                {filterFaculty(associateProf).length}
               </span>
               <br></br>
               <span className="text-base p-2">
                 Assistant Professor :{" "}
-                {
-                  filterFaculty(designationFilter(facultys).assistantProf)
-                    .length
-                }
+                {filterFaculty(assistantProf).length}
               </span>
               <span className="text-base p-2">
                 Lecturer :{" "}
-                {filterFaculty(designationFilter(facultys).lecturer).length}
+                {filterFaculty(lecturer).length}
               </span>
             </p>
             <p className="font-bold text-xl mt-2 mb-4 text-red-500 text-center">
@@ -318,8 +264,42 @@ const AllFacultys = () => {
               <div className="mt-4 lg:w-5/6 m-auto grid lg:grid-cols-5 md:grid-cols-2 sm:grid-cols-1 justify-items-center">
                 <Button details={btnData.jobTypeBtn} />
                 <Button details={btnData.designationdBtn} />
-                <Button details={btnData.departmentBtn} />
-                <Button details={btnData.universityBtn} other={universitys} />
+                <div class="w-3/4  m-auto flex flex-col mb-2">
+                  <label class="font-semibold text-gray-600 py-2">
+                    Department
+                  </label>
+                  <select
+                    class="appearance-none text-base block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
+                    value={selecteditem.department}
+                    onChange={onChange}
+                    name="department"
+                  >
+                    <option value="">--- Select ---</option>
+                    {department.map((name) => (
+                      <option key={name} value={name}>
+                        {name}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <div class="w-3/4  m-auto flex flex-col mb-2">
+                  <label class="font-semibold text-gray-600 py-2">
+                    University
+                  </label>
+                  <select
+                    class="appearance-none text-base block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
+                    value={selecteditem.university}
+                    onChange={onChange}
+                    name="university"
+                  >
+                    <option value="">--- Select ---</option>
+                    {universitys.map((name) => (
+                      <option key={name} value={name}>
+                        {name}
+                      </option>
+                    ))}
+                  </select>
+                </div>
                 <Button details={btnData.marritedBtn} />
               </div>
               <div className="mt-4 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-12 justify-items-center">
