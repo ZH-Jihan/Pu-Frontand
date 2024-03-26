@@ -9,9 +9,9 @@ const PostConvoTeam = () => {
   const [selectedItems, setSelectedItems] = useState([]);
   const [selectedName, setSelectedName] = useState("");
 
-  const facultyList = allFaculty.filter((el) => el.status === "Active")
+  const facultyList = allFaculty.filter((el) => el.status === "Active");
 
-const allMember = employe.concat(facultyList);
+  const allMember = employe.concat(facultyList);
 
   const handleCheckboxChange = (id) => {
     if (selectAll) {
@@ -32,33 +32,38 @@ const allMember = employe.concat(facultyList);
     }
   };
 
-  const uniqueNames = Array.from(new Set(allMember.map((item) => item.Dept || item.dipartment)));
+  const uniqueNames = Array.from(
+    new Set(allMember.map((item) => item.Dept || item.dipartment))
+  );
   console.log(uniqueNames);
   const handleSelectChange = (event) => {
     setSelectedName(event.target.value);
   };
   let data;
   if (selectedName) {
-    data = allMember.filter((el) => el.Dept === selectedName || el.dipartment === selectedName);
+    data = allMember.filter(
+      (el) => el.Dept === selectedName || el.dipartment === selectedName
+    );
   } else {
     data = allMember;
   }
 
-  const hendleTeamPost = async (e) =>{
-    e.preventDefault()
+  const hendleTeamPost = async (e) => {
+    e.preventDefault();
     const teamData = {
-        teamName : e.target.teamName.value,
-        teamLeader : e.target.teamLeader.value,
-        teamSecretary : e.target.teamSecretary.value,
-        teamMember : selectedItems
-    }
-    const respons = await CustomAxiosPost("/convocationTeam",teamData)
+      teamName: e.target.teamName.value,
+      teamLeader: e.target.teamLeader.value,
+      teamSecretary: e.target.teamSecretary.value,
+      responsibility: e.target.description.value,
+      teamMember: selectedItems,
+    };
+    const respons = await CustomAxiosPost("/convocationTeam", teamData);
     if (respons) {
-       e.target.reset()
-       setSelectedItems([])
-       toast.success("Successfully Add Team Info")
+      e.target.reset();
+      setSelectedItems([]);
+      toast.success("Successfully Add Team Info");
     }
-  }
+  };
   return (
     <div>
       <form onSubmit={hendleTeamPost}>
@@ -84,7 +89,7 @@ const allMember = employe.concat(facultyList);
                           </span>
                         </label>
                         <input
-                        placeholder="Type Commitee Name"
+                          placeholder="Type Commitee Name"
                           class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
                           required
                           type="text"
@@ -99,7 +104,7 @@ const allMember = employe.concat(facultyList);
                           </span>
                         </label>
                         <input
-                        placeholder="Type Convener Name"
+                          placeholder="Type Convener Name"
                           class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
                           required
                           type="text"
@@ -114,7 +119,7 @@ const allMember = employe.concat(facultyList);
                           </span>
                         </label>
                         <input
-                        placeholder="Member Secretary Name"
+                          placeholder="Member Secretary Name"
                           class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
                           required
                           type="text"
@@ -140,33 +145,44 @@ const allMember = employe.concat(facultyList);
                       </div>
                       {/* <p>Selected Options: {selectedOptions.join(', ')}</p> */}
                     </div>
+                    <div class="form-control flex-auto w-full mb-1 text-lg space-y-2 pb-1">
+                      <label class="font-semibold text-gray-600 ">
+                        Duties & Responsibilities
+                      </label>
+                      <textarea
+                        name="description"
+                        class="w-full min-h-[100px] text-base max-h-[200px] h-20 appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg  py-4 px-4"
+                        placeholder="Enter Team  Duties & Responsibilities"
+                        spellcheck="true"
+                      ></textarea>
+                    </div>
                     <div>
-                          <h1 class="text-xl font-bold text-gray-800 dark:text-white my-1 ">
-                            Select Team Member
-                          </h1>
+                      <h1 class="text-xl font-bold text-gray-800 dark:text-white my-1 ">
+                        Select Team Member
+                      </h1>
 
-                          <div className="grid lg:grid-cols-5 gap-2">
-                            {employe &&
-                              data.map((menu) => (
-                                <label class="inline-flex items-center mt-2">
-                                  <input
-                                    type="checkbox"
-                                    checked={
-                                      selectAll ||
-                                      selectedItems.includes(menu.Name || menu.name)
-                                    }
-                                    onChange={() =>
-                                      handleCheckboxChange(menu.Name || menu.name)
-                                    }
-                                    class="form-checkbox h-5 w-5 text-red-600"
-                                  />
-                                  <span class="ml-2 text-gray-700">
-                                    {menu.Name || menu.name}
-                                  </span>
-                                </label>
-                              ))}
-                          </div>
-                        </div>
+                      <div className="grid lg:grid-cols-5 gap-2">
+                        {employe &&
+                          data.map((menu) => (
+                            <label class="inline-flex items-center mt-2">
+                              <input
+                                type="checkbox"
+                                checked={
+                                  selectAll ||
+                                  selectedItems.includes(menu.Name || menu.name)
+                                }
+                                onChange={() =>
+                                  handleCheckboxChange(menu.Name || menu.name)
+                                }
+                                class="form-checkbox h-5 w-5 text-red-600"
+                              />
+                              <span class="ml-2 text-gray-700">
+                                {menu.Name || menu.name}
+                              </span>
+                            </label>
+                          ))}
+                      </div>
+                    </div>
                     <div class="form-control mt-5 text-right md:space-x-3 md:block flex flex-col-reverse">
                       <button
                         type="submit"

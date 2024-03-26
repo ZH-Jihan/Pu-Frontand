@@ -147,7 +147,7 @@
     "imgurl": "https://i.ibb.co/qjPjY3c/Abdun-Nur.png"
   },
   {
-    "Name": "Subrina Ety",
+    "Name": "Subrina Eity",
     "Designation": "Sr. Executive",
     "Dept": "Admin",
     "ID": "212-012-700",
@@ -313,6 +313,13 @@
     "Dept": "Digital  Marketing",
     "ID": "223-007-700",
     "imgurl": "https://i.ibb.co/Qd5TNdx/Sadnan-Sakib.png"
+  },
+  {
+    "Name": "Md. Riad Hossain",
+    "Designation": "Executive",
+    "Dept": "Digital  Marketing",
+    "ID": "",
+    "imgurl": ""
   },
   {
     "Name": "Md. Jahid Hassan",
