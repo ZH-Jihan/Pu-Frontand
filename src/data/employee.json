@@ -1,10 +1,24 @@
 [
   {
-    "Name": "Prof. Dr. Md. Abdul Mannan",
+    "Name": "Prof. Dr. Md. Abdul Mannan Chowdhury",
     "Designation": "Vice Chancellor",
     "Dept": "VC",
     "ID": "232-035-700",
     "imgurl": "https://i.ibb.co/bBGtCsP/VC-Sir.png"
+  },
+  {
+    "Name": "Prof. Dr. Md. Anwarul Kabir,",
+    "Designation": "Principal Adviser",
+    "Dept": "",
+    "ID": "",
+    "imgurl": ""
+  },
+  {
+    "Name": "Prof. A.H.M Faruque",
+    "Designation": "Treasurer",
+    "Dept": "",
+    "ID": "",
+    "imgurl": ""
   },
   {
     "Name": "Md. Ruhul Amin",
@@ -133,11 +147,18 @@
     "imgurl": "https://i.ibb.co/qjPjY3c/Abdun-Nur.png"
   },
   {
-    "Name": "Subrina",
+    "Name": "Subrina Ety",
     "Designation": "Sr. Executive",
     "Dept": "Admin",
     "ID": "212-012-700",
     "imgurl": "https://i.ibb.co/zSZd99b/Subrina-Eti.png"
+  },
+  {
+    "Name": "Koli Akter Joya",
+    "Designation": "Frot Desk",
+    "Dept": "Admin",
+    "ID": "",
+    "imgurl": ""
   },
   {
     "Name": "Fahmida Akter Khan",
@@ -180,6 +201,13 @@
     "Dept": "Controller Section",
     "ID": "121-022-700",
     "imgurl": "https://i.ibb.co/ypVL0zR/Afroza-Khanom.png"
+  },
+  {
+    "Name": "Rownak Jahan",
+    "Designation": "Executive",
+    "Dept": "Controller Section",
+    "ID": "",
+    "imgurl": ""
   },
   {
     "Name": "Shamsur Rahman",
