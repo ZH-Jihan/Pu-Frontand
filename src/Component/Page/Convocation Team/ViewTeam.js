@@ -5,12 +5,14 @@ import useFatchData from "../../Hooks/useFatchData";
 const ViewTeam = () => {
   const { data: allTeam } = useFatchData("/convocationTeam");
   const [nameWiseTable, setNameWiseTable] = useState(false);
+  const [nameFilter, setNameFilter] = useState([]);
   const [selecteditem, setSelecteditem] = useState({
     committe: "",
   });
   const onChange = (e) => {
     const { name, value } = e.target;
     setSelecteditem((prev) => ({ ...prev, [name]: value }));
+    setNameFilter([])
   };
   const navigate = useNavigate()
   //**** Get All Name for deffrent proparty in array Of object and create new name Array ****//
@@ -29,11 +31,16 @@ const ViewTeam = () => {
   const committe = Array.from(new Set(allTeam.map((el) => el.teamName)));
   let data;
   if (selecteditem.committe) {
+    
     data = allTeam.filter((el) => el.teamName === selecteditem.committe);
-  } else {
+    
+  }else if (nameFilter.length){
+    data = nameFilter
+  }else {
     data = allTeam;
   }
-
+console.log(nameFilter);
+  
   if (nameWiseTable === true) {
     return (
       <div>
@@ -93,23 +100,29 @@ const ViewTeam = () => {
                         <td class="px-2 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                           {name}
                         </td>
-                        <td class="px-2 py-2 whitespace-nowrap text-base font-medium text-gray-900">
+                        <td  class="px-2 py-2 whitespace-nowrap text-base font-medium text-blue-700">
+                          <button onClick={()=>{setNameFilter(allTeam.filter((el) => el.teamLeader === name)); setNameWiseTable(false)}}>
                           {
                             allTeam.filter((el) => el.teamLeader === name)
                               .length
                           }
+                          </button>
                         </td>
-                        <td class="px-2 py-2 whitespace-nowrap text-base font-medium text-gray-900">
+                        <td class="px-2 py-2 whitespace-nowrap text-base font-medium text-blue-700 underline">
+                          <button onClick={()=>{setNameFilter(allTeam.filter((el) => el.teamSecretary === name)); setNameWiseTable(false)}}>
                           {
                             allTeam.filter((el) => el.teamSecretary === name)
                               .length
                           }
+                          </button>
                         </td>
-                        <td class="px-2 py-2 whitespace-nowrap text-base font-medium text-gray-900">
+                        <td class="px-2 py-2 whitespace-nowrap text-base font-medium text-blue-700">
+                        <button onClick={()=>{setNameFilter(allTeam.filter((el) => el.teamMember.includes(name))); setNameWiseTable(false)}}>
                           {
                             allTeam.filter((el) => el.teamMember.includes(name))
                               .length
                           }
+                          </button>
                         </td>
                       </tr>
                     ))}
