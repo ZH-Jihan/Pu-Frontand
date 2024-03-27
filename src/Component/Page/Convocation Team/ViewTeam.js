@@ -101,15 +101,19 @@ console.log(nameFilter);
                           {name}
                         </td>
                         <td  class="px-2 py-2 whitespace-nowrap text-base font-medium text-blue-700">
-                          <button onClick={()=>{setNameFilter(allTeam.filter((el) => el.teamLeader === name)); setNameWiseTable(false)}}>
+                          <button 
+                          className="underline underline-offset-2"
+                          onClick={()=>{setNameFilter(allTeam.filter((el) => el.teamLeader === name)); setNameWiseTable(false)}}>
                           {
                             allTeam.filter((el) => el.teamLeader === name)
                               .length
                           }
                           </button>
                         </td>
-                        <td class="px-2 py-2 whitespace-nowrap text-base font-medium text-blue-700 underline">
-                          <button onClick={()=>{setNameFilter(allTeam.filter((el) => el.teamSecretary === name)); setNameWiseTable(false)}}>
+                        <td class="px-2 py-2 whitespace-nowrap text-base font-medium text-blue-700 ">
+                          <button
+                          className="underline underline-offset-2"
+                          onClick={()=>{setNameFilter(allTeam.filter((el) => el.teamSecretary === name)); setNameWiseTable(false)}}>
                           {
                             allTeam.filter((el) => el.teamSecretary === name)
                               .length
@@ -117,7 +121,9 @@ console.log(nameFilter);
                           </button>
                         </td>
                         <td class="px-2 py-2 whitespace-nowrap text-base font-medium text-blue-700">
-                        <button onClick={()=>{setNameFilter(allTeam.filter((el) => el.teamMember.includes(name))); setNameWiseTable(false)}}>
+                        <button 
+                        className="underline underline-offset-2"
+                        onClick={()=>{setNameFilter(allTeam.filter((el) => el.teamMember.includes(name))); setNameWiseTable(false)}}>
                           {
                             allTeam.filter((el) => el.teamMember.includes(name))
                               .length
