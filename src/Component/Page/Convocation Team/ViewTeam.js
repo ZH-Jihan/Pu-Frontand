@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import useFatchData from "../../Hooks/useFatchData";
 
 const ViewTeam = () => {
@@ -11,6 +12,7 @@ const ViewTeam = () => {
     const { name, value } = e.target;
     setSelecteditem((prev) => ({ ...prev, [name]: value }));
   };
+  const navigate = useNavigate()
   //**** Get All Name for deffrent proparty in array Of object and create new name Array ****//
   const uniqueValuesSet = new Set();
   const allName = allTeam.flatMap((el) => {
@@ -128,7 +130,7 @@ const ViewTeam = () => {
         <h2 className="font-bold text-xl text-center text-red-600 pb-2">
           Total Committee : {allTeam.length}
         </h2>
-        <div className="grid grid-cols-2 w-2/4 m-auto">
+        <div className="grid lg:grid-cols-2 lg:w-2/4 m-auto">
           <div class="w-3/4  m-auto flex flex-col mb-2">
             <label className="font-semibold text-gray-600 py-2">Click To See</label>
             <button
@@ -186,7 +188,7 @@ const ViewTeam = () => {
                 </div>
                 <div className="card-actions text-center pt-4 ">
                   <button className="w-full pl-8 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center "
-                  
+                  onClick={()=> navigate(`/viewteam/${team._id}`)}
                   >
                     See More
                   </button>

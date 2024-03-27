@@ -35,6 +35,7 @@ import ViewAbsentReport from "./Component/Page/All Report/ViewAbsentReport";
 import AdmissonFrom from "./Component/Page/Apply From/AdmissonFrom";
 import RegistrationFrom from "./Component/Page/Apply From/RegistrationFrom";
 import PostConvoTeam from "./Component/Page/Convocation Team/PostConvoTeam";
+import TeamDetails from "./Component/Page/Convocation Team/TeamDetails";
 import ViewTeam from "./Component/Page/Convocation Team/ViewTeam";
 import NewHomePageV2 from "./Component/Page/Home/NewHomePageV2";
 import MyRequireAuth from "./Component/Page/Security/MyRequireAuth";
@@ -128,6 +129,7 @@ function App() {
 
             <Route path="/entryconvoteam" element={<PostConvoTeam/>}/>
             <Route path="/viewteam" element={<ViewTeam/>}/>
+            <Route path="/viewteam/:id" element={<TeamDetails/>}/>
 
 
             <Route path="/womenhostel" element={<HostelMember />}></Route>
