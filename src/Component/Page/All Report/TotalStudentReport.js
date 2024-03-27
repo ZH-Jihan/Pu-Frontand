@@ -336,13 +336,13 @@ const TotalStudentReport = () => {
               <td class=" px-6 py-4 whitespace-nowrap text-base font-bold text-green-600">
                 <p>{findyear(year.year).arr.length}</p>
               </td>
-              <td class=" px-6 py-4 whitespace-nowrap text-base font-bold text-indigo-400">
+              <td class=" px-6 py-4 whitespace-nowrap text-base font-bold text-blue-600">
                 <p>{findyear(year.year).spring.length}</p>
               </td>
               <td class=" px-6 py-4 whitespace-nowrap text-base font-bold text-blue-600">
                 <p>{findyear(year.year).summer.length}</p>
               </td>
-              <td class=" px-6 py-4 whitespace-nowrap text-base font-bold text-orange-400">
+              <td class=" px-6 py-4 whitespace-nowrap text-base font-bold text-blue-600">
                 <p>{findyear(year.year).fall.length}</p>
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-base font-medium text-gray-900">
