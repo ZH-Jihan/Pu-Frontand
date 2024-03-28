@@ -197,7 +197,7 @@ console.log(nameFilter);
                     {team?.teamSecretary}
                   </h2>
                   <span className="text-lg  font-bold text-center">
-                    Member{" "}- { team?.teamMember.length }
+                    Members{" "}- { team?.teamMember.length }
                   </span>
                   <h2 className="">
                     {team?.teamMember.slice(0, 5).map((member) => (
