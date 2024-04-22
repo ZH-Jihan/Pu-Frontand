@@ -21,12 +21,11 @@ const EditHostelMember = () => {
     const { name, value } = e.target;
     setUpdate((prev) => ({ ...prev, [name]: value }));
   };
-  console.log(update);
+
   const updateMember = async (event) => {
     event.preventDefault();
-
     const respons = await PutCustomAxios(`/hostelmember/${id}`, update);
-
+console.log(respons);
     if (respons.status) {
       toast.success(respons.status);
       setUpdate({});

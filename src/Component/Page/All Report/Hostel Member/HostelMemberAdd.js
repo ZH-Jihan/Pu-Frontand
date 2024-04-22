@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import toast from "react-hot-toast";
-import CustomAxiosPost from "../../../Hooks/CustomAxiosPost";
 import useLocalDataFatch from "../../../Hooks/localDataFatch";
 const HostelMemberAdd = () => {
   const { data: totalReg } = useLocalDataFatch("allregStudent.json");
@@ -10,14 +8,26 @@ const HostelMemberAdd = () => {
     e.preventDefault();
     setId(e.target.value);
   };
-  const [selectFlat,setSelectFlat] = useState({
-    flat :""
-  })
-  const handleInputChange=(e)=>{
-    const {name,value} = e.target;
-    setSelectFlat((prev)=>({...prev, [name]: value}))
-  }
+
+  const [pic, setPic] = useState(null);
+  const [file, setFile] = useState(null);
+  const picUpload = (e) => {
+    const [file] = e.target.files;
+    setPic(URL.createObjectURL(file));
+    setFile(file);
+  };
+
+  const [selectFlat, setSelectFlat] = useState({
+    flat: "",
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setSelectFlat((prev) => ({ ...prev, [name]: value }));
+  };
+
   let student = totalReg.find((el) => el.ar === id);
+
   if (student === undefined) {
     student = admission.find((el) => el.AR === id);
   }
@@ -25,16 +35,17 @@ const HostelMemberAdd = () => {
   if (id.length === 6 && student === undefined) {
     alert("Please Provied a valide Id");
   }
-  
+
   const memberAdd = async (event) => {
-    event.preventDefault();
+    event.preventDefault()
     let name;
     if (student?.name === "") {
       name = event.target.name.value;
     } else {
       name = student?.name || student?.Name;
     }
-    
+    const formData = new FormData();
+    formData.append("image", file);
     const studentInfo = {
       name: name,
       id: student?.ar || student?.AR,
@@ -47,17 +58,19 @@ const HostelMemberAdd = () => {
       joinDate: event.target.joindate.value,
       department: student?.mainProgramName || student?.programName,
     };
-    console.log(studentInfo);
-    try {
-      const result = await CustomAxiosPost("/hostelmember", studentInfo);
 
-      // Handle the result (e.g., show a success message)
-      console.log("Post successful:", result);
-      if (result.status === "Success") {
-        toast.success("Successfully Add Member");
-        setId("");
-        event.target.reset();
-      }
+    
+    console.log(formData);
+    try {
+      // const result = await CustomAxiosPost("/hostelmember", studentInfo);
+
+      // // Handle the result (e.g., show a success message)
+      // console.log("Post successful:", result);
+      // if (result.status === "Success") {
+      //   toast.success("Successfully Add Member");
+      //   setId("");
+      //   event.target.reset();
+      // }
     } catch (error) {
       // Handle errors (e.g., show an error message)
       console.error("Post failed:", error);
@@ -80,6 +93,32 @@ const HostelMemberAdd = () => {
                 <div class="mt-5">
                   <div class="form">
                     <div class="md:grid grid lg:grid-cols-4 gap-4 w-full text-xs">
+                      <div class="mb-3">
+                        <label class="font-semibold text-gray-600 text-xl py-2">
+                          Student Img
+                          <span title="required" className="text-red-500">
+                            *
+                          </span>
+                        </label>
+                        <div class="flex items-center py-6">
+                          {pic ? (<div class="w-20 h-20 mr-4 flex-none rounded-xl border overflow-hidden">
+                            <img
+                              class="w-20 h-20 mr-4 object-cover"
+                              src={pic}
+                              alt="Faculty Img"
+                            />
+                          </div>):(
+                          <label class="cursor-pointer ">
+                            <input
+                              name="image"
+                              onChange={picUpload}
+                              type="file"
+                              className="focus:outline-none text-white py-2 pl-4 rounded-full bg-green-400 hover:bg-green-500 hover:shadow-lg"
+                            />
+                            {/* <input type="file" class="hidden" /> */}
+                          </label>)}
+                        </div>
+                      </div>
                       <div class="form-control  mb-3 space-y-2 w-full text-base">
                         <label class="font-semibold text-gray-600 text-xl py-2">
                           Student Id

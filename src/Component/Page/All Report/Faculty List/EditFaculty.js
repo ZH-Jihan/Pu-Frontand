@@ -71,6 +71,7 @@ if (respons) {
 
       // }
     };
+    console.log(update);
     if (loading === true && !facultys.length) {
       <Loading/>
     } else {
@@ -266,10 +267,10 @@ if (respons) {
                           <input
                           value={update?.roomnum}
                           onChange={onChange}
-                            placeholder="University"
+                            placeholder="Room Number"
                             class="appearance-none text-base block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
                             type="text"
-                            name="university"
+                            name="roomnum"
                           />
                         </div>
                         {/* Job Type */}

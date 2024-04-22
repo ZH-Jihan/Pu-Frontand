@@ -11,7 +11,7 @@ const RoomWiseFaculty = () => {
   //   const { name, value } = e.target;
   //   setSelecteditem((prev) => ({ ...prev, [name]: value }));
   // };
-  console.log(selecteditem);
+  
   const filterData = (room) => {
     let data;
     const datas = faculty.filter((el)=>el.status === "Active")
