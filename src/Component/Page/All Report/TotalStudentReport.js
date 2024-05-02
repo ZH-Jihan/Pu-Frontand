@@ -492,6 +492,8 @@ const TotalStudentReport = () => {
       let totaldata2 = finddata(data[1]?.name);
       let totaldata3 = finddata(data[2]?.name);
       const arr = [].concat(totaldata1, totaldata2, totaldata3);
+
+
       return { arr, data };
     };
 
@@ -539,6 +541,10 @@ const TotalStudentReport = () => {
         {filterselect.mainReport === "admission" && (
           <Button details={btn.admsubReport} />
         )}
+        {filterselect.mainReport === "admission" && 
+          filterselect.addSubReport !== "yearwsem"  && filterselect.addSubReport !== ""   && (
+            <Button details={btn.regSubReport} />
+          )}
         {filterselect.mainReport === "regaster" && (
           <Button details={btn.regmainSubReport} />
         )}
