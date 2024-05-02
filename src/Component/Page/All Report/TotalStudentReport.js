@@ -411,7 +411,9 @@ const TotalStudentReport = () => {
     const finddata = (parms) => {
       const data = studentsinfo.filter((el) => el.semester === parms);
       return data;
+      
     };
+    console.log(studentsinfo);
     const findyear = (parms) => {
       let data;
       if (parms) {
@@ -421,8 +423,11 @@ const TotalStudentReport = () => {
       let summer = finddata(data[1]?.name);
       let spring = finddata(data[2]?.name);
       const arr = [].concat(fall, summer, spring);
+      const day = arr.filter(el => el.programType === "Day").length
+      const evening = arr.filter(el => el.programType === "Evening").length
+      const weekend = arr.filter(el => el.programType === "Weekend").length
 
-      return { arr, data, spring, summer, fall };
+      return { arr, data, spring, summer, fall ,day,evening,weekend};
     };
     return (
       <div>
@@ -433,6 +438,9 @@ const TotalStudentReport = () => {
           {field: "", header: "Spring"},
           {field: "", header: "Summer"},
           {field: "", header: "Fall"},
+          {field: "", header: "Day"},
+          {field: "", header: "Evening"},
+          {field: "", header: "Weekend"},
           ]}/>
           <tbody>
             {/* <tr class=" border-b"> */}
@@ -444,14 +452,23 @@ const TotalStudentReport = () => {
                 <td class=" px-6 py-4 whitespace-nowrap text-base font-bold text-green-600">
                   <p>{findyear(year.year)?.arr.length}</p>
                 </td>
-                <td class="px-6 py-4 whitespace-nowrap text-base font-medium text-gray-900">
+                <td class="px-6 py-4 whitespace-nowrap text-base font-medium text-blue-600">
                   <p>{findyear(year.year)?.spring.length}</p>
                 </td>
-                <td class="px-6 py-4 whitespace-nowrap text-base font-medium text-gray-900">
+                <td class="px-6 py-4 whitespace-nowrap text-base font-medium text-blue-600">
                   <p>{findyear(year.year)?.summer.length}</p>
                 </td>
-                <td class="px-6 py-4 whitespace-nowrap text-base font-medium text-gray-900">
+                <td class="px-6 py-4 whitespace-nowrap text-base font-medium text-blue-600">
                   <p>{findyear(year.year)?.fall.length}</p>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap text-base font-medium text-gray-900">
+                  <p>{findyear(year.year)?.day}</p>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap text-base font-medium text-gray-900">
+                  <p>{findyear(year.year)?.evening}</p>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap text-base font-medium text-gray-900">
+                  <p>{findyear(year.year)?.weekend}</p>
                 </td>
               </tr>
             ))}
