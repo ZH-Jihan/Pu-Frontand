@@ -508,7 +508,7 @@ const TotalStudentReport = () => {
                   {year.year}
                 </td>
                 <td class="px-2 py-4 whitespace-nowrap text-sm font-medium text-green-600">
-                  {findyear(year.year)?.arr.length}
+                  {filterSem(findyear(year.year)?.arr).datas.length}
                 </td>
                 {addmisonTableBody(findyear(year.year)?.arr)}
               </tr>
