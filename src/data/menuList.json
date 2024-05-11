@@ -44,6 +44,11 @@
         "role": ["user", "editor", "admin"]
       },
       {
+        "name": "Student Aff. Program",
+        "navigate": "/viewstdnaffprogram",
+        "role": ["user", "editor", "admin"]
+      },
+      {
         "name": "Room Wise Faculty",
         "navigate": "/roomwisefaculty",
         "role": ["user", "editor", "admin"]
@@ -67,6 +72,11 @@
       {
         "name": "Faculty Entry",
         "navigate": "/addfaculty",
+        "role": ["editor", "admin"]
+      },
+      {
+        "name": "Std.Aff. Program Entry",
+        "navigate": "/programdataAdd",
         "role": ["editor", "admin"]
       },
       {

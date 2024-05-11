@@ -43,6 +43,8 @@ import Notpound from "./Component/Page/Sheared Page/Notpound";
 import MyLogin from "./Component/Page/SingUp & Login/MyLogin";
 import MySingUp from "./Component/Page/SingUp & Login/MySingUp";
 import Unothorize from "./Component/Page/SingUp & Login/Unothorize";
+import ViewProgram from "./Component/Page/Student Afirse/ViewProgram";
+import AddProgramData from "./Component/Page/Student Afirse/addProgramData";
 // axios.defaults.url("http://localhost:5000/api/v1")
 // const token = Cookies.get('token')
 
@@ -130,6 +132,10 @@ function App() {
             <Route path="/entryconvoteam" element={<PostConvoTeam/>}/>
             <Route path="/viewteam" element={<ViewTeam/>}/>
             <Route path="/viewteam/:id" element={<TeamDetails/>}/>
+
+
+            <Route path="/programdataAdd" element={<AddProgramData/>}/>
+            <Route path="/viewstdnaffprogram" element={<ViewProgram/>}/>
 
 
             <Route path="/womenhostel" element={<HostelMember />}></Route>

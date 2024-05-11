@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import toast from "react-hot-toast";
+import CustomAxiosPost from "../../../Hooks/CustomAxiosPost";
 import useLocalDataFatch from "../../../Hooks/localDataFatch";
 const HostelMemberAdd = () => {
   const { data: totalReg } = useLocalDataFatch("allregStudent.json");
@@ -59,18 +61,16 @@ const HostelMemberAdd = () => {
       department: student?.mainProgramName || student?.programName,
     };
 
-    
-    console.log(formData);
     try {
-      // const result = await CustomAxiosPost("/hostelmember", studentInfo);
+      const result = await CustomAxiosPost("/hostelmember", studentInfo);
 
-      // // Handle the result (e.g., show a success message)
-      // console.log("Post successful:", result);
-      // if (result.status === "Success") {
-      //   toast.success("Successfully Add Member");
-      //   setId("");
-      //   event.target.reset();
-      // }
+      // Handle the result (e.g., show a success message)
+      console.log("Post successful:", result);
+      if (result.status === "Success") {
+        toast.success("Successfully Add Member");
+        setId("");
+        event.target.reset();
+      }
     } catch (error) {
       // Handle errors (e.g., show an error message)
       console.error("Post failed:", error);
