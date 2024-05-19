@@ -1,7 +1,10 @@
 import React from "react";
+import rutinData from "../../../../data/classRoutin.json";
 import useFatchData from "../../../Hooks/useFatchData";
 import TableHead from "../../../Utilits/Table/TableHead";
 import "../../../Utilits/Table/tabel.css";
+
+
 
 const RutineTable = ({
   data = null,
@@ -18,26 +21,45 @@ const RutineTable = ({
   setFilterSel = null
 }) => {
   const { data: facultyDatas } = useFatchData("/faculty");
-  
 
+  
+  
+  
   
 
 //***** At A Glance Table Data Condition Wise *****//
-  const atAGlanceTblData = [
+  const offlineatAGlanceTblData = [
     { field: "", header: "Day" },
     { field: "", header: "Number Of Slot" },
     { field: "", header: "Total Class" },
     { field: "", header: "Civil" },
   ]
+  const onlineatAGlanceTblData = [
+    { field: "", header: "Day" },
+    { field: "", header: "Number Of Slot" },
+    { field: "", header: "Total Class" },
+    { field: "", header: "In Campus" },
+    { field: "", header: "Online" },
+    { field: "", header: "CE - Campus" },
+    { field: "", header: "CE - Online" },
+    { field: "", header: "CSE - Campus" },
+    { field: "", header: "CSE - Online" },
+    { field: "", header: "EEE - Campus" },
+    { field: "", header: "EEE - Online" },
+    { field: "", header: "Bus - Campus" },
+    { field: "", header: "Bus - Online" },
+    { field: "", header: "Eng - Campus" },
+    { field: "", header: "Eng- Online" }
+  ]
 if (atAGlance.name === "Spring-24") {
-  atAGlanceTblData.push(
+  offlineatAGlanceTblData.push(
     { field: "", header: "CSE" },
     { field: "", header: "EEE" },
     { field: "", header: "Business" },
     { field: "", header: "English" },
     { field: "", header: "Capacity Utilized" })
 } else {
-  atAGlanceTblData.push(
+  offlineatAGlanceTblData.push(
     { field: "", header: "CSE/EEE" },
     { field: "", header: "Business" },
     { field: "", header: "English" },
@@ -161,7 +183,7 @@ const onClick = (day) =>{
   };
 
   //*****.. Weekly Class At a Glance Report ..*****//
-  const weeklyAtAGlance = () => {
+  const weeklyOfflineAtAGlance = () => {
     const classFilterWDay = (day) => {
       const rutinData = atAGlance.data;
       let data;
@@ -254,6 +276,127 @@ const onClick = (day) =>{
     );
   };
 
+  const weeklyOnlineAtAGlance = () => {
+    const days = Array.from(new Set(rutinData.map(item=> item.Day)))
+    
+    days.push("Total")
+  console.log(days);
+    const classFilterWDay = (day,online) => {
+      const rutindata = rutinData.filter(el=>el.Day === day)
+
+      const dayWiseSlot = Array.from(new Set(rutindata.map(item=> item.TimeSlot)))
+
+      let data;
+      let civil;
+      let Eng;
+      let ece;
+      let cse;
+      let eee;
+      let bus;
+      if (day) {
+        if (day === "Total") {
+          data = rutinData;
+        }else {
+          data = rutindata.filter((el) => el.Day === day);
+        }
+      }
+
+      if (online) {
+
+        if (online === "online") {
+          if (day === "Total") {
+            data = rutinData.filter((el) => el.Room === "Online");
+          } else {
+            data = rutindata.filter((el) => el.Room === "Online");
+          }
+        }else if (online === "offline") {
+          if (day === "Total") {
+            data = rutinData.filter((el) => el.Room !== "Online");
+          } else {
+            data = rutindata.filter((el) => el.Room !== "Online");
+          }
+        }
+      }
+      if (data) {
+        civil = data.filter((el) => el.Dept === "CE");
+        Eng = data.filter((el) => el.Dept === "ENG");
+        if (atAGlance.name === "Spring-24") {
+          cse = data.filter((el) => el.Dept === "CSE");
+          eee = data.filter((el) => el.Dept === "EEE");
+        } else {
+          ece = data.filter((el) => el.Dept === "CSE/EEE");
+        }
+        bus = data.filter((el) => el.Dept === "BUS");
+      }
+      return { data, civil, Eng, ece, bus,cse,eee };
+    };
+    const slot = (value, day) => {
+      const rutindata = rutinData.filter(el=>el.Day === day)
+
+      const dayWiseSlot = Array.from(new Set(rutindata.map(item=> item.TimeSlot)))
+      if (day === "Total") {
+        const sum = 73
+        
+        return sum;
+      }
+      return dayWiseSlot.length;
+    };
+    return (
+      <>
+        {days &&
+          days.map((day) => (
+            <tr className={` ${hover && "hover"} ${striped && "striped"}`}>
+              <td  class="text-blue-600 underline underline-offset-4 px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                <button onClick={()=> onClick(day) }>{day}</button>
+              </td>
+              <td  class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                {slot(day.length,day)}
+              </td>
+              <td  class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                {classFilterWDay(day).data.length}
+              </td>
+              <td  class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                {classFilterWDay(day,"offline").data.length}
+              </td>
+              <td  class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                {classFilterWDay(day,"online").data.length}
+              </td>
+              <td  class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-rose-600">
+                {classFilterWDay(day,"offline").civil.length}
+              </td>
+              <td  class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-600">
+                {classFilterWDay(day,"online").civil.length}
+              </td>
+              <td  class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-rose-600">
+                {classFilterWDay(day,"offline").cse.length}
+              </td>
+              <td  class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-600">
+                {classFilterWDay(day,"online").cse.length}
+              </td>
+              <td  class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-rose-600">
+                {classFilterWDay(day,"offline").eee.length}
+              </td>
+              <td  class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-600">
+                {classFilterWDay(day,"online").eee.length}
+              </td>
+              <td  class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-rose-600">
+                {classFilterWDay(day,"offline").bus.length}
+              </td>
+              <td  class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-600">
+                {classFilterWDay(day,"online").bus.length}
+              </td>
+              <td  class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-rose-600">
+                {classFilterWDay(day,"offline").Eng.length}
+              </td>
+              <td  class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-600">
+                {classFilterWDay(day,"online").Eng.length}
+              </td>
+            </tr>
+          ))}
+      </>
+    );
+  };
+
   //****.. Component Main Funtion Return ..*****//
   return (
     <div class="flex flex-col w-full">
@@ -287,9 +430,14 @@ const onClick = (day) =>{
                   ]}
                 ></TableHead>
               )}
-              {name === "" && (
+              {name === "offline" && (
                 <TableHead
-                  data = {atAGlanceTblData}
+                  data = {offlineatAGlanceTblData}
+                ></TableHead>
+              )}
+              {name === "online" && (
+                <TableHead
+                  data = {onlineatAGlanceTblData}
                 ></TableHead>
               )}
               {/* <TableBody columns={columns} data={data}/> */}
@@ -297,7 +445,8 @@ const onClick = (day) =>{
                 {name === "main" && date !== "" && mainReport()}
                 {name === "slotWise" && date !== "" && slotWiseClass()}
                 {name === "roomWise" && date !== "" && roomWiseClass()}
-                {name === "" &&  weeklyAtAGlance()}
+                {name === "offline" &&  weeklyOfflineAtAGlance()}
+                {name === "online" &&  weeklyOnlineAtAGlance()}
               </tbody>
             </table>
           </div>
