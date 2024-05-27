@@ -22,7 +22,8 @@ const useRoutineBtn = ({onChange,filterselect}) => {
         function: { onChange },
         btnName: "room",
         option: [
-          { value: "", name: "--All Room--" }
+          { value: "", name: "--All Room--" },
+          { value: "Online", name: "Online" },
         ],
       };
       const semesterBtn = {
