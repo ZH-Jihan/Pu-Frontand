@@ -1,4 +1,6 @@
 [
+ { "name": "Spring-24", 
+ "data": [
   {
     "CourseCode": "ENV210",
     "CourseTitle": "Environmental Science",
@@ -9113,4 +9115,6 @@
     "ProgramCode": "47",
     "Dept": "CE"
   }
+]
+} 
 ]

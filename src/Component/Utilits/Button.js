@@ -21,7 +21,7 @@ const Button = ({ details,other }) => {
           )}
           {other && other.map((room) => (
               <option value={room.roomnum || room.name }>
-                {room.name || `${room.roomnum} || ${room.roomname}`}
+                {room.name  || `${room.roomnum} || ${room.roomname}` }
               </option>
             ))}
         </select>

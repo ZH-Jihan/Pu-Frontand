@@ -8,11 +8,11 @@ const useRoutineBtn = ({onChange,filterselect}) => {
         btnName: "department",
         option: [
           { value: "", name: "--All Department--" },
-          { value: "Civil", name: "Civil" },
+          { value: "CE", name: "Civil" },
           { value: "CSE", name: "CSE" },
           { value: "EEE", name: "EEE" },
-          { value: "English", name: "English" },
-          { value: "Business", name: "Business" },
+          { value: "ENG", name: "English" },
+          { value: "BUS", name: "Business" },
         ],
       };
 
@@ -32,9 +32,7 @@ const useRoutineBtn = ({onChange,filterselect}) => {
         btnName: "semester",
         option: [
           { value: "", name: "--Select Semester--" },
-          { value: "Spring-24", name: "Spring-24" },
-          { value: "fall", name: "Fall-23" },
-          { value: "summer", name: "Summer-23" }
+          { value: "Spring-24", name: "Spring-24" }
         ],
       };
 
@@ -54,8 +52,9 @@ const useRoutineBtn = ({onChange,filterselect}) => {
         function: { onChange },
         btnName: "reportType",
         option: [
-          { value: "online", name: "Weekly All Class Report" },
+          { value: "all", name: "Weekly All Class Report" },
           { value: "offline", name: "Weekly Ofline Class Report" },
+          { value: "online", name: "Weekly Online Class Report" },
           { value: "main", name: "Main Routine" },
           { value: "slotWise", name: "Slot Wise Report" },
           { value: "roomWise", name: "Room Wise Report" }

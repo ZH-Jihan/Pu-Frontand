@@ -1,10 +1,7 @@
 import React from "react";
-import rutinData from "../../../../data/classRoutin.json";
 import useFatchData from "../../../Hooks/useFatchData";
 import TableHead from "../../../Utilits/Table/TableHead";
 import "../../../Utilits/Table/tabel.css";
-
-
 
 const RutineTable = ({
   data = null,
@@ -17,24 +14,34 @@ const RutineTable = ({
   other = null,
   atAGlance = null,
   striped = true,
-  setDay= null,
-  setFilterSel = null
+  setDay = null,
+  setFilterSel = null,
 }) => {
   const { data: facultyDatas } = useFatchData("/faculty");
 
-  
-  
-  
-  
-
-//***** At A Glance Table Data Condition Wise *****//
+  //***** At A Glance Table Data Condition Wise *****//
   const offlineatAGlanceTblData = [
     { field: "", header: "Day" },
     { field: "", header: "Number Of Slot" },
     { field: "", header: "Total Class" },
     { field: "", header: "Civil" },
-  ]
+    { field: "", header: "CSE" },
+    { field: "", header: "EEE" },
+    { field: "", header: "Business" },
+    { field: "", header: "English" },
+    { field: "", header: "Capacity Utilized" }
+  ];
   const onlineatAGlanceTblData = [
+    { field: "", header: "Day" },
+    { field: "", header: "Number Of Slot" },
+    { field: "", header: "Total Class" },
+    { field: "", header: "Civil" },
+    { field: "", header: "CSE" },
+    { field: "", header: "EEE" },
+    { field: "", header: "Business" },
+    { field: "", header: "English" }
+  ];
+  const weeklyAllAtAGlanceTblData = [
     { field: "", header: "Day" },
     { field: "", header: "Number Of Slot" },
     { field: "", header: "Total Class" },
@@ -49,24 +56,10 @@ const RutineTable = ({
     { field: "", header: "Bus - Campus" },
     { field: "", header: "Bus - Online" },
     { field: "", header: "Eng - Campus" },
-    { field: "", header: "Eng- Online" }
-  ]
-if (atAGlance.name === "Spring-24") {
-  offlineatAGlanceTblData.push(
-    { field: "", header: "CSE" },
-    { field: "", header: "EEE" },
-    { field: "", header: "Business" },
-    { field: "", header: "English" },
-    { field: "", header: "Capacity Utilized" })
-} else {
-  offlineatAGlanceTblData.push(
-    { field: "", header: "CSE/EEE" },
-    { field: "", header: "Business" },
-    { field: "", header: "English" },
-    { field: "", header: "Capacity Utilized" })
-}
+    { field: "", header: "Eng- Online" },
+  ];
 
-//*** This funtion Convart Faculty initial Name to Full Name ***/
+  //*** This funtion Convart Faculty initial Name to Full Name ***/
   const findFaculty = (name) => {
     let fullName;
     if (name) {
@@ -75,9 +68,9 @@ if (atAGlance.name === "Spring-24") {
     return (fullName = fullName.map((data) => data.name));
   };
 
-const onClick = (day) =>{
-  setFilterSel((prev) => ({ ...prev, "reportType": "main", "day": day }));
-}
+  const onClick = (day) => {
+    setFilterSel((prev) => ({ ...prev, reportType: "main", day: day }));
+  };
 
   //*****.. Main Report Table Body ..*****//
   const mainReport = () => {
@@ -87,22 +80,22 @@ const onClick = (day) =>{
           data.map((tdata) => (
             <tr className={` ${hover && "hover"} ${striped && "striped"}`}>
               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                {tdata.room}
+                {tdata.Room}
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                {tdata.course}
+                {tdata.CourseCode}
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                {findFaculty(tdata.faculty)[0]}
+                {findFaculty(tdata.FacultyInitial)[0]}
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                {tdata.time}
+                {tdata.TimeSlot}
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                {tdata.day}
+                {tdata.Day}
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                Dept. Of {tdata.drpartment}
+                Dept. Of {tdata.Dept}
               </td>
               {other &&
                 other.map((col) => (
@@ -121,17 +114,17 @@ const onClick = (day) =>{
     const filters = (times) => {
       let datas;
       if (times) {
-        datas = data.filter((el) => el.time === times);
+        datas = data.filter((el) => el.TimeSlot === times);
       }
       return datas;
     };
     return (
       <>
         {data2 &&
-          data2[0]?.value.map((tdata) => (
+          data2?.map((tdata) => (
             <tr className={` ${hover && "hover"} ${striped && "striped"}`}>
               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                {data2[0]?.name}
+                {data[0]?.Day}
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                 {tdata.name}
@@ -147,25 +140,30 @@ const onClick = (day) =>{
 
   //*****.. This Funtion Show Class Room Wise Daily Class Count ..*****//
   const roomWiseClass = () => {
-    const customStyle = (value) =>{
+    const customStyle = (value) => {
       if (value <= 0) {
-        return {backgroundColor:"rgb(84 83 83 / 84%)"}
+        return { backgroundColor: "rgb(255 163 107 / 47%)" };
       }
-    } 
+    };
+
     const filters = (times) => {
+      
       let datas;
       if (times) {
-        datas = data.filter((el) => el.room === times);
+        datas = data.filter((el) => el.Room === times);
+        return datas;
       }
-      return datas;
     };
     return (
       <>
         {classroom &&
           classroom.map((room) => (
-            <tr style={customStyle(filters(room.roomnum).length)} className={` ${hover && "hover"} ${striped && "striped"}`}>
+            <tr
+              style={customStyle(filters(room.roomnum).length)}
+              className={` ${hover && "hover"} ${striped && "striped"}`}
+            >
               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                {data2[0]?.name}
+                {data[0]?.Day}
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                 {room.roomnum}
@@ -184,9 +182,15 @@ const onClick = (day) =>{
 
   //*****.. Weekly Class At a Glance Report ..*****//
   const weeklyOfflineAtAGlance = () => {
-    const classFilterWDay = (day) => {
-      const rutinData = atAGlance.data;
-      let data;
+    const days = Array.from(new Set(data.map((item) => item.Day)));
+
+    days.push("Total");
+    const classFilterWDay = (day, online) => {
+      // const rutindata = data.filter(el=>el.Day === day)
+
+      // const dayWiseSlot = Array.from(new Set(rutindata.map(item=> item.TimeSlot)))
+
+      let datas;
       let civil;
       let Eng;
       let ece;
@@ -195,148 +199,48 @@ const onClick = (day) =>{
       let bus;
       if (day) {
         if (day === "Total") {
-          data = rutinData;
+          datas = data;
         } else {
-          data = rutinData.filter((el) => el.day === day);
-        }
-      }
-      if (data) {
-        civil = data.filter((el) => el.drpartment === "Civil");
-        Eng = data.filter((el) => el.drpartment === "English");
-        if (atAGlance.name === "Spring-24") {
-          cse = data.filter((el) => el.drpartment === "CSE");
-          eee = data.filter((el) => el.drpartment === "EEE");
-        } else {
-          ece = data.filter((el) => el.drpartment === "CSE/EEE");
-        }
-        bus = data.filter((el) => el.drpartment === "Business");
-      }
-      return { data, civil, Eng, ece, bus,cse,eee };
-    };
-    const slot = (value, day) => {
-      if (day === "Total") {
-        let sum = 0;
-        // Iterate over each object and add its capacity to the sum
-        for (let i = 0; i < atAGlance.timeSlot.length; i++) {
-          sum += Number(atAGlance.timeSlot[i].value.length);
-        }
-        return sum;
-      }
-      return value;
-    };
-    return (
-      <>
-        {atAGlance &&
-          atAGlance.timeSlot.map((day) => (
-            <tr className={` ${hover && "hover"} ${striped && "striped"}`}>
-              <td  class="text-blue-600 underline underline-offset-4 px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                <button onClick={()=> onClick(day.name) }>{day.name}</button>
-              </td>
-              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                {slot(day.value.length, day.name)}
-              </td>
-              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                {classFilterWDay(day.name).data.length}
-              </td>
-              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                {classFilterWDay(day.name).civil.length}
-              </td>
-              {atAGlance.name === "Spring-24" ? (
-                <>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                    {classFilterWDay(day.name).cse.length}
-                  </td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                    {classFilterWDay(day.name).eee.length}
-                  </td>
-                </>
-              ) : (
-                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                  {classFilterWDay(day.name).ece.length}
-                </td>
-              )}
-
-              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                {classFilterWDay(day.name).bus.length}
-              </td>
-              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                {classFilterWDay(day.name).Eng.length}
-              </td>
-              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                {Math.round(
-                  (classFilterWDay(day.name).data.length /
-                    (classroom.length * slot(day.value.length, day.name))) *
-                    100
-                )}{" "}
-                %
-              </td>
-            </tr>
-          ))}
-      </>
-    );
-  };
-
-  const weeklyOnlineAtAGlance = () => {
-    const days = Array.from(new Set(rutinData.map(item=> item.Day)))
-    
-    days.push("Total")
-  console.log(days);
-    const classFilterWDay = (day,online) => {
-      const rutindata = rutinData.filter(el=>el.Day === day)
-
-      const dayWiseSlot = Array.from(new Set(rutindata.map(item=> item.TimeSlot)))
-
-      let data;
-      let civil;
-      let Eng;
-      let ece;
-      let cse;
-      let eee;
-      let bus;
-      if (day) {
-        if (day === "Total") {
-          data = rutinData;
-        }else {
-          data = rutindata.filter((el) => el.Day === day);
+          datas = data.filter((el) => el.Day === day);
         }
       }
 
       if (online) {
-
         if (online === "online") {
           if (day === "Total") {
-            data = rutinData.filter((el) => el.Room === "Online");
+            datas = datas.filter((el) => el.Room === "Online");
           } else {
-            data = rutindata.filter((el) => el.Room === "Online");
+            datas = datas.filter((el) => el.Room === "Online");
           }
-        }else if (online === "offline") {
+        } else if (online === "offline") {
           if (day === "Total") {
-            data = rutinData.filter((el) => el.Room !== "Online");
+            datas = datas.filter((el) => el.Room !== "Online");
           } else {
-            data = rutindata.filter((el) => el.Room !== "Online");
+            datas = datas.filter((el) => el.Room !== "Online");
           }
         }
       }
-      if (data) {
-        civil = data.filter((el) => el.Dept === "CE");
-        Eng = data.filter((el) => el.Dept === "ENG");
-        if (atAGlance.name === "Spring-24") {
-          cse = data.filter((el) => el.Dept === "CSE");
-          eee = data.filter((el) => el.Dept === "EEE");
-        } else {
-          ece = data.filter((el) => el.Dept === "CSE/EEE");
-        }
-        bus = data.filter((el) => el.Dept === "BUS");
+      if (datas) {
+        civil = datas.filter((el) => el.Dept === "CE");
+        Eng = datas.filter((el) => el.Dept === "ENG");
+        cse = datas.filter((el) => el.Dept === "CSE");
+        eee = datas.filter((el) => el.Dept === "EEE");
+        bus = datas.filter((el) => el.Dept === "BUS");
       }
-      return { data, civil, Eng, ece, bus,cse,eee };
+      return { datas, civil, Eng, ece, bus, cse, eee };
     };
     const slot = (value, day) => {
-      const rutindata = rutinData.filter(el=>el.Day === day)
+      const rutindata = data.filter((el) => el.Day === day);
 
-      const dayWiseSlot = Array.from(new Set(rutindata.map(item=> item.TimeSlot)))
+      const dayWiseSlot = Array.from(
+        new Set(rutindata.map((item) => item.TimeSlot))
+      );
       if (day === "Total") {
-        const sum = 73
-        
+        let sum = 73;
+        // Iterate over each object and add its capacity to the sum
+        // for (let i = 0; i < atAGlance.timeSlot.length; i++) {
+        //   sum += Number(atAGlance.timeSlot[i].value.length);
+        // }
         return sum;
       }
       return dayWiseSlot.length;
@@ -346,50 +250,252 @@ const onClick = (day) =>{
         {days &&
           days.map((day) => (
             <tr className={` ${hover && "hover"} ${striped && "striped"}`}>
-              <td  class="text-blue-600 underline underline-offset-4 px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                <button onClick={()=> onClick(day) }>{day}</button>
+              <td class="text-blue-600 underline underline-offset-4 px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                <button onClick={() => onClick(day)}>{day}</button>
               </td>
-              <td  class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                {slot(day.length,day)}
+              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                {slot(day.length, day)}
               </td>
-              <td  class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                {classFilterWDay(day).data.length}
+              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                {classFilterWDay(day, "offline").datas.length}
               </td>
-              <td  class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                {classFilterWDay(day,"offline").data.length}
+              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium ">
+                {classFilterWDay(day, "offline").civil.length}
               </td>
-              <td  class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                {classFilterWDay(day,"online").data.length}
+              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium ">
+                {classFilterWDay(day, "offline").cse.length}
               </td>
-              <td  class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-rose-600">
-                {classFilterWDay(day,"offline").civil.length}
+              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium ">
+                {classFilterWDay(day, "offline").eee.length}
               </td>
-              <td  class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-600">
-                {classFilterWDay(day,"online").civil.length}
+              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium ">
+                {classFilterWDay(day, "offline").bus.length}
               </td>
-              <td  class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-rose-600">
-                {classFilterWDay(day,"offline").cse.length}
+              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium ">
+                {classFilterWDay(day, "offline").Eng.length}
               </td>
-              <td  class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-600">
-                {classFilterWDay(day,"online").cse.length}
+              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                {Math.round(
+                  (classFilterWDay(day).datas.length /
+                    (classroom.length * slot(day.length, day))) *
+                    100
+                )}{" "}
+                %
               </td>
-              <td  class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-rose-600">
-                {classFilterWDay(day,"offline").eee.length}
+            </tr>
+          ))}
+      </>
+    );
+  };
+  const onlineAtAGlance = () => {
+    const days = Array.from(new Set(data.map((item) => item.Day)));
+
+    days.push("Total");
+    const classFilterWDay = (day, online) => {
+      // const rutindata = data.filter(el=>el.Day === day)
+
+      // const dayWiseSlot = Array.from(new Set(rutindata.map(item=> item.TimeSlot)))
+
+      let datas;
+      let civil;
+      let Eng;
+      let ece;
+      let cse;
+      let eee;
+      let bus;
+      if (day) {
+        if (day === "Total") {
+          datas = data;
+        } else {
+          datas = data.filter((el) => el.Day === day);
+        }
+      }
+
+      if (online) {
+        if (online === "online") {
+          if (day === "Total") {
+            datas = datas.filter((el) => el.Room === "Online");
+          } else {
+            datas = datas.filter((el) => el.Room === "Online");
+          }
+        } else if (online === "offline") {
+          if (day === "Total") {
+            datas = datas.filter((el) => el.Room !== "Online");
+          } else {
+            datas = datas.filter((el) => el.Room !== "Online");
+          }
+        }
+      }
+      if (datas) {
+        civil = datas.filter((el) => el.Dept === "CE");
+        Eng = datas.filter((el) => el.Dept === "ENG");
+        cse = datas.filter((el) => el.Dept === "CSE");
+        eee = datas.filter((el) => el.Dept === "EEE");
+        bus = datas.filter((el) => el.Dept === "BUS");
+      }
+      return { datas, civil, Eng, ece, bus, cse, eee };
+    };
+    const slot = (value, day) => {
+      const rutindata = data.filter((el) => el.Day === day);
+
+      const dayWiseSlot = Array.from(
+        new Set(rutindata.map((item) => item.TimeSlot))
+      );
+      if (day === "Total") {
+        let sum = 73;
+        // Iterate over each object and add its capacity to the sum
+        // for (let i = 0; i < atAGlance.timeSlot.length; i++) {
+        //   sum += Number(atAGlance.timeSlot[i].value.length);
+        // }
+        return sum;
+      }
+      return dayWiseSlot.length;
+    };
+    return (
+      <>
+        {days &&
+          days.map((day) => (
+            <tr className={` ${hover && "hover"} ${striped && "striped"}`}>
+              <td class="text-blue-600 underline underline-offset-4 px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                <button onClick={() => onClick(day)}>{day}</button>
               </td>
-              <td  class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-600">
-                {classFilterWDay(day,"online").eee.length}
+              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                {slot(day.length, day)}
               </td>
-              <td  class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-rose-600">
-                {classFilterWDay(day,"offline").bus.length}
+              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                {classFilterWDay(day, "online").datas.length}
               </td>
-              <td  class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-600">
-                {classFilterWDay(day,"online").bus.length}
+              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium ">
+                {classFilterWDay(day, "online").civil.length}
               </td>
-              <td  class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-rose-600">
-                {classFilterWDay(day,"offline").Eng.length}
+              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium ">
+                {classFilterWDay(day, "online").cse.length}
               </td>
-              <td  class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-600">
-                {classFilterWDay(day,"online").Eng.length}
+              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium ">
+                {classFilterWDay(day, "online").eee.length}
+              </td>
+              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium ">
+                {classFilterWDay(day, "online").bus.length}
+              </td>
+              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium ">
+                {classFilterWDay(day, "online").Eng.length}
+              </td>
+            </tr>
+          ))}
+      </>
+    );
+  };
+
+  const weeklyAllAtAGlance = () => {
+    const days = Array.from(new Set(data.map((item) => item.Day)));
+
+    days.push("Total");
+    const classFilterWDay = (day, online) => {
+      // const rutindata = data.filter(el=>el.Day === day)
+
+      // const dayWiseSlot = Array.from(new Set(rutindata.map(item=> item.TimeSlot)))
+
+      let datas;
+      let civil;
+      let Eng;
+      let ece;
+      let cse;
+      let eee;
+      let bus;
+      if (day) {
+        if (day === "Total") {
+          datas = data;
+        } else {
+          datas = data.filter((el) => el.Day === day);
+        }
+      }
+
+      if (online) {
+        if (online === "online") {
+          if (day === "Total") {
+            datas = datas.filter((el) => el.Room === "Online");
+          } else {
+            datas = datas.filter((el) => el.Room === "Online");
+          }
+        } else if (online === "offline") {
+          if (day === "Total") {
+            datas = datas.filter((el) => el.Room !== "Online");
+          } else {
+            datas = datas.filter((el) => el.Room !== "Online");
+          }
+        }
+      }
+      if (datas) {
+        civil = datas.filter((el) => el.Dept === "CE");
+        Eng = datas.filter((el) => el.Dept === "ENG");
+        cse = datas.filter((el) => el.Dept === "CSE");
+        eee = datas.filter((el) => el.Dept === "EEE");
+        bus = datas.filter((el) => el.Dept === "BUS");
+      }
+      return { datas, civil, Eng, ece, bus, cse, eee };
+    };
+    const slot = (value, day) => {
+      const rutindata = data.filter((el) => el.Day === day);
+
+      const dayWiseSlot = Array.from(
+        new Set(rutindata.map((item) => item.TimeSlot))
+      );
+      if (day === "Total") {
+        const sum = 73;
+
+        return sum;
+      }
+      return dayWiseSlot.length;
+    };
+    return (
+      <>
+        {days &&
+          days.map((day) => (
+            <tr className={` ${hover && "hover"} ${striped && "striped"}`}>
+              <td class="text-blue-600 underline underline-offset-4 px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                <button onClick={() => onClick(day)}>{day}</button>
+              </td>
+              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                {slot(day.length, day)}
+              </td>
+              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                {classFilterWDay(day).datas.length}
+              </td>
+              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-rose-600">
+                {classFilterWDay(day, "offline").datas.length}
+              </td>
+              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-600">
+                {classFilterWDay(day, "online").datas.length}
+              </td>
+              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-rose-600">
+                {classFilterWDay(day, "offline").civil.length}
+              </td>
+              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-600">
+                {classFilterWDay(day, "online").civil.length}
+              </td>
+              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-rose-600">
+                {classFilterWDay(day, "offline").cse.length}
+              </td>
+              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-600">
+                {classFilterWDay(day, "online").cse.length}
+              </td>
+              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-rose-600">
+                {classFilterWDay(day, "offline").eee.length}
+              </td>
+              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-600">
+                {classFilterWDay(day, "online").eee.length}
+              </td>
+              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-rose-600">
+                {classFilterWDay(day, "offline").bus.length}
+              </td>
+              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-600">
+                {classFilterWDay(day, "online").bus.length}
+              </td>
+              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-rose-600">
+                {classFilterWDay(day, "offline").Eng.length}
+              </td>
+              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-600">
+                {classFilterWDay(day, "online").Eng.length}
               </td>
             </tr>
           ))}
@@ -402,14 +508,30 @@ const onClick = (day) =>{
     <div class="flex flex-col w-full">
       <div class="overflow-x-auto sm:mx-0.5 lg:mx-0.5">
         <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
-        {name === "roomWise" && date !== "" &&  <h1 className="text-center text-lg mb-2"> Total Slot : {data2[0]?.value.length}</h1>}
+          {name === "roomWise" && date !== "" && (
+            <div>
+              <h1 className="text-center text-lg mb-2">
+                {" "}
+                Total Slot :{" "}
+                {data2.length}
+              </h1>
+            </div>
+          )}
+          {name === "slotWise" && date !== "" && (
+            <div>
+              <h1 className="text-center text-lg mb-2">
+                {" "}
+                Total Slot :{" "}
+                {data2.length}
+              </h1>
+            </div>
+          )}
           <div class="overflow-hidden">
             <table class="w-full m-auto">
               {name === "main" && date !== "" && (
                 <>
-                 <TableHead data={columns}></TableHead>
+                  <TableHead data={columns}></TableHead>
                 </>
-                
               )}
               {name === "slotWise" && date !== "" && (
                 <TableHead
@@ -431,22 +553,22 @@ const onClick = (day) =>{
                 ></TableHead>
               )}
               {name === "offline" && (
-                <TableHead
-                  data = {offlineatAGlanceTblData}
-                ></TableHead>
+                <TableHead data={offlineatAGlanceTblData}></TableHead>
               )}
               {name === "online" && (
-                <TableHead
-                  data = {onlineatAGlanceTblData}
-                ></TableHead>
+                <TableHead data={onlineatAGlanceTblData}></TableHead>
+              )}
+              {name === "all" && (
+                <TableHead data={weeklyAllAtAGlanceTblData}></TableHead>
               )}
               {/* <TableBody columns={columns} data={data}/> */}
               <tbody>
                 {name === "main" && date !== "" && mainReport()}
                 {name === "slotWise" && date !== "" && slotWiseClass()}
                 {name === "roomWise" && date !== "" && roomWiseClass()}
-                {name === "offline" &&  weeklyOfflineAtAGlance()}
-                {name === "online" &&  weeklyOnlineAtAGlance()}
+                {name === "offline" && weeklyOfflineAtAGlance()}
+                {name === "online" && onlineAtAGlance()}
+                {name === "all" && weeklyAllAtAGlance()}
               </tbody>
             </table>
           </div>

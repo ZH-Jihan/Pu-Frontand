@@ -202,6 +202,19 @@ if (respons) {
                             name="email"
                           />
                         </div>
+                        <div class="form-control  mb-3 space-y-2 w-full text-lg">
+                          <label class="font-semibold text-gray-600 ">
+                          Educational Subject
+                          </label>
+                          <input
+                          value={update?.edusubject}
+                          onChange={onChange}
+                            placeholder="Name of the subject"
+                            class="appearance-none text-base block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
+                            type="text"
+                            name="subject"
+                          />
+                        </div>
                       </div>
                       <div class="form-control md:flex md:flex-row md:space-x-4 w-full text-lg">
                         <div class="form-control  w-full flex flex-col mb-3">

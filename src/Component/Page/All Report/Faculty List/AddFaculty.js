@@ -18,6 +18,7 @@ const Addproduct = () => {
       doj: event.target.doj?.value,
       dob: event.target.dob?.value,
       jobtype: event.target.jobtype?.value,
+      edusubject: event.target.subject?.value,
       sex: event.target.sex?.value,
       status: event.target.status?.value,
       description: event.target.description?.value,
@@ -183,6 +184,17 @@ const Addproduct = () => {
                         class="appearance-none text-base block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
                         type="text"
                         name="email"
+                      />
+                    </div>
+                    <div class="form-control  mb-3 space-y-2 w-full text-lg">
+                      <label class="font-semibold text-gray-600 ">
+                        Educational Subject
+                      </label>
+                      <input
+                        placeholder="Name of the subject"
+                        class="appearance-none text-base block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
+                        type="text"
+                        name="subject"
                       />
                     </div>
                   </div>
