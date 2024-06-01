@@ -12,7 +12,7 @@ const DeleteCustomAxios = async (url, data) => {
     
 console.log(token);
     try {
-        const response = await axios.delete(`${testUrl}${url}`,{headers});
+        const response = await axios.delete(`${mainUrl}${url}`,{headers});
         return response.data;
     } catch (error) {
         throw error;
