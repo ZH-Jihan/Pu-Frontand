@@ -57,6 +57,7 @@ const useRoutineBtn = ({onChange,filterselect}) => {
           { value: "offline", name: "Weekly Ofline Class Report" },
           { value: "online", name: "Weekly Online Class Report" },
           { value: "main", name: "Main Routine" },
+          { value: "facultywise", name: "Faculty Wise Class" },
           { value: "slotWise", name: "Slot Wise Report" },
           { value: "roomWise", name: "Room Wise Report" }
           

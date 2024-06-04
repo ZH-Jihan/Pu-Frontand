@@ -29,7 +29,7 @@ const RutineTable = ({
     { field: "", header: "EEE" },
     { field: "", header: "Business" },
     { field: "", header: "English" },
-    { field: "", header: "Capacity Utilized" }
+    { field: "", header: "Capacity Utilized" },
   ];
   const onlineatAGlanceTblData = [
     { field: "", header: "Day" },
@@ -39,7 +39,13 @@ const RutineTable = ({
     { field: "", header: "CSE" },
     { field: "", header: "EEE" },
     { field: "", header: "Business" },
-    { field: "", header: "English" }
+    { field: "", header: "English" },
+  ];
+  const facultyWiseClassTblHead = [
+    { field: "", header: "Name" },
+    { field: "", header: "Total Class In Week" },
+    { field: "", header: "Department" },
+    { field: "", header: "Job Type" },
   ];
   const weeklyAllAtAGlanceTblData = [
     { field: "", header: "Day" },
@@ -70,6 +76,36 @@ const RutineTable = ({
 
   const onClick = (day) => {
     setFilterSel((prev) => ({ ...prev, reportType: "main", day: day }));
+  };
+
+  //*****.. Faculty Wise Class Report ..*****//
+  const facultyWiseClassCount = () => {
+    const activeFaculty = facultyDatas.filter((el) => el.status === "Active");
+    const facultyClass = (name) =>{
+      const totalClass = data.filter(el=> el.FacultyInitial === name)
+      return totalClass.length;
+    }
+    console.log(activeFaculty);
+    return (
+      <>
+        {activeFaculty.map((faculty) => (
+          <tr className={` ${hover && "hover"} ${striped && "striped"}`}>
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+              {faculty.name}
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+              {facultyClass(faculty.initialname)}
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+              {faculty.dipartment}
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+              {faculty.jobtype}
+            </td>
+          </tr>
+        ))}
+      </>
+    );
   };
 
   //*****.. Main Report Table Body ..*****//
@@ -147,7 +183,6 @@ const RutineTable = ({
     };
 
     const filters = (times) => {
-      
       let datas;
       if (times) {
         datas = data.filter((el) => el.Room === times);
@@ -512,8 +547,7 @@ const RutineTable = ({
             <div>
               <h1 className="text-center text-lg mb-2">
                 {" "}
-                Total Slot :{" "}
-                {data2.length}
+                Total Slot : {data2.length}
               </h1>
             </div>
           )}
@@ -521,8 +555,7 @@ const RutineTable = ({
             <div>
               <h1 className="text-center text-lg mb-2">
                 {" "}
-                Total Slot :{" "}
-                {data2.length}
+                Total Slot : {data2.length}
               </h1>
             </div>
           )}
@@ -561,10 +594,15 @@ const RutineTable = ({
               {name === "all" && (
                 <TableHead data={weeklyAllAtAGlanceTblData}></TableHead>
               )}
+              {name === "facultywise" && (
+                <TableHead data={facultyWiseClassTblHead}></TableHead>
+              )}
               {/* <TableBody columns={columns} data={data}/> */}
               <tbody>
                 {name === "main" && date !== "" && mainReport()}
                 {name === "slotWise" && date !== "" && slotWiseClass()}
+                {name === "facultywise" &&
+                  facultyWiseClassCount()}
                 {name === "roomWise" && date !== "" && roomWiseClass()}
                 {name === "offline" && weeklyOfflineAtAGlance()}
                 {name === "online" && onlineAtAGlance()}

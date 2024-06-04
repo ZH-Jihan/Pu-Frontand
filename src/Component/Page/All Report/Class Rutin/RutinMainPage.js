@@ -72,7 +72,7 @@ const RutinMainPage = () => {
   const daySlot = dayWiseSlotFind(semFilterData);
   console.log(daySlot);
   //*****.. Load All Filter btn ..*****//
-  if (filterselect.reportType === "all" || filterselect.reportType === "online" || filterselect.reportType === "offline") {
+  if (filterselect.reportType === "all" || filterselect.reportType === "online" || filterselect.reportType === "offline" || filterselect.reportType === "facultywise") {
     filterselect.day = ""
     filterselect.department = ""
     filterselect.timeslot = ""
@@ -137,12 +137,14 @@ const RutinMainPage = () => {
         {filterselect.semester &&
           filterselect.reportType !== "offline" &&
           filterselect.reportType !== "online" &&
+          filterselect.reportType !== "facultywise"&&
           filterselect.reportType !== "all" && (
             <Button details={data.dayBtn} />
           )}
         {filterselect.semester &&
           filterselect.reportType !== "offline" &&
           filterselect.reportType !== "online" &&
+          filterselect.reportType !== "facultywise"&&
           filterselect.reportType !== "all" &&
           filterselect.day !== "" && (
             <>
