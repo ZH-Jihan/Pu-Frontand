@@ -82,14 +82,13 @@ const RutineTable = ({
   const facultyWiseClassCount = () => {
     console.log(filtername.scarcebyname);
     const activeFaculty = facultyDatas.filter((el) => el.status === "Active");
-    let facultylist;
+    let facultylist = activeFaculty;
     if (filtername.jobtype) {
       facultylist = activeFaculty.filter(el=>el.jobtype === filtername.jobtype)
-    }else if(filtername.scarcebyname !== ""){
-      facultylist = activeFaculty.filter(el=>el.name.toLowerCase().includes(filtername.scarcebyname.toLowerCase()))
+      
     }
-    else {
-      facultylist = activeFaculty
+    if(filtername.scarcebyname){
+      facultylist = activeFaculty.filter(el=>el.name.toLowerCase().includes(filtername.scarcebyname.toLowerCase()))
     }
     
     const facultyClass = (name) =>{

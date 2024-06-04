@@ -143,7 +143,7 @@ const RutinMainPage = () => {
         {filterselect.reportType === "facultywise" && (
           <><Button details={data.facultyType} />
           <div class="w-3/4  m-auto flex flex-col mb-2">
-      <label class="font-semibold text-gray-600 py-2">Scarce By Name</label>
+      <label class="font-semibold text-gray-600 py-2">Search By Name</label>
 
         <input
           value={filterselect.scarcebyname}
