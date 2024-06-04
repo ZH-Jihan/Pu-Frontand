@@ -18,19 +18,22 @@ const RutinMainPage = () => {
     department: "",
     timeslot: "",
     teacher: "",
+    jobtype: "",
+    scarcebyname:"",
     room: "",
     semester: "",
     reportType: "all",
   });
 
-  
   const onChange = (e) => {
     const { name, value } = e.target;
 
     setFilterselect((prev) => ({ ...prev, [name]: value }));
   };
 
+  //*****.. Load All Filter btn ..*****//
   const data = useRoutineBtn({ onChange, filterselect });
+
   //*****.. Filter Data By Or Try Semestr Wise ..*****//
   const filterDataSemWise = () => {
     let data = [];
@@ -42,7 +45,6 @@ const RutinMainPage = () => {
     }
   };
   const semFilterData = filterDataSemWise().data;
-  console.log(semFilterData);
   //*****.. Set Or Find Date And Day Name ..*****//
   // const date = moment(filterselect.date, "YYYY/MM/DD").format("DD/MM/YYYY");
   // const day = moment(date, "DD/MM/YYYY").format("dddd");
@@ -62,7 +64,6 @@ const RutinMainPage = () => {
           newArray.push({ name: item.TimeSlot });
         }
       });
-      console.log(newArray);
 
       return newArray;
     } else {
@@ -70,12 +71,17 @@ const RutinMainPage = () => {
     }
   };
   const daySlot = dayWiseSlotFind(semFilterData);
-  console.log(daySlot);
-  //*****.. Load All Filter btn ..*****//
-  if (filterselect.reportType === "all" || filterselect.reportType === "online" || filterselect.reportType === "offline" || filterselect.reportType === "facultywise") {
-    filterselect.day = ""
-    filterselect.department = ""
-    filterselect.timeslot = ""
+
+
+  if (
+    filterselect.reportType === "all" ||
+    filterselect.reportType === "online" ||
+    filterselect.reportType === "offline" ||
+    filterselect.reportType === "facultywise"
+  ) {
+    filterselect.day = "";
+    filterselect.department = "";
+    filterselect.timeslot = "";
   }
   //*****.. Data Filtar Funtion ..*****/
   const filter = (data = []) => {
@@ -134,17 +140,30 @@ const RutinMainPage = () => {
       <div className="mt-4 mb-4 lg:w-full m-auto grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 justify-items-center">
         {<Button details={data.semesterBtn} />}
         {filterselect.semester && <Button details={data.reportTypeBtn} />}
+        {filterselect.reportType === "facultywise" && (
+          <><Button details={data.facultyType} />
+          <div class="w-3/4  m-auto flex flex-col mb-2">
+      <label class="font-semibold text-gray-600 py-2">Scarce By Name</label>
+
+        <input
+          value={filterselect.scarcebyname}
+          onChange={onChange}
+          autocomplete="None"
+          placeholder="Input Name"
+          class="appearance-none text-base block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
+          name= "scarcebyname"
+        />
+    </div></>
+        )}
         {filterselect.semester &&
           filterselect.reportType !== "offline" &&
           filterselect.reportType !== "online" &&
-          filterselect.reportType !== "facultywise"&&
-          filterselect.reportType !== "all" && (
-            <Button details={data.dayBtn} />
-          )}
+          filterselect.reportType !== "facultywise" &&
+          filterselect.reportType !== "all" && <Button details={data.dayBtn} />}
         {filterselect.semester &&
           filterselect.reportType !== "offline" &&
           filterselect.reportType !== "online" &&
-          filterselect.reportType !== "facultywise"&&
+          filterselect.reportType !== "facultywise" &&
           filterselect.reportType !== "all" &&
           filterselect.day !== "" && (
             <>
@@ -166,7 +185,7 @@ const RutinMainPage = () => {
           atAGlance={filterDataSemWise()}
           classroom={classRooms}
           columns={tableHead}
-          name={filterselect.reportType}
+          filtername={filterselect}
           date={filterselect.day}
           setFilterSel={setFilterselect}
         />

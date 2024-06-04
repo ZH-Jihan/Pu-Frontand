@@ -6,7 +6,7 @@ import "../../../Utilits/Table/tabel.css";
 const RutineTable = ({
   data = null,
   data2 = null,
-  name = null,
+  filtername = null,
   classroom = null,
   columns = null,
   hover = true,
@@ -80,15 +80,25 @@ const RutineTable = ({
 
   //*****.. Faculty Wise Class Report ..*****//
   const facultyWiseClassCount = () => {
+    console.log(filtername.scarcebyname);
     const activeFaculty = facultyDatas.filter((el) => el.status === "Active");
+    let facultylist;
+    if (filtername.jobtype) {
+      facultylist = activeFaculty.filter(el=>el.jobtype === filtername.jobtype)
+    }else if(filtername.scarcebyname !== ""){
+      facultylist = activeFaculty.filter(el=>el.name.toLowerCase().includes(filtername.scarcebyname.toLowerCase()))
+    }
+    else {
+      facultylist = activeFaculty
+    }
+    
     const facultyClass = (name) =>{
       const totalClass = data.filter(el=> el.FacultyInitial === name)
       return totalClass.length;
     }
-    console.log(activeFaculty);
     return (
       <>
-        {activeFaculty.map((faculty) => (
+        {facultylist.map((faculty) => (
           <tr className={` ${hover && "hover"} ${striped && "striped"}`}>
             <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
               {faculty.name}
@@ -543,7 +553,7 @@ const RutineTable = ({
     <div class="flex flex-col w-full">
       <div class="overflow-x-auto sm:mx-0.5 lg:mx-0.5">
         <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
-          {name === "roomWise" && date !== "" && (
+          {filtername.reportType === "roomWise" && date !== "" && (
             <div>
               <h1 className="text-center text-lg mb-2">
                 {" "}
@@ -551,7 +561,7 @@ const RutineTable = ({
               </h1>
             </div>
           )}
-          {name === "slotWise" && date !== "" && (
+          {filtername.reportType === "slotWise" && date !== "" && (
             <div>
               <h1 className="text-center text-lg mb-2">
                 {" "}
@@ -561,12 +571,12 @@ const RutineTable = ({
           )}
           <div class="overflow-hidden">
             <table class="w-full m-auto">
-              {name === "main" && date !== "" && (
+              {filtername.reportType === "main" && date !== "" && (
                 <>
                   <TableHead data={columns}></TableHead>
                 </>
               )}
-              {name === "slotWise" && date !== "" && (
+              {filtername.reportType === "slotWise" && date !== "" && (
                 <TableHead
                   data={[
                     { field: "", header: "Selected Day" },
@@ -575,7 +585,7 @@ const RutineTable = ({
                   ]}
                 ></TableHead>
               )}
-              {name === "roomWise" && date !== "" && (
+              {filtername.reportType === "roomWise" && date !== "" && (
                 <TableHead
                   data={[
                     { field: "", header: "Selected Day" },
@@ -585,28 +595,28 @@ const RutineTable = ({
                   ]}
                 ></TableHead>
               )}
-              {name === "offline" && (
+              {filtername.reportType === "offline" && (
                 <TableHead data={offlineatAGlanceTblData}></TableHead>
               )}
-              {name === "online" && (
+              {filtername.reportType === "online" && (
                 <TableHead data={onlineatAGlanceTblData}></TableHead>
               )}
-              {name === "all" && (
+              {filtername.reportType === "all" && (
                 <TableHead data={weeklyAllAtAGlanceTblData}></TableHead>
               )}
-              {name === "facultywise" && (
+              {filtername.reportType === "facultywise" && (
                 <TableHead data={facultyWiseClassTblHead}></TableHead>
               )}
               {/* <TableBody columns={columns} data={data}/> */}
               <tbody>
-                {name === "main" && date !== "" && mainReport()}
-                {name === "slotWise" && date !== "" && slotWiseClass()}
-                {name === "facultywise" &&
+                {filtername.reportType === "main" && date !== "" && mainReport()}
+                {filtername.reportType === "slotWise" && date !== "" && slotWiseClass()}
+                {filtername.reportType === "facultywise" &&
                   facultyWiseClassCount()}
-                {name === "roomWise" && date !== "" && roomWiseClass()}
-                {name === "offline" && weeklyOfflineAtAGlance()}
-                {name === "online" && onlineAtAGlance()}
-                {name === "all" && weeklyAllAtAGlance()}
+                {filtername.reportType === "roomWise" && date !== "" && roomWiseClass()}
+                {filtername.reportType === "offline" && weeklyOfflineAtAGlance()}
+                {filtername.reportType === "online" && onlineAtAGlance()}
+                {filtername.reportType === "all" && weeklyAllAtAGlance()}
               </tbody>
             </table>
           </div>

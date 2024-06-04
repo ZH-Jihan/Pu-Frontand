@@ -46,6 +46,17 @@ const useRoutineBtn = ({onChange,filterselect}) => {
           { value: "", name: "--All Slot--" },
         ],
       };
+      const facultyType = {
+        btnHade: "Job Type",
+        btnvalue: filterselect.jobtype,
+        function: { onChange },
+        btnName: "jobtype",
+        option: [
+          { value: "", name: "--All--" },
+          { value: "Full Time", name: "Full Time" },
+          { value: "Part Time", name: "Part Time" },
+        ],
+      };
 
       const reportTypeBtn = {
         btnHade: "Type Of Report",
@@ -81,7 +92,7 @@ const useRoutineBtn = ({onChange,filterselect}) => {
         ],
       };
     
-    return {classRoomBtn,departmentBtn,semesterBtn,timeSlotBtn,filterselect,dayBtn,reportTypeBtn};
+    return {classRoomBtn,departmentBtn,semesterBtn,timeSlotBtn,filterselect,dayBtn,reportTypeBtn,facultyType};
 };
 
 export default useRoutineBtn;
