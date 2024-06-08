@@ -10,7 +10,9 @@ const RutinMainPage = () => {
   // const { data: rutinDatas } = useLocalDataFatch("PU-App.department.json");
   const rutinDatas = rutinData;
   const { data: classRoom } = useFatchData("/classroom");
+  const { data: facultyDatas } = useFatchData("/faculty");
   const classRooms = classRoom.data;
+  // const facultyDepartment =  
 
   //*****.. Set Or Find Selected Item Name And Valu ..*****//
   const [filterselect, setFilterselect] = useState({

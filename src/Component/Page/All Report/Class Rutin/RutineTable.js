@@ -161,7 +161,9 @@ const RutineTable = ({
       if (times) {
         datas = data.filter((el) => el.TimeSlot === times);
       }
-      return datas;
+      const incumpas = datas.filter(el=>el.Room !== "Online")
+      const online = datas.filter(el=>el.Room === "Online")
+      return {datas, online, incumpas};
     };
     return (
       <>
@@ -174,8 +176,17 @@ const RutineTable = ({
               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                 {tdata.name}
               </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                {filters(tdata.name).incumpas.length}
+              </td>
+              <td  class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                {classroom.length - filters(tdata.name).incumpas.length}
+              </td>
+              <td style={filters(tdata.name).online.length !== 0 ?({color:"red"}):({color:"green"})} class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                {filters(tdata.name).online.length}
+              </td>
               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-900">
-                {filters(tdata.name).length}
+                {filters(tdata.name).datas.length}
               </td>
             </tr>
           ))}
@@ -185,11 +196,11 @@ const RutineTable = ({
 
   //*****.. This Funtion Show Class Room Wise Daily Class Count ..*****//
   const roomWiseClass = () => {
-    const customStyle = (value) => {
-      if (value <= 0) {
-        return { backgroundColor: "rgb(255 163 107 / 47%)" };
-      }
-    };
+    // const customStyle = (value) => {
+    //   if (value <= 0) {
+    //     return { backgroundColor: "rgb(255 163 107 / 47%)" };
+    //   }
+    // };
 
     const filters = (times) => {
       let datas;
@@ -203,7 +214,7 @@ const RutineTable = ({
         {classroom &&
           classroom.map((room) => (
             <tr
-              style={customStyle(filters(room.roomnum).length)}
+              // style={customStyle(filters(room.roomnum).length)}
               className={` ${hover && "hover"} ${striped && "striped"}`}
             >
               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
@@ -215,7 +226,7 @@ const RutineTable = ({
               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                 {room.roominitial}
               </td>
-              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-900">
+              <td style={filters(room.roomnum).length !== 0 ?({color:"blue"}):({color:"red"})} class="px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-900">
                 {filters(room.roomnum).length}
               </td>
             </tr>
@@ -580,6 +591,9 @@ const RutineTable = ({
                   data={[
                     { field: "", header: "Selected Day" },
                     { field: "", header: "Time Slot" },
+                    { field: "", header: "In Campus" },
+                    { field: "", header: "Empty Room" },
+                    { field: "", header: "Online Class" },
                     { field: "", header: "Total Class" },
                   ]}
                 ></TableHead>

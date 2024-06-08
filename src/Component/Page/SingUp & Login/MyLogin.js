@@ -2,7 +2,7 @@ import axios from "axios";
 import Cookies from "js-cookie";
 import React from "react";
 import toast from "react-hot-toast";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 const url = "https://pu-server-1.onrender.com/api/v1/user/login";
 
 const MyLogin = () => {
@@ -124,10 +124,10 @@ const MyLogin = () => {
               </div>
             </form>
             <span class="ml-2">
-              You don't have an account?
-              <Link to="#" class="text-base ml-2 text-blue-500 font-medium">
-                Please Contact Admin( Kamal Sir )
-              </Link>
+              You don't have an account? Please Contact 
+              <h1 to="#" class="text-base ml-2 ">
+                 Kamal Ahmed - Consultant<br/> <span className="text-blue-400">consultant_kamal@pu.edu.bd</span> <br/>01986868585
+              </h1>
             </span>
           </div>
         </div>
