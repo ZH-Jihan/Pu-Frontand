@@ -256,7 +256,7 @@ const RutineTable = ({
         if (day === "Total") {
           datas = data;
         } else {
-          datas = data.filter((el) => el.Day === day);
+          datas = data.filter((el) => el.Day === day );
         }
       }
 
@@ -331,9 +331,8 @@ const RutineTable = ({
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                 {Math.round(
-                  (classFilterWDay(day).datas.length /
-                    (classroom.length * slot(day.length, day))) *
-                    100
+                  (classFilterWDay(day, "offline").datas.length /
+                    (classroom.length * slot(day.length, day))) * 100
                 )}{" "}
                 %
               </td>
