@@ -285,13 +285,13 @@ const RutineTable = ({
       return { datas, civil, Eng, ece, bus, cse, eee };
     };
     const slot = (value, day) => {
-      const rutindata = data.filter((el) => el.Day === day);
+      const rutindata = data.filter((el) => el.Day === day && el.Room !== "Online" );
 
       const dayWiseSlot = Array.from(
         new Set(rutindata.map((item) => item.TimeSlot))
       );
       if (day === "Total") {
-        let sum = 73;
+        let sum = 56;
         // Iterate over each object and add its capacity to the sum
         // for (let i = 0; i < atAGlance.timeSlot.length; i++) {
         //   sum += Number(atAGlance.timeSlot[i].value.length);
@@ -391,13 +391,13 @@ const RutineTable = ({
       return { datas, civil, Eng, ece, bus, cse, eee };
     };
     const slot = (value, day) => {
-      const rutindata = data.filter((el) => el.Day === day);
+      const rutindata = data.filter((el) => el.Day === day && el.Room === "Online");
 
       const dayWiseSlot = Array.from(
         new Set(rutindata.map((item) => item.TimeSlot))
       );
       if (day === "Total") {
-        let sum = 73;
+        let sum = 17;
         // Iterate over each object and add its capacity to the sum
         // for (let i = 0; i < atAGlance.timeSlot.length; i++) {
         //   sum += Number(atAGlance.timeSlot[i].value.length);
