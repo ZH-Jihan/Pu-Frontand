@@ -515,40 +515,40 @@ const RutineTable = ({
               <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                 {classFilterWDay(day).datas.length}
               </td>
-              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-rose-600">
+              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-600">
                 {classFilterWDay(day, "offline").datas.length}
               </td>
-              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-600">
+              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-rose-600">
                 {classFilterWDay(day, "online").datas.length}
               </td>
-              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-rose-600">
+              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-600">
                 {classFilterWDay(day, "offline").civil.length}
               </td>
-              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-600">
+              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-rose-600">
                 {classFilterWDay(day, "online").civil.length}
               </td>
-              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-rose-600">
+              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-600">
                 {classFilterWDay(day, "offline").cse.length}
               </td>
-              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-600">
+              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-rose-600">
                 {classFilterWDay(day, "online").cse.length}
               </td>
-              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-rose-600">
+              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-600">
                 {classFilterWDay(day, "offline").eee.length}
               </td>
-              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-600">
+              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-rose-600">
                 {classFilterWDay(day, "online").eee.length}
               </td>
-              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-rose-600">
+              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-600">
                 {classFilterWDay(day, "offline").bus.length}
               </td>
-              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-600">
+              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-rose-600">
                 {classFilterWDay(day, "online").bus.length}
               </td>
-              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-rose-600">
+              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-600">
                 {classFilterWDay(day, "offline").Eng.length}
               </td>
-              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-600">
+              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-rose-600">
                 {classFilterWDay(day, "online").Eng.length}
               </td>
             </tr>
