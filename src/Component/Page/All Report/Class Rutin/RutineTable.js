@@ -291,7 +291,12 @@ const RutineTable = ({
         new Set(rutindata.map((item) => item.TimeSlot))
       );
       if (day === "Total") {
-        let sum = 56;
+        let sum 
+        if (filtername.semester === "Spring-24") {
+          sum = 56
+        } else {
+          sum = 62
+        }
         // Iterate over each object and add its capacity to the sum
         // for (let i = 0; i < atAGlance.timeSlot.length; i++) {
         //   sum += Number(atAGlance.timeSlot[i].value.length);
@@ -396,7 +401,13 @@ const RutineTable = ({
         new Set(rutindata.map((item) => item.TimeSlot))
       );
       if (day === "Total") {
-        let sum = 17;
+        let sum 
+        if (filtername.semester === "Spring-24") {
+          sum = 17
+        } else {
+          sum = 13
+        }
+        
         // Iterate over each object and add its capacity to the sum
         // for (let i = 0; i < atAGlance.timeSlot.length; i++) {
         //   sum += Number(atAGlance.timeSlot[i].value.length);
@@ -495,7 +506,12 @@ const RutineTable = ({
         new Set(rutindata.map((item) => item.TimeSlot))
       );
       if (day === "Total") {
-        const sum = 73;
+        let sum 
+        if (filtername.semester === "Spring-24") {
+          sum = 73
+        } else {
+          sum = 66
+        }
 
         return sum;
       }

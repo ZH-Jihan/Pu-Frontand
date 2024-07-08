@@ -33,7 +33,9 @@ const useRoutineBtn = ({onChange,filterselect}) => {
         btnName: "semester",
         option: [
           { value: "", name: "--Select Semester--" },
+          { value: "Summer-24", name: "Summer-24" },
           { value: "Spring-24", name: "Spring-24" }
+          
         ],
       };
 
