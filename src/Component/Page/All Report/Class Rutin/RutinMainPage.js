@@ -46,7 +46,23 @@ const RutinMainPage = () => {
       return data;
     }
   };
-  const semFilterData = filterDataSemWise().data;
+  const dayOrder = {
+    'Saturday': 0,
+    'Sunday': 1,
+    'Monday': 2,
+    'Tuesday': 3,
+    'Wednesday': 4,
+    'Thursday': 5,
+    'Friday': 6
+    
+};
+function sortByDay(a, b) {
+  return dayOrder[a.Day] - dayOrder[b.Day];
+}
+  const semFilterData = filterDataSemWise().data?.sort(sortByDay)
+  
+
+  console.log(semFilterData);
   //*****.. Set Or Find Date And Day Name ..*****//
   // const date = moment(filterselect.date, "YYYY/MM/DD").format("DD/MM/YYYY");
   // const day = moment(date, "DD/MM/YYYY").format("dddd");
