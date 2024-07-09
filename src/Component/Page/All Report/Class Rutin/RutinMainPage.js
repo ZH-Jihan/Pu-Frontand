@@ -12,7 +12,7 @@ const RutinMainPage = () => {
   const { data: classRoom } = useFatchData("/classroom");
   const { data: facultyDatas } = useFatchData("/faculty");
   const classRooms = classRoom.data;
-  // const facultyDepartment =  
+  // const facultyDepartment =
 
   //*****.. Set Or Find Selected Item Name And Valu ..*****//
   const [filterselect, setFilterselect] = useState({
@@ -21,7 +21,7 @@ const RutinMainPage = () => {
     timeslot: "",
     teacher: "",
     jobtype: "",
-    scarcebyname:"",
+    scarcebyname: "",
     room: "",
     semester: "",
     reportType: "all",
@@ -46,23 +46,23 @@ const RutinMainPage = () => {
       return data;
     }
   };
+  // Order of the days of the week 
   const dayOrder = {
-    'Saturday': 0,
-    'Sunday': 1,
-    'Monday': 2,
-    'Tuesday': 3,
-    'Wednesday': 4,
-    'Thursday': 5,
-    'Friday': 6
-    
-};
-function sortByDay(a, b) {
-  return dayOrder[a.Day] - dayOrder[b.Day];
-}
-  const semFilterData = filterDataSemWise().data?.sort(sortByDay)
-  
+    Saturday: 0,
+    Sunday: 1,
+    Monday: 2,
+    Tuesday: 3,
+    Wednesday: 4,
+    Thursday: 5,
+    Friday: 6,
+  };
+  // Custom comparator function to sort by day names
+  function sortByDay(a, b) {
+    return dayOrder[a.Day] - dayOrder[b.Day];
+  }
+  // Sort the array
+  const semFilterData = filterDataSemWise().data?.sort(sortByDay);
 
-  console.log(semFilterData);
   //*****.. Set Or Find Date And Day Name ..*****//
   // const date = moment(filterselect.date, "YYYY/MM/DD").format("DD/MM/YYYY");
   // const day = moment(date, "DD/MM/YYYY").format("dddd");
@@ -90,12 +90,10 @@ function sortByDay(a, b) {
   };
   const daySlot = dayWiseSlotFind(semFilterData);
 
-
   if (
     filterselect.reportType === "all" ||
     filterselect.reportType === "online" ||
-    filterselect.reportType === "offline" ||
-    filterselect.reportType === "facultywise"
+    filterselect.reportType === "offline" 
   ) {
     filterselect.day = "";
     filterselect.department = "";
@@ -159,19 +157,24 @@ function sortByDay(a, b) {
         {<Button details={data.semesterBtn} />}
         {filterselect.semester && <Button details={data.reportTypeBtn} />}
         {filterselect.reportType === "facultywise" && (
-          <><Button details={data.facultyType} />
-          <div class="w-3/4  m-auto flex flex-col mb-2">
-      <label class="font-semibold text-gray-600 py-2">Search By Name</label>
+          <>
+            <Button details={data.facultyType} />
+            <Button details={data.departmentBtn} />
+            <div class="w-3/4  m-auto flex flex-col mb-2">
+              <label class="font-semibold text-gray-600 py-2">
+                Search By Name
+              </label>
 
-        <input
-          value={filterselect.scarcebyname}
-          onChange={onChange}
-          autocomplete="None"
-          placeholder="Input Name"
-          class="appearance-none text-base block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
-          name= "scarcebyname"
-        />
-    </div></>
+              <input
+                value={filterselect.scarcebyname}
+                onChange={onChange}
+                autocomplete="None"
+                placeholder="Input Name"
+                class="appearance-none text-base block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
+                name="scarcebyname"
+              />
+            </div>
+          </>
         )}
         {filterselect.semester &&
           filterselect.reportType !== "offline" &&
@@ -190,6 +193,20 @@ function sortByDay(a, b) {
                 <>
                   <Button details={data.classRoomBtn} other={classRooms} />
                   <Button details={data.timeSlotBtn} other={daySlot} />
+                  <div class="w-3/4  m-auto flex flex-col mb-2">
+              <label class="font-semibold text-gray-600 py-2">
+                Search By Name
+              </label>
+
+              <input
+                value={filterselect.scarcebyname}
+                onChange={onChange}
+                autocomplete="None"
+                placeholder="Input Name"
+                class="appearance-none text-base block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
+                name="scarcebyname"
+              />
+            </div>
                 </>
               )}
               {/* <button class="w-3/4  m-auto flex flex-col mb-2">Retun To Weekly</button> */}

@@ -67,7 +67,7 @@ const useRoutineBtn = ({onChange,filterselect}) => {
         btnName: "reportType",
         option: [
           { value: "all", name: "Weekly All Class Report" },
-          { value: "offline", name: "Weekly Ofline Class Report" },
+          { value: "offline", name: "Weekly Offline Class Report" },
           { value: "online", name: "Weekly Online Class Report" },
           { value: "main", name: "Main Routine" },
           { value: "facultywise", name: "Faculty Wise Class" },

@@ -80,12 +80,28 @@ const RutineTable = ({
 
   //*****.. Faculty Wise Class Report ..*****//
   const facultyWiseClassCount = () => {
-    console.log(filtername.scarcebyname);
+    
     const activeFaculty = facultyDatas.filter((el) => el.status === "Active");
     let facultylist = activeFaculty;
+   
     if (filtername.jobtype) {
       facultylist = activeFaculty.filter(el=>el.jobtype === filtername.jobtype)
       
+    }
+    if (filtername.department === "CE") {
+      facultylist = activeFaculty.filter(el=>el.dipartment === "DEPARTMENT OF CIVIL ENGINEERING") 
+    }
+    if (filtername.department === "CSE") {
+      facultylist = activeFaculty.filter(el=>el.dipartment === "DEPARTMENT OF CSE") 
+    }
+    if (filtername.department === "EEE") {
+      facultylist = activeFaculty.filter(el=>el.dipartment === "DEPARTMENT OF EEE") 
+    }
+    if (filtername.department === "ENG") {
+      facultylist = activeFaculty.filter(el=>el.dipartment === "DEPARTMENT OF ENGLISH") 
+    }
+    if (filtername.department === "BUS") {
+      facultylist = activeFaculty.filter(el=>el.dipartment === "DEPARTMENT OF BUSINESS") 
     }
     if(filtername.scarcebyname){
       facultylist = activeFaculty.filter(el=>el.name.toLowerCase().includes(filtername.scarcebyname.toLowerCase()))
@@ -119,10 +135,17 @@ const RutineTable = ({
 
   //*****.. Main Report Table Body ..*****//
   const mainReport = () => {
+    const findbyfaculty = (datas = []) => {
+      let data = datas;
+      if(filtername.scarcebyname){
+        data = data.filter(el=>el.FacultyName.toLowerCase().includes(filtername.scarcebyname.toLowerCase()))
+      }
+      return data;
+    }
     return (
       <>
         {data &&
-          data.map((tdata) => (
+          findbyfaculty(data).map((tdata) => (
             <tr className={` ${hover && "hover"} ${striped && "striped"}`}>
               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                 {tdata.Room}
