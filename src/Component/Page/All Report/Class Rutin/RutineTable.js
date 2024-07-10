@@ -22,6 +22,7 @@ const RutineTable = ({
   //***** At A Glance Table Data Condition Wise *****//
   const offlineatAGlanceTblData = [
     { field: "", header: "Day" },
+    { field: "", header: "Approved Slot" },
     { field: "", header: "Number Of Slot" },
     { field: "", header: "Total Class" },
     { field: "", header: "Civil" },
@@ -337,6 +338,9 @@ const RutineTable = ({
                 <button onClick={() => onClick(day)}>{day}</button>
               </td>
               <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                {day === "Total" ? 56 : 8}
+              </td>
+              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                 {slot(day.length, day)}
               </td>
               <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
@@ -360,7 +364,7 @@ const RutineTable = ({
               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                 {Math.round(
                   (classFilterWDay(day, "offline").datas.length /
-                    (classroom.length * slot(day.length, day))) * 100
+                    (classroom.length * (day === "Total" ? 56 : 8))) * 100
                 )}{" "}
                 %
               </td>
