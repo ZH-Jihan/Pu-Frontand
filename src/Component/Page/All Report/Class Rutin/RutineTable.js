@@ -318,7 +318,7 @@ const RutineTable = ({
         if (filtername.semester === "Spring-24") {
           sum = 56
         } else {
-          sum = 62
+          sum = 52
         }
         // Iterate over each object and add its capacity to the sum
         // for (let i = 0; i < atAGlance.timeSlot.length; i++) {
@@ -533,7 +533,7 @@ const RutineTable = ({
         if (filtername.semester === "Spring-24") {
           sum = 73
         } else {
-          sum = 66
+          sum = 57
         }
 
         return sum;
