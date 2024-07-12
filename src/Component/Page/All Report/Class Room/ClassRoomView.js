@@ -25,7 +25,7 @@ const ClassRoomView = () => {
   ];
   const hendelRoomDelete = async (id) => {
         const response = await DeleteCustomAxios(`/classroom/${id}`)
-        console.log(response);
+      
         window.location.reload();
   }
     return (

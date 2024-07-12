@@ -45,7 +45,7 @@ const EditFaculty = () => {
       //   toast.error("Please Select Option")
       // } else {
       const respons = await PutCustomAxios(`/faculty/${id}`,update)
-      console.log(respons);
+     
 
 if (respons) {
   setUpdate({})
@@ -71,7 +71,7 @@ if (respons) {
 
       // }
     };
-    console.log(update);
+   
     if (loading === true && !facultys.length) {
       <Loading/>
     } else {

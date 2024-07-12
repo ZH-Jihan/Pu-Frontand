@@ -59,7 +59,7 @@ const RoomWiseFaculty = () => {
     { field: "pnumber", header: "Phone Number" },
   ];
   const slot = (value, day) => {
-    console.log(value);
+    
     if (day === "Total") {
       let sum = 0;
       // Iterate over each object and add its capacity to the sum

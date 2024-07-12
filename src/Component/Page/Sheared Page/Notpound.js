@@ -4,7 +4,7 @@ import { useLocation, useNavigate } from 'react-router';
 const Notpound = () => {
     const location = useLocation();
     const navigate = useNavigate();
-    console.log(location);
+   
     let from = location.state?.from?.pathname || "/";
     return (
 <div class="h-screen w-screen bg-gray-50 flex items-center">

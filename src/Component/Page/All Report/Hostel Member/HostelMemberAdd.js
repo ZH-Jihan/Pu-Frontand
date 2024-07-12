@@ -65,7 +65,7 @@ const HostelMemberAdd = () => {
       const result = await CustomAxiosPost("/hostelmember", studentInfo);
 
       // Handle the result (e.g., show a success message)
-      console.log("Post successful:", result);
+      
       if (result.status === "Success") {
         toast.success("Successfully Add Member");
         setId("");

@@ -39,7 +39,7 @@ const ViewTeam = () => {
   }else {
     data = allTeam;
   }
-console.log(nameFilter);
+
   
   if (nameWiseTable === true) {
     return (

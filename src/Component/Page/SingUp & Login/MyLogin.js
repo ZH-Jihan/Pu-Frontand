@@ -36,7 +36,7 @@ const MyLogin = () => {
       //clear state and controlled inputs
       event.target.reset();
     } catch (err) {
-      console.log(err);
+     
       if (!err?.response) {
         toast.error("No Server Response");
       } else if (err.response?.status === 409) {

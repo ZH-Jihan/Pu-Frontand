@@ -12,7 +12,7 @@ const MySingUp = () => {
   });
   const viewReport = menuList[0]?.value;
   const addData = menuList[1]?.value;
-  console.log(viewReport);
+ 
   let menulist;
 
   if (viewReport && addData) {
@@ -71,7 +71,7 @@ const MySingUp = () => {
     };
 
     const respons = await CustomAxiosPost("/user/singup", newUser);
-    console.log(respons);
+
     if (respons?.status === "Success") {
       setSelectAll(false);
       setSelectedItems([]);

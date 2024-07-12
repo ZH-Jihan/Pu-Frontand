@@ -6,6 +6,8 @@ import { getUserRole } from '../../Security/myAuth';
 const HostelMember = () => {
     
     const { data: hostelmember,error } = useFatchData("/hostelmember");
+    const activeMember = hostelmember.filter(member => member.isDeleted === false);
+   
     const [selectedName, setSelectedName] = useState('');
 const user = getUserRole()
     
@@ -23,7 +25,7 @@ const user = getUserRole()
 
       //**** Set Department Name To Show Select Button *****//
 
-      const uniqueNames = Array.from(new Set(hostelmember.map(item => item.department)));
+      const uniqueNames = Array.from(new Set(activeMember.map(item => item.department)));
 
     
 
@@ -33,9 +35,9 @@ const user = getUserRole()
 
     let data;
     if (selectedName) {
-        data = hostelmember.filter((el)=> el.department === selectedName)
+        data = activeMember.filter((el)=> el.department === selectedName)
     } else {
-        data = hostelmember
+        data = activeMember
     }
 
       if (error) {
@@ -47,14 +49,14 @@ const user = getUserRole()
       const counteMemberDepWise = (name) =>{
         let data;
         if (name) {
-            data = hostelmember.filter((el)=> el.department === name)
+            data = activeMember.filter((el)=> el.department === name)
         }
         return data?.length
       }
     return (
         <div>
             <h1 className='text-2xl pb-4 text-center font-bold'>Women Hostel Member</h1>
-            <h1 className='text-lg pb-2 text-center font-bold'>Total : {hostelmember?.length}</h1>
+            <h1 className='text-lg pb-2 text-center font-bold'>Total : {activeMember?.length}</h1>
             <h2 className='lg:w-1/4 m-auto text-center font-bold grid grid-cols-4'>
                 {
                 uniqueNames.map((name)=>(
@@ -75,7 +77,9 @@ const user = getUserRole()
             data={data} 
             details={true}
             edit={true}
+            deleted={true}
             editpathname={"edithostelmember"}
+            deletePath={"hostelmember"}
             detailPath={"datailshosMember"}
             />
         </div>

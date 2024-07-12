@@ -18,13 +18,13 @@ const AddProgramData = () => {
             const result = await CustomAxiosPost("/stdnaffprogram", data);
     
           // Handle the result (e.g., show a success message)
-          console.log("Post successful:", result);
+        
           if (result.status === "Success") {
             toast.success("Successfully Add Member");
             e.target.reset();
           }
         } catch (error) {
-            console.log(error);
+            
         }
     }
     return (

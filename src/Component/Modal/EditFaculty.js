@@ -3,7 +3,7 @@ import useDepartment from "../../Hooks/useDepartment";
 import useUniversity from "../../Hooks/useUniversity";
 
 const EditFaculty = (editFuclty, setEditfaculty) => {
-  console.log(editFuclty);
+  
   const {id,name,initialname,designation,dipartment,university,pnumber,doj,dob,description,jobtype}=editFuclty.editFuclty; ;
   const [departments] = useDepartment();
   const [universitys] = useUniversity();
@@ -24,7 +24,7 @@ const EditFaculty = (editFuclty, setEditfaculty) => {
       dob: event.target.dob?.value,
       description: event.target.description?.value,
     };
-    console.log(facultyinfo);
+    
   }
   
   return (

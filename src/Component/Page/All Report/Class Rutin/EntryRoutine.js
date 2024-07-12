@@ -55,7 +55,7 @@ e.preventDefault();
         name:selectSemester.semester,
         data: jsonData
     };
-    console.log(rutinData);
+   
   };
 
   return (

@@ -205,7 +205,7 @@ const EntryAbsentReport = () => {
   const changeRegon =(e)=>{
     const value= e.target.value;
     setPresent(value);
-    console.log(value);
+    
   }
   
   // const ftype =(name)=>{
@@ -242,7 +242,7 @@ const EntryAbsentReport = () => {
               toast.success("Add faculty apsent");
             })
   };
-  console.log(present);
+ 
   // const checkClass = (initialName) =>{
   //   if (condition) {
 

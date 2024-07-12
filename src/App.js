@@ -5,6 +5,7 @@ import AllDepartment from "./Component/Page/All Report/AllDepartment";
 import AddClassRoom from "./Component/Page/All Report/Class Room/AddClassRoom";
 import ClassRoomView from "./Component/Page/All Report/Class Room/ClassRoomView";
 import EditClassRoom from "./Component/Page/All Report/Class Room/EditClassRoom";
+import AddRutine from "./Component/Page/All Report/Class Rutin/AddRutine";
 import EntryRoutine from "./Component/Page/All Report/Class Rutin/EntryRoutine";
 import RutinMainPage from "./Component/Page/All Report/Class Rutin/RutinMainPage";
 import EditHostelMember from "./Component/Page/All Report/Edit & Delete Info/Edit Info/EditHostelMember";
@@ -139,6 +140,7 @@ function App() {
 
 
             <Route path="/womenhostel" element={<HostelMember />}></Route>
+            <Route path="/addrutin" element={<AddRutine />}></Route>
             <Route path="/addwomenhostel" element={<HostelMemberAdd />}></Route>
             <Route
               path="/edithostelmember/:id"

@@ -66,15 +66,6 @@ const RutineTable = ({
     { field: "", header: "Eng- Online" },
   ];
 
-  //*** This funtion Convart Faculty initial Name to Full Name ***/
-  const findFaculty = (name) => {
-    let fullName;
-    if (name) {
-      fullName = facultyDatas.filter((el) => el.initialname === name);
-    }
-    return (fullName = fullName.map((data) => data.name));
-  };
-
   const onClick = (day) => {
     setFilterSel((prev) => ({ ...prev, reportType: "main", day: day }));
   };
@@ -155,7 +146,7 @@ const RutineTable = ({
                 {tdata.CourseCode}
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                {findFaculty(tdata.FacultyInitial)[0]}
+                {tdata.FacultyName}
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                 {tdata.TimeSlot}

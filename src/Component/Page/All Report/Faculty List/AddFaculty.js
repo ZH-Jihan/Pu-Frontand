@@ -23,7 +23,7 @@ const Addproduct = () => {
       status: event.target.status?.value,
       description: event.target.description?.value,
     };
-    console.log(facultyinfo);
+    
     // if (facultyinfo.dipartment || facultyinfo.designation || facultyinfo.university === "--Select Department--") {
     //   toast.error("Please Select Option")
     // } else {

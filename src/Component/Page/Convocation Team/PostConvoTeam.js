@@ -35,7 +35,6 @@ const PostConvoTeam = () => {
   const uniqueNames = Array.from(
     new Set(allMember.map((item) => item.Dept || item.dipartment))
   );
-  console.log(uniqueNames);
   const handleSelectChange = (event) => {
     setSelectedName(event.target.value);
   };

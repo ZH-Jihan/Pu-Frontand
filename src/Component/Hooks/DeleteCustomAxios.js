@@ -10,7 +10,7 @@ const testUrl = `http://localhost:5000/api/v1`
     
 const DeleteCustomAxios = async (url, data) => {
     
-console.log(token);
+
     try {
         const response = await axios.delete(`${mainUrl}${url}`,{headers});
         return response.data;

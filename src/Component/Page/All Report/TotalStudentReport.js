@@ -193,7 +193,7 @@ const TotalStudentReport = () => {
           }
         }
       }
-      console.log(matchedObjects);
+      
       return { fRegStudent, fAddmiStudent, matchedObjects };
     };
     return (
@@ -313,7 +313,7 @@ const TotalStudentReport = () => {
       const weekend = arr.filter((el) => el.programType === "Weekend");
       return { arr, day, evening, weekend ,fall,spring,summer};
     };
-    console.log(findyear("2021"));
+    
     return (
       <table class="lg:w-1/4 m-auto">
         <TableHead data={[
@@ -413,7 +413,7 @@ const TotalStudentReport = () => {
       return data;
       
     };
-    console.log(studentsinfo);
+    
     const findyear = (parms) => {
       let data;
       if (parms) {

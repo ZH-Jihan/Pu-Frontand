@@ -238,7 +238,7 @@ const RoutinDetail = () => {
         );
       }
       const calculatePersent = (slot, value, daydata) => {
-        console.log(daydata);
+      
         if (value === "0") {
           return Math.round((daydata / (classroom.length * slot)) * 100);
         }

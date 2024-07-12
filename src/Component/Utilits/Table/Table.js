@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import DeleteCustomAxios from "../../Hooks/DeleteCustomAxios";
 import { getUserRole } from "../../Page/Security/myAuth";
 import "./tabel.css";
 
@@ -19,6 +20,7 @@ const Table = ({
 }) => {
   const navigate = useNavigate();
   const users = getUserRole();
+  
   let role = false;
   if (users.role !== "user") {
     role = true;
@@ -27,6 +29,7 @@ const Table = ({
     if (head) return head.toUpperCase();
     return field.toUpperCase();
   };
+
   return (
     <div class="flex flex-col w-full">
       <div class="overflow-x-auto sm:mx-0.5 lg:mx-0.5">
@@ -118,7 +121,7 @@ const Table = ({
                           <button
                             className="rounded-2xl border-2 border-red-400 px-4 py-1"
                             onClick={() =>
-                              deletePath(row._id)
+                              DeleteCustomAxios(`/${deletePath}/${row._id}`)
                             }
                           >
                             Delete

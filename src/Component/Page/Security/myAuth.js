@@ -11,19 +11,19 @@ import Cookies from "js-cookie";
     
           if (tokenData.expirationTime && new Date().getTime() < tokenData.expirationTime) {
             // Token is still valid
-            console.log('Token is still valid.');
+           
             return true;
           } else {
             // Token has expired or has no valid expiration time
             Cookies.remove("accessToken")
             localStorage.removeItem('authToken');
-            console.log('Token has expired or has no valid expiration time.');
+           
           }
         } catch (error) {
           // Handle decoding error, e.g., invalid token format
           console.error('Error decoding token:', error.message);
         }}
-        console.log('Token not found.');
+       
   return false;
 }
 
@@ -43,7 +43,7 @@ function  isAuthenticated() {
                 
               return decodedData;
             } catch (error) {
-                console.log(error);
+               
             }
         }
         return null;

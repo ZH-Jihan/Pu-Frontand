@@ -93,7 +93,7 @@ const ViewAbsentReport = () => {
       </table>
     );
   };
-  console.log(facultys);
+  
   return (
     <div>
       <p className="text-center font-bold text-3xl my-4">

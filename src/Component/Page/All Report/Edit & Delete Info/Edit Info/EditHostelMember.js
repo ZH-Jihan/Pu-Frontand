@@ -25,7 +25,7 @@ const EditHostelMember = () => {
   const updateMember = async (event) => {
     event.preventDefault();
     const respons = await PutCustomAxios(`/hostelmember/${id}`, update);
-console.log(respons);
+
     if (respons.status) {
       toast.success(respons.status);
       setUpdate({});

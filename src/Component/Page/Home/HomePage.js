@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const HomePage = () => {
   const { user, isAuthenticated, isLoading } = useAuth0();
-  console.log(user);
+  
   
   const reportPaths = [
     { name: "View Class Schedule", path: "/viewroutin" },

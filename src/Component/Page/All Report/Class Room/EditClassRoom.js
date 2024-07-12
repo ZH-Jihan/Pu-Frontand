@@ -19,7 +19,7 @@ const EditClassRoom = () => {
     const { name, value } = e.target;
     setUpdate((prev) => ({ ...prev, [name]: value }));
   };
-  console.log(update);
+ 
     const hendelRoom = async (e) => {
         e.preventDefault();
         
