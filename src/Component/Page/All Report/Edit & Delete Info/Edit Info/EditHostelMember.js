@@ -2,6 +2,7 @@ import moment from "moment";
 import React, { useState } from "react";
 import toast from "react-hot-toast";
 import { useNavigate, useParams } from "react-router-dom";
+import DeleteCustomAxios from "../../../../Hooks/DeleteCustomAxios";
 import PutCustomAxios from "../../../../Hooks/PutCustomAxios";
 import useFatchData from "../../../../Hooks/useFatchData";
 
@@ -28,6 +29,17 @@ const EditHostelMember = () => {
 
     if (respons.status) {
       toast.success(respons.status);
+      setUpdate({});
+      navigate("/womenhostel");
+    }
+  };
+  const deleteMember = async (event) => {
+    window.alert("Are You Sure?? Delete This Member")
+    console.log(event);
+    const respons =await DeleteCustomAxios(`/hostelmember/${event}`)
+    
+    if (respons.message) {
+      toast.success(respons.message);
       setUpdate({});
       navigate("/womenhostel");
     }
@@ -257,6 +269,13 @@ const EditHostelMember = () => {
                         onClick={() => navigate(-1)}
                       >
                         Back
+                      </button>
+                      <button
+                        type="button"
+                        class="mb-2 md:mb-0 bg-red-800 px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-orange-400"
+                        onClick={() => deleteMember(update._id) }
+                      >
+                        Delete
                       </button>
                       <button
                         type="submit"

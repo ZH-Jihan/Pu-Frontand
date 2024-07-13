@@ -98,6 +98,7 @@ const Table = ({
                           </button>
                         </td>
                       )}
+                      
                       {columns.map((col) => (
                         <td class="px-2 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                           {row[col.field]}
@@ -130,6 +131,7 @@ const Table = ({
                       )}
 
                       {other &&
+                      
                         other.map((col) => (
                           <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                             {col.field}
