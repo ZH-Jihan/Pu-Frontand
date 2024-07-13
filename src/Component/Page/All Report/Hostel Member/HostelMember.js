@@ -55,7 +55,6 @@ const HostelMember = () => {
     }
     return data?.length;
   };
-  console.log(activeMember[0].updatedAt);
   return (
     <div>
       <h1 className="text-2xl pb-4 text-center font-bold">
