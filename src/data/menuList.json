@@ -24,6 +24,11 @@
         "role": ["user", "editor", "admin"]
       },
       {
+        "name": "Alumni Network",
+        "navigate": "/viewalumni",
+        "role": ["user", "editor", "admin"]
+      },
+      {
         "name": "Convocation Team",
         "navigate": "/viewteam",
         "role": ["user", "editor", "admin"]
@@ -82,6 +87,11 @@
       {
         "name": "Add Hostel Member",
         "navigate": "/addwomenhostel",
+        "role": ["editor", "admin"]
+      },
+      {
+        "name": "Entry Alumni",
+        "navigate": "/entryalumni",
         "role": ["editor", "admin"]
       },
       {
