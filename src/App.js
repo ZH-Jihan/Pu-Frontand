@@ -2,6 +2,8 @@ import { Toaster } from "react-hot-toast";
 import { Route, Routes } from "react-router-dom";
 import CompanyInfo from "./Component/Page/About/CompanyInfo";
 import AllDepartment from "./Component/Page/All Report/AllDepartment";
+import EntryAlumni from "./Component/Page/All Report/Alumni Network/EntryAlumni";
+import ViewAlumni from "./Component/Page/All Report/Alumni Network/ViewAlumni";
 import AddClassRoom from "./Component/Page/All Report/Class Room/AddClassRoom";
 import ClassRoomView from "./Component/Page/All Report/Class Room/ClassRoomView";
 import EditClassRoom from "./Component/Page/All Report/Class Room/EditClassRoom";
@@ -133,6 +135,9 @@ function App() {
             <Route path="/entryconvoteam" element={<PostConvoTeam/>}/>
             <Route path="/viewteam" element={<ViewTeam/>}/>
             <Route path="/viewteam/:id" element={<TeamDetails/>}/>
+
+            <Route path="/entryalumni" element={<EntryAlumni/>}/>
+            <Route path="/viewalumni" element={<ViewAlumni/>}/>
 
 
             <Route path="/programdataAdd" element={<AddProgramData/>}/>
