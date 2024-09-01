@@ -105,7 +105,9 @@ const HostelMember = () => {
         data={data}
         details={true}
         edit={selectedName.report !== "EX-Member" && true }
+        backMember = {selectedName.report === "EX-Member" && true}
         editpathname={"edithostelmember"}
+        backMemberPath={"hostelmember/backmember"}
         detailPath={"datailshosMember"}
       />
     </div>

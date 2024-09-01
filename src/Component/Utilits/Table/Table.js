@@ -10,6 +10,8 @@ const Table = ({
   hover = true,
   other = null,
   edit = false,
+  backMember = false,
+  backMemberPath = null,
   details = false,
   deleted = false,
   user = null,
@@ -66,6 +68,14 @@ const Table = ({
                       Button
                     </th>
                   )}
+                  {backMember === true && role === true && (
+                    <th
+                      scope="col"
+                      class="text-sm font-larg text-gray-900 px-2 py-4 text-left"
+                    >
+                      Button
+                    </th>
+                  )}
                   {deleted === true && role === true && (
                     <th
                       scope="col"
@@ -74,6 +84,7 @@ const Table = ({
                       Button
                     </th>
                   )}
+                
                   {other &&
                     other.map((col) => (
                       <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
@@ -114,6 +125,19 @@ const Table = ({
                             }
                           >
                             Edit
+                          </button>
+                        </td>
+                      )}
+                      {backMember === true && role === true && (
+                        <td class="py-1 whitespace-nowrap text-sm font-medium text-gray-900">
+                          <button
+                            className="rounded-2xl border-2 border-red-400 px-4 py-1"
+                            onClick={() =>
+                              {DeleteCustomAxios(`/${backMemberPath}/${row._id}`);
+                              window.location.reload(false)}
+                            }
+                          >
+                            Back Member
                           </button>
                         </td>
                       )}
