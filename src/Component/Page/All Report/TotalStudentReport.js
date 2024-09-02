@@ -14,6 +14,9 @@ const tableHead = [
   { field: "", header: "EMBA" },
   { field: "", header: "ENG" },
   { field: "", header: "MAELT" },
+  { field: "", header: "MECO" },
+  { field: "", header: "LLB" },
+  { field: "", header: "LLM" },
   { field: "", header: "ETE" },
   { field: "", header: "IBUS" },
   { field: "", header: "IENG" },
@@ -63,7 +66,7 @@ const TotalStudentReport = () => {
 
   const filterSem = (totaldata, name) => {
     let datas;
-    let bba, ce, cse, eco, eee, emba, eng, ete, ibus, ieng, maelt, mba, pmba;
+    let bba, ce, cse, eco, eee, emba, eng, ete, ibus, ieng, maelt, mba, pmba,meco,llb,llm;
     if (name) {
       datas = totaldata.filter(
         (el) => el.semester === name || el.semesterName === name
@@ -139,6 +142,21 @@ const TotalStudentReport = () => {
       );
     }
     if (datas) {
+      meco = datas.filter(
+        (el) => el.programName === "MECO" || el.mainProgramName === "MECO"
+      );
+    }
+    if (datas) {
+      llb = datas.filter(
+        (el) => el.programName === "LLB" || el.mainProgramName === "LLB"
+      );
+    }
+    if (datas) {
+      llm = datas.filter(
+        (el) => el.programName === "LLM" || el.mainProgramName === "LLM"
+      );
+    }
+    if (datas) {
       mba = datas.filter(
         (el) => el.programName === "MBA" || el.mainProgramName === "MBA"
       );
@@ -164,6 +182,9 @@ const TotalStudentReport = () => {
       maelt,
       mba,
       pmba,
+      meco,
+      llb,
+      llm
     };
   };
 
@@ -274,6 +295,15 @@ const TotalStudentReport = () => {
         </td>
         <td class="px-2 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
           {filterSem(arry, name).maelt.length}
+        </td>
+        <td class="px-2 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+          {filterSem(arry, name).meco.length}
+        </td>
+        <td class="px-2 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+          {filterSem(arry, name).llb.length}
+        </td>
+        <td class="px-2 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+          {filterSem(arry, name).llm.length}
         </td>
         <td class="px-2 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
           {filterSem(arry, name).ete.length}
