@@ -137,7 +137,7 @@ const Table = ({
                               window.location.reload(false)}
                             }
                           >
-                            Back Member
+                            Reinstate
                           </button>
                         </td>
                       )}
