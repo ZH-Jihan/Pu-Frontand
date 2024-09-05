@@ -7,6 +7,8 @@ const HostelMember = () => {
 
   const [selectedName, setSelectedName] = useState({
     department: "",
+    flate:"",
+    scarcebyname:"",
     report: "Current",
   });
   const handleSelectChange = (event) => {
@@ -35,15 +37,42 @@ const HostelMember = () => {
   const uniqueNames = Array.from(
     new Set(activeMember.map((item) => item.department))
   );
+  const uniqueFlat = Array.from(
+    new Set(activeMember.map((item) => item.flate))
+  );
 
-  let data;
-  if (selectedName.department) {
-    data = activeMember.filter(
-      (el) => el.department === selectedName.department
-    );
-  } else {
-    data = activeMember;
+  const search_params = Object.keys(Object.assign({}, ...activeMember));
+
+
+
+  const filterMember = (array = []) =>{
+    let data = array;
+    if (selectedName.department) {
+      data = data.filter(
+        (el) => el.department === selectedName.department
+      );
+    }
+    if (selectedName.flate) {
+      data = data.filter(
+        (el) => el.flate === selectedName.flate
+      );
+    }
+    if (selectedName.scarcebyname) {
+      data = activeMember.filter((el) =>{
+
+        return(
+          el.name.toLowerCase().includes(selectedName.scarcebyname) || 
+          el.number.toLowerCase().includes(selectedName.scarcebyname) ||
+          el.id.toLowerCase().includes(selectedName.scarcebyname)
+        )
+      });
+    }
+    return data;
   }
+   
+  // else {
+  //   data = activeMember;
+  // }
 
   if (error) {
     return <h1>{error?.response?.data?.error}</h1>;
@@ -63,12 +92,24 @@ const HostelMember = () => {
       <h1 className="text-lg pb-2 text-center font-bold">
         Total : {activeMember?.length}
       </h1>
-      <h2 className="lg:w-1/4 m-auto text-center font-bold grid grid-cols-4">
+      <h2 className="lg:w-2/4 gap-2 m-auto p-4 text-center font-bold grid grid-cols-6">
         {uniqueNames.map((name) => (
           <span>{`${name} : ${counteMemberDepWise(name)} `}</span>
         ))}
       </h2>
-      <div className="grid grid-cols-4 lg:grid-cols-2 w-2/4">
+      <div className="grid grid-cols-2 gap-4 lg:grid-cols-4 lg:w-6/7 px-8 m-auto">
+      <div class="form-control lg:ml-16  flex flex-col mb-3">
+          <label class="font-semibold text-gray-600 py-2">Select Report</label>
+          <select
+            class="appearance-none text-base block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
+            value={selectedName.report}
+            onChange={handleSelectChange}
+            name="report"
+          >
+            <option>Current</option>
+            <option>EX-Member</option>
+          </select>
+        </div>
         <div class="form-control lg:ml-16  flex flex-col mb-3">
           <label class="font-semibold text-gray-600 py-2">
             Select Department
@@ -88,21 +129,41 @@ const HostelMember = () => {
           </select>
         </div>
         <div class="form-control lg:ml-16  flex flex-col mb-3">
-          <label class="font-semibold text-gray-600 py-2">Select Report</label>
+          <label class="font-semibold text-gray-600 py-2">
+            Select Flate
+          </label>
           <select
             class="appearance-none text-base block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
-            value={selectedName.report}
+            value={selectedName.flate}
             onChange={handleSelectChange}
-            name="report"
+            name="flate"
           >
-            <option>Current</option>
-            <option>EX-Member</option>
+            <option value="">--- Select ---</option>
+            {uniqueFlat.map((name) => (
+              <option key={name} value={name}>
+                {name}
+              </option>
+            ))}
           </select>
         </div>
+        <div class="form-control lg:ml-16  flex flex-col mb-3">
+              <label class="font-semibold text-gray-600 py-2">
+                 Name, Id, Number
+              </label>
+
+              <input
+                value={selectedName.scarcebyname}
+                onChange={handleSelectChange}
+                autocomplete="None"
+                placeholder="Search By"
+                class="appearance-none text-base block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
+                name="scarcebyname"
+              />
+            </div>
       </div>
       <Table
         columns={detailtableHead}
-        data={data}
+        data={filterMember(activeMember)}
         details={true}
         edit={selectedName.report !== "EX-Member" && true }
         backMember = {selectedName.report === "EX-Member" && true}
