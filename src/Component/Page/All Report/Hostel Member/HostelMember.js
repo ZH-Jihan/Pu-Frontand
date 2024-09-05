@@ -77,10 +77,10 @@ const HostelMember = () => {
   if (error) {
     return <h1>{error?.response?.data?.error}</h1>;
   }
-  const counteMemberDepWise = (name) => {
-    let data;
+  const counteMemberDepWise = (name,array) => {
+    let data = array;
     if (name) {
-      data = activeMember.filter((el) => el.department === name);
+      data = data.filter((el) => el.department === name);
     }
     return data?.length;
   };
@@ -90,11 +90,11 @@ const HostelMember = () => {
         Women Hostel Member
       </h1>
       <h1 className="text-lg pb-2 text-center font-bold">
-        Total : {activeMember?.length}
+        Total : {filterMember(activeMember)?.length}
       </h1>
       <h2 className="lg:w-2/4 gap-2 m-auto p-4 text-center font-bold grid grid-cols-6">
         {uniqueNames.map((name) => (
-          <span>{`${name} : ${counteMemberDepWise(name)} `}</span>
+          <span>{`${name} : ${counteMemberDepWise(name,filterMember(activeMember))} `}</span>
         ))}
       </h2>
       <div className="grid grid-cols-2 gap-4 lg:grid-cols-4 lg:w-6/7 px-8 m-auto">
