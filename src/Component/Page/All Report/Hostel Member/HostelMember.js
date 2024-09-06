@@ -61,9 +61,9 @@ const HostelMember = () => {
       data = activeMember.filter((el) =>{
 
         return(
-          el.name.toLowerCase().includes(selectedName.scarcebyname) || 
-          el.number.toLowerCase().includes(selectedName.scarcebyname) ||
-          el.id.toLowerCase().includes(selectedName.scarcebyname)
+          el.name.toLowerCase().includes(selectedName.scarcebyname.toLowerCase()) || 
+          el.number.includes(selectedName.scarcebyname) ||
+          el.id.includes(selectedName.scarcebyname)
         )
       });
     }
