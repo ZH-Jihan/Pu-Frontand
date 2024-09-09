@@ -186,6 +186,26 @@ const EditHostelMember = () => {
                           name="joinDate"
                         />
                       </div>
+                      <div class="form-control  mb-3 space-y-2 w-full text-base">
+                        <label class="font-semibold text-gray-600 py-2">
+                          Reference
+                        </label>
+                        <select
+                          autocomplete="None"
+                          onChange={onChange}
+                          value={update.flat}
+                          class="appearance-none text-base block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
+                          type="text"
+                          required
+                          name="reference"
+                        >
+                          <option>{update?.reference}</option>
+                          <option>FaceBook</option>
+                          <option>Admission</option>
+                          <option>Friend</option>
+                          <option>Other</option>
+                        </select>
+                      </div>
                     </div>
                     <div class="md:grid grid lg:grid-cols-4 gap-4 w-full text-xs">
                       <div class="form-control  mb-3 space-y-2 w-full text-base">
