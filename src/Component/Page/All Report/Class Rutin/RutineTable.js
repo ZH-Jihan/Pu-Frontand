@@ -66,8 +66,8 @@ const RutineTable = ({
     { field: "", header: "Eng- Online" },
   ];
 
-  const onClick = (day) => {
-    setFilterSel((prev) => ({ ...prev, reportType: "main", day: day }));
+  const onClick = (day,classtype) => {
+    setFilterSel((prev) => ({ ...prev, reportType: "main", room: classtype , day: day }));
   };
 
   //*****.. Faculty Wise Class Report ..*****//
@@ -326,7 +326,7 @@ const RutineTable = ({
           days.map((day) => (
             <tr className={` ${hover && "hover"} ${striped && "striped"}`}>
               <td class="text-blue-600 underline underline-offset-4 px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                <button onClick={() => onClick(day)}>{day}</button>
+                <button onClick={() => onClick(day,"Offline")}>{day}</button>
               </td>
               <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                 {day === "Total" ? 56 : 8}
@@ -440,7 +440,7 @@ const RutineTable = ({
           days.map((day) => (
             <tr className={` ${hover && "hover"} ${striped && "striped"}`}>
               <td class="text-blue-600 underline underline-offset-4 px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                <button onClick={() => onClick(day)}>{day}</button>
+                <button onClick={() => onClick(day,"Online")}>{day}</button>
               </td>
               <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                 {slot(day.length, day)}

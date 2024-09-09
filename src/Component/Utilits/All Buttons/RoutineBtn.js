@@ -23,7 +23,7 @@ const useRoutineBtn = ({onChange,filterselect}) => {
         btnName: "room",
         option: [
           { value: "", name: "--All Room--" },
-          { value: "Online", name: "Online" },
+          { value: "Online", name: "Online" }
         ],
       };
       const semesterBtn = {
@@ -32,7 +32,7 @@ const useRoutineBtn = ({onChange,filterselect}) => {
         function: { onChange },
         btnName: "semester",
         option: [
-          { value: "", name: "--Select Semester--" },
+          // { value: "", name: "--Select Semester--" },
           { value: "Summer-24", name: "Summer-24" },
           { value: "Spring-24", name: "Spring-24" }
           

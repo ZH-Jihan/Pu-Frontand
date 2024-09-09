@@ -23,7 +23,7 @@ const RutinMainPage = () => {
     jobtype: "",
     scarcebyname: "",
     room: "",
-    semester: "",
+    semester: "Summer-24",
     reportType: "all",
   });
 
@@ -98,6 +98,7 @@ const RutinMainPage = () => {
     filterselect.day = "";
     filterselect.department = "";
     filterselect.timeslot = "";
+    filterselect.room = "";
   }
   //*****.. Data Filtar Funtion ..*****/
   const filter = (data = []) => {
@@ -106,7 +107,15 @@ const RutinMainPage = () => {
       datas = datas.filter((el) => el.Dept === filterselect.department);
     }
     if (filterselect.room) {
-      datas = datas.filter((el) => el.Room === filterselect.room);
+      if (filterselect.room === "Offline") {
+        datas = datas.filter((el) => el.Room !== "Online");
+      }
+      else if (filterselect.room === "Online") {
+        datas = datas.filter((el) => el.Room === "Online");
+      }
+      else{
+        datas = datas.filter((el) => el.Room === filterselect.room);
+      }
     }
     if (filterselect.day) {
       datas = datas.filter((el) => el.Day === filterselect.day);
@@ -116,6 +125,7 @@ const RutinMainPage = () => {
     }
     return datas;
   };
+console.log(filterselect.room);
 
   //*****.. Main Table Hade And Json Data Field Name ..*****//
   const tableHead = [
@@ -126,7 +136,9 @@ const RutinMainPage = () => {
     { field: "day", header: "" },
     { field: "drpartment", header: "department" },
   ];
-
+if (!rutinDatas) {
+  <Loading></Loading>
+} else {
   return (
     <div>
       <div>
@@ -137,11 +149,11 @@ const RutinMainPage = () => {
             {filterselect.day && filterselect.semester
               ? "Today's Total Class"
               : "Total Class For The Week"}
-            : {filter(semFilterData).length}
+            : {filter(semFilterData)?.length}
           </h1>
           {filterselect.timeslot && !filterselect.room && (
             <p className="text-red-500">
-              {filter(semFilterData)?.length >= classRooms.length ? (
+              {filter(semFilterData)?.length >= classRooms?.length ? (
                 <span className="text-green-700">Empty Class Room : 0</span>
               ) : (
                 <span className="text-red-500">
@@ -213,7 +225,7 @@ const RutinMainPage = () => {
             </>
           )}
       </div>
-      {filterselect.semester && classRooms.length ? (
+      {classRooms?.length ? (
         <RutineTable
           data={filter(semFilterData)}
           data2={daySlot}
@@ -229,6 +241,8 @@ const RutinMainPage = () => {
       )}
     </div>
   );
+}
+  
 };
 
 export default RutinMainPage;
