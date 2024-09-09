@@ -83,6 +83,9 @@ const DetailsHostelMember = () => {
                   <p class="text-gray-700 dark:text-gray-300 text-lg ">
                     Join Date - {moment(member?.joinDate).format("ll")}
                   </p>
+                  <p class="text-gray-700 dark:text-gray-300 text-lg ">
+                  Reference - {moment(member?.reference).format("ll")}
+                  </p>
                 </div>
               </div>
 
