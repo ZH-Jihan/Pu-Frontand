@@ -1,6 +1,6 @@
 import axios from 'axios';
 const testUrl = `http://localhost:5000/api/v1`
-    const mainUrl = `https://pu-server-1.onrender.com/api/v1`
+    const mainUrl = `https://pu-server-side.onrender.com/api/v1`
     const token = JSON.parse(localStorage.getItem('authToken'))?.token
     
     const headers = {

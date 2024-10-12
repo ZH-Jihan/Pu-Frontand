@@ -52,7 +52,7 @@ if (respons) {
   toast.success("Faculty Edit Success")
   navigate("/faculty")
 }
-      // fetch(`https://pu-server-1.onrender.com/api/v1/updatefaculty/${id}`, {
+      // fetch(`https://pu-server-side.onrender.com/api/v1/updatefaculty/${id}`, {
       //   method: "PUT",
       //   headers: {
       //     "content-type": "application/json",

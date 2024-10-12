@@ -15,7 +15,7 @@ const AddCrouse = () => {
           program: event.target.programname?.value,
           description: event.target.description?.value,
         };
-        fetch("https://pu-server-1.onrender.com/api/v1/course", {
+        fetch("https://pu-server-side.onrender.com/api/v1/course", {
           method: "POST",
           headers: {
             "content-type": "application/json",

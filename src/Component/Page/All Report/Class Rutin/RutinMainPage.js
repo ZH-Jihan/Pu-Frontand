@@ -6,7 +6,7 @@ import Button from "../../../Utilits/Button";
 import Loading from "../../Sheared Page/Loading";
 import RutineTable from "./RutineTable";
 const RutinMainPage = () => {
-  // const {rutinDatas} = useFatchData('https://pu-server-1.onrender.com/api/v1/routin')
+  // const {rutinDatas} = useFatchData('https://pu-server-side.onrender.com/api/v1/routin')
   // const { data: rutinDatas } = useLocalDataFatch("PU-App.department.json");
   const rutinDatas = rutinData;
   const { data: classRoom } = useFatchData("/classroom");

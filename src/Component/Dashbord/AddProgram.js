@@ -12,7 +12,7 @@ const AddProgram = () => {
           dipartment: event.target.departmentname?.value,
           description: event.target.description?.value,
         };
-        fetch("https://pu-server-1.onrender.com/api/v1/program", {
+        fetch("https://pu-server-side.onrender.com/api/v1/program", {
           method: "POST",
           headers: {
             "content-type": "application/json",

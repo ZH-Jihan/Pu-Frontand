@@ -27,7 +27,7 @@ const Addproduct = () => {
     // if (facultyinfo.dipartment || facultyinfo.designation || facultyinfo.university === "--Select Department--") {
     //   toast.error("Please Select Option")
     // } else {
-    fetch("https://pu-server-1.onrender.com/api/v1/faculty", {
+    fetch("https://pu-server-side.onrender.com/api/v1/faculty", {
       method: "POST",
       headers: {
         "content-type": "application/json",

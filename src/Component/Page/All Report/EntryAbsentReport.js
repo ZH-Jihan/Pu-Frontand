@@ -226,7 +226,7 @@ const EntryAbsentReport = () => {
         slot:tslot,
         room:room,
     };
-    fetch("https://pu-server-1.onrender.com/api/v1/facultyabsent", {
+    fetch("https://pu-server-side.onrender.com/api/v1/facultyabsent", {
           // method: "POST",
           headers: {
             "content-type": "application/json",

@@ -10,7 +10,7 @@ const ClassRoomAdd = () => {
       roominitial: event.target.roominitial?.value,
       capacity: event.target.capacity?.value,
     };
-    fetch("https://pu-server-1.onrender.com/api/v1/classroom", {
+    fetch("https://pu-server-side.onrender.com/api/v1/classroom", {
       method: "POST",
       headers: {
         "content-type": "application/json",
