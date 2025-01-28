@@ -6,7 +6,7 @@ const useFatchData = (url) => {
     const [error,setError] = useState(null);
     const token = JSON.parse(localStorage.getItem('authToken'))?.token
     const textUrl = "http://localhost:5000/api/v1"
-    const serverUrl = "https://pu-server-side.onrender.com/api/v1"
+    const serverUrl = "https://pu-server-side-xf9f.onrender.com/api/v1"
     
     useEffect(()=>{
         const headers = {

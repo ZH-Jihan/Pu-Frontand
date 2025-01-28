@@ -26,7 +26,7 @@ const Booking = ({product,order,setOrder}) => {
                 orderQuantity: orderQuantity,
             }
     
-            fetch('https://pu-server-side.onrender.com/api/v1/order', {
+            fetch('https://pu-server-side-xf9f.onrender.com/api/v1/order', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

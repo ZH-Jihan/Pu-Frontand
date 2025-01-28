@@ -13,7 +13,7 @@ const AddAdmisson = () => {
       id: event.target.programId?.value,
       description: event.target.description?.value,
     };
-    fetch("https://pu-server-side.onrender.com/api/v1/program", {
+    fetch("https://pu-server-side-xf9f.onrender.com/api/v1/program", {
       method: "POST",
       headers: {
         "content-type": "application/json",

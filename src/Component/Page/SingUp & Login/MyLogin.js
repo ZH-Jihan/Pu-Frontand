@@ -3,7 +3,7 @@ import Cookies from "js-cookie";
 import React from "react";
 import toast from "react-hot-toast";
 import { useLocation, useNavigate } from "react-router-dom";
-const url = "https://pu-server-side.onrender.com/api/v1/user/login";
+const url = "https://pu-server-side-xf9f.onrender.com/api/v1/user/login";
 
 const MyLogin = () => {
   const navigate = useNavigate();

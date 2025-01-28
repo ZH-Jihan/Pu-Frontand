@@ -9,7 +9,7 @@ const AddUniversity = () => {
           id: event.target.versityId?.value,
           description: event.target.description?.value,
         };
-        fetch("https://pu-server-side.onrender.com/api/v1/university", {
+        fetch("https://pu-server-side-xf9f.onrender.com/api/v1/university", {
           method: "POST",
           headers: {
             "content-type": "application/json",
