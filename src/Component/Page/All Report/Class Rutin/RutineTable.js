@@ -30,6 +30,7 @@ const RutineTable = ({
     { field: "", header: "EEE" },
     { field: "", header: "Business" },
     { field: "", header: "English" },
+    { field: "", header: "LAW" },
     { field: "", header: "Capacity Utilized" },
   ];
   const onlineatAGlanceTblData = [
@@ -64,6 +65,7 @@ const RutineTable = ({
     { field: "", header: "Bus - Online" },
     { field: "", header: "Eng - Campus" },
     { field: "", header: "Eng- Online" },
+    { field: "", header: "LAW - Campus" },
   ];
 
   const onClick = (day,classtype) => {
@@ -266,6 +268,7 @@ const RutineTable = ({
       let ece;
       let cse;
       let eee;
+      let law;
       let bus;
       if (day) {
         if (day === "Total") {
@@ -294,10 +297,11 @@ const RutineTable = ({
         civil = datas.filter((el) => el.Dept === "CE");
         Eng = datas.filter((el) => el.Dept === "ENG");
         cse = datas.filter((el) => el.Dept === "CSE");
+        law = datas.filter((el) => el.Dept === "LLB");
         eee = datas.filter((el) => el.Dept === "EEE");
         bus = datas.filter((el) => el.Dept === "BUS");
       }
-      return { datas, civil, Eng, ece, bus, cse, eee };
+      return { datas, civil, Eng, ece, bus, cse, eee , law};
     };
     const slot = (value, day) => {
       const rutindata = data.filter((el) => el.Day === day && el.Room !== "Online" );
@@ -351,6 +355,9 @@ const RutineTable = ({
               </td>
               <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium ">
                 {classFilterWDay(day, "offline").Eng.length}
+              </td>
+              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium ">
+                {classFilterWDay(day, "offline").law.length}
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                 {Math.round(
@@ -485,6 +492,7 @@ const RutineTable = ({
       let cse;
       let eee;
       let bus;
+      let law;
       if (day) {
         if (day === "Total") {
           datas = data;
@@ -514,8 +522,9 @@ const RutineTable = ({
         cse = datas.filter((el) => el.Dept === "CSE");
         eee = datas.filter((el) => el.Dept === "EEE");
         bus = datas.filter((el) => el.Dept === "BUS");
+        law = datas.filter((el) => el.Dept === "LLB");
       }
-      return { datas, civil, Eng, ece, bus, cse, eee };
+      return { datas, civil, Eng, ece, bus, cse, eee,law };
     };
     const slot = (value, day) => {
       const rutindata = data.filter((el) => el.Day === day);
@@ -584,6 +593,9 @@ const RutineTable = ({
               </td>
               <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-rose-600">
                 {classFilterWDay(day, "online").Eng.length}
+              </td>
+              <td class=" px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-600">
+                {classFilterWDay(day, "offline").law.length}
               </td>
             </tr>
           ))}
